@@ -172,7 +172,7 @@ void MotorDriver::writeCommand() {
     }
     RCLCPP_INFO(node_->get_logger(), "Write command to actuator: %s", command.c_str());
     
-    uart_protocol_->sendPosition(commandPositions);
+    uart_protocol_->sendPosition(commandPositions, true);
 }
 
 /**

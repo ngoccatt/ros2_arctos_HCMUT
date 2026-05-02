@@ -190,10 +190,20 @@ private:
     step = "executing";
     goal_handle->publish_feedback(feedback);
     RCLCPP_INFO(this->get_logger(), "Executing...");
-    move_group->execute(my_plan);
+    auto errorCode = move_group->execute(my_plan);
 
     // delay for some time to allow hardware to execute the plan till the end.
     loop_rate.sleep();
+
+    if (errorCode != moveit::core::MoveItErrorCode::SUCCESS) 
+    {
+      result->completed = false;
+      goal_handle->abort(result);
+      step = error_code_to_string(errorCode);
+      goal_handle->publish_feedback(feedback);
+      RCLCPP_INFO(this->get_logger(), "Execute failed");
+      return;
+    }
 
     if (rclcpp::ok()) {
       step = "completed";

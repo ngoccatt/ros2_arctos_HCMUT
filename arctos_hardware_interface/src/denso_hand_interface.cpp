@@ -278,24 +278,12 @@ namespace denso_hand_interface
     {
         static bool isPositionUpdated;
         isPositionUpdated = false;
-        static int FLUSH_DURATION = 10000000; // Flush every 10 seconds
-        static int loop_count = static_cast<int>(FLUSH_DURATION / period.nanoseconds());
         // Resize last command vectors if not already done
         if (last_position_command_.size() != info_.joints.size())
         {
             // force homing on first activation
             last_position_command_.resize(info_.joints.size(), -1.0); 
             RCLCPP_INFO(node_->get_logger(), "Initialized last command vectors.");
-        }
-
-        if (loop_count > 0)
-        {
-            loop_count--;
-        }
-        else
-        {
-            uart_protocol_->flush();
-            loop_count = static_cast<int>(FLUSH_DURATION / period.nanoseconds());
         }
 
         for (size_t i = 0; i < info_.joints.size(); i++)

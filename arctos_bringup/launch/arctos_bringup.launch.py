@@ -117,7 +117,7 @@ def generate_launch_description():
     camera_node1 = Node(
         package='v4l2_camera',
         executable='v4l2_camera_node',
-        name='v4l2_camera',
+        name='v4l2_camera_1',
         output='screen',
         parameters=[
             {
@@ -146,7 +146,7 @@ def generate_launch_description():
     camera_node2 = Node(
         package='v4l2_camera',
         executable='v4l2_camera_node',
-        name='v4l2_camera',
+        name='v4l2_camera_2',
         output='screen',
         parameters=[
             {

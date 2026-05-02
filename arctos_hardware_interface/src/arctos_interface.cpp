@@ -294,8 +294,6 @@ namespace arctos_interface
 
         static bool isPositionUpdated;
         isPositionUpdated = false;
-        static int FLUSH_DURATION = 10000000; // Flush every 10 seconds
-        static int loop_count = static_cast<int>(FLUSH_DURATION / period.nanoseconds());
         // TREND_THRESHOLD for increasing, -TREND_THRESHOLD for decreasing, 0 for unknown
         static std::vector<int> trend(info_.joints.size(), 0);
         // whether to allow position command to be sent, only set to true when trend changes or command changes significantly
@@ -313,16 +311,6 @@ namespace arctos_interface
             last_valid_position_command_.resize(info_.joints.size(), 0.0);
             last_velocity_command_.resize(info_.joints.size(), 0.0);
             RCLCPP_INFO(node_->get_logger(), "Initialized last command vectors.");
-        }
-
-        if (loop_count > 0)
-        {
-            loop_count--;
-        }
-        else
-        {
-            uart_protocol_->flush();
-            loop_count = static_cast<int>(FLUSH_DURATION / period.nanoseconds());
         }
 
         for (size_t i = 0; i < info_.joints.size(); i++)
@@ -446,7 +434,7 @@ namespace arctos_interface
                         RCLCPP_DEBUG(node_->get_logger(),
                                      "Position command for joint %s unchanged: %.3f",
                                      info_.joints[i].name.c_str(), joint_position_command_[i]);
-                        if (idle_counter[i] >= TREND_RESET_THRESHOLD)
+                        if (idle_counter[i] >= TREND_RESET_THRESHOLD && trend[i] != 0)
                         {
                             RCLCPP_INFO(node_->get_logger(), "Resetting trend for joint %s after %d idle cycles",
                                         info_.joints[i].name.c_str(), idle_counter[i]);
