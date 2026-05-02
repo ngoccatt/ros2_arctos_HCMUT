@@ -446,7 +446,7 @@ namespace arctos_interface
                         RCLCPP_DEBUG(node_->get_logger(),
                                      "Position command for joint %s unchanged: %.3f",
                                      info_.joints[i].name.c_str(), joint_position_command_[i]);
-                        if (idle_counter[i] >= TREND_RESET_THRESHOLD && trend[i] != 0)
+                        if (idle_counter[i] >= TREND_RESET_THRESHOLD)
                         {
                             RCLCPP_INFO(node_->get_logger(), "Resetting trend for joint %s after %d idle cycles",
                                         info_.joints[i].name.c_str(), idle_counter[i]);
