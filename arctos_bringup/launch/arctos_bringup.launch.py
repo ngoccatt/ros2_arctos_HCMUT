@@ -179,6 +179,6 @@ def generate_launch_description():
         joint_state_broadcaster_spawner,
         delay_robot_arm_controller_spawner,
         delay_rviz_and_moveit_launch,
-        # camera_node,
-        # can_launch
+        camera_node1,
+        camera_node2,
     ])

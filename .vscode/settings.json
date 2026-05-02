@@ -131,6 +131,5 @@
     },
     "cmake.sourceDirectory": "/home/arctos/ros2_ws/src/ros2_arctos_HCMUT/arctos_bringup",
     "github.copilot.chat.codeGeneration.useInstructionFiles": true,
-    "ROS2.distro": "humble",
-    "cmake.ignoreCMakeListsMissing": true
+    "ROS2.distro": "humble"
 }
