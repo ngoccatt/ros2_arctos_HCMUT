@@ -205,7 +205,7 @@ int KeyboardServo::keyLoop()
   bool servo_started = false;
 
   double max_velocity_x = 3.0543;
-  double max_velocity_y = 2.4907;
+  double max_velocity_y = 3.4907;
   double max_velocity_z = 3.4907;
   double max_velocity_a = 5.236;
   double max_velocity_b = 5.236;
