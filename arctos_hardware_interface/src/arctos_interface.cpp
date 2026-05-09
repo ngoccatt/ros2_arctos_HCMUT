@@ -285,8 +285,8 @@ namespace arctos_interface
     */
     return_type ArctosInterface::write(const rclcpp::Time & /*time*/, const rclcpp::Duration & period)
     {
-        // Reset trend after 5 cycles of no change
-        static const int TREND_RESET_THRESHOLD = 5;
+        // Reset trend after 10 cycles of no change (10 * 100ms = 1000ms)
+        static const int TREND_RESET_THRESHOLD = 10;
         // Number of consecutive increases/decreases to confirm trend
         static const int TREND_THRESHOLD = 2;
         // Delta increase in joint position to fill up the "empty slot"
