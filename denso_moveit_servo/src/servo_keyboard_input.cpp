@@ -169,7 +169,7 @@ private:
   double axis_pos_cmd;
 };
 
-KeyboardServo::KeyboardServo() : frame_to_publish_(BASE_FRAME_ID), joint_vel_cmd_(0.8), axis_pos_cmd(0.01)
+KeyboardServo::KeyboardServo() : frame_to_publish_(BASE_FRAME_ID), joint_vel_cmd_(0.8), axis_pos_cmd(1.0)
 {
   pub_node_ = std::make_shared<PublisherNode>();
   service_node_ = std::make_shared<ServiceNode>();
