@@ -38,7 +38,7 @@ namespace denso_hand_interface
         // Initialize state storage vectors
         servo_position_.resize(info_.joints.size(), 0.0);
         servo_velocity_.resize(info_.joints.size(), 0.0);
-        servo_position_command_.resize(info_.joints.size(), 0.02);
+        servo_position_command_.resize(info_.joints.size(), 0.1);
         motor_ids_.resize(info_.joints.size());
 
         // Clear previous interface mappings

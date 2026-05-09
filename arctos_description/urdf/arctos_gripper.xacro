@@ -89,7 +89,7 @@
     parent="gripper_body_link" child="gripper_gear_right"
     origin_xyz="-0.0105000000000263 0.0175575664610773 0.0484957779974575" origin_rpy="0.0 0.0 0.0"
     axis_xyz="0.0 -1.0 0.0"
-    limit_u="1.4835" limit_l="0.02" limit_e="100.0" limit_v="100.0" damping="0.02" friction="0.0"
+    limit_u="1.47" limit_l="0.1" limit_e="100.0" limit_v="100.0" damping="0.02" friction="0.0"
     mimic=""
   />
 
@@ -105,7 +105,7 @@
     parent="gripper_body_link" child="gripper_gear_left"
     origin_xyz="0.0105 0.017558 0.048496" origin_rpy="0.0 0.0 0.0" 
     axis_xyz="0.0 1.0 0.0"
-    limit_u="1.4835" limit_l="0.02" limit_e="100.0" limit_v="100.0" damping="0.02" friction="0.0"
+    limit_u="1.47" limit_l="0.1" limit_e="100.0" limit_v="100.0" damping="0.02" friction="0.0"
     mimic="gripper_gear_right_joint"
   />
 

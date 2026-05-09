@@ -22,8 +22,8 @@
       </hardware>
       <joint name="gripper_gear_right_joint">
         <command_interface name="position">
-          <param name="min">0.02</param>
-          <param name="max">1.4835</param>
+          <param name="min">0.1</param>
+          <param name="max">1.47</param>
         </command_interface>
         <state_interface name="position">
           <param name="initial_value">${initial_positions['gripper_gear_right_joint']}</param>

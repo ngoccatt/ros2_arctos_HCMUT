@@ -36,10 +36,10 @@
         <joint name="Z_joint" value="0"/>
     </group_state>
     <group_state name="close" group="denso_hand">
-        <joint name="gripper_gear_right_joint" value="0.02"/>
+        <joint name="gripper_gear_right_joint" value="0.1"/>
     </group_state>
     <group_state name="open" group="denso_hand">
-        <joint name="gripper_gear_right_joint" value="1.4835"/>
+        <joint name="gripper_gear_right_joint" value="1.47"/>
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="denso_hand" parent_link="link_6" group="denso_hand"/>
