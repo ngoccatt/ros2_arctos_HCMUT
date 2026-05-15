@@ -362,7 +362,7 @@ bool UartProtocol::sendMsg(const std::string &msg_to_send)
  * @return true if the message was sent successfully, false if connection is down or error occurred
  * 
  */
-bool UartProtocol::sendMsgRaw(const std::string & msg_to_send_without_eol)
+bool UartProtocol::sendMsgWithCLRF(const std::string & msg_to_send_without_eol)
 {
     if (!this->connected())
     {
@@ -376,7 +376,7 @@ bool UartProtocol::sendMsgRaw(const std::string & msg_to_send_without_eol)
     }
     catch(const std::exception& e)
     {
-        std::cerr << "uart: sendMsgRaw: " << e.what() << '\n';
+        std::cerr << "uart: sendMsgWithCLRF: " << e.what() << '\n';
         return false;
     }
     return true;

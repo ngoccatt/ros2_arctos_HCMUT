@@ -58,7 +58,7 @@ public:
     bool sendMsg(const std::string &msg_to_send);
 
     /// @brief Low-level message transmission helper function appending EOL
-    bool sendMsgRaw(const std::string &msg_to_send_without_eol);
+    bool sendMsgWithCLRF(const std::string &msg_to_send_without_eol);
     
 private:
     /// @brief Serial connection object for UART communication

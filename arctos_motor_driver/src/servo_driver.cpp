@@ -19,8 +19,9 @@ namespace arctos_motor_driver {
 #define RED "\033[31m"
 #define BOLD_RED "\033[1;31m"
 
-#define REAL_SERVO_CLOSE    179.560546875
-#define REAL_SERVO_OPEN     91.318359375
+// This value should be specified after testing full open and full close position of real gripper.
+#define REAL_SERVO_CLOSE    179.560546875 - 5
+#define REAL_SERVO_OPEN     91.318359375 - 5
 
 /**
  * @brief Constructs a ServoDriver object.
@@ -204,7 +205,7 @@ void ServoDriver::writeCommand() {
     }
     RCLCPP_INFO(node_->get_logger(), "Write command to actuator: %s", command.c_str());
     
-    uart_protocol_->sendMsgRaw(command);
+    uart_protocol_->sendMsgWithCLRF(command);
 }
 
 /*
@@ -219,7 +220,7 @@ void ServoDriver::writeQueryCommand() {
 
     // RCLCPP_INFO(node_->get_logger(), "Write query to actuator: %s", command.c_str());
     
-    uart_protocol_->sendMsgRaw(command);
+    uart_protocol_->sendMsgWithCLRF(command);
 }
 
 /**
