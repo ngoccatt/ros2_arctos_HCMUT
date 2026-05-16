@@ -126,8 +126,8 @@ denso_hand_interface:
         inverted_feedback: false        # for case of request go to 1000, but motor run to -1000
         gear_ratio: 1.0
         hardware_type: MKS_42D
-        zero_position: 5.729578
-        lower_limit: 5.729578           # lower limit (close), in degree (0.1 rad)
-        upper_limit: 84.2248            # upper limit (open), in degree (1.47 rad)
+        zero_position: 5.0
+        lower_limit: 5.0              # lower limit (close), in degree (0.087266 rad)
+        upper_limit: 85.0             # upper limit (open), in degree (1.48353 rad)
         velocity: 200.0 
         acceleration: 20.0

@@ -19,9 +19,13 @@ namespace arctos_motor_driver {
 #define RED "\033[31m"
 #define BOLD_RED "\033[1;31m"
 
+// Soft_Limit here should be equal to the reduction in 3D servo: the servo full range is 0 -> 90. 
+// it has been reduced to 5 -> 85 to avoid servo stalling, which might burn the servo
+#define SOFT_LIMIT          5
 // This value should be specified after testing full open and full close position of real gripper.
-#define REAL_SERVO_CLOSE    179.560546875 - 5
-#define REAL_SERVO_OPEN     91.318359375 - 5
+// the degree of servo for full close/full open, get by (pos - 1024) * 360/4096
+#define REAL_SERVO_CLOSE    (185.1855469 - SOFT_LIMIT)
+#define REAL_SERVO_OPEN     (90.3515625 + SOFT_LIMIT)
 
 /**
  * @brief Constructs a ServoDriver object.

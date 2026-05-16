@@ -38,7 +38,7 @@ namespace denso_hand_interface
         // Initialize state storage vectors
         servo_position_.resize(info_.joints.size(), 0.0);
         servo_velocity_.resize(info_.joints.size(), 0.0);
-        servo_position_command_.resize(info_.joints.size(), 0.1);
+        servo_position_command_.resize(info_.joints.size(), 0.087266);
         motor_ids_.resize(info_.joints.size());
 
         // Clear previous interface mappings
@@ -274,7 +274,7 @@ namespace denso_hand_interface
     It is called after *update* in the realtime loop.
     responsible for updating the data values of the *command_interfaces*
     */
-    return_type DensoHandInterface::write(const rclcpp::Time & /*time*/, const rclcpp::Duration & period)
+    return_type DensoHandInterface::write(const rclcpp::Time & /*time*/, const rclcpp::Duration & /*period*/)
     {
         static bool isPositionUpdated;
         isPositionUpdated = false;
