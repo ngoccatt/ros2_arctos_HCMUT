@@ -15526,3 +15526,6 @@ arctos@arctos-HP-EliteDesk-705-G4-DM-35W-TAA:~/ros2_ws$ ros2 launch arctos_bring
 [ros2_control_node-1] [INFO] [1778912737.320682956] [arctos_hardware_interface]: Updated motor 5 (normal) position: -0.00 degrees
 [ros2_control_node-1] [INFO] [1778912737.320786600] [arctos_hardware_interface]: Updated motor 3 (normal) position: 1.56 degrees
 [ros2_control_node-1] [INFO] [1778912737.420646644] [arctos_hardware_interface]: Updated motor 5 (normal) position: 0.00 degrees
+
+
+Uart failed: 2 time
