@@ -180,10 +180,10 @@ void ServoDriver::setServoPosition(const std::string& servo_name, double positio
 /**
  * @brief Write command to actuator, using buffer from each motors
  *
- * Convert from 3D range: 0.420 (3D_close) -> 84.9983 (3D_open)
- * to Servo range       : 185 (Real_close)    -> ~101 (Real_open)
+ * Convert from 3D range: 5 (3D_close) -> 85 (3D_open)
+ * to Servo range       : 185.18 - 5 (Real_close)    -> 90.35 + 5 (Real_open)
  * # Step 1: convert 3D degree [x] into acceptable servo degree
- * servo degree = (185 - ([x] - 3D_close))
+ * servo degree = ((185.18 - 5) - ([x] - 3D_close))
  * # Step 2: convert servo degree to radian.
  * Position is send in radians intead of degree
  * @param void
@@ -400,16 +400,18 @@ void ServoDriver::processServoResponse(uint8_t motor_id, std::string data) {
 
         // **Update servo State**
         servo.load = jsonObject["load"].get<double>();
+        double temper = jsonObject["temper"].get<double>();
 
         // **Apply Deadband Filtering (to remove tiny errors)**
         constexpr double POSITION_DEADBAND = 0.0001;
         if (std::abs(servo.position) < POSITION_DEADBAND) {
             servo.position = 0.0;
         }
-        RCLCPP_INFO(node_->get_logger(), "Updated motor %d (%s) position: %.2f degrees", 
-                    servo.motor_id, servo.inverted_feedback ? "inverted feedback" : "normal", servo.position);
+        RCLCPP_INFO(node_->get_logger(), "Updated motor %d (%s) position: %.2f degrees, load: %.2f, temper: %.2f", 
+                    servo.motor_id, servo.inverted_feedback ? "inverted feedback" : "normal", servo.position, servo.load, temper);
 
         servo.last_update = node_->get_clock()->now();
+
     } catch (const std::exception& e) {
         RCLCPP_ERROR(node_->get_logger(), "Error processing encoder response: %s", e.what());
     }
