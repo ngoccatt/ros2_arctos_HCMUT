@@ -11,12 +11,12 @@ from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, Comm
 
 def generate_launch_description():
     # MoveItConfigsBuilder automatically do the following:
-    # .robot_description: create urdf file using command: xacro arctos.urdf.xacro
+    # .robot_description: create urdf file using command: xacro denso.urdf.xacro
     # .robot_description_semantic
     moveit_config = (
-        MoveItConfigsBuilder("arctos")
-        .robot_description(file_path="config/arctos.urdf.xacro")
-        .robot_description_semantic(file_path="config/arctos.srdf")
+        MoveItConfigsBuilder("denso")
+        .robot_description(file_path="config/denso.urdf.xacro")
+        .robot_description_semantic(file_path="config/denso.srdf")
         .trajectory_execution(file_path="config/moveit_controllers.yaml")
         .robot_description_kinematics(file_path="config/kinematics.yaml")
         .planning_pipelines(pipelines=["ompl", "chomp"])

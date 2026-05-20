@@ -1,6 +1,6 @@
 # Contribution Guidelines 🚀
 
-Thank you for your interest in contributing to the **ROS2 Arctos Repository**! 🎉 We welcome contributions from the community to help improve and expand the functionality of the Arctos 6DOF robotic arm. Please review these guidelines to ensure a smooth collaboration process. 🤝
+Thank you for your interest in contributing to the **ROS2 Denso Repository**! 🎉 We welcome contributions from the community to help improve and expand the functionality of the Denso 6DOF robotic arm. Please review these guidelines to ensure a smooth collaboration process. 🤝
 
 ## How to Contribute 🛠️
 
@@ -83,9 +83,9 @@ This project adheres to the [Code of Conduct](CODE_OF_CONDUCT.md). By participat
 
 If you need help with your contributions or have questions about the project, feel free to:
 
-- 💡 Join the discussion on the [Issues](https://github.com/Arctos-Robotics/ros2_arctos/issues) page.
+- 💡 Join the discussion on the [Issues](https://github.com/Denso-Robotics/ros2_denso/issues) page.
 - 🛠️ Reach out to maintainers by tagging them in your pull request or issue.
 
 ---
 
-We’re excited to have you contribute to the ROS2 Arctos project! 🎉 Thank you for helping us make this project better for everyone. 🌍
+We’re excited to have you contribute to the ROS2 Denso project! 🎉 Thank you for helping us make this project better for everyone. 🌍

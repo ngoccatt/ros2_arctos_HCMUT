@@ -19,5 +19,5 @@ ros2 launch file_server2 ros_sharp_communication.launch.py
 2. Then run our bringup file so that \robot_description have some data to transmit
 
 ```bash
-ros2 launch arctos_bringup gz_arctos_bringup.launch.py use_sim_time:=true
+ros2 launch denso_bringup gz_denso_bringup.launch.py use_sim_time:=true
 ```

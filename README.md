@@ -1,4 +1,4 @@
-# ROS2 Arctos
+# ROS2 Denso
 ![Discord](https://img.shields.io/discord/1099629962618748958?logo=discord&logoColor=%23FFFFFF&logoSize=auto)
 
 
@@ -6,38 +6,20 @@
 
 This project is still under development and is not yet ready for production use. We are actively working on improving the project and adding new features. If you would like to contribute, please see the [Contributing Guidelines](CONTRIBUTING.md).
 
-**USE AT YOUR OWN RISK**.
-
-Only use this project if you have:
-- Ensured the KY-003/WSH231 hall effect sensors have been tested and are working correctly.
-    - ⚠️ If the hall effect sensors are swapped (meaning the sensor for the home position is connected on the pin of the sensor for the opposite limit position), the `set_zero_position.py` script will not work correctly.
-    - ⚠️ If the hall effect sensors are not being triggered, the arm will not stop moving when it reaches the limit positions.
-        - Pressing "ESC" while running the `set_zero_position.py` script will stop the robot from moving. (*You must be running the script in a terminal that has focus for this to work.*)
-- Ensured your robot arm is securely mounted and will not fall over when powered on.
-    - You may be required to mount the robot arm on something that is at least 10cm tall to ensure the arm does not collide with the ground. *(This is a temporary requirement and more information will be provided in the future.)*
-- Ensured the robot arm is not near any objects that could be damaged if the arm moves unexpectedly.
-    - You should have at least 1 meter of clearance around the robot arm.
-
-**It is strongly recommended to stay close to the robot** and be ready to power it off in case of any unexpected behavior.
-
-See the [Configure MKS Motors and Hall Effect Sensors](https://discord.com/channels/1099629962618748958/1339645142172303440/1339645142172303440) thread on Discord for more information. 
-
-This thread is also a work in progress. However, it contains some useful information on how to configure the motors and hall effect sensors.
-
 ## Overview
 
-**ROS2 Arctos** is a **ROS2 package** designed for controlling the Arctos robot arm using **CAN-based motor drivers** and **MoveIt! for motion planning**. The project is structured into multiple packages, each handling a specific aspect of the robotic arm.
+**ROS2 Denso** is a **ROS2 package** designed for controlling the Denso robot arm using **MoveIt! for motion planning**. The project is structured into multiple packages, each handling a specific aspect of the robotic arm.
 
 ## Repository Structure
 
 ```
-ros2_arctos/
-│── arctos_bringup/            # Launch and runtime management
-│── arctos_description/        # URDF and robot model files
-│── arctos_hardware_interface/ # ROS2 control hardware abstraction
-│── arctos_motor_driver/       # CAN motor driver implementation
-│── arctos_moveit_base_xyz/    # MoveIt! base motion with X, Y and Z
-│── arctos_moveit_config/      # MoveIt! motion planning configurations
+ros2_denso/
+│── denso_bringup/            # Launch and runtime management
+│── denso_description/        # URDF and robot model files
+│── denso_hardware_interface/ # ROS2 control hardware abstraction
+│── denso_motor_driver/       # CAN motor driver implementation
+│── denso_moveit_base_xyz/    # MoveIt! base motion with X, Y and Z
+│── denso_moveit_config/      # MoveIt! motion planning configurations
 │── scripts/                   # Utility scripts
 │── assets/                    # Images and other assets
 │── LICENSE                    # Project license
@@ -93,18 +75,18 @@ First, install the required dependencies:
 sudo apt install can-utils python3-rosdep ros-humble-can-msgs ros-humble-ros2-control ros-humble-gz-ros2-control ros-humble-gz-ros2-control-demos ros-humble-gripper-controllers ros-humble-moveit-servo ros-humble-v4l2-camera ros-humble-rqt-image-view ros-humble-image-transport-plugins ros-humble-rosbridge-server -y
 ```
 
-**Open new terminal**, then create a ROS2 workspace and clone the ROS2 Arctos repository inside the `src/` directory:
+**Open new terminal**, then create a ROS2 workspace and clone the ROS2 Denso repository inside the `src/` directory:
 
 ```bash
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
-git clone --recurse-submodules https://github.com/ngoccatt/ros2_arctos_HCMUT.git
+git clone --recurse-submodules https://github.com/ngoccatt/ros2_denso_HCMUT.git
 ```
 
 **Note**: If you are on a different branch, you need to checkout the branch you want to use.
 
 ```bash
-cd ros2_arctos
+cd ros2_denso
 git checkout <branch_name>
 ```
 
@@ -175,7 +157,7 @@ rosdep install --from-paths src -y --ignore-src
 Move into serial folder and build it first:
 
 ```bash
-cd ~/ros2_ws/src/ros2_arctos_HCMUT/serial
+cd ~/ros2_ws/src/ros2_denso_HCMUT/serial
 make
 make install
 ```
@@ -201,16 +183,16 @@ source install/setup.bash
 
 #### Launch the robot
 
-To launch the robot with real hardware, run the launch file `arctos_bringup.launch.py`:
+To launch the robot with real hardware, run the launch file `denso_bringup.launch.py`:
 
 ```bash
-ros2 launch arctos_bringup arctos_bringup.launch.py use_sim_time:=false
+ros2 launch denso_bringup denso_bringup.launch.py use_sim_time:=false
 ```
 
-To launch the robot with gazebo sim, run the launch file `gz_arctos_bringup.launch.py`:
+To launch the robot with gazebo sim, run the launch file `gz_denso_bringup.launch.py`:
 
 ```bash
-ros2 launch arctos_bringup gz_arctos_bringup.launch.py use_sim_time:=true
+ros2 launch denso_bringup gz_denso_bringup.launch.py use_sim_time:=true
 ```
 
 #### Launch the supporting packages for extra functionality:
@@ -237,12 +219,12 @@ ros2 launch file_server2 ros_sharp_communication.launch.py
 
 Each package has its own **README.md** with more details:
 
-- [arctos\_bringup](arctos_bringup/README.md)
-- [arctos\_description](arctos_description/README.md)
-- [arctos\_hardware\_interface](arctos_hardware_interface/README.md)
-- [arctos\_motor\_driver](arctos_motor_driver/README.md)
-- [arctos\_moveit\_base\_xyz](arctos_moveit_base_xyz/README.md)
-- [arctos\_moveit\_config](arctos_moveit_config/README.md)
+- [denso\_bringup](denso_bringup/README.md)
+- [denso\_description](denso_description/README.md)
+- [denso\_hardware\_interface](denso_hardware_interface/README.md)
+- [denso\_motor\_driver](denso_motor_driver/README.md)
+- [denso\_moveit\_base\_xyz](denso_moveit_base_xyz/README.md)
+- [denso\_moveit\_config](denso_moveit_config/README.md)
 
 ## Contributing
 
