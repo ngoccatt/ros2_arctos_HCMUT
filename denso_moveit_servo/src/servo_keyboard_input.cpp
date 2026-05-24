@@ -249,102 +249,121 @@ int KeyboardServo::keyLoop()
     {
       case KEYCODE_LEFT:
         RCLCPP_DEBUG(pub_node_->get_logger(), "LEFT");
+        RCLCPP_INFO(pub_node_->get_logger(), "Left arrow pressed: cartesian jog in negative Y direction.");
         twist_msg->twist.linear.y = -axis_pos_cmd;
         publish_twist = true;
         break;
       case KEYCODE_RIGHT:
         RCLCPP_DEBUG(pub_node_->get_logger(), "RIGHT");
+        RCLCPP_INFO(pub_node_->get_logger(), "Right arrow pressed: cartesian jog in positive Y direction.");
         twist_msg->twist.linear.y = axis_pos_cmd;
         publish_twist = true;
         break;
       case KEYCODE_UP:
         RCLCPP_DEBUG(pub_node_->get_logger(), "UP");
+        RCLCPP_INFO(pub_node_->get_logger(), "Up arrow pressed: cartesian jog in positive X direction.");
         twist_msg->twist.linear.x = axis_pos_cmd;
         publish_twist = true;
         break;
       case KEYCODE_DOWN:
         RCLCPP_DEBUG(pub_node_->get_logger(), "DOWN");
+        RCLCPP_INFO(pub_node_->get_logger(), "Down arrow pressed: cartesian jog in negative X direction.");
         twist_msg->twist.linear.x = -axis_pos_cmd;
         publish_twist = true;
         break;
       case KEYCODE_PERIOD:
         RCLCPP_DEBUG(pub_node_->get_logger(), "PERIOD");
+        RCLCPP_INFO(pub_node_->get_logger(), "Period pressed: cartesian jog in negative Z direction.");
         twist_msg->twist.linear.z = -axis_pos_cmd;
         publish_twist = true;
         break;
       case KEYCODE_SEMICOLON:
         RCLCPP_DEBUG(pub_node_->get_logger(), "SEMICOLON");
+        RCLCPP_INFO(pub_node_->get_logger(), "Semicolon pressed: cartesian jog in positive Z direction.");
         twist_msg->twist.linear.z = axis_pos_cmd;
         publish_twist = true;
         break;
       case KEYCODE_E:
         RCLCPP_DEBUG(pub_node_->get_logger(), "E");
+        RCLCPP_INFO(pub_node_->get_logger(), "E pressed: switch cartesian jogging to the end-effector frame.");
         frame_to_publish_ = EEF_FRAME_ID;
         break;
       case KEYCODE_W:
         RCLCPP_DEBUG(pub_node_->get_logger(), "W");
+        RCLCPP_INFO(pub_node_->get_logger(), "W pressed: switch cartesian jogging to the world/base frame.");
         frame_to_publish_ = BASE_FRAME_ID;
         break;
       case KEYCODE_1:
         RCLCPP_DEBUG(pub_node_->get_logger(), "1");
+        RCLCPP_INFO(pub_node_->get_logger(), "1 pressed: joint jog X_joint in the current jog direction.");
         joint_msg->joint_names.push_back("X_joint");
         joint_msg->velocities.push_back(max_velocity_x * scaling);
         publish_joint = true;
         break;
       case KEYCODE_2:
         RCLCPP_DEBUG(pub_node_->get_logger(), "2");
+        RCLCPP_INFO(pub_node_->get_logger(), "2 pressed: joint jog Y_joint in the current jog direction.");
         joint_msg->joint_names.push_back("Y_joint");
         joint_msg->velocities.push_back(max_velocity_y * scaling);
         publish_joint = true;
         break;
       case KEYCODE_3:
         RCLCPP_DEBUG(pub_node_->get_logger(), "3");
+        RCLCPP_INFO(pub_node_->get_logger(), "3 pressed: joint jog Z_joint in the current jog direction.");
         joint_msg->joint_names.push_back("Z_joint");
         joint_msg->velocities.push_back(max_velocity_z * scaling);
         publish_joint = true;
         break;
       case KEYCODE_4:
         RCLCPP_DEBUG(pub_node_->get_logger(), "4");
+        RCLCPP_INFO(pub_node_->get_logger(), "4 pressed: joint jog A_joint in the current jog direction.");
         joint_msg->joint_names.push_back("A_joint");
         joint_msg->velocities.push_back(max_velocity_a * scaling);
         publish_joint = true;
         break;
       case KEYCODE_5:
         RCLCPP_DEBUG(pub_node_->get_logger(), "5");
+        RCLCPP_INFO(pub_node_->get_logger(), "5 pressed: joint jog B_joint in the current jog direction.");
         joint_msg->joint_names.push_back("B_joint");
         joint_msg->velocities.push_back(max_velocity_b * scaling);
         publish_joint = true;
         break;
       case KEYCODE_6:
         RCLCPP_DEBUG(pub_node_->get_logger(), "6");
+        RCLCPP_INFO(pub_node_->get_logger(), "6 pressed: joint jog C_joint in the current jog direction.");
         joint_msg->joint_names.push_back("C_joint");
         joint_msg->velocities.push_back(max_velocity_c * scaling);
         publish_joint = true;
         break;
       case KEYCODE_7:
         RCLCPP_DEBUG(pub_node_->get_logger(), "7");
+        RCLCPP_INFO(pub_node_->get_logger(), "7 pressed: joint jog key selected, but no joint is configured for this case.");
         // joint_msg->joint_names.push_back("panda_joint7");
         // joint_msg->velocities.push_back(joint_vel_cmd_);
         publish_joint = true;
         break;
       case KEYCODE_R:
         RCLCPP_DEBUG(pub_node_->get_logger(), "R");
+        RCLCPP_INFO(pub_node_->get_logger(), "R pressed: reverse the joint jog direction.");
         scaling *= -1.0;
         break;
       case KEYCODE_S:
         RCLCPP_DEBUG(service_node_->get_logger(), "S");
+        RCLCPP_INFO(service_node_->get_logger(), "S pressed: start servo mode.");
         if (service_node_->startServo()) {
           servo_started = true;
         }
         break;
       case KEYCODE_SPACE:
         RCLCPP_DEBUG(service_node_->get_logger(), "SPACE");
+        RCLCPP_INFO(service_node_->get_logger(), "Space pressed: stop servo mode.");
         if (service_node_->stopServo()) {
           servo_started = false;
         }
         break;
       case KEYCODE_Q:
         RCLCPP_DEBUG(pub_node_->get_logger(), "quit");
+        RCLCPP_INFO(pub_node_->get_logger(), "Q pressed: exit keyboard servo control.");
         return 0;
       default:
         break;

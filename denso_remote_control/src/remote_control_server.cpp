@@ -22,7 +22,7 @@
 // static const rclcpp::Logger LOGGER = rclcpp::get_logger("remote_control");
 
 // send_goal via command line: 
-// ros2 action send_goal /move_to_pose denso_interfaces/action/MoveToPose "{pose: {position: {x: 0.3, y: 0.0, z: 0.5}, orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}}}"
+// ros2 action send_goal /move_to_pose denso_interfaces/action/MoveToPose "{pose: {position: {x: 0.0, y: 0.0, z: 0.0}, orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}}, joints: [0.0, -0.5, 1.0, 0.0, 0.5, 0.0], use_pose: false}"
 
 namespace action_denso_control
 {
@@ -150,7 +150,7 @@ private:
 
     // Check if there is a cancel request
     if (goal_handle->is_canceling()) {
-      result->completed = false;
+      result->completed = true;
       goal_handle->canceled(result);
       RCLCPP_INFO(this->get_logger(), "Goal canceled");
       return;
@@ -176,12 +176,12 @@ private:
         move_group->setJointValueTarget(joint_group_positions);
     }
     
-    bool success = (move_group->plan(my_plan) == moveit::core::MoveItErrorCode::SUCCESS);
+    auto errorCodePlanning = move_group->plan(my_plan);
 
-    if (!success) {
-      result->completed = false;
+    if (errorCodePlanning != moveit::core::MoveItErrorCode::SUCCESS) {
+      result->completed = true;
       goal_handle->abort(result);
-      step = "planning failed";
+      step = "planning_failed:" + error_code_to_string(errorCodePlanning);
       goal_handle->publish_feedback(feedback);
       RCLCPP_INFO(this->get_logger(), "Planning failed");
       return;
@@ -190,16 +190,16 @@ private:
     step = "executing";
     goal_handle->publish_feedback(feedback);
     RCLCPP_INFO(this->get_logger(), "Executing...");
-    auto errorCode = move_group->execute(my_plan);
+    auto errorCodeExecuting = move_group->execute(my_plan);
 
     // delay for some time to allow hardware to execute the plan till the end.
     loop_rate.sleep();
 
-    if (errorCode != moveit::core::MoveItErrorCode::SUCCESS) 
+    if (errorCodeExecuting != moveit::core::MoveItErrorCode::SUCCESS) 
     {
-      result->completed = false;
+      result->completed = true;
       goal_handle->abort(result);
-      step = error_code_to_string(errorCode);
+      step = "execute_failed:" + error_code_to_string(errorCodeExecuting);
       goal_handle->publish_feedback(feedback);
       RCLCPP_INFO(this->get_logger(), "Execute failed");
       return;
