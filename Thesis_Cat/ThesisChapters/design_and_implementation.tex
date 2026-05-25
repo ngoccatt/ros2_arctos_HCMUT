@@ -37,7 +37,7 @@ Trong sơ đồ này, có các khối chức năng chính có thể kể đến 
     \end{itemize}
     \item \textbf{Khối điều khiển: PC Controller}: 
 
-    PC Controller đóng vai trò là bộ điều khiển trung tâm, là cầu nối giữa thiết bị điều khiển thông dụng khác với cụm RC5-Cánh tay VS-6577E. Trên PC Controller sẽ được tập trung phát triển các cơ chế điều khiển cánh tay cũng như cập nhật trạng thái cánh tay tận dụng ROS2. ROS2 đem lại cho nhà phát triển một hệ sinh thái đa dạng, mạnh mẽ, giúp nhà phát triển có thể dễ dàng triển khai các ứng dụng robot đa dạng, phức tạp mà không bị phụ thuộc bởi máy RC5 của Denso. Nhóm tập trung xây dựng một cơ chế giao tiếp hiệu quả, tốc độ cao và đáng tin cậy giữa thiết bị điều khiển bên ngoài và cánh tay robot Denso, từ đó tạo nền móng cho việc phát triển nhiều ứng dụng trên cánh tay robot sau này.
+    PC Controller đóng vai trò là bộ điều khiển trung tâm, là cầu nối giữa thiết bị điều khiển thông dụng khác với cụm RC5-Cánh tay VS-6577E. Trên PC Controller sẽ được tập trung phát triển các cơ chế điều khiển cánh tay cũng như cập nhật trạng thái cánh tay tận dụng ROS2 Humble. ROS2 đem lại cho nhà phát triển một hệ sinh thái đa dạng, mạnh mẽ, giúp nhà phát triển có thể dễ dàng triển khai các ứng dụng robot đa dạng, phức tạp mà không bị phụ thuộc bởi máy RC5 của Denso. Nhóm tập trung xây dựng một cơ chế giao tiếp hiệu quả, tốc độ cao và đáng tin cậy giữa thiết bị điều khiển bên ngoài và cánh tay robot Denso, từ đó tạo nền móng cho việc phát triển nhiều ứng dụng trên cánh tay robot sau này.
 
     \item \textbf{Khối ứng dụng VR: Meta Quest 3}
 
@@ -596,7 +596,7 @@ Publish period là thời gian giữa các lệnh gửi điều khiển từ Mov
 incoming_command_timeout:  0.3  
 \end{lstlisting}
 
-Một trong những vấn đề khi hiện thực việc điều khiển robot xoay liên tục, đó là xác định khi nào nên dừng việc xoay. MoveIt-Servo giải quyết điều này dễ dàng qua việc cho phép người dùng điều chỉnh thông số timeout, trong trường hợp này là 300ms; nghĩa là người dùng có thể spam liên tục lệnh điều khiển gửi tới MoveIt-Servo, tuy nhiên nếu ngưng gửi lệnh và MoveIt-Servo nhận thấy đã quá 300ms kể từ khi nhận lệnh cuối cùng, MoveIt-Servo cũng sẽ ngưng gửi lệnh JointTrajectory xuống controller, từ đó ngưng xoay robot thực tế. 
+Một trong những vấn đề khi hiện thực việc điều khiển robot xoay liên tục, đó là xác định khi nào nên dừng việc xoay. MoveIt-Servo giải quyết điều này dễ dàng qua việc cho phép người dùng điều chỉnh thông số timeout, trong trường hợp này là 300ms; nghĩa là người dùng có thể gửi lệnh điều khiển liên tục với tần số cao tới MoveIt-Servo, tuy nhiên nếu ngưng gửi lệnh và MoveIt-Servo nhận thấy đã quá 300ms kể từ khi nhận lệnh cuối cùng, MoveIt-Servo cũng sẽ ngưng gửi lệnh JointTrajectory xuống controller, từ đó ngưng xoay robot thực tế. 
 
 Tuy nhiên, cơ chế này lại mang tính ràng buộc về thời gian thực (Real-time) để có thể hoạt động chính xác. Cụ thể, cách MoveIt-Servo xác định timeout là lấy thời điểm trong Header TimeStamp có trong mỗi lệnh gửi tới MoveIt-Servo, trừ với thời gian thực tế (Ros wall-timer), điều này yêu cầu lệnh gửi tới phải có TimeStamp hợp lệ để MoveIt-Servo có thể tính toán và cho dừng hoạt động điều khiển sau khoảng thời gian timeout. 
 
@@ -780,7 +780,7 @@ Trong quá trình phát triển, để giảm bớt sự phụ thuộc vào thi�
     </gazebo>
     \end{lstlisting}
     
-    \item \textbf{Thêm thuộc tính friction (ma sát), damping (giảm chấn) vào cho các trục trong file URDF}: Nếu thiếu hai thông số friction và damping, các trục gần như sẽ bị overshoot khi xoay do quán tính, khiến nó xoay xa hơn so với vị trí yêu cầu. Bộ số friction, damping hợp lý sẽ giữ cho cánh tay có được độ ổn định, có thể giữ vị trí góc được điều khiển và xoay với tốc độ gần tương đồng với thiết bị thật. 
+    \item \textbf{Thêm thuộc tính friction (ma sát), damping (giảm chấn) vào cho các trục trong file URDF}: Nếu thiếu hai thông số friction và damping, các trục gần như sẽ bị vọt lố (overshoot) do quán tính, khiến nó xoay xa hơn so với vị trí yêu cầu. Bộ số friction, damping hợp lý sẽ giữ cho cánh tay có được độ ổn định, có thể giữ vị trí góc được điều khiển và xoay với tốc độ gần tương đồng với thiết bị thật. 
 
         \begin{lstlisting}[language=xml]
     <joint name="${name}" type="${type}">
@@ -881,7 +881,7 @@ Source code của hệ thống điều khiển bằng ROS2 có thể tìm ở đ
 
 \section{Ứng dụng VR}
 
-Ở phần này, phần thiết kế và xây dựng ứng dụng VR - module quan trọng thứ 3 của toàn bộ hệ thống, hoàn tất luồng điều khiển từ VR - Ros2 - RC5 của đề tài. Đối với việc xây dựng ứng dụng, đề tài chủ trương sử dụng phiên bản Unity mới nhất - Unity 6, để có thể tận dụng sức mạnh và các tính năng nổi bật từ Game Engine này, cũng như dễ dàng tích hợp với \href{https://developers.meta.com/horizon/downloads/package/meta-xr-sdk-all-in-one-upm/}{Meta XR SDK} để xây dựng ứng dụng VR. Mục tiêu mà ứng dụng VR cần đáp ứng là:
+Ở phần này, phần thiết kế và xây dựng ứng dụng VR - module quan trọng thứ 3 của toàn bộ hệ thống, hoàn tất luồng điều khiển từ VR - Ros2 - RC5 của đề tài. Đối với việc xây dựng ứng dụng, đề tài chủ trương sử dụng phiên bản Unity mới nhất - Unity 6 (6000.4.0f1), để có thể tận dụng sức mạnh và các tính năng nổi bật từ Game Engine này, cũng như dễ dàng tích hợp với \href{https://developers.meta.com/horizon/downloads/package/meta-xr-sdk-all-in-one-upm/}{Meta XR SDK} để xây dựng ứng dụng VR. Mục tiêu mà ứng dụng VR cần đáp ứng là:
 \begin{itemize}
     \item Dễ sử dụng, thân thiện với người dùng.
     \item Hiệu năng ổn định, không crash, FPS không dưới 60.
@@ -900,7 +900,7 @@ Meta XR SDK là một package lớn và tương đối phức tạp, nên Packag
 
 Tiếp đến là cài đặt Ros-Sharp package trên Unity, qua đó cho phép giao tiếp với RosBridge Server đã cài đặt trên Ros2 trước đó. Việc cài đặt Ros-sharp cũng tương đối đơn giản, và mặc định package này cũng cung cấp các thao tác cơ bản nhất như kết nối tới Ros2, subscribe/publish vào một vài topic thông dụng của Ros2 cùng một bộ các kiểu dữ liệu Ros2 thông dụng. Điểm ấn tượng của gói package này là cho phép người dùng tự do định nghĩa message/service/action, và cho phép sinh ra các file class phù hợp trong C\# cho các message/service/action này thông qua việc import từ Ros. Tuy nhiên, việc import chỉ hỗ trợ cho việc định nghĩa format message/service/action, còn các hành động như publish, subscribe, gọi Service, gọi Action server và lấy kết quả/feedback... đều cần xây dựng thêm các class cho mỗi hành động, bởi tùy theo cấu trúc của messsage, mà hành động xử lý sẽ khác nhau.
 
-Sau khi cài đặt thành công, người dùng có thể chuyển (transfer) mô hình 3D của robot vào trong Unity thông qua Ros-Sharp. Cách chính xác nhất để "tranfer" là mở một kết nối tới Ros2 đang chạy và đang publish Robot Description, sau đó thực hiện theo hướng dẫn \href{https://github.com/siemens/ros-sharp/wiki/User_App_ROS_TransferURDFFromROS}{TransferURDFFromROS} để đưa Robot vào trong môi trường Unity. Cách làm này đảm bảo mô hình 3D của robot được chuyển qua đầy đủ, kèm toàn bộ những script hỗ trợ đính kèm từng component cho việc đọc dữ liệu \lstinline[style=inlinecode]{\joint_states} để đồng bộ với robot thực tế.
+Sau khi cài đặt thành công, người dùng có thể chuyển (transfer) mô hình 3D của robot vào trong Unity thông qua Ros-Sharp. Cách chính xác nhất để chuyển mô hình vào Unity là mở một kết nối tới Ros2 đang chạy và đang publish Robot Description, sau đó thực hiện theo hướng dẫn \href{https://github.com/siemens/ros-sharp/wiki/User_App_ROS_TransferURDFFromROS}{TransferURDFFromROS} để đưa Robot vào trong môi trường Unity. Cách làm này đảm bảo mô hình 3D của robot được chuyển qua đầy đủ, kèm toàn bộ những script hỗ trợ đính kèm từng component cho việc đọc dữ liệu \lstinline[style=inlinecode]{\joint_states} để đồng bộ với robot thực tế.
 
 Về phía Ros2, lần lượt chạy các lệnh sau ở hai cửa sổ terminal khác nhau để đảm bảo Robot Description được publish và RosBridge server được khởi động, sẵn sàng để nhận kết nối:
 

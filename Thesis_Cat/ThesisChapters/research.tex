@@ -18,7 +18,7 @@ Mục tiêu cơ bản của hệ thống điều khiển từ xa là thu hẹp k
 
 Tương tự,  Mới đây nhất, hệ thống BEAVR do Viện MIT phát triển (2025) \cite{arclab2025beavr} đã ứng dụng thiết bị Meta Quest 3S để vận hành nền tảng robot thao tác hai tay (bimanual). Hệ thống này cho phép thu thập dữ liệu thao tác với tần số điều khiển lên tới 90Hz, chứng minh khả năng đáp ứng nhanh nhạy của VR Controllers đối với các tác vụ phức tạp.
 
-Kế thừa các kết quả nghiên cứu trên, luận văn sử dụng thiết bị Meta Quest 3 kết hợp với VR Controllers làm phương thức nhập liệu chính. Thiết bị Meta Quest 3 là một thiết bị dạng "Stand-alone", tức là nó có thể chạy riêng biệt không cần sự hỗ trợ của máy tính PC, do đó ứng dụng phát triển trên kính Meta Quest 3 cũng cần được tối ưu hoặc tùy chỉnh để có thể chạy độc lập mà không ảnh hưởng tới trải nghiệm của người dùng. Trong ứng dụng, ba phương thức điều khiển được cung cấp: Xoay trực tiếp với MoveIt-Servo, xoay bằng bẳng điều khiển hoặc tương tác với model để xoay, cho phép người dùng được tự do lựa chọn phương thức phù hợp cho công việc điều khiển.
+Kế thừa các kết quả nghiên cứu trên, luận văn sử dụng thiết bị Meta Quest 3 kết hợp với VR Controllers làm phương thức nhập liệu chính. Thiết bị Meta Quest 3 là một thiết bị dạng "Stand-alone", tức là nó có thể chạy riêng biệt không cần sự hỗ trợ của máy tính PC, do đó ứng dụng phát triển trên kính Meta Quest 3 cũng cần được tối ưu hoặc tùy chỉnh để có thể chạy độc lập mà không ảnh hưởng tới trải nghiệm của người dùng. Trong ứng dụng, ba phương thức điều khiển được cung cấp: Xoay trực tiếp với MoveIt-Servo, xoay bằng bảng điều khiển hoặc tương tác với model để xoay, cho phép người dùng được tự do lựa chọn phương thức phù hợp cho công việc điều khiển.
 
 \section{Cải thiện nhận thức tình huống thông qua Bản sao số (Digital Twin)}
 Digital Twin là một xu hướng đang được quan tâm với sự phát triển mạnh mẽ của mạng Internet và mạng lưới IoT, với ý tưởng là việc hình thành một bản sao ảo của vật thể, với trạng thái luôn được đồng bộ với vật thể thật, nhằm theo dõi, kiểm soát, điều khiển vật thể. Đối với ứng dụng VR điều khiển từ xa, việc cấu tạo bản sao số (Digital Twin) trong môi trường VR giúp người dùng dễ dàng theo dõi tình trạng của thiết bị / robot ở nhiều góc độ khác nhau, có được nhận thức không gian và tầm hoạt động của thiết bị chính xác hơn, từ đó đưa ra thao tác điều khiển an toàn. 
@@ -49,7 +49,7 @@ Khía cạnh sống còn nhất trong nghiên cứu điều khiển từ xa là 
 
 Đề tài chủ tương xây dựng một hệ thống \textbf{ROS 2 tích hợp tiêu chuẩn Ros2-Control và MoveIt 2 cho ứng dụng VR tương tác trực tiếp}. Việc sử dụng ROS2 tận dụng kiến trúc mạng phân tán DDS giúp hệ thống tách biệt luồng xử lý Camera khỏi luồng truyền tọa độ (Joint States) với việc chỉ định chế độ QoS khác nhau. Kể cả khi mạng Wi-Fi bị nhiễu, các lệnh điều khiển quan trọng vẫn luôn được ROS 2 ưu tiên xử lý, đảm bảo ứng dụng VR duy trì kết nối đáng tin cậy.
 
-\section{Phân tích khoảng trống nghiên cứu và sự định vị của luận văn}
+\section{Phân tích khoảng trống nghiên cứu}
 
 Qua xem xét, có thể thấy việc sử dụng VR và Bản sao số mang lại lợi ích to lớn. Tuy nhiên, các nghiên cứu hiện hành \cite{arclab2025beavr, torrejon2026teleoperation} thường được thực hiện trên những nền tảng robot thế hệ mới (như Franka Emika, UR5) đã hỗ trợ sẵn các API điều khiển thời gian thực (Real-time Servoing) cấp thấp từ nhà sản xuất. Một số nghiên cứu không sử dụng ROS nói chung cho điều khiển, mà sử dụng trực tiếp phần mềm điều khiển tiên tiến được hỗ trợ bởi các robot này.
 
