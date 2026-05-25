@@ -1,0 +1,599 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{vr-in-contruction}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=450b75df8797928cfc9f964bfbf87628}{%
+           family={Adami},
+           familyi={A\bibinitperiod},
+           given={Pooya},
+           giveni={P\bibinitperiod}}}%
+        {{hash=7870ae48cd789f1b124a0c3eb241317e}{%
+           family={Rodrigues},
+           familyi={R\bibinitperiod},
+           given={Patrick\bibnamedelima B},
+           giveni={P\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=edfbc3aa43f488692d2c745629b16701}{%
+           family={Woods},
+           familyi={W\bibinitperiod},
+           given={Peter\bibnamedelima J},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=c91bb706c9fc266efb551d477f8ec202}{%
+           family={Becerik-Gerber},
+           familyi={B\bibinithyphendelim G\bibinitperiod},
+           given={Burcin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=1855b062c6b280c045018adcfbbe0206}{%
+           family={Soibelman},
+           familyi={S\bibinitperiod},
+           given={Lucio},
+           giveni={L\bibinitperiod}}}%
+        {{hash=d1a5dab8087fb98eb608984772684db1}{%
+           family={Copur-Gencturk},
+           familyi={C\bibinithyphendelim G\bibinitperiod},
+           given={Yasemin},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=82196c6b2ff205e36eb514e5f48b24f0}{%
+           family={Lucas},
+           familyi={L\bibinitperiod},
+           given={Gale},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{72b143fee5351dcf0c70096cf96add43}
+      \strng{fullhash}{4f0e3e0e0c435546a267dc174300cb40}
+      \strng{fullhashraw}{4f0e3e0e0c435546a267dc174300cb40}
+      \strng{bibnamehash}{72b143fee5351dcf0c70096cf96add43}
+      \strng{authorbibnamehash}{72b143fee5351dcf0c70096cf96add43}
+      \strng{authornamehash}{72b143fee5351dcf0c70096cf96add43}
+      \strng{authorfullhash}{4f0e3e0e0c435546a267dc174300cb40}
+      \strng{authorfullhashraw}{4f0e3e0e0c435546a267dc174300cb40}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advanced Engineering Informatics}
+      \field{title}{Effectiveness of VR-based training on improving construction workers’ knowledge, skills, and safety behavior in robotic teleoperation}
+      \field{volume}{50}
+      \field{year}{2021}
+      \field{pages}{101431}
+      \range{pages}{1}
+    \endentry
+    \entry{moveit_conf}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=c1a7f3693d1e2e5f5821b1b351260e9b}{%
+           family={Addison},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c1a7f3693d1e2e5f5821b1b351260e9b}
+      \strng{fullhash}{c1a7f3693d1e2e5f5821b1b351260e9b}
+      \strng{fullhashraw}{c1a7f3693d1e2e5f5821b1b351260e9b}
+      \strng{bibnamehash}{c1a7f3693d1e2e5f5821b1b351260e9b}
+      \strng{authorbibnamehash}{c1a7f3693d1e2e5f5821b1b351260e9b}
+      \strng{authornamehash}{c1a7f3693d1e2e5f5821b1b351260e9b}
+      \strng{authorfullhash}{c1a7f3693d1e2e5f5821b1b351260e9b}
+      \strng{authorfullhashraw}{c1a7f3693d1e2e5f5821b1b351260e9b}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Configure MoveIt 2 for a Simulated Robot Arm – ROS 2 Jazzy}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://automaticaddison.com/configure-moveit-2-for-a-simulated-robot-arm-ros-2-jazzy/
+      \endverb
+      \verb{url}
+      \verb https://automaticaddison.com/configure-moveit-2-for-a-simulated-robot-arm-ros-2-jazzy/
+      \endverb
+      \keyw{ros2-tutorial}
+    \endentry
+    \entry{uart}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=1197190d95b0f6e82537145fe6948a4b}{%
+           family={analog.com},
+           familyi={a\bibinitperiod}}}%
+      }
+      \strng{namehash}{1197190d95b0f6e82537145fe6948a4b}
+      \strng{fullhash}{1197190d95b0f6e82537145fe6948a4b}
+      \strng{fullhashraw}{1197190d95b0f6e82537145fe6948a4b}
+      \strng{bibnamehash}{1197190d95b0f6e82537145fe6948a4b}
+      \strng{authorbibnamehash}{1197190d95b0f6e82537145fe6948a4b}
+      \strng{authornamehash}{1197190d95b0f6e82537145fe6948a4b}
+      \strng{authorfullhash}{1197190d95b0f6e82537145fe6948a4b}
+      \strng{authorfullhashraw}{1197190d95b0f6e82537145fe6948a4b}
+      \field{sortinit}{a}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Uart: a hardware communication protocol}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.analog.com/en/resources/analog-dialogue/articles/uart-a-hardware-communication-protocol.html
+      \endverb
+      \verb{url}
+      \verb https://www.analog.com/en/resources/analog-dialogue/articles/uart-a-hardware-communication-protocol.html
+      \endverb
+      \keyw{uart}
+    \endentry
+    \entry{compare-graphic-user}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=0a27d714f6077b9631ee729c620c8a65}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Jialin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=be23a7995620cf96277f8e5e872e11e8}{%
+           family={Moemeni},
+           familyi={M\bibinitperiod},
+           given={Armaghan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9e14b6567e849436e34a8d6c5ca93771}{%
+           family={Caleb-Solly},
+           familyi={C\bibinithyphendelim S\bibinitperiod},
+           given={Praminda},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{913b6add437f4ceeb626c389c105d1a7}
+      \strng{fullhash}{13465ca1284daaa5b1b1a925e49101df}
+      \strng{fullhashraw}{13465ca1284daaa5b1b1a925e49101df}
+      \strng{bibnamehash}{13465ca1284daaa5b1b1a925e49101df}
+      \strng{authorbibnamehash}{13465ca1284daaa5b1b1a925e49101df}
+      \strng{authornamehash}{913b6add437f4ceeb626c389c105d1a7}
+      \strng{authorfullhash}{13465ca1284daaa5b1b1a925e49101df}
+      \strng{authorfullhashraw}{13465ca1284daaa5b1b1a925e49101df}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Companion of the 2023 ACM/IEEE International Conference on Human-Robot Interaction}
+      \field{title}{Comparing a graphical user interface, hand gestures and controller in virtual reality for robot teleoperation}
+      \field{year}{2023}
+      \field{pages}{644\bibrangedash 648}
+      \range{pages}{5}
+    \endentry
+    \entry{formant}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=e2ef951ab8d64c8a53679506cad7aed8}{%
+           family={Formant},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{e2ef951ab8d64c8a53679506cad7aed8}
+      \strng{fullhash}{e2ef951ab8d64c8a53679506cad7aed8}
+      \strng{fullhashraw}{e2ef951ab8d64c8a53679506cad7aed8}
+      \strng{bibnamehash}{e2ef951ab8d64c8a53679506cad7aed8}
+      \strng{authorbibnamehash}{e2ef951ab8d64c8a53679506cad7aed8}
+      \strng{authornamehash}{e2ef951ab8d64c8a53679506cad7aed8}
+      \strng{authorfullhash}{e2ef951ab8d64c8a53679506cad7aed8}
+      \strng{authorfullhashraw}{e2ef951ab8d64c8a53679506cad7aed8}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is teleoperation?}
+      \verb{urlraw}
+      \verb https://formant.io/resources/learn/learn-teleoperation/
+      \endverb
+      \verb{url}
+      \verb https://formant.io/resources/learn/learn-teleoperation/
+      \endverb
+      \keyw{teleoperation}
+    \endentry
+    \entry{compare-interfaces}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{hash=422acfbb77384381f420d612fd99376a}{%
+           family={Hetrick},
+           familyi={H\bibinitperiod},
+           given={Rebecca},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6aa313cdc20c05917bf2c3eda8dfbe3c}{%
+           family={Amerson},
+           familyi={A\bibinitperiod},
+           given={Nicholas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=204cc9b2cab414dd3f68ac1a3c537848}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Boyoung},
+           giveni={B\bibinitperiod}}}%
+        {{hash=f86f313631ff8989160c5162163cadad}{%
+           family={Rosen},
+           familyi={R\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=04df1371738824971dee7a750dc03d08}{%
+           family={Visser},
+           familyi={V\bibinitperiod},
+           given={Ewart\bibnamedelima J},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=9d6602519be4861a49ce7b2a90a98621}{%
+           family={Phillips},
+           familyi={P\bibinitperiod},
+           given={Elizabeth},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{3200bcf6acbfbf907b5c36bb7ae719cc}
+      \strng{fullhash}{43329af93e4629b273e0f99a0d723b15}
+      \strng{fullhashraw}{43329af93e4629b273e0f99a0d723b15}
+      \strng{bibnamehash}{43329af93e4629b273e0f99a0d723b15}
+      \strng{authorbibnamehash}{43329af93e4629b273e0f99a0d723b15}
+      \strng{authornamehash}{3200bcf6acbfbf907b5c36bb7ae719cc}
+      \strng{authorfullhash}{43329af93e4629b273e0f99a0d723b15}
+      \strng{authorfullhashraw}{43329af93e4629b273e0f99a0d723b15}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2020 Systems and Information Engineering Design Symposium (SIEDS)}
+      \field{title}{Comparing virtual reality interfaces for the teleoperation of robots}
+      \field{year}{2020}
+      \field{pages}{1\bibrangedash 7}
+      \range{pages}{7}
+    \endentry
+    \entry{multi-view}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=2ea9c428291ad1c367b9dd94df72e187}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Bidan},
+           giveni={B\bibinitperiod}}}%
+        {{hash=176558e4149c69c60671cd64ab753335}{%
+           family={Timmons},
+           familyi={T\bibinitperiod},
+           given={Nicholas\bibnamedelima Gerard},
+           giveni={N\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=f495cdda14989886bcfdb65c02b7a19d}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Qiang},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, United Kingdom}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{83c3e615cdbdfbc583a6db20ee355e31}
+      \strng{fullhash}{d45bd02329c5c77bbe5580c092d65a9f}
+      \strng{fullhashraw}{d45bd02329c5c77bbe5580c092d65a9f}
+      \strng{bibnamehash}{d45bd02329c5c77bbe5580c092d65a9f}
+      \strng{authorbibnamehash}{d45bd02329c5c77bbe5580c092d65a9f}
+      \strng{authornamehash}{83c3e615cdbdfbc583a6db20ee355e31}
+      \strng{authorfullhash}{d45bd02329c5c77bbe5580c092d65a9f}
+      \strng{authorfullhashraw}{d45bd02329c5c77bbe5580c092d65a9f}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper proposes a user-friendly teleoperation interface for manipulation. We provide the user with a view of the scene augmented with depth information from local cameras to provide visibility in occluded areas during manipulation tasks. This gives an improved sense of the 3D environment which results in better task performance. Further, we monitor the pose of the robot's end effector in real-time so that we are able to superimpose a virtual representation into the scene when parts are occluded. The integration of these features enables the user to perform difficult manipulation tasks when the action environment is normally occluded in the main camera view.We performed preliminary studies with this new setup and users provided positive feedback regarding the proposed augmented reality (AR) system.}
+      \field{booktitle}{Companion of the 2020 ACM/IEEE International Conference on Human-Robot Interaction}
+      \field{isbn}{9781450370578}
+      \field{series}{HRI '20}
+      \field{title}{Augmented Reality with Multi-view Merging for Robot Teleoperation}
+      \field{year}{2020}
+      \field{pages}{260\bibrangedash 262}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1145/3371382.3378336
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3371382.3378336
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3371382.3378336
+      \endverb
+      \keyw{augmented reality,multi-view vision,object manipulation,teleoperation}
+    \endentry
+    \entry{reality-fusion}{misc}{}{}
+      \name{author}{5}{}{%
+        {{hash=815a2cdb03036dc2884fcf0472f759cf}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Ke},
+           giveni={K\bibinitperiod}}}%
+        {{hash=6559a4d7b7ed851e8e874368734e6f48}{%
+           family={Bacher},
+           familyi={B\bibinitperiod},
+           given={Reinhard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=27a0ce31328b58f8d428aba0f3762c9d}{%
+           family={Schmidt},
+           familyi={S\bibinitperiod},
+           given={Susanne},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4d6c0b66ad72ffcfa1d49f291cbbca45}{%
+           family={Leemans},
+           familyi={L\bibinitperiod},
+           given={Wim},
+           giveni={W\bibinitperiod}}}%
+        {{hash=e4088f755d31ec26782bb85730565047}{%
+           family={Steinicke},
+           familyi={S\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{bc4908476129f5d39803e51d00d66921}
+      \strng{fullhash}{d187ded47484f2571cf0a46fa2193ff6}
+      \strng{fullhashraw}{d187ded47484f2571cf0a46fa2193ff6}
+      \strng{bibnamehash}{d187ded47484f2571cf0a46fa2193ff6}
+      \strng{authorbibnamehash}{d187ded47484f2571cf0a46fa2193ff6}
+      \strng{authornamehash}{bc4908476129f5d39803e51d00d66921}
+      \strng{authorfullhash}{d187ded47484f2571cf0a46fa2193ff6}
+      \strng{authorfullhashraw}{d187ded47484f2571cf0a46fa2193ff6}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.RO}
+      \field{eprinttype}{arXiv}
+      \field{title}{Reality Fusion: Robust Real-time Immersive Mobile Robot Teleoperation with Volumetric Visual Data Fusion}
+      \field{year}{2025}
+      \verb{eprint}
+      \verb 2408.01225
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2408.01225
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2408.01225
+      \endverb
+    \endentry
+    \entry{doi:10.1126/scirobotics.abm6074}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=7b84d10a03303cd00f198fefb38a5da3}{%
+           family={Macenski},
+           familyi={M\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0d11ace6e44e4742ea1692d7ddf4819e}{%
+           family={Foote},
+           familyi={F\bibinitperiod},
+           given={Tully},
+           giveni={T\bibinitperiod}}}%
+        {{hash=a8ad4a5f43253f69552460c946e34e49}{%
+           family={Gerkey},
+           familyi={G\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=4e2c9f9d04cf548117105f50a9c8a7a1}{%
+           family={Lalancette},
+           familyi={L\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+        {{hash=fe838d86b89f8983167a3747e11998bb}{%
+           family={Woodall},
+           familyi={W\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a195e02383364d4009f77ca22451e11}
+      \strng{fullhash}{c321d95ccac4f92536f0f1ed99f34d05}
+      \strng{fullhashraw}{c321d95ccac4f92536f0f1ed99f34d05}
+      \strng{bibnamehash}{c321d95ccac4f92536f0f1ed99f34d05}
+      \strng{authorbibnamehash}{c321d95ccac4f92536f0f1ed99f34d05}
+      \strng{authornamehash}{4a195e02383364d4009f77ca22451e11}
+      \strng{authorfullhash}{c321d95ccac4f92536f0f1ed99f34d05}
+      \strng{authorfullhashraw}{c321d95ccac4f92536f0f1ed99f34d05}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science Robotics}
+      \field{number}{66}
+      \field{title}{Robot Operating System 2: Design, architecture, and uses in the wild}
+      \field{volume}{7}
+      \field{year}{2022}
+      \true{nocite}
+      \field{pages}{eabm6074}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1126/scirobotics.abm6074
+      \endverb
+      \verb{urlraw}
+      \verb https://www.science.org/doi/abs/10.1126/scirobotics.abm6074
+      \endverb
+      \verb{url}
+      \verb https://www.science.org/doi/abs/10.1126/scirobotics.abm6074
+      \endverb
+    \endentry
+    \entry{moveit}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=a8456833ca3dba82188942683da441e5}{%
+           family={moveit},
+           familyi={m\bibinitperiod}}}%
+      }
+      \strng{namehash}{a8456833ca3dba82188942683da441e5}
+      \strng{fullhash}{a8456833ca3dba82188942683da441e5}
+      \strng{fullhashraw}{a8456833ca3dba82188942683da441e5}
+      \strng{bibnamehash}{a8456833ca3dba82188942683da441e5}
+      \strng{authorbibnamehash}{a8456833ca3dba82188942683da441e5}
+      \strng{authornamehash}{a8456833ca3dba82188942683da441e5}
+      \strng{authorfullhash}{a8456833ca3dba82188942683da441e5}
+      \strng{authorfullhashraw}{a8456833ca3dba82188942683da441e5}
+      \field{sortinit}{m}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Moveit Concept}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://moveit.picknik.ai/humble/doc/concepts/concepts.html
+      \endverb
+      \verb{url}
+      \verb https://moveit.picknik.ai/humble/doc/concepts/concepts.html
+      \endverb
+      \keyw{moveit}
+    \endentry
+    \entry{Vicarios}{article}{}{}
+      \name{author}{8}{}{%
+        {{hash=0d34e89d68bba7d7f1c04111cf22f69e}{%
+           family={Naceri},
+           familyi={N\bibinitperiod},
+           given={Abdeldjallil},
+           giveni={A\bibinitperiod}}}%
+        {{hash=57bb9e3ebf3257a871345d7c16c4ed92}{%
+           family={Mazzanti},
+           familyi={M\bibinitperiod},
+           given={Dario},
+           giveni={D\bibinitperiod}}}%
+        {{hash=26b502a8d679d81faa540853ca0c9d82}{%
+           family={Bimbo},
+           familyi={B\bibinitperiod},
+           given={Joao},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4c11746080f92434773f7399ab58e539}{%
+           family={Tefera},
+           familyi={T\bibinitperiod},
+           given={Yonas\bibnamedelima T},
+           giveni={Y\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=b809e251b95f1e16cd648e509299e7b1}{%
+           family={Prattichizzo},
+           familyi={P\bibinitperiod},
+           given={Domenico},
+           giveni={D\bibinitperiod}}}%
+        {{hash=9d989a5cb2cad2afc11c8e0d17980e42}{%
+           family={Caldwell},
+           familyi={C\bibinitperiod},
+           given={Darwin\bibnamedelima G},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=f304d79196a1642d602fbc8c739e50e8}{%
+           family={Mattos},
+           familyi={M\bibinitperiod},
+           given={Leonardo\bibnamedelima S},
+           giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=dcd6cb60f46a46d6c329ef4f4df49aba}{%
+           family={Deshpande},
+           familyi={D\bibinitperiod},
+           given={Nikhil},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{b8addde53380132ca83fa78c55d0f3a3}
+      \strng{fullhash}{183d9549273ba89f543f5a69087524e3}
+      \strng{fullhashraw}{183d9549273ba89f543f5a69087524e3}
+      \strng{bibnamehash}{b8addde53380132ca83fa78c55d0f3a3}
+      \strng{authorbibnamehash}{b8addde53380132ca83fa78c55d0f3a3}
+      \strng{authornamehash}{b8addde53380132ca83fa78c55d0f3a3}
+      \strng{authorfullhash}{183d9549273ba89f543f5a69087524e3}
+      \strng{authorfullhashraw}{183d9549273ba89f543f5a69087524e3}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Intelligent \& Robotic Systems}
+      \field{number}{4}
+      \field{title}{The vicarios virtual reality interface for remote robotic teleoperation: Teleporting for intuitive tele-manipulation}
+      \field{volume}{101}
+      \field{year}{2021}
+      \field{pages}{80}
+      \range{pages}{1}
+    \endentry
+    \entry{ros2-control-humble}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=aba3aa931662562ba28fd1f0a05f64bf}{%
+           family={Ros},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{aba3aa931662562ba28fd1f0a05f64bf}
+      \strng{fullhash}{aba3aa931662562ba28fd1f0a05f64bf}
+      \strng{fullhashraw}{aba3aa931662562ba28fd1f0a05f64bf}
+      \strng{bibnamehash}{aba3aa931662562ba28fd1f0a05f64bf}
+      \strng{authorbibnamehash}{aba3aa931662562ba28fd1f0a05f64bf}
+      \strng{authornamehash}{aba3aa931662562ba28fd1f0a05f64bf}
+      \strng{authorfullhash}{aba3aa931662562ba28fd1f0a05f64bf}
+      \strng{authorfullhashraw}{aba3aa931662562ba28fd1f0a05f64bf}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ros2\_Control: Humble}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://control.ros.org/humble/doc/getting_started/getting_started.html#controller-manager
+      \endverb
+      \verb{url}
+      \verb https://control.ros.org/humble/doc/getting_started/getting_started.html#controller-manager
+      \endverb
+      \keyw{ros2_control}
+    \endentry
+    \entry{vr-in-arc-welding}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=46503b74fdfd2da53a01c9e7c6d9a8de}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Qiyue},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=6084b1ab56b261dec15a88ea96802472}{%
+           family={Cheng},
+           familyi={C\bibinitperiod},
+           given={Yongchao},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=f065c514faec3a469aabc611cf11d122}{%
+           family={Jiao},
+           familyi={J\bibinitperiod},
+           given={Wenhua},
+           giveni={W\bibinitperiod}}}%
+        {{hash=81c335766307864554638e7f41baf00e}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Michael\bibnamedelima T},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=f6812a50fb92a8d0ead603d154c231cc}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={YuMing},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{0978051a38eac86ac27e41c8378927d6}
+      \strng{fullhash}{c8c8cd8ee646d3872b04f98a6c75b126}
+      \strng{fullhashraw}{c8c8cd8ee646d3872b04f98a6c75b126}
+      \strng{bibnamehash}{c8c8cd8ee646d3872b04f98a6c75b126}
+      \strng{authorbibnamehash}{c8c8cd8ee646d3872b04f98a6c75b126}
+      \strng{authornamehash}{0978051a38eac86ac27e41c8378927d6}
+      \strng{authorfullhash}{c8c8cd8ee646d3872b04f98a6c75b126}
+      \strng{authorfullhashraw}{c8c8cd8ee646d3872b04f98a6c75b126}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Manufacturing Processes}
+      \field{title}{Virtual reality human-robot collaborative welding: A case study of weaving gas tungsten arc welding}
+      \field{volume}{48}
+      \field{year}{2019}
+      \field{pages}{210\bibrangedash 217}
+      \range{pages}{8}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

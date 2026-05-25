@@ -47,3 +47,6 @@ arctos_moveit_config/config/gz_arctos.sdf
 .gitignore
 arctos_moveit_config/config/gz_arctos.urdf
 build/*
+Thesis_Cat.zip
+Thesis_by_AI.drawio
+ref_paper/*

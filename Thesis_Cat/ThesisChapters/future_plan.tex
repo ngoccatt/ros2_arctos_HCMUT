@@ -1,0 +1,51 @@
+\chapter{TỔNG KẾT VÀ HƯỚNG PHÁT TRIỂN}
+\section{Tổng kết}
+
+Trong giai đoạn 1, nhóm đã hiện thực tương đối yêu cầu đối với việc điều khiển phần cứng: Làm quen với cánh tay robot Denso và cách thức điều khiển thông qua máy RC5, đồng thời xây dựng thành công chương trình điều khiển robot bằng Ros2 kết hợp Ros2-Control và MoveIt bằng ngôn ngữ C++ với thiết kế theo hướng dễ mở rộng, dễ bảo trì và có thể phù hợp với nhiều loại cánh tay robot khác nhau. So với kiến trúc ban đầu gồm 5 thành phần: \textbf{Cánh tay robot Denso VS-6577, máy điều khiển RC5, PC controller, các Camera và kính thực tế ảo (VR)}, nhóm đã làm quen và hiện thực tương đối ba thành phần đầu tiên của hệ thống, và dự tính sẽ tiếp tục phát triển ba thành phần này và hiện thực, tích hợp hai thành phần còn lại để tạo nên một hệ thống điều khiển hoàn chỉnh.
+
+\subsection{Đánh giá hiệu suất của các thành phần}
+
+Với ba thành phần đã hiện thực, nhóm có thực hiện tự đánh giá như sau:
+
+\begin{itemize}
+    \item \textbf{Điều khiển cánh tay robot Denso VS-6577 với RC5}: Về cơ bản, nhóm đã làm quen và hiểu được cách để vận hành cánh tay robot theo vị trí từng trục cùng với việc thu thập dữ liệu các trục xoay.
+    
+    Tuy nhiên nhóm vẫn chưa vận dụng được các tính năng điều khiển chi tiết mà nhà sản xuất cung cấp, các hàm chuyển động robot chưa được tìm hiểu và sử dụng đa dạng. Nhóm cũng chưa điều khiển được vận tốc quay và vấn đề gia tốc khi di chuyển từng bước một cách linh hoạt, mà hiện phải chọn một tốc độ chậm cố định cho mọi trục trên RC5, dẫn tới thuật toán điều khiển robot ROS2 cũng phải điều chỉnh để chậm theo thiết bị và đảm bảo thao tác nằm trong khoảng thời gian cho phép.
+
+    \item \textbf{Giao tiếp UART giữa RC5 và PC Controller}: Nhóm đã tìm được phương pháp giao tiếp phù hợp và hợp lý giữa máy điều khiển RC5 (với thiết kế tương đối cũ) và PC Controller thông qua cổng RS232, đồng thời hiểu được cách dữ liệu được xử lý thế nào trong RC5 và sử dụng các lệnh phù hợp. 
+
+    Tuy vậy, với baud rate 19200, tốc độ giao tiếp này vẫn có thể xem là chưa đủ nhanh cho ứng dụng thời gian thực, và nhóm thường gặp vấn đề máy RC5 sẽ bị lỗi "tag error" khi tăng tốc độ truyền lệnh của PC Controller nhanh hơn và máy RC5 chưa thể xử lý kịp. Ngoài ra, việc nhận lệnh điều khiển đang phải chờ cho cánh tay hoạt động xong mới nhận, gây ra khả năng mất dữ liệu khi robot đang thực hiện thao tác quay.
+
+    \item \textbf{Xây dựng hệ thống điều khiển thời gian thực ROS2 trên PC Controller}: Đây là phần nhóm dành nhiều thời gian hiện thực và tìm hiểu, với chú trọng tích hợp được giữa mô hình 3D của cánh tay robot Denso VS-5677, thiết kế dự án tích hợp giữa ROS2, Ros2-Control và MoveIt tuân thủ theo kiến trúc được đề xuất bởi Ros2-Control, hơn nữa còn sử dụng ngôn ngữ C++ thay vì Python để tăng khả năng xử lý đa luồng, từ đó đảm bảo yêu cầu điều khiển thời gian thực đã đề ra ban đầu. Nhóm cũng cố gắng thiết kế chương trình có tính mở rộng và tinh chỉnh cao, tận dụng các file cấu hình bên ngoài giúp việc thay đổi hoạt động điều khiển trở nên dễ dàng hơn, và thậm chí phần Hardware Interface có thể được tận dụng lại cho các mô hình cánh tay robot khác.
+
+    Nhưng điểm yếu của hiện thực hiện tại, vẫn là chưa thể điều khiển robot trong thời gian thực, tốc độ của chu kì read-update-write vẫn còn thấp (chỉ 2Hz) do giới hạn về cách thức điều khiển phần cứng cũng như tốc độ truyền lệnh. Dự án cũng chưa tận dụng được các công cụ mô phỏng như Gazebo, do đó có tính phụ thuộc vào phần cứng và làm chậm khả năng phát triển các tính năng khác. Việc điều khiển bằng tốc độ cũng chưa được ứng dụng triệt để, dù có chuẩn bị sẵn do thiếu phương pháp điều khiển tốc độ của cánh tay robot. 
+\end{itemize}
+
+%phải lên 1 kiến trúc tổng quát, rồi module nào dc hiệu suất ra sao, tương lai làm cái nào để hoàn thiện luận văn, tối ưu chỗ nào, cải tiến chỗ nào, cố gắng làm rõ ra
+
+\section{Hướng phát triển}
+
+Dựa vào kết quả hiện tại và những hạn chế nhận biết được, nhóm sẽ tiếp tục phát triển, hoàn thiện hệ thống điều khiển cánh tay robot thông qua kính VR, qua việc tiếp tục cải thiện những điểm hạn chế từ kết quả hiện tại và hiện thực những thành phần còn thiếu trong hệ thống.
+
+\subsection{Những điểm cần cải tiến}
+
+Nhóm sẽ tiến hành cải tiến, chủ yếu là về phía điều khiển giữa cánh tay VS-5677 và RC5, giữa RC5 và PC Controller, qua đó đáp ứng khả năng điều khiển phần cứng thời gian thực, cụ thể:
+
+\begin{itemize}
+    \item Lắp thêm phần đế hoặc tìm cách cố định cánh tay robot trên mặt phẳng. Hiện tại, nhóm chỉ có thể điều khiển cánh tay ở tốc độ thấp do cánh tay thiếu phần đế vững chắc, khi quay quá nhanh sẽ khiến cánh tay bị lật/ ngã.
+    \item Tối ưu cách thức điều khiển giữa khối RC5 và cánh tay robot Denso VS-6577, thêm nhiều kiểu lệnh điều khiển mới và có cơ chế phản hồi sau mỗi lệnh điều khiển. Thêm khả năng điều khiển vận tốc linh hoạt khi di chuyển, và nghiên cứu khả năng tùy chỉnh gia tốc để chuyển động. 
+    \item Làm quen và vận dụng trình mô phỏng Gazebo với hiện thực ROS2 hiện tại để tránh phụ thuộc nhiều vào phần cứng
+    \item Tối ưu tốc độ truyền và xử lý dữ liệu UART trên cả RC5 và PC controller để cho phép tần suất chạy Ros2-Control cao hơn.
+    \item Tạo cơ chế điều khiển vận tốc thay vì chỉ tốc độ cho cánh tay hiện tại thông qua định dạng lệnh mới và code xử lý mới ở RC5
+\end{itemize}
+
+\subsection{Những thành phần cần hiện thực}
+
+So với hệ thống đã đề xuất, nhóm vẫn còn thiếu các thành phần ở lớp ứng dụng - trên cả PC controller và ứng dụng trên kính thực tế ảo VR. Hướng hiện thực của nhóm trong luận văn sẽ tập trung vào:
+
+\begin{enumerate}
+    \item Xây dựng module điều khiển ROS2 cao hơn Moveit, cung cấp những topic cần thiết cho điều khiển VR
+    \item Tìm hiểu và hiện thực cơ chế truyền dữ liệu và hình ảnh, video hiệu quả, độ trễ thấp thông qua ROS2. Cơ chế này cần hỗ trợ ít nhất 2 luồng dữ liệu camera khác nhau để đảm bảo tính phản ảnh thế giới thực tốt trong ứng dụng VR
+    \item Xây dựng ứng dụng VR có khả năng điều khiển cánh tay robot từ xa và cập nhật trạng thái với độ trễ thấp.
+    \item Xây dựng khả năng tương tác linh hoạt với mô hình cánh tay Robot trong môi trường VR.
+\end{enumerate}

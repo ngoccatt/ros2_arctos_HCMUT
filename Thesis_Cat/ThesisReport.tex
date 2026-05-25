@@ -1,0 +1,411 @@
+% \NeedsTeXFormat{LaTeX2e}
+% \documentclass[12pt,a4paper,oneside,openright]{Book}
+\documentclass[11pt,a4paper]{report}
+%\pagestyle{empty}
+\usepackage[utf8]{vietnam}
+\usepackage{array}
+% \usepackage[titletoc]{appendix}
+\usepackage{listings}
+\usepackage{indentfirst}
+\usepackage{amsmath,amsfonts,amssymb,fancyhdr}
+\usepackage{amsthm,amsxtra,latexsym, amscd}
+\usepackage[bottom=2cm, left=3cm,right=2cm,top=2cm] {geometry}
+\usepackage[unicode]{hyperref}
+\usepackage{graphicx}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{fancyhdr,graphicx,amsmath,amssymb}
+\graphicspath{images}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage[table]{xcolor}
+\graphicspath{ {images}}
+\setcounter{secnumdepth}{6}
+\usepackage{afterpage}
+\usepackage{boxedminipage,fancybox}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{xcolor,soul}
+\sethlcolor{lightgray}
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+% \usepackage[automake]{glossaries}
+\usepackage{xcolor}
+\usepackage{tabularray}
+% \makeglossaries
+\usepackage{rotating}
+\usepackage{tikz}
+\usetikzlibrary{trees,shapes.geometric,arrows.meta,positioning,fit,backgrounds,calc}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{forest}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{pmboxdraw}
+% \usepackage{csquotes}
+
+\usepackage[
+backend=biber,
+style=ieee,
+sorting=nty
+]{biblatex}
+
+\addbibresource{ref.bib}
+% \font\tench=t5-lmb10 at18pt%
+
+% \titleformat{\chapter}[display]
+% {\normalfont\large\filcenter\bfseries}
+% {{{\chaptertitlename\,}\thechapter}} {1pc}{
+% {\tench}\MakeUppercase}
+
+
+
+% \usepackage{minitoc}
+\usepackage{lipsum} % just to generate text for the example
+%------------------------------------------------------------
+%   CHAPTER CUSTOM
+%------------------------------------------------------------
+\titleformat{\chapter}[display]
+{\bfseries\Large}
+{\filright\MakeUppercase{\chaptertitlename} \Huge\thechapter}
+{1ex}
+{\titlerule\vspace{1ex}\filleft}
+[\vspace{1ex}\titlerule]
+%------------------------------------------------------------
+%   CHAPTER CUSTOM
+%------------------------------------------------------------
+%------------------------------------------------------------
+%   CUSTOM SIZE SECTION
+%------------------------------------------------------------
+\titleformat*{\section}{\LARGE\bfseries}
+\titleformat*{\subsection}{\Large\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
+\titleformat*{\paragraph}{\large\bfseries}
+\titleformat*{\subparagraph}
+{\large\bfseries}
+\titleformat{\paragraph}[block]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+
+
+\renewcommand{\theequation}{\thechapter.\arabic{equation}}% Danh lai so cong thuc toan
+% \font\tieude=t5-lmb10 at 14pt
+ \pagestyle{fancy}
+\renewcommand\headrulewidth{0 pt}
+ \lhead{ }
+ \chead{\thepage }
+ \rhead{  }
+\lfoot{ }
+\cfoot{ }
+\rfoot{ }
+\numberwithin{subsection}{section}
+%------------------------------------------------------------
+\theoremstyle{definition}
+\theoremstyle{plain}
+\newtheorem{theorem}{Định lý}[section]
+\newtheorem{dl}[theorem]{Định lý}
+\newtheorem{hq}[theorem]{Hệ quđả}
+\newtheorem{corollary}[theorem]{Hệ quả}
+\newtheorem{problem}{Bài toán}
+\newtheorem{main}{Định lý cơ bản}
+\newtheorem{bd}[theorem]{Bổ đề}
+\newtheorem{lemma}[theorem]{Bổ đề}
+\newtheorem{md}[theorem]{Mệnh đề}
+\newtheorem{proposition}[theorem]{Mệnh đề}
+\theoremstyle{definition}
+\newtheorem{dn}[theorem]{Định nghĩa}
+\newtheorem{definition}[theorem]{Định nghĩa}
+\theoremstyle{definition}
+\theoremstyle{remark}
+\theoremstyle{definition}
+\newtheorem{note}[theorem]{\bf Chú ý}
+\newtheorem{vd}[theorem]{\bf Ví dụ}
+\newtheorem{example}[theorem]{Ví dụ}
+\newtheorem{nx}[theorem]{\bf Nhận xét}
+\newtheorem{remark}[theorem]{Nhận xét}
+\newtheoremstyle{vd}% name
+  {3pt}%      Space above
+  {3pt}%      Space below
+  {}%         Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\bfseries}% Thm head font
+  {.}%        Punctuation after thm head
+  {.5em}%     Space after thm head: " " = normal interword space;
+        %       \newline = linebreak
+  {}%
+
+\usepackage{verbatimbox}
+%------------------------------------------------------------
+%   CUSTOM HEADER AND FOOTER
+%------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\textbf{\nouppercase{\rightmark}}}
+
+\renewcommand{\headrulewidth}{1pt}
+\fancyfoot{} % clear all footer fields
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\newcolumntype{L}{>{\centering\arraybackslash}m{5cm}}
+
+
+
+% ---------------------------------------------------------------
+% --------------------- CUSTOM TBLR SECTION ---------------------
+\DefTblrTemplate{contfoot-text}{default}{Tiếp tục ở trang sau}
+\DefTblrTemplate{conthead-text}{default}{(Tiếp theo)}
+% ---------------------------------------------------------------
+
+\usepackage{titletoc}% http://ctan.org/pkg/titletoc
+\titlecontents*{chapter}% <section-type>
+  [0pt]% <left>
+  {}% <above-code>
+  {\bfseries\chaptername\ \thecontentslabel\quad}% <numbered-entry-format>
+  {}% <numberless-entry-format>
+  {\bfseries\hfill\contentspage}% <filler-page-format>
+
+% \flushbottom
+
+\raggedbottom
+
+\begin{document}
+% \setlength{\parindent}{1.5fem}
+\renewcommand{\baselinestretch}{1.5}
+
+\renewcommand{\appendixname}{Appendix}
+\renewcommand{\figurename}{Hình}
+\renewcommand{\tablename}{Bảng}
+\renewcommand{\contentsname}{Mục lục}
+
+\renewcommand{\listfigurename}{Danh sách hình ảnh}
+\renewcommand{\listtablename}{Danh sách bảng}
+\renewcommand{\refname}{Tài liệu tham khảo}
+
+% \font\chuong=t5-lmb10 at12pt%
+% \def\chaptername{\chuong CHƯƠNG}
+\fontsize{12pt}{12pt}\selectfont
+\def\e{$\varepsilon$}
+\def\ptd {\,$p$-trơn đều\,}
+\def\xs{$(\Omega,\mathcal{F},\mathbf{P})$}
+\def\F{$\mathcal{F}$}
+\def\X{$\Bbb{E}$\,\,}
+\def\a{$\mathcal{A}$}
+\def\E{\,$\Bbb{E}$\,}
+\def\be{$\mathcal{B}(\Bbb{E})$\,\,}
+\def\spm{$E,;\;{\mathcal{B}}$}
+\def\htxs{\xrightarrow{\mathbf{P}}}
+\def\m{{\bf m}}
+\def\n{{\bf n}}
+\def\k{{\bf k}}
+\def\l{{\bf l}}
+%----------------------------------------------------------------------------
+\def\RR{$\Bbb{R}\times\Bbb{R}$}
+\def\R2{$\Bbb{R}^2$}
+\def\Fn{\mathcal{F}_n}
+\def\Fmn{\mathcal{F}_{mn}}
+\def\Fij{\mathcal{F}_{ij}}
+\def\Xi{\{X_i, i\geq 1\}}
+\def\Xij{\{X_{ij};i\geq 1,j\geq 1\}}
+%--------------------------------------------------------------------------
+\newcommand{\I}{\mathbb I}% hàm chỉ tiêu
+\newcommand{\bE}{\mathbb E}% không gian Banach
+\newcommand{\fP}{\mathbf P}% xác suất
+\newcommand{\mL}{\mathcal{L}}
+\newcommand{\mF}{\mathcal{F}\,}
+\newcommand{\fE}{\mathbf E}
+\newcommand{\BE}{$\mathcal{B}(\mathbb{E})$\,}
+\newcommand{\hcc}{$\xrightarrow{h.c.c}$\,}
+\newcommand{\tb}{$\xrightarrow{\mathcal{L}}$}
+\newcommand{\xij}{$\{X_{ij}; i, j \geq1\}$\,}
+\newcommand{\xmn}{$\{X_{mn}; m\geq 1, n \geq1\}$\,}
+\newcommand{\aij}{$\{A_{mnij};\, m, n, i, j \geq  1\}$}
+%-----------------------------------------------------------------------
+\def\al{{\alpha}}
+\def\R{{\Bbb R}}
+\def\F{{\mathcal F}}
+\def\N{\Bbb{N}^d}
+%----------------------------------------------------------------------------------------------------------%
+
+%New colors defined below
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{MintGreen}{rgb}{0.603,0.996,0.721}
+\definecolor{Onahau}{rgb}{0.8,0.976,1}
+\definecolor{bashbg}{RGB}{245,248,250}
+\definecolor{bashprompt}{RGB}{0,102,204}
+\definecolor{bashcomment}{RGB}{56,142,60}
+\definecolor{bashstring}{RGB}{173,20,87}
+\definecolor{bashoption}{RGB}{230,81,0}
+
+%Code listing style named "mystyle"
+\lstdefinestyle{mystyle}{
+  backgroundcolor=\color{backcolour},   commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=b,                    
+  keepspaces=true,                 
+  numbers=left,                    
+  numbersep=5pt,                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2
+}
+
+\lstdefinestyle{inlinecode}{
+  basicstyle=\ttfamily\normalsize,
+  backgroundcolor=\color{backcolour},
+  keywordstyle=\color{magenta},
+  commentstyle=\color{codegreen},
+  stringstyle=\color{codepurple},
+  showspaces=false,
+  showstringspaces=false,
+  keepspaces=true,
+  breaklines=false
+}
+
+%"mystyle" code listing set
+\lstset{style=mystyle}
+
+\colorlet{punct}{blue!70!black}
+\definecolor{background}{RGB}{245,248,250}
+\definecolor{delim}{RGB}{30,64,175}
+\colorlet{numb}{teal!70!black}
+
+\lstdefinelanguage{json}{
+    basicstyle=\normalfont\ttfamily,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    backgroundcolor=\color{background},
+    literate=
+     *{0}{{{\color{numb}0}}}{1}
+      {1}{{{\color{numb}1}}}{1}
+      {2}{{{\color{numb}2}}}{1}
+      {3}{{{\color{numb}3}}}{1}
+      {4}{{{\color{numb}4}}}{1}
+      {5}{{{\color{numb}5}}}{1}
+      {6}{{{\color{numb}6}}}{1}
+      {7}{{{\color{numb}7}}}{1}
+      {8}{{{\color{numb}8}}}{1}
+      {9}{{{\color{numb}9}}}{1}
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+}
+
+\lstdefinelanguage{yaml}{
+  keywords={true,false,null,y,n,yes,no,on,off},
+  keywordstyle=\color{blue}\bfseries,
+  basicstyle=\ttfamily\footnotesize,
+  sensitive=false,
+  comment=[l]{\#},
+  commentstyle=\color{codegreen},
+  stringstyle=\color{codepurple},
+  morestring=[b]',
+  morestring=[b]",
+  showstringspaces=false,
+  breaklines=true,
+  breakatwhitespace=false,
+  tabsize=2
+}
+
+\lstdefinelanguage{bash}{
+  sensitive=true,
+  alsoletter={-},
+  morekeywords={sudo,apt,apt-get,install,update,upgrade,ros2,colcon,source,cd,ls,cat,echo,export,launch,run,mkdir,rm,cp,mv},
+  morekeywords=[2]{-y,--symlink-install,--help},
+  keywordstyle=\color{bashprompt}\bfseries,
+  keywordstyle=[2]\color{bashoption}\bfseries,
+  comment=[l]{\#},
+  commentstyle=\color{bashcomment}\itshape,
+  morestring=[b]",
+  morestring=[b]',
+  stringstyle=\color{bashstring}
+}
+
+\lstdefinestyle{bashstyle}{
+  language=bash,
+  backgroundcolor=\color{bashbg},
+  basicstyle=\ttfamily\footnotesize,
+  frame=single,
+  rulecolor=\color{codegray},
+  numbers=left,
+  numberstyle=\tiny\color{codegray},
+  numbersep=6pt,
+  showstringspaces=false,
+  breaklines=true,
+  breakatwhitespace=true,
+  keepspaces=true,
+  tabsize=2
+}
+
+\lstdefinestyle{DOS}        %terminal command style
+{
+    backgroundcolor=\color{black},
+    basicstyle=\scriptsize\color{white}\ttfamily
+}
+\lstdefinestyle{csharp} {
+    language=[Sharp]C, 
+    frame=lr, 
+    rulecolor=\color{blue!80!black}
+}
+
+%----------------------------------------------------------------------------------------------------------%
+\include{Others/ThesisCover} 
+
+\newcommand\blankpage{%
+	\null
+	\thispagestyle{empty}%
+	\addtocounter{page}{-1}%
+	\begin{center}
+	\end{center}  
+	\newpage  
+}
+
+ % \includepdf{Images/nhiem_vu.jpg}
+ % \includepdf{Images/huong_dan.jpg}
+ % \includepdf{Images/phan_bien.jpg}
+
+\pagenumbering{roman}
+% \include{Others/commitment}
+% \include{Others/acknowledgement}
+% \include{Others/abstract}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\pagenumbering{arabic}
+
+\include{ThesisChapters/Introduction}
+
+\include{ThesisChapters/research}
+
+\include{ThesisChapters/methodologies}
+
+\include{ThesisChapters/design_and_implementation}
+
+\include{ThesisChapters/evaluation}
+
+\include{ThesisChapters/future_plan}
+
+\nocite{*}
+
+\printbibliography[
+heading=bibintoc,
+title=Tài liệu tham khảo,
+]
+
+\include{Others/information}
+
+\end{document}
+%%21:16:49 1/9/2012Last Modification of contents

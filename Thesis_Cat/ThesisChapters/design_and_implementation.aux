@@ -1,0 +1,246 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}THIẾT KẾ VÀ HIỆN THỰC HỆ THỐNG}{35}{chapter.4}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Sơ đồ thiết kế hệ thống}{35}{section.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Sơ đồ thiết kế của hệ thống điều khiển}}{35}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:placeholder}{{4.1}{35}{Sơ đồ thiết kế của hệ thống điều khiển}{figure.caption.19}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Xây dựng chương trình điều khiển cánh tay bằng RC5}{37}{section.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Thiết kế chương trình}{37}{subsection.4.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Cơ chế nhận lệnh, xử lý lệnh kiểu chuỗi và xoay cánh tay robot}{38}{subsection.4.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Kiến trúc chương trình điều khiển RC5}}{39}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:rc5-program-architecture}{{4.2}{39}{Kiến trúc chương trình điều khiển RC5}{figure.caption.20}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Cơ chế cập nhật trạng thái robot}{40}{subsection.4.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Kiến trúc phần mềm điều khiển bằng ROS2}{41}{section.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Sơ đồ kiến trúc phần mềm dựa trên Ros2-Control}{41}{subsection.4.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Sơ đồ kiến trúc phần mềm dựa trên Ros2-Control}}{41}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:placeholder}{{4.3}{41}{Sơ đồ kiến trúc phần mềm dựa trên Ros2-Control}{figure.caption.21}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Khối Driver}{42}{subsection.4.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2.1}Khối UartProtocol}{42}{subsubsection.4.3.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2.2}Motor Driver}{43}{subsubsection.4.3.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2.3}Servo Driver}{43}{subsubsection.4.3.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}Robot description}{44}{subsection.4.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Minh họa kết nối phần cứng phục vụ quá trình tích hợp mô hình robot}}{45}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:hw-connection-for-integration}{{4.4}{45}{Minh họa kết nối phần cứng phục vụ quá trình tích hợp mô hình robot}{figure.caption.22}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.4}Hardware Interface}{45}{subsection.4.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.4.1}Quá trình khởi động Hardware Interface}{46}{subsubsection.4.3.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Luồng khởi động của Hardware Interface}}{46}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:placeholder}{{4.5}{46}{Luồng khởi động của Hardware Interface}{figure.caption.23}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.4.2}Luồng điều khiển (Write)}{48}{subsubsection.4.3.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Luồng điều khiển (Write) của DensoInterface}}{49}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:placeholder}{{4.6}{49}{Luồng điều khiển (Write) của DensoInterface}{figure.caption.24}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.4.3}Luồng đọc (Read)}{50}{subsubsection.4.3.4.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Luồng đọc (Read) của DensoInterface}}{50}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:placeholder}{{4.7}{50}{Luồng đọc (Read) của DensoInterface}{figure.caption.25}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.5}Ros2 Controllers}{51}{subsection.4.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.5.1}denso\_arm\_controller}{52}{subsubsection.4.3.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.5.2}denso\_hand\_controller}{54}{subsubsection.4.3.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.5.3}joint\_state\_boardcaster}{55}{subsubsection.4.3.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.6}Moveit2}{55}{subsection.4.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.7}Khối ứng dụng}{57}{subsection.4.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.7.1}Denso MoveIt Servo}{57}{subsubsection.4.3.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.7.2}Denso Remote Control}{60}{subsubsection.4.3.7.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Luồng hoạt động của Denso Remote Control Action Server}}{61}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:denso-remote-control-flow}{{4.8}{61}{Luồng hoạt động của Denso Remote Control Action Server}{figure.caption.26}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {4.3.7.2.1}Đánh giá nhanh thiết kế điều khiển}{61}{paragraph.4.3.7.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.8}Mô phỏng với Gazebo}{62}{subsection.4.3.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.9}Lấy dữ liệu camera với V4L2 Camera Node}{64}{subsection.4.3.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.10}Sử dụng RosBridge server}{64}{subsection.4.3.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces RosBridge Server làm cầu nối giữa ROS2 và ứng dụng Unity}}{65}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:rosbridge-server}{{4.9}{65}{RosBridge Server làm cầu nối giữa ROS2 và ứng dụng Unity}{figure.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces Các dịch vụ ROS2 chính mà ứng dụng VR truy cập qua RosBridge}}{65}{figure.caption.28}\protected@file@percent }
+\newlabel{fig:rosbridge-services}{{4.10}{65}{Các dịch vụ ROS2 chính mà ứng dụng VR truy cập qua RosBridge}{figure.caption.28}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Ứng dụng VR}{65}{section.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Chuẩn bị tài nguyên để xây dựng ứng dụng}{66}{subsection.4.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces Quy trình chuyển mô hình robot từ ROS2 sang Unity}}{67}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:transfer-urdf-to-unity}{{4.11}{67}{Quy trình chuyển mô hình robot từ ROS2 sang Unity}{figure.caption.29}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Kiến trúc phần mềm của ứng dụng VR trên Unity}{67}{subsection.4.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}Module tương tác VR}{67}{subsection.4.4.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces Camera Rig trong Meta XR SDK}}{68}{figure.caption.30}\protected@file@percent }
+\newlabel{fig:camera-rig-meta-sdk}{{4.12}{68}{Camera Rig trong Meta XR SDK}{figure.caption.30}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.4}Module giao tiếp Ros2}{69}{subsection.4.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.4.1}Kết nối tới Ros2}{69}{subsubsection.4.4.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces Connect Panel và luồng kết nối tới ROS2 qua RosBridge}}{69}{figure.caption.31}\protected@file@percent }
+\newlabel{fig:unity-connect-panel}{{4.13}{69}{Connect Panel và luồng kết nối tới ROS2 qua RosBridge}{figure.caption.31}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.4.2}Theo dõi Camera với Image subscription}{70}{subsubsection.4.4.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.14}{\ignorespaces Cấu hình Compressed Image Subscriber trong Unity}}{70}{figure.caption.32}\protected@file@percent }
+\newlabel{fig:image-subscriber-unity}{{4.14}{70}{Cấu hình Compressed Image Subscriber trong Unity}{figure.caption.32}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.4.3}Theo dõi trạng thái Robot thực tế thông qua Joint State subscription}{70}{subsubsection.4.4.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.4.4}Điều khiển robot với MoveIt Servo}{71}{subsubsection.4.4.4.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.15}{\ignorespaces Giao diện MoveIt-Servo Panel trong ứng dụng VR}}{72}{figure.caption.33}\protected@file@percent }
+\newlabel{fig:moveit-servo-panel-unity}{{4.15}{72}{Giao diện MoveIt-Servo Panel trong ứng dụng VR}{figure.caption.33}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.4.5}Đóng mở Gripper với GripperCommand Action Client}{73}{subsubsection.4.4.4.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.16}{\ignorespaces Tạo Action class trong Ros-Sharp từ file action của ROS2}}{73}{figure.caption.34}\protected@file@percent }
+\newlabel{fig:generate-action-rossharp}{{4.16}{73}{Tạo Action class trong Ros-Sharp từ file action của ROS2}{figure.caption.34}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.17}{\ignorespaces Hiện thực UnityGripperCommandActionClient}}{74}{figure.caption.35}\protected@file@percent }
+\newlabel{fig:unity-gripper-command-client}{{4.17}{74}{Hiện thực UnityGripperCommandActionClient}{figure.caption.35}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.4.6}Điều khiển robot với MoveToPose Action Client}{74}{subsubsection.4.4.4.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.18}{\ignorespaces Điều khiển robot bằng bảng điều khiển và mô hình Future Denso Robot}}{76}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:joint-rotate-and-future-robot}{{4.18}{76}{Điều khiển robot bằng bảng điều khiển và mô hình Future Denso Robot}{figure.caption.36}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.19}{\ignorespaces Điều khiển robot bằng tương tác nắm trực tiếp trên mô hình}}{77}{figure.caption.37}\protected@file@percent }
+\newlabel{fig:robot-grab-rotate}{{4.19}{77}{Điều khiển robot bằng tương tác nắm trực tiếp trên mô hình}{figure.caption.37}{}}
+\@setckpt{ThesisChapters/design_and_implementation}{
+\setcounter{page}{78}
+\setcounter{equation}{0}
+\setcounter{enumi}{7}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{4}
+\setcounter{section}{4}
+\setcounter{subsection}{4}
+\setcounter{subsubsection}{6}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{19}
+\setcounter{table}{0}
+\setcounter{lstnumber}{1}
+\setcounter{parentequation}{0}
+\setcounter{section@level}{0}
+\setcounter{Item}{44}
+\setcounter{Hfootnote}{0}
+\setcounter{bookmark@seq@number}{54}
+\setcounter{ALC@unique}{0}
+\setcounter{ALC@line}{0}
+\setcounter{ALC@rem}{0}
+\setcounter{ALC@depth}{0}
+\setcounter{float@type}{16}
+\setcounter{algorithm}{0}
+\setcounter{caption@flags}{6}
+\setcounter{continuedfloat}{0}
+\setcounter{subfigure}{2}
+\setcounter{subtable}{0}
+\setcounter{tblrcount}{3}
+\setcounter{r@tfl@t}{0}
+\setcounter{AM@survey}{0}
+\setcounter{tabx@nest}{0}
+\setcounter{listtotal}{0}
+\setcounter{listcount}{0}
+\setcounter{liststart}{0}
+\setcounter{liststop}{0}
+\setcounter{citecount}{0}
+\setcounter{citetotal}{0}
+\setcounter{multicitecount}{0}
+\setcounter{multicitetotal}{0}
+\setcounter{instcount}{38}
+\setcounter{maxnames}{2}
+\setcounter{minnames}{1}
+\setcounter{maxitems}{3}
+\setcounter{minitems}{1}
+\setcounter{citecounter}{0}
+\setcounter{maxcitecounter}{0}
+\setcounter{savedcitecounter}{0}
+\setcounter{uniquelist}{0}
+\setcounter{uniquename}{0}
+\setcounter{refsection}{0}
+\setcounter{refsegment}{0}
+\setcounter{maxextratitle}{0}
+\setcounter{maxextratitleyear}{0}
+\setcounter{maxextraname}{2}
+\setcounter{maxextradate}{0}
+\setcounter{maxextraalpha}{0}
+\setcounter{abbrvpenalty}{50}
+\setcounter{highnamepenalty}{50}
+\setcounter{lownamepenalty}{25}
+\setcounter{maxparens}{3}
+\setcounter{parenlevel}{0}
+\setcounter{blx@maxsection}{0}
+\setcounter{mincomprange}{10}
+\setcounter{maxcomprange}{100000}
+\setcounter{mincompwidth}{1}
+\setcounter{afterword}{0}
+\setcounter{savedafterword}{0}
+\setcounter{annotator}{0}
+\setcounter{savedannotator}{0}
+\setcounter{author}{0}
+\setcounter{savedauthor}{0}
+\setcounter{bookauthor}{0}
+\setcounter{savedbookauthor}{0}
+\setcounter{commentator}{0}
+\setcounter{savedcommentator}{0}
+\setcounter{editor}{0}
+\setcounter{savededitor}{0}
+\setcounter{editora}{0}
+\setcounter{savededitora}{0}
+\setcounter{editorb}{0}
+\setcounter{savededitorb}{0}
+\setcounter{editorc}{0}
+\setcounter{savededitorc}{0}
+\setcounter{foreword}{0}
+\setcounter{savedforeword}{0}
+\setcounter{holder}{0}
+\setcounter{savedholder}{0}
+\setcounter{introduction}{0}
+\setcounter{savedintroduction}{0}
+\setcounter{namea}{0}
+\setcounter{savednamea}{0}
+\setcounter{nameb}{0}
+\setcounter{savednameb}{0}
+\setcounter{namec}{0}
+\setcounter{savednamec}{0}
+\setcounter{translator}{0}
+\setcounter{savedtranslator}{0}
+\setcounter{shortauthor}{0}
+\setcounter{savedshortauthor}{0}
+\setcounter{shorteditor}{0}
+\setcounter{savedshorteditor}{0}
+\setcounter{labelname}{0}
+\setcounter{savedlabelname}{0}
+\setcounter{institution}{0}
+\setcounter{savedinstitution}{0}
+\setcounter{lista}{0}
+\setcounter{savedlista}{0}
+\setcounter{listb}{0}
+\setcounter{savedlistb}{0}
+\setcounter{listc}{0}
+\setcounter{savedlistc}{0}
+\setcounter{listd}{0}
+\setcounter{savedlistd}{0}
+\setcounter{liste}{0}
+\setcounter{savedliste}{0}
+\setcounter{listf}{0}
+\setcounter{savedlistf}{0}
+\setcounter{location}{0}
+\setcounter{savedlocation}{0}
+\setcounter{organization}{0}
+\setcounter{savedorganization}{0}
+\setcounter{origlocation}{0}
+\setcounter{savedoriglocation}{0}
+\setcounter{origpublisher}{0}
+\setcounter{savedorigpublisher}{0}
+\setcounter{publisher}{0}
+\setcounter{savedpublisher}{0}
+\setcounter{language}{0}
+\setcounter{savedlanguage}{0}
+\setcounter{origlanguage}{0}
+\setcounter{savedoriglanguage}{0}
+\setcounter{pageref}{0}
+\setcounter{savedpageref}{0}
+\setcounter{textcitecount}{0}
+\setcounter{textcitetotal}{0}
+\setcounter{textcitemaxnames}{0}
+\setcounter{biburlbigbreakpenalty}{100}
+\setcounter{biburlbreakpenalty}{200}
+\setcounter{biburlnumpenalty}{0}
+\setcounter{biburlucpenalty}{0}
+\setcounter{biburllcpenalty}{0}
+\setcounter{smartand}{1}
+\setcounter{bbx:relatedcount}{0}
+\setcounter{bbx:relatedtotal}{0}
+\setcounter{theorem}{0}
+\setcounter{problem}{0}
+\setcounter{main}{0}
+\setcounter{@index}{0}
+\setcounter{@plane}{0}
+\setcounter{@row}{0}
+\setcounter{@col}{0}
+\setcounter{use@args}{0}
+\setcounter{@record}{0}
+\setcounter{index@count}{0}
+\setcounter{VerbboxLineNo}{0}
+\setcounter{lstlisting}{0}
+}

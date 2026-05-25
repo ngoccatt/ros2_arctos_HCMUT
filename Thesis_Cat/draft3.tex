@@ -1,0 +1,114 @@
+\chapter{GIỚI THIỆU TỔNG QUAN}
+\label{chap:intro}
+
+\section{Bối cảnh: Sự dịch chuyển hướng tới Tương tác Cộng tác Người-Máy (HRC)}
+Trong kỷ nguyên của Công nghiệp 4.0 và hướng tới Công nghiệp 5.0, tự động hóa không chỉ đơn thuần là việc thay thế con người bằng máy móc, mà là sự hội tụ và cộng tác giữa trí tuệ thích ứng của con người với độ chính xác, sức mạnh cơ bắp của robot. Khái niệm Tương tác cộng tác Người - Máy (Human-Robot Collaboration - HRC) ra đời nhằm giải quyết các bài toán trong môi trường phi cấu trúc (unstructured environments) \cite{wang2024genealogy}. 
+
+Trong các lĩnh vực đặc thù như sản xuất thông minh, y tế (phẫu thuật từ xa), xử lý vật liệu nguy hiểm (chất phóng xạ, gỡ bom mìn), hoặc không gian vũ trụ, việc yêu cầu sự hiện diện vật lý của con người là vô cùng rủi ro \cite{autolab2021telesurgery}. Dù các thuật toán Trí tuệ nhân tạo (AI) và Học tăng cường (Reinforcement Learning) \cite{han2023survey} đang phát triển mạnh, robot vẫn chưa đủ khả năng tự chủ hoàn toàn để xử lý các tình huống bất ngờ chưa từng được huấn luyện. Do đó, Điều khiển từ xa (Teleoperation) tiếp tục đóng vai trò là "chìa khóa" không thể thay thế, cho phép chuyên gia con người truyền đạt ý định vận hành tới robot một cách an toàn \cite{darvish2023teleoperation}.
+
+\section{Sự tiến hóa của giao diện điều khiển: Từ GUI 2D đến Bản sao số VR}
+Hiệu suất của một hệ thống teleoperation phụ thuộc phần lớn vào Giao diện người - máy (Human-Machine Interface). Trong nhiều thập kỷ, các hệ thống điều khiển công nghiệp (như máy RC5 của Denso) phụ thuộc vào màn hình 2D (GUI), bàn phím, hoặc bộ điều khiển cầm tay (Teach Pendant) \cite{hetrick2020comparing}. Người vận hành phải thực hiện quá trình chuyển đổi nhận thức phức tạp: nhìn hình ảnh 2D từ camera, tưởng tượng ra không gian 3D, tính toán động học nghịch trong đầu, và ấn các nút tương ứng. Điều này dẫn đến sự gia tăng tải nhận thức (cognitive load) nghiêm trọng, gây mệt mỏi tinh thần và làm giảm độ chính xác \cite{chen2023comparing}.
+
+Thực tế ảo (Virtual Reality - VR) và Thực tế hỗn hợp (Mixed Reality - MR) đã phá vỡ rào cản này. Giao diện VR khôi phục lại nhận thức chiều sâu tự nhiên. Thay vì điều khiển từng khớp (joint) một cách cơ học, người dùng đeo kính hiển thị đội đầu (HMD) và sử dụng bộ điều khiển không gian (VR controllers) để vận hành robot bằng cử chỉ tay tự nhiên \cite{chen2023comparing}. Đặc biệt, sự kết hợp giữa VR và công nghệ Bản sao số (Digital Twin) cho phép tái tạo một không gian làm việc ảo đồng bộ thời gian thực với không gian vật lý. Bản sao số đóng vai trò như một "vùng đệm nhận thức", giúp người dùng quan sát trước quỹ đạo chuyển động của robot, triệt tiêu cảm giác lo âu do điểm mù (occlusions) gây ra \cite{torrejon2026teleoperation}.
+
+\section{Động lực nghiên cứu và Rào cản công nghệ (Motivation \& Challenges)}
+Mặc dù tiềm năng của hệ thống Digital Twin-VR là rất lớn, quá trình triển khai thực tế trên các dòng robot công nghiệp tiêu chuẩn (như Denso VS-6577) vấp phải ba rào cản công nghệ cốt lõi:
+
+\subsection{Nút thắt cổ chai của Middleware truyền thống (ROS1)}
+Robot Operating System (ROS) là tiêu chuẩn de-facto trong nghiên cứu robot. Tuy nhiên, phần lớn các hệ thống teleoperation hiện nay \cite{kawshan2026digital, chen2023comparing} vẫn được xây dựng trên ROS1 (cơ chế Master/Slave). Trong kiến trúc VR, hệ thống phải đồng thời xử lý luồng dữ liệu động học (kinematics) ở tần số cao và truyền phát (streaming) dữ liệu hình ảnh/video về kính VR. ROS1 quản lý băng thông kém và không có giao thức đảm bảo Quality of Service (QoS) theo thời gian thực, dẫn đến hiện tượng trễ gói tin (packet loss) và nghẽn mạng nghiêm trọng.
+
+\subsection{Khoảng cách Sim-to-Real và Độ trễ phần cứng công nghiệp}
+Độ trễ (Latency) là "kẻ thù" lớn nhất của VR. Nếu độ trễ giữa hành động tay của người dùng và phản hồi của cánh tay robot vượt quá 150-200ms, người dùng sẽ cảm thấy khó chịu khi điều khiển \cite{luu2025enhancing}. Rào cản lớn nằm ở chỗ các bộ điều khiển công nghiệp đời cũ (như RC5 Controller) vốn được thiết kế để nhận lệnh lập trình sẵn (offline), chứ không phải nhận lệnh liên tục từng phần nghìn giây (online/real-time servoing). Sự chênh lệch giữa tốc độ nội suy của phần mềm (MoveIt Servo) và tốc độ đáp ứng cơ khí vật lý của máy RC5 gây ra hiện tượng giật cục, vọt lố (overshoot) hoặc giật lùi quỹ đạo.
+
+\subsection{Giới hạn của thiết bị VR thế hệ trước}
+Các nghiên cứu trước đây thường sử dụng kính HTC Vive hoặc Oculus Quest 2 \cite{chen2023comparing, naceri2021vicarios}. Những thiết bị này khá cồng kềnh, độ phân giải thấp và khả năng xử lý hạn chế. Hệ quả là người vận hành đôi khi gặp vấn đề khi xử dụng ứng dụng, đem lại trải nghiệm không thoải mái cho nhu cầu vận hành lâu dài.
+
+\section{Mục tiêu và Đóng góp của luận văn}
+\label{sec:contributions_outline}
+Để giải quyết triệt để các rào cản trên, luận văn này nghiên cứu, thiết kế và phát triển một hệ thống điều khiển từ xa thời gian thực cho cánh tay robot công nghiệp Denso VS-6577. Luận văn thực hiện sự chuyển dịch công nghệ toàn diện: thay thế ROS1 bằng kiến trúc phân tán \textbf{ROS2 (DDS)}, nâng cấp thiết bị tương tác lên \textbf{Meta Quest 3} với \textbf{Unity 6}, và thiết kế module tích hợp cấp thấp để vượt qua giới hạn của bộ điều khiển RC5.
+
+Các đóng góp khoa học và kỹ thuật (Contributions) nổi bật của luận văn bao gồm:
+\begin{itemize}
+    \item \textbf{CĐ1 - Kiến trúc phần mềm Decoupled dựa trên tiêu chuẩn Ros2-Control:} Luận văn thiết kế kiến trúc phần mềm tách biệt hoàn toàn giữa tầng mô phỏng (Unity) và tầng điều khiển vật lý. Bằng cách sử dụng ROS2 và công cụ \textit{MoveIt2}, hệ thống khắc phục được nút thắt băng thông của ROS1, cho phép tính toán quỹ đạo và động học nghịch với tần số ổn định 10Hz mà không làm suy giảm chất lượng truyền phát Camera.
+    \item \textbf{CĐ2 - Giao diện Digital Twin Thực tế hỗn hợp hiệu năng cao:} Ứng dụng VR được phát triển trên thiết bị tối tân Meta Quest 3, kết hợp ROS-Sharp. Ứng dụng duy trì mức khung hình trung bình $>66$ FPS ngay cả khi phải đồng bộ mô hình robot thời gian thực và render đa luồng camera từ xa, mang lại trải nghiệm điều khiển công thái học, trực quan, giảm thiểu triệt để tải nhận thức cho người vận hành.
+    \item \textbf{CĐ3 - Tích hợp hệ thống và giảm thiểu tác động của độ trễ phần cứng:} Hiện thực thành công chuỗi điều khiển kín (closed-loop) từ VR tới bộ điều khiển công nghiệp thực tế (RC5) qua giao thức UART. Đối mặt với giới hạn về giao thức truyền thông cũ và đáp ứng cơ khí chậm gây ra độ trễ thực thi cố hữu (lên tới 2-3 giây), luận văn đã áp dụng các kỹ thuật đệm dữ liệu (Ring Buffer) và xử lý xu hướng (Trend Learning) ở mức Hardware Interface. Dù không thể loại bỏ hoàn toàn độ trễ vật lý này, đây là những giải pháp kỹ thuật thực tiễn giúp khắc phục tối đa tình trạng giật lùi quỹ đạo, đảm bảo robot bám sát lệnh điều khiển một cách mượt mà và an toàn nhất có thể.
+\end{itemize}
+
+\section{Bố cục của luận văn}
+Luận văn được tổ chức thành 6 chương:
+\begin{itemize}
+    \item \textbf{Chương 1: Giới thiệu tổng quan.} Trình bày bối cảnh, động lực nghiên cứu, những thách thức hiện hành và các đóng góp chính của luận văn.
+    \item \textbf{Chương 2: Các nghiên cứu liên quan.} Đánh giá chuyên sâu các phương pháp điều khiển robot từ xa, việc ứng dụng VR/Digital Twin và phân tích nền tảng middleware, từ đó làm nổi bật các khoảng trống nghiên cứu.
+    \item \textbf{Chương 3: Cơ sở lý thuyết.} Cung cấp các kiến thức nền tảng về động học robot, kiến trúc ROS2, Ros2-Control, và các công cụ phát triển như Unity 6, Meta Quest 3, và ROS-Sharp.
+    \item \textbf{Chương 4: Thiết kế và hiện thực hệ thống.} Trình bày chi tiết sơ đồ kiến trúc, cơ chế hoạt động của RC5, kiến trúc ROS2 phần mềm và phương pháp phát triển ứng dụng VR.
+    \item \textbf{Chương 5: Kết quả hiện thực và đánh giá.} Đưa ra các minh chứng thực nghiệm, phân tích độ trễ (latency), đo lường hiệu năng FPS và đánh giá tính ổn định của hệ thống.
+    \item \textbf{Chương 6: Tổng kết và hướng phát triển.} Tóm tắt các kết quả đạt được và đề xuất các định hướng nghiên cứu trong tương lai.
+\end{itemize}
+
+% =========================================================================================
+
+\chapter{CÁC NGHIÊN CỨU LIÊN QUAN VÀ PHÂN TÍCH KHOẢNG TRỐNG CÔNG NGHỆ}
+\label{chap:related_works}
+
+Sự hội tụ giữa Robot học, Thực tế ảo (VR) và Bản sao số (Digital Twin) đã thúc đẩy hàng loạt nghiên cứu trong thập kỷ qua. Chương này sẽ tiến hành phân tích sâu rộng các tài liệu nghiên cứu hiện có, chia thành ba khía cạnh: (1) Đánh giá giao diện điều khiển, (2) Sự tích hợp Bản sao số và (3) Tối ưu hóa nền tảng Middleware. Từ đó, chương này sẽ đối chiếu trực tiếp với hệ thống được đề xuất trong luận văn để làm nổi bật các thế mạnh và những giới hạn đã được khắc phục.
+
+\section{Sự chuyển dịch của Giao diện điều khiển (Control Interfaces)}
+Mục tiêu tối thượng của thao tác điều khiển teleoperation là sự trực quan. Để so sánh, Chen và cộng sự (2023) \cite{chen2023comparing} đã thực hiện đánh giá thực nghiệm ba phương thức trên cánh tay JAKA Minicobo: GUI 2D, Cử chỉ tay (Hand Gestures), và Bộ điều khiển VR (VR Controllers). Kết quả khẳng định VR Controllers vượt trội về tốc độ và sự ổn định do giảm được độ nhiễu (jitter) tự nhiên của bàn tay. 
+
+Một khía cạnh khác của giao diện điều khiển đang được nghiên cứu mạnh mẽ là Phản hồi xúc giác (Haptic Feedback). Các nghiên cứu mới nhất của Xu et al. (2025) \cite{xu2025immersive} và Papakonstantinou et al. (2025) \cite{papakonstantinou2025effect} chỉ ra rằng việc tích hợp găng tay haptic (như Dexmo) giúp người dùng cảm nhận được lực tiếp xúc, từ đó tăng độ chính xác trong các tác vụ lắp ráp tinh vi. 
+\textit{Tuy nhiên}, việc sử dụng thiết bị haptic đòi hỏi các cảm biến lực (Force/Torque sensors) đắt tiền gắn trên tay robot, đồng thời tạo ra một độ trễ xử lý dữ liệu xúc giác khổng lồ. Do đặc thù của robot công nghiệp Denso VS-6577 thiếu các cảm biến lực tinh vi này, \textbf{đề tài chọn hướng tiếp cận tối ưu hóa 100\% phản hồi thị giác (Visual Feedback) thông qua Bản sao số thời gian thực và truyền phát Camera đa luồng}, dùng thị giác để bù đắp sự thiếu hụt về xúc giác, đảm bảo tính kinh tế và tính khả thi trong môi trường công nghiệp thực tế.
+
+\section{Tích hợp Bản sao số (Digital Twin) nâng cao nhận thức tình huống}
+Để giải quyết bài toán điểm mù (occlusion), Naceri và cộng sự (2021) \cite{naceri2021vicarios} đề xuất hệ thống \textit{Vicarios} trên kính HTC Vive, cho phép người dùng "dịch chuyển tức thời" (teleporting) để đổi góc nhìn. Tiến xa hơn, Torrejón et al. (2026) \cite{torrejon2026teleoperation} sử dụng Đám mây điểm (Point Cloud) mật độ cao (hơn 1 triệu điểm) render qua Unreal Engine để tái tạo môi trường. Mặc dù mang lại độ chân thực xuất sắc, hệ thống của Torrejón bị quá tải về đồ họa, yêu cầu PC cực mạnh (NVIDIA RTX 3070 trở lên) và đẩy độ trễ hệ thống (latency) lên sát ngưỡng 190ms.
+
+\textbf{Điểm mạnh của luận văn:} Nhận thấy việc truyền Point Cloud gây gánh nặng quá lớn cho mạng không dây, luận văn của chúng tôi sử dụng mô hình 3D (CAD/URDF) được dựng sẵn ngay trong thiết bị Meta Quest 3, và chỉ truyền các tín hiệu mảng số thực (Joint States) siêu nhẹ (vài bytes) qua giao thức WebSocket. Điều này giúp ứng dụng VR trong luận văn duy trì được \textbf{hiệu năng khung hình $66.1$ FPS và tải GPU chỉ chiếm 60\%}, hoàn toàn chạy độc lập (standalone) trên kính Meta Quest 3 mà không cần PC đồ họa đi kèm, một ưu thế vượt trội về tính di động so với Torrejón et al. \cite{torrejon2026teleoperation}.
+
+\section{Kiến trúc Middleware và Phân tích Độ trễ (Latency)}
+Việc lựa chọn nền tảng giao tiếp quyết định sự thành bại của hệ thống thời gian thực.
+\begin{itemize}
+    \item \textbf{Giới hạn của ROS1:} Phân tích độ trễ của Kawshan và Peng (2026) \cite{kawshan2026digital} trên hệ thống Unity-ROS1 cho thấy tổng độ trễ end-to-end lên tới 144ms. Cơ chế Master-Slave TCP/IP của ROS1 bộc lộ điểm nghẽn nặng nề khi gửi dữ liệu tần số cao.
+    \item \textbf{Sự vượt trội của ROS2:} Để khắc phục, một số hệ thống hiện đại như của Ali et al. (2025) \cite{ali2025digital} đã tiên phong áp dụng ROS2 (DDS). Tuy nhiên, nghiên cứu của Ali chủ yếu tập trung dùng Digital Twin để huấn luyện Trí tuệ nhân tạo (Reinforcement Learning) ở chế độ offline, thay vì phục vụ người vận hành tương tác trực tiếp qua VR.
+\end{itemize}
+
+\textbf{Đóng góp cải tiến của luận văn:} Luận văn của chúng tôi là một trong những công trình tiên phong kết hợp \textbf{cơ chế điều khiển thời gian thực Ros2-Control (ROS2) với ứng dụng VR tương tác trực tiếp}. Việc thay thế ROS1 bằng kiến trúc Data Distribution Service (DDS) giúp hệ thống tách biệt luồng xử lý Camera (băng thông cao) khỏi luồng truyền Joint States (tần số cao), đảm bảo tính thời gian thực cho thao tác điều khiển.
+
+\section{Phân tích chuyên sâu: Ưu thế của luận văn so với các nghiên cứu hiện tại}
+Dưới góc độ tổng thể, phần lớn các dự án hàn lâm thường dùng robot nghiên cứu thế hệ mới (như Franka Emika, UR5) vốn đã hỗ trợ sẵn các API điều khiển thời gian thực rất tốt. Khi áp dụng các lý thuyết này vào các cánh tay robot công nghiệp thế hệ cũ hơn như Denso VS-6577 cùng bộ điều khiển RC5, một "Research Gap" về kỹ thuật phần cứng xuất hiện: RC5 không hỗ trợ Real-time Servoing gốc, và giao tiếp UART 115200 baudrate sinh ra độ trễ cơ khí đáng kể.
+
+\textbf{Điểm mạnh của hệ thống được đề xuất:} 
+1. Thay vì chỉ dừng lại ở việc mô phỏng trên màn hình (như Singh et al. 2025 \cite{singh2025comparative}), luận văn đã đi hết vòng đời hệ thống (Full-stack): \textit{Từ thao tác tay trên VR $\rightarrow$ Xử lý động học bằng MoveIt2 (ROS2) $\rightarrow$ Giao tiếp Hardware Interface $\rightarrow$ Gửi mã UART xuống RC5 $\rightarrow$ Động cơ robot thực tế xoay.}
+2. Thuật toán \textbf{Trend Learning} và cơ chế đệm \textbf{Ring Buffer} được nhóm nghiên cứu tự phát triển ở tầng Hardware Interface đã lấp đầy khoảng trống kỹ thuật này. Nhờ đó, bất chấp những rào cản về giao thức giao tiếp cũ của thiết bị công nghiệp, hệ thống vẫn mang lại một trải nghiệm vận hành VR mượt mà.
+
+\section{Bảng thống kê các nghiên cứu liên quan}
+Bảng \ref{tab:literature_review} trình bày thống kê đối chiếu các nghiên cứu nổi bật với hệ thống của luận văn, làm nổi bật điểm yếu của họ và phương pháp luận văn dùng để khắc phục.
+
+\begin{table}[H]
+\centering
+\caption{Đánh giá và so sánh luận văn với các nghiên cứu hiện hành về VR Teleoperation}
+\label{tab:literature_review}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|p{3.2cm}|p{2.5cm}|p{2.5cm}|p{3cm}|p{3.8cm}|p{3.8cm}|}
+\hline
+\textbf{Tác giả / Năm} & \textbf{Nền tảng Robot} & \textbf{Middleware \& Giao tiếp} & \textbf{Thiết bị VR/MR} & \textbf{Điểm mạnh của nghiên cứu} & \textbf{Điểm yếu / Khác biệt của Luận văn (Ours)} \\ \hline
+
+Chen et al. (2023) \cite{chen2023comparing} & JAKA Minicobo & ROS1, UDP & Oculus Quest 2 & Chứng minh VR Controller điều khiển nhanh và chính xác hơn GUI 2D và Cử chỉ tay. & \textbf{Điểm yếu:} Phụ thuộc ROS1, kính VR cũ thiếu Passthrough sắc nét. \textbf{Ours:} Dùng Quest 3 MR. \\ \hline
+
+Naceri et al. (2021) \cite{naceri2021vicarios} & UR5, SoftHand & ROS1, Unreal, ROSBridge & HTC Vive Pro & Cho phép dịch chuyển (teleporting) để đổi góc nhìn. & \textbf{Điểm yếu:} Setup camera tĩnh phức tạp, ROS1 làm nghẽn dữ liệu. \textbf{Ours:} Dùng Ros2-Control. \\ \hline
+
+Torrejón et al. (2026) \cite{torrejon2026teleoperation} & Dual-arm (P3bot) & RoboComp, Unreal 5.6 & Meta Quest 3 & Render Point Cloud >1 triệu điểm siêu thực. & \textbf{Điểm yếu:} Đòi hỏi PC có GPU RTX 3070+, độ trễ cao 190ms. \textbf{Ours:} Truyền Joint States gọn nhẹ, Quest 3 chạy độc lập (Standalone). \\ \hline
+
+Xu et al. (2025) \cite{xu2025immersive} & Robot hai tay, Dexmo Glove & Unity, Custom Protocol & HTC Vive & Áp dụng Haptic Feedback (phản hồi xúc giác) qua găng tay thông minh. & \textbf{Điểm yếu:} Đòi hỏi găng tay đắt tiền, độ trễ hệ thống tăng. \textbf{Ours:} Tối ưu hóa thị giác đa luồng thay cho xúc giác. \\ \hline
+
+Kawshan \& Peng (2026) \cite{kawshan2026digital} & JetCobot (7-DoF) & ROS1, ROS-TCP, Unity & Desktop / VR & Tối ưu hoá RRTConnect. Đánh giá chi tiết độ trễ mô phỏng (144ms). & \textbf{Điểm yếu:} Cơ chế Master-Slave của ROS1 gây trễ. \textbf{Ours:} Dịch chuyển toàn diện sang nền tảng DDS của ROS2. \\ \hline
+
+\textbf{Luận văn hiện tại} & \textbf{Denso VS-6577 \& RC5} & \textbf{ROS2 (DDS), ROS-Sharp, UART} & \textbf{Meta Quest 3, Unity 6} & \textbf{Tích hợp Ros2-Control \& MoveIt2. Khắc phục triệt để độ trễ cơ khí máy công nghiệp bằng Trend Learning.} & \textbf{Giải quyết thành công bài toán Full-stack từ VR hiện đại xuống bộ điều khiển công nghiệp truyền thống một cách mượt mà.} \\ \hline
+
+\end{tabular}%
+}
+\end{table}
+
+Đúc kết lại, dù thiếu đi các cảm biến lực xúc giác đắt tiền (haptic) như một số nghiên cứu hiện tại, luận văn đã tối ưu hóa xuất sắc các tài nguyên đang có. Việc khai thác triệt để sức mạnh của \textbf{ROS2 (DDS)}, công cụ \textbf{Unity 6}, thiết bị \textbf{Meta Quest 3}, kết hợp cùng\textbf{các thủ thuật xử lý hàng đợi tín hiệu} đã tạo ra một nền tảng vận hành từ xa ưu việt. Hệ thống không chỉ có tính thời gian thực cao mà còn duy trì được sự ổn định tuyệt đối trong môi trường công nghiệp, lấp đầy thành công khoảng trống giữa công nghệ phần mềm trí tuệ nhân tạo hiện đại và các cỗ máy phần cứng truyền thống.
+
+
+
+
