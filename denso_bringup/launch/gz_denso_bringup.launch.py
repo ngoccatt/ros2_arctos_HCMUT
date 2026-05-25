@@ -194,9 +194,9 @@ def generate_launch_description():
             }
         ],
         remappings=[
-            ('image_raw', '/camera/image_raw'),
-            ('camera_info', '/camera/camera_info'),
-            ('image_raw/compressed', '/camera/image_raw/compressed'),
+            ('image_raw', '/camera_1/image_raw'),
+            ('camera_info', '/camera_1/camera_info'),
+            ('image_raw/compressed', '/camera_1/image_raw/compressed'),
         ]
     )
 
@@ -239,8 +239,8 @@ def generate_launch_description():
         delay_robot_arm_controller_spawner,
         delay_rviz_and_moveit_launch,
         rosbridge_server_launch,
-        # camera_node_v4l2,
-        camera_node_usbcam,
+        camera_node_v4l2,
+        # camera_node_usbcam,
         # Launch Arguments
         DeclareLaunchArgument(
             'use_sim_time',
