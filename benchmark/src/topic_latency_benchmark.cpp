@@ -54,10 +54,10 @@ private:
     msg.data = std::to_string(last_publish_time_->nanoseconds());
     benchmark_pub_->publish(msg);
 
-    RCLCPP_INFO(
-      this->get_logger(),
-      "/benchmark published at %.9f s  (seq %zu)",
-      last_publish_time_->seconds(), ++seq_);
+    // RCLCPP_INFO(
+    //   this->get_logger(),
+    //   "/benchmark published at %.9f s  (seq %zu)",
+    //   last_publish_time_->seconds(), ++seq_);
   }
 
   void onAck(const std_msgs::msg::String::SharedPtr msg)
