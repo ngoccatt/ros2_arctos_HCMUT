@@ -1,114 +1,61 @@
-
-\chapter{CÁC NGHIÊN CỨU LIÊN QUAN VÀ PHÂN TÍCH KHOẢNG TRỐNG}
+\chapter{CÁC NGHIÊN CỨU LIÊN QUAN}
 \label{chap:related_works}
 
-Sự hội tụ giữa Robot học, Thực tế ảo (VR), và Bản sao số (Digital Twin) đã thúc đẩy hàng loạt nghiên cứu trong thập kỷ qua. Chương này phân tích sâu các tài liệu nghiên cứu hiện có theo bốn nhóm chủ đề: (1) Giao diện điều khiển, (2) Tích hợp Bản sao số, (3) Tối ưu Middleware và quản lý độ trễ, (4) Haptic Feedback. Mỗi nghiên cứu được đánh giá về điểm mạnh và hạn chế cụ thể để làm rõ vị trí và hướng tiếp cận của luận văn.
+Việc ứng dụng Thực tế ảo (VR) và Bản sao số (Digital Twin) vào quá trình điều khiển từ xa (Teleoperation) đã và đang nhận được sự quan tâm sâu sắc từ cộng đồng nghiên cứu robot học quốc tế. Để có một cái nhìn toàn diện và định vị được giá trị của đề tài trong bức tranh công nghệ hiện tại, chương này sẽ tiến hành phân tích chi tiết các công trình nghiên cứu nổi bật trong khoảng 5 năm trở lại đây. Các tài liệu được phân nhóm thành bốn chủ đề chính: (1) Phương thức tương tác và giao diện điều khiển, (2) Khả năng cải thiện nhận thức tình huống qua Bản sao số, và (3) Tối ưu hóa nền tảng Middleware để giải quyết bài toán độ trễ. Dựa trên cơ sở phân tích này, một bảng thống kê sẽ được thiết lập ở cuối chương nhằm tổng hợp các khoảng trống nghiên cứu (Research Gaps) và cách tiếp cận của luận văn.
 
-\section{Giao diện điều khiển robot từ xa}
-\label{sec:related_interface}
+\section{Phương thức tương tác và giao diện điều khiển (Control Interfaces)}
 
-Giao diện điều khiển (Control Interface) là yếu tố quyết định trải nghiệm của người vận hành và hiệu quả của hệ thống teleoperation.
+Mục tiêu cơ bản của hệ thống điều khiển từ xa là thu hẹp khoảng cách không gian giữa người vận hành và thiết bị. Ở khía cạnh này, việc lựa chọn phương thức nhập liệu (input methods) đóng vai trò quyết định đối với trải nghiệm người dùng và hiệu suất công việc. 
 
-Chen et al. (2023) \cite{chen2023comparing} thực hiện so sánh trực tiếp ba phương thức điều khiển trên cánh tay JAKA Minicobo: Giao diện 2D (GUI) của nhà sản xuất, Cử chỉ tay (Hand Gestures), và Bộ điều khiển VR (VR Controllers) với kính Meta Quest 2. Thử nghiệm với 16 người dùng trên nhiệm vụ cụ thể (điều khiển cánh tay câu cá) cho thấy VR Controllers đạt thời gian hoàn thành ngắn hơn đáng kể so với GUI 2D, và ổn định hơn so với Cử chỉ tay do giảm được nhiễu bàn tay tự nhiên. \textit{Điểm mạnh}: nghiên cứu có dữ liệu thực nghiệm với nhóm người dùng đa dạng, phương pháp đo lường khách quan. \textit{Hạn chế}: sử dụng Meta Quest 2 (chip thế hệ cũ, hiệu năng thấp hơn Quest 3) và ROS1, nhiệm vụ thử nghiệm đơn giản và không đại diện cho môi trường công nghiệp thực.
+Để đánh giá sự ưu việt của VR so với các phương pháp truyền thống, Chen và cộng sự (2023) \cite{chen2023comparing} đã thực hiện một nghiên cứu so sánh thực nghiệm ba phương thức điều khiển trên cánh tay JAKA Minicobo: Giao diện đồ họa 2D trên màn hình máy tính (GUI), nhận diện cử chỉ tay (Hand Tracking), và bộ điều khiển thực tế ảo (VR Controllers) thông qua kính Oculus Quest 2. Họ thiết lập một kịch bản "câu cá" mô phỏng để người dùng điều khiển cánh tay robot thực hiện nhiệm vụ lấy vật thể. Kết quả thực nghiệm định lượng cho thấy việc sử dụng VR Controllers giúp người dùng hoàn thành nhiệm vụ với tốc độ nhanh nhất và độ ổn định cao nhất, nhờ vào khả năng theo dõi chuyển động không gian 6 bậc tự do (6-DoF) đáng tin cậy, làm giảm độ nhiễu (jitter) tự nhiên của bàn tay con người. Trong khi đó, tính năng Hand tracking dù mang lại cảm giác công thái học tự nhiên nhưng lại dễ bị mất dấu tín hiệu khi làm việc ở các góc khuất phức tạp. 
 
-Hetrick et al. (2020) \cite{hetrick2020comparing} nghiên cứu sự khác biệt giữa hai phương thức điều khiển trên robot Baxter hai tay với kính HTC Vive: điều khiển theo quỹ đạo (trajectory-based) và điều khiển theo vị trí (goal-based). Kết quả cho thấy không có sự khác biệt lớn về hiệu suất, nhưng người có kinh nghiệm thiên về phương thức goal-based do tốc độ nhanh hơn. \textit{Điểm mạnh}: phân tích được ảnh hưởng của kinh nghiệm người dùng lên cognitive load và workload. \textit{Hạn chế}: robot Baxter hai tay không phổ biến trong bối cảnh cánh tay công nghiệp đơn, HTC Vive là thiết bị đã lỗi thời.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Images/Intro/chen.jpg}
+    \caption{Giao diện điều khiển VR trong nghiên cứu của Chen và cộng sự \cite{chen2023comparing} }
+    \label{fig:unity-connect-panel}
+\end{figure}
 
-Su et al. (2022) \cite{su2022mixed} đề xuất hệ thống Mixed Reality kết hợp imitation-based mapping, ánh xạ cử chỉ tay người điều khiển sang chuyển động cánh tay robot một cách tự nhiên. \textit{Điểm mạnh}: tính trực quan cao khi ánh xạ trực tiếp từ cử chỉ người. \textit{Hạn chế}: độ trễ cao do xử lý MR và phụ thuộc vào PC đồ họa mạnh, không khả thi cho triển khai standalone.
+Tương tự,  Mới đây nhất, hệ thống BEAVR do Viện MIT phát triển (2025) \cite{arclab2025beavr} đã ứng dụng thiết bị Meta Quest 3S để vận hành nền tảng robot thao tác hai tay (bimanual). Hệ thống này cho phép thu thập dữ liệu thao tác với tần số điều khiển lên tới 90Hz, chứng minh khả năng đáp ứng nhanh nhạy của VR Controllers đối với các tác vụ phức tạp.
 
-Zhang et al. (2023) \cite{zhang2023research} giới thiệu hệ thống VR 5 chiều (5D) cho teleoperation với tích hợp đa modal bao gồm cả phản hồi lực. \textit{Điểm mạnh}: cung cấp trải nghiệm toàn diện với nhiều kênh phản hồi. \textit{Hạn chế}: phần cứng đặc thù, không mở nguồn (not open-source), khó tái tạo trong môi trường thực nghiệm độc lập.
+Kế thừa các kết quả nghiên cứu trên, luận văn sử dụng thiết bị Meta Quest 3 kết hợp với VR Controllers làm phương thức nhập liệu chính. Thiết bị Meta Quest 3 là một thiết bị dạng "Stand-alone", tức là nó có thể chạy riêng biệt không cần sự hỗ trợ của máy tính PC, do đó ứng dụng phát triển trên kính Meta Quest 3 cũng cần được tối ưu hoặc tùy chỉnh để có thể chạy độc lập mà không ảnh hưởng tới trải nghiệm của người dùng. Trong ứng dụng, ba phương thức điều khiển được cung cấp: Xoay trực tiếp với MoveIt-Servo, xoay bằng bẳng điều khiển hoặc tương tác với model để xoay, cho phép người dùng được tự do lựa chọn phương thức phù hợp cho công việc điều khiển.
 
-\textbf{Nhận xét:} Kết quả tổng hợp từ các nghiên cứu trên cho thấy VR Controllers mang lại kết quả tốt nhất về tốc độ và ổn định so với cử chỉ tay và GUI 2D. Đây là lý do luận văn lựa chọn Meta Quest 3 với VR Controllers làm giao diện điều khiển chính, thay vì hand tracking.
+\section{Cải thiện nhận thức tình huống thông qua Bản sao số (Digital Twin)}
+Digital Twin là một xu hướng đang được quan tâm với sự phát triển mạnh mẽ của mạng Internet và mạng lưới IoT, với ý tưởng là việc hình thành một bản sao ảo của vật thể, với trạng thái luôn được đồng bộ với vật thể thật, nhằm theo dõi, kiểm soát, điều khiển vật thể. Đối với ứng dụng VR điều khiển từ xa, việc cấu tạo bản sao số (Digital Twin) trong môi trường VR giúp người dùng dễ dàng theo dõi tình trạng của thiết bị / robot ở nhiều góc độ khác nhau, có được nhận thức không gian và tầm hoạt động của thiết bị chính xác hơn, từ đó đưa ra thao tác điều khiển an toàn. 
 
-\section{Tích hợp Bản sao số và nhận thức tình huống}
-\label{sec:related_digital_twin}
+Trong dự án \textit{Vicarios}, Naceri và cộng sự (2021) \cite{naceri2021vicarios} đã xây dựng một mô hình ảo của cánh tay UR5 sử dụng Unreal Engine và ROS. Đặc tính nổi bật của hệ thống là cho phép người dùng thay đổi góc nhìn (teleporting) trong không gian VR để có nhiều góc nhìn đa dạng hơn xung quanh robot được điều khiển. Để tăng tính trực quan, có đến ba camera được gắn ở môi trường xung quanh robot thực tế, dùng để truyền trực tiếp dữ liệu video và dữ liệu điểm mây (point-cloud data). Robot và dữ liệu ảnh camera đều được vận hành với ROS trên Ubuntu 16.04.
 
-Bản sao số (Digital Twin) là thành phần cốt lõi để tăng nhận thức tình huống (situational awareness) cho người vận hành trong môi trường VR.
+Tiến xa hơn về mặt tái tạo không gian, Torrejón và cộng sự (2026) \cite{torrejon2026teleoperation} đã xây dựng một framework điều khiển tay máy kép sử dụng thiết bị Meta Quest 3 và Unreal Engine 5. Để đồng bộ môi trường thực tế vào VR, họ đã sử dụng hệ thống Đám mây điểm (Point Cloud) với mật độ cực cao (hơn 1 triệu điểm ảnh) truyền trực tiếp từ camera ZED 2i. Mặc dù mang lại độ chân thực xuất sắc cho Bản sao số, phương pháp truyền tải Point Cloud liên tục đòi hỏi băng thông mạng khổng lồ và phần cứng xử lý đồ họa cường độ cao. Nghiên cứu của Torrejón yêu cầu một máy tính PC trang bị GPU NVIDIA RTX 3070 trở lên để kết xuất đồ họa, và quá trình xử lý Point Cloud đã đẩy độ trễ hệ thống (latency) lên sát ngưỡng 190ms \cite{torrejon2026teleoperation}, gây khó khăn cho các tác vụ cần phản ứng tức thời.
 
-Naceri et al. (2021) \cite{naceri2021vicarios} đề xuất \textit{Vicarios Interface} trên kính HTC Vive Pro, cho phép người điều khiển ``dịch chuyển'' (teleport) trong không gian ảo để thay đổi góc nhìn tự do và render môi trường bằng Point Cloud từ nhiều camera. \textit{Điểm mạnh}: giải quyết bài toán điểm mù (occlusion) hiệu quả, người dùng đánh giá cao tính trực quan của góc nhìn 3D tự do. \textit{Hạn chế}: sử dụng ROS1 với ROSBridge gây bottleneck băng thông khi truyền dữ liệu Point Cloud khối lượng lớn, đòi hỏi PC đồ họa mạnh để render real-time.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Images/Intro/torrejon2026teleoperation.jpg}
+    \caption{Khả năng tái tạo không gian bằng Point Cloud ấn tượng, nhưng đặt nặng về hiệu năng phần cứng}
+    \label{fig:unity-connect-panel}
+\end{figure}
 
-Huang et al. (2020) \cite{multi-view} xây dựng nền tảng AR đa camera với ZED stereo camera (toàn cục) và RealSense (cục bộ gắn tay gắp), sử dụng Point Cloud Depth Projection để tạo cảm giác ``nhìn xuyên qua'' khi tay gắp bị che khuất. \textit{Điểm mạnh}: Picture-in-Picture kết hợp Depth Projection cải thiện nhận thức tình huống trong môi trường có vật cản. \textit{Hạn chế}: thiết kế Picture-in-Picture khi không hợp lý làm tăng cognitive load thay vì giảm, như kết quả nghiên cứu cũng chỉ ra.
 
-Torrejón et al. (2026) \cite{torrejon2026teleoperation} xây dựng hệ thống teleoperation tay đôi với Point Cloud mật độ cao ($>$1 triệu điểm) được render bằng Unreal Engine 5.6, sử dụng kính Meta Quest 3. \textit{Điểm mạnh}: tái tạo môi trường vật lý với mức độ chân thực cao, cung cấp nhận thức tình huống phong phú. \textit{Hạn chế}: yêu cầu PC có GPU NVIDIA RTX 3070 trở lên, độ trễ hệ thống đạt 190ms (sát ngưỡng thoải mái cho VR), không thể chạy standalone.
+Do giới hạn về tài nguyên, đề tài không ưu tiên tái hiện lại môi trường bằng Đám mây điểm (Point Cloud) vốn rất nặng nề về dữ liệu, phương pháp của luận văn hiện tại sử dụng mô hình 3D của robot (với hình dáng và thông số chính xác từ nhà sản xuất) được đưa trực tiếp vào ứng dụng VR. Mô hình 3D của robot luôn được đồng bộ với trạng thái thực tế của robot (Joint States) siêu nhẹ được truyền từ Ros2-control nhằm cập nhật chuyển động của mô hình 3D. Để thay thế nhận thức không gian, đề tài sử dụng hai USB camera truyền dữ liệu hình ảnh tới ứng dụng, một camera gắn ở đầu cánh tay, camera còn lại cho thấy toàn bộ góc làm việc xung quanh cánh tay robot. Nhờ chiến lược này, ứng dụng VR của luận văn duy trì được mức khung hình ổn định trên 66 FPS và tải GPU của kính chỉ chiếm khoảng 60\%, hoàn toàn chạy độc lập (Standalone) trên kính Meta Quest 3 mà không cần cắm cáp kết nối với máy tính đồ họa chuyên dụng. Sự kết hợp giữa mô hình Digital Twin nhẹ và luồng video đa góc độ từ camera USB thông thường giúp giảm thiểu tải mạng, mang lại độ trễ thấp và tính di động cao hơn hẳn so với việc truyền Point Cloud.
 
-Kawshan và Peng (2026) \cite{kawshan2026digital} xây dựng Digital Twin trên Unity kết nối với JetCobot 7-DoF qua ROS1. Nghiên cứu cung cấp benchmark chi tiết về độ trễ end-to-end đạt 144ms và xác nhận cơ chế Master-Slave của ROS1 là bottleneck. \textit{Điểm mạnh}: đánh giá độ trễ đầy đủ, cung cấp số liệu tham chiếu quan trọng. \textit{Hạn chế}: bottleneck ROS1 đã được xác nhận nhưng chưa được giải quyết trong phạm vi nghiên cứu này.
+\section{Vai trò của Middleware và bài toán cải thiện độ trễ giao tiếp}
 
-Singh et al. (2025) \cite{singh2025comparative} so sánh Digital Twin trong Unity và Gazebo về simulation fidelity. \textit{Điểm mạnh}: phân tích học thuật có hệ thống về độ trung thực mô phỏng. \textit{Hạn chế}: chỉ dừng ở mô phỏng, không triển khai vòng điều khiển kín (closed-loop) với phần cứng thực tế.
+Khía cạnh sống còn nhất trong nghiên cứu điều khiển từ xa là việc lựa chọn nền tảng giao tiếp (Middleware) để đảm bảo dữ liệu truyền tải theo thời gian thực (Real-time).
 
-Ali et al. (2025) \cite{ali2025digital} sử dụng ROS2 và Digital Twin để huấn luyện Reinforcement Learning cho robot sản xuất. \textit{Điểm mạnh}: tiên phong áp dụng ROS2 DDS cho Digital Twin, cho thấy ưu thế so với ROS1. \textit{Hạn chế}: hoạt động ở chế độ offline (huấn luyện AI), không phục vụ người vận hành tương tác VR trực tiếp.
+\textbf{Giới hạn của ROS 1:} Nhiều dự án hiện nay vẫn sử dụng nền tảng Robot Operating System thế hệ đầu (ROS 1). Nghiên cứu của Kawshan và Peng (2026) \cite{kawshan2026digital} đánh giá chi tiết kiến trúc tích hợp Unity-ROS 1 khi điều khiển robot JetCobot (7 bậc tự do). Báo cáo chỉ ra rằng giao thức mạng TCP/IP dựa trên cơ chế Master-Slave của ROS 1 thường sinh ra độ trễ tích lũy. Họ đo lường được tổng độ trễ end-to-end lên tới 144ms, bộc lộ điểm nghẽn nghiêm trọng khi hệ thống phải xử lý đồng thời luồng dữ liệu hình ảnh băng thông lớn và luồng tọa độ động học tần số cao \cite{kawshan2026digital}. 
 
-\textbf{Nhận xét:} Luận văn này sử dụng cách tiếp cận Digital Twin đơn giản và thực tế hơn: mô hình URDF/CAD được load sẵn trong Meta Quest 3, đồng bộ trạng thái qua Joint States và camera stream qua WebSocket. Cách tiếp cận này không cung cấp độ phong phú môi trường như Point Cloud (so với Naceri, Torrejón), nhưng cho phép chạy standalone trên Quest 3 đạt 66,1 FPS với 60\% tải GPU mà không cần PC đồ họa --- ưu thế trực tiếp về tính khả thi và chi phí triển khai.
+\textbf{MQTT trong điều khiển real-time}: Một giải pháp mạng khác là giao thức MQTT trong môi trường IoT công nghiệp (IIoT) được nghiên cứu bởi Luu và cộng sự (2025) \cite{Luu2025EnhancingRealTime}. Tuy giải quyết được vấn đề chống rớt gói tin, mạng diện rộng WAN vẫn khiến độ trễ dao động ở mức 94.7ms - 139.3ms (với các mức QoS khác nhau), chưa đáp ứng được độ trễ lý tưởng (dưới 50ms) cho điều khiển liên tục.
 
-\section{Tối ưu hóa Middleware và Quản lý Độ trễ}
-\label{sec:related_middleware}
+\textbf{Xu hướng dịch chuyển sang ROS 2:} Để vượt qua rào cản này, báo cáo tổng quan của Casini và cộng sự (2025) \cite{casini2025survey} nhấn mạnh rằng ROS 2, với chuẩn giao thức Data Distribution Service (DDS), cung cấp năng lực điều phối dữ liệu ưu việt. Cơ chế Chất lượng dịch vụ (QoS) của DDS loại bỏ hiện tượng "chặn đầu hàng đợi" (Head-of-line blocking), cho phép các lệnh điều khiển khẩn cấp được ưu tiên gửi đi mà không bị cản trở bởi luồng video. Áp dụng lý thuyết này, Ali và cộng sự (2025) \cite{ali2025digital} đã triển khai ROS 2 để kết nối Digital Twin nhằm huấn luyện học tăng cường (Soft Actor-Critic Reinforcement Learning) cho quá trình in 3D. Nhờ nền tảng DDS, họ đạt được độ trễ đồng bộ (synchronization latency) gần như tức thời ở mức $\sim$20ms. Tuy nhiên, nghiên cứu của Ali \cite{ali2025digital} mới chỉ tập trung vào mô phỏng AI ngoại tuyến (offline), chưa phục vụ cho con người tương tác điều khiển trực tiếp qua giao diện VR.
 
-Việc lựa chọn nền tảng giao tiếp quyết định tính thời gian thực của toàn hệ thống.
+Đề tài chủ tương xây dựng một hệ thống \textbf{ROS 2 tích hợp tiêu chuẩn Ros2-Control và MoveIt 2 cho ứng dụng VR tương tác trực tiếp}. Việc sử dụng ROS2 tận dụng kiến trúc mạng phân tán DDS giúp hệ thống tách biệt luồng xử lý Camera khỏi luồng truyền tọa độ (Joint States) với việc chỉ định chế độ QoS khác nhau. Kể cả khi mạng Wi-Fi bị nhiễu, các lệnh điều khiển quan trọng vẫn luôn được ROS 2 ưu tiên xử lý, đảm bảo ứng dụng VR duy trì kết nối đáng tin cậy.
 
-Kawshan và Peng (2026) \cite{kawshan2026digital} đã định lượng được bottleneck của ROS1: tổng độ trễ end-to-end đạt 144ms trong hệ thống Unity--ROS1. Cơ chế Master-Slave TCP/IP của ROS1 bộc lộ điểm nghẽn nặng khi phải truyền đồng thời kinematics tần số cao và dữ liệu hình ảnh.
+\section{Phân tích khoảng trống nghiên cứu và sự định vị của luận văn}
 
-Luu et al. (2025) \cite{luu2025enhancing} phân tích hệ thống teleoperation trong Industrial IoT, nhấn mạnh ảnh hưởng của hạ tầng mạng lên độ trễ điều khiển. \textit{Điểm mạnh}: xem xét vấn đề từ góc độ IoT infrastructure toàn diện. \textit{Hạn chế}: không sử dụng hardware interface chuẩn hóa như ros2-control.
+Qua xem xét, có thể thấy việc sử dụng VR và Bản sao số mang lại lợi ích to lớn. Tuy nhiên, các nghiên cứu hiện hành \cite{arclab2025beavr, torrejon2026teleoperation} thường được thực hiện trên những nền tảng robot thế hệ mới (như Franka Emika, UR5) đã hỗ trợ sẵn các API điều khiển thời gian thực (Real-time Servoing) cấp thấp từ nhà sản xuất. Một số nghiên cứu không sử dụng ROS nói chung cho điều khiển, mà sử dụng trực tiếp phần mềm điều khiển tiên tiến được hỗ trợ bởi các robot này.
 
-Ali et al. (2025) \cite{ali2025digital} áp dụng ROS2 DDS cho Digital Twin, đặt tiền đề kỹ thuật cho việc thay thế ROS1. Macenski et al. (2022) \cite{doi:10.1126/scirobotics.abm6074} trình bày kiến trúc và thiết kế của ROS2, khẳng định DDS là cơ sở cho giao tiếp phân tán, QoS thời gian thực, và tách biệt luồng dữ liệu.
+Trong tình huống của dự án, bộ điều khiển RC5 của Denso VS-6577 là một bộ điều khiển tương đối cũ, do đó việc thiết kế một chương trình điều khiển phức tạp, đáp ứng yêu cầu điều khiển thời gian thực giao tiếp kính VR là không khả thi. ROS2 là lựa chọn hợp lý nhất để gánh lấy sự phức tạp của toàn bộ cơ chế điều khiển và giao tiếp với ứng dụng VR, đảm bảo sự không phụ thuộc vào một nền tảng Robot cụ thể. 
 
-Li et al. (2025) \cite{reality-fusion} đề xuất giải pháp truyền phát môi trường dưới dạng 3D Gaussian Splats (3DGS) cho robot di động, cải thiện chất lượng hình ảnh. \textit{Điểm mạnh}: hình ảnh môi trường chân thực với băng thông tối ưu hơn Point Cloud. \textit{Hạn chế}: 3DGS được thiết kế cho robot di động, không phù hợp với cánh tay công nghiệp cố định; đòi hỏi bước tái tạo 3DGS từ camera trước khi triển khai.
+Thêm nữa, phần lớn các nghiên cứu sử dụng ROS1 cho cơ chế điều khiển. Một vài nghiên cứu gần đây tận dụng ROS2, nhưng lại không nói rõ cách thiết kế và cũng không đề xuất được một nền tảng điều khiển robot ROS2 tiêu chuẩn. Đề tài đề xuất một hệ thống điều khiển robot nhấn mạnh vào ROS2 tích hợp Ros2-Control + MoveIt, giao tiếp với thiết bị VR với Ros-sharp, hứa hẹn khả năng tổng quát hóa tốt và có thể thay thế phần driver dễ dàng để điều khiển loại robot mới.
 
-\textbf{Nhận xét:} Luận văn lựa chọn ROS2 (DDS) làm nền tảng để khắc phục trực tiếp bottleneck của ROS1. Nhờ DDS, luồng camera stream (băng thông cao) và luồng Joint States (tần số cao) được xử lý độc lập qua các topic riêng biệt với QoS phù hợp, đảm bảo tính thời gian thực cho điều khiển mà không bị ảnh hưởng bởi tải hình ảnh.
+Một mặt khác nữa chính là sự tiện dụng. Các nghiên cứu có xu hướng sử dụng kính thực tế ảo nhưng cần kết nối với PC/Laptop để xử lý đồ họa, tạo ra giới hạn về phạm vi hoạt động tự do của người dùng, nhưng đánh đổi thì sẽ xử lý được dữ liệu nặng hơn với việc truyền và xử lý dữ liệu từ sensor point cloud. Đề tài tập trung nhiều hơn vào việc tạo nên sự tiện dụng cho người sử dụng - tạo một ứng dụng riêng biệt chạy độc lập trên kính VR Meta Quest 3, để người dùng có thể chạy và kết nối tới cánh tay robot ở bất cứ đâu trong cùng mạng cục bộ và thực hiện điều khiển mà vẫn giữ một hiệu năng ổn định. Tuy vậy, đánh đổi của ứng dụng hiện tại là dữ liệu truyền nhận tương đối đơn giản, và chưa có cơ chế điều khiển phức tạp hơn, như là ánh xạ cử động tay với phần tay gắp của cánh tay robot.
 
-\section{Haptic Feedback và Phản hồi cảm giác}
-\label{sec:related_haptic}
-
-Phản hồi xúc giác (Haptic Feedback) là hướng nghiên cứu bổ sung quan trọng trong teleoperation, giúp người vận hành cảm nhận được lực tiếp xúc từ xa.
-
-Xu et al. (2025) \cite{xu2025immersive} phát triển hệ thống VR bimanual (hai tay) tích hợp với găng tay Dexmo để truyền phản hồi lực từ cảm biến lực trên robot. \textit{Điểm mạnh}: phản hồi xúc giác thực sự giúp tăng độ chính xác trong tác vụ lắp ráp tinh vi, người dùng cảm nhận được khi robot chạm vật thể. \textit{Hạn chế}: thiết bị Dexmo có chi phí cao, cần cảm biến lực/moment (F/T sensor) gắn trực tiếp trên robot, thêm độ trễ xử lý tín hiệu haptic.
-
-Papakonstantinou et al. (2025) \cite{papakonstantinou2025effect} phân tích định lượng tác động của xúc giác lên hiệu suất điều khiển cánh tay đơn. \textit{Điểm mạnh}: số liệu định lượng rõ ràng về mức độ cải thiện khi có haptic. \textit{Hạn chế}: đòi hỏi F/T sensor gắn trực tiếp vào robot, làm tăng độ phức tạp tích hợp.
-
-MIT ARCLab (2025) \cite{arclab2025beavr} giới thiệu BEAVR: hệ thống teleoperation VR bimanual mã nguồn mở, hỗ trợ đa nền tảng. \textit{Điểm mạnh}: open-source, khả năng tái sử dụng cao. \textit{Hạn chế}: được thiết kế cho robot nghiên cứu (Franka Emika) vốn có API real-time sẵn có, không áp dụng trực tiếp cho robot công nghiệp đời cũ với bộ điều khiển hạn chế.
-
-\textbf{Nhận xét:} Cánh tay Denso VS-6577/RC5 không được trang bị F/T sensor tinh vi, và chi phí tích hợp haptic là rào cản thực tế trong bối cảnh của luận văn. Thay vào đó, luận văn tập trung tối ưu hóa phản hồi thị giác (visual feedback) thông qua Digital Twin thời gian thực và camera stream --- dùng thị giác bù đắp xúc giác, phù hợp với điều kiện phần cứng và kinh tế của đề tài.
-
-\section{Bảng so sánh các nghiên cứu liên quan}
-\label{sec:related_table}
-
-Bảng \ref{tab:literature_review} tổng hợp và đối chiếu các nghiên cứu tiêu biểu với hệ thống được đề xuất trong luận văn.
-
-\begin{table}[H]
-\centering
-\caption{So sánh các nghiên cứu liên quan về VR Teleoperation với luận văn hiện tại}
-\label{tab:literature_review}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|p{3.2cm}|p{2.5cm}|p{2.5cm}|p{3cm}|p{3.8cm}|p{3.8cm}|}
-\hline
-\textbf{Tác giả / Năm} & \textbf{Nền tảng Robot} & \textbf{Middleware \& Giao tiếp} & \textbf{Thiết bị VR/AR} & \textbf{Điểm mạnh} & \textbf{Hạn chế / Khác biệt với Luận văn} \\ \hline
-
-Chen et al. (2023) \cite{chen2023comparing} & JAKA Minicobo & ROS1, UDP & Meta Quest 2 & Dữ liệu thực nghiệm 16 người dùng, chứng minh VR Controller hiệu quả hơn GUI 2D. & Dùng ROS1 và thiết bị VR cũ; nhiệm vụ thử nghiệm đơn giản. Ours: ROS2 + Quest 3. \\ \hline
-
-Naceri et al. (2021) \cite{naceri2021vicarios} & UR5, SoftHand & ROS1, ROSBridge, Unreal & HTC Vive Pro & Teleporting góc nhìn tự do; render Point Cloud cải thiện nhận thức tình huống. & ROS1/ROSBridge gây bottleneck băng thông; cần PC đồ họa mạnh. Ours: ROS2 DDS, standalone Quest 3. \\ \hline
-
-Torrejón et al. (2026) \cite{torrejon2026teleoperation} & P3bot (tay đôi) & RoboComp, Unreal 5.6 & Meta Quest 3 & Point Cloud $>$1M điểm, môi trường 3D chân thực. & Cần GPU RTX 3070+, độ trễ 190ms, không standalone. Ours: URDF lightweight, 66,1 FPS standalone. \\ \hline
-
-Xu et al. (2025) \cite{xu2025immersive} & Robot tay đôi, Dexmo & Unity, custom protocol & HTC Vive & Haptic Feedback thực sự tăng độ chính xác lắp ráp tinh vi. & Cần F/T sensor và găng tay đắt tiền. Ours: tối ưu visual feedback thay cho haptic. \\ \hline
-
-Kawshan \& Peng (2026) \cite{kawshan2026digital} & JetCobot (7-DoF) & ROS1, ROS-TCP, Unity & Desktop/VR & Benchmark độ trễ chi tiết (144ms end-to-end). & Bottleneck ROS1 được xác nhận nhưng chưa giải quyết. Ours: chuyển hoàn toàn sang ROS2 DDS. \\ \hline
-
-Luu et al. (2025) \cite{luu2025enhancing} & Robot công nghiệp & ROS, IoT network & -- & Phân tích ảnh hưởng hạ tầng mạng IoT lên độ trễ. & Không dùng hardware interface chuẩn hóa. Ours: ros2-control + MoveIt2. \\ \hline
-
-\textbf{Luận văn (Ours)} & \textbf{Denso VS-6577 \& RC5} & \textbf{ROS2 (DDS), ROS-Sharp, UART} & \textbf{Meta Quest 3, Unity 6} & \textbf{Full-stack từ VR đến bộ điều khiển công nghiệp đời cũ; standalone 66,1 FPS; kiến trúc ros2-control chuẩn hóa.} & \textbf{Chưa tích hợp haptic; Trend Learning là giải pháp tạm thời cho vấn đề đồng bộ RC5.} \\ \hline
-
-\end{tabular}%
-}
-\end{table}
-
-\section{Tổng kết: Khoảng trống nghiên cứu và định hướng của luận văn}
-\label{sec:related_gap}
-
-Tổng hợp từ phân tích các nghiên cứu trên, có thể xác định ba khoảng trống nghiên cứu (research gap) mà luận văn hướng đến:
-
-\begin{enumerate}
-
-    \item \textbf{Phần lớn hệ thống teleoperation vẫn dùng ROS1 với bottleneck đã được xác nhận.} Kawshan \& Peng (2026) đã định lượng bottleneck này là 144ms, nhưng không giải quyết. Các công trình dùng ROS2 như Ali et al. (2025) chủ yếu phục vụ huấn luyện AI offline, chưa có công trình nào kết hợp ros2-control với giao diện VR tương tác trực tiếp cho robot công nghiệp. Luận văn lấp đầy khoảng trống này bằng kiến trúc ROS2 (DDS) phân tầng chuẩn hóa.
-
-    \item \textbf{Digital Twin phụ thuộc Point Cloud nặng và PC đồ họa chuyên dụng.} Naceri (2021) và Torrejón (2026) cung cấp nhận thức tình huống phong phú nhưng không khả thi cho triển khai standalone. Luận văn chọn cách tiếp cận URDF lightweight + WebSocket, đạt được tính khả thi cao với 66,1 FPS trên Quest 3 mà không cần PC đồ họa đi kèm.
-
-    \item \textbf{Chưa có công trình nào thực hiện tích hợp full-stack từ VR hiện đại đến bộ điều khiển công nghiệp đời cũ không hỗ trợ real-time API.} Các robot trong nghiên cứu học thuật (UR5, Franka Emika, JAKA) đều có API điều khiển linh hoạt. Denso VS-6577 với RC5 chỉ hỗ trợ giao tiếp ngoại vi qua UART 115200 baud --- một giới hạn phần cứng thực tế mà luận văn giải quyết bằng giao thức UART tùy chỉnh, Ring Buffer, và Trend Learning. Cần thẳng thắn nhìn nhận rằng Trend Learning là giải pháp tạm thời giúp cải thiện đáng kể tính mượt mà của quỹ đạo, nhưng vấn đề đồng bộ giữa tần số MoveIt Servo và tốc độ đáp ứng RC5 vẫn là hướng nghiên cứu mở cần tiếp tục.
-
-\end{enumerate}

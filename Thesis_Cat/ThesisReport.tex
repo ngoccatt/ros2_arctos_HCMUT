@@ -1,6 +1,8 @@
 % \NeedsTeXFormat{LaTeX2e}
 % \documentclass[12pt,a4paper,oneside,openright]{Book}
 \documentclass[11pt,a4paper]{report}
+\pdfcompresslevel=9
+\pdfobjcompresslevel=2
 %\pagestyle{empty}
 \usepackage[utf8]{vietnam}
 \usepackage{array}
@@ -376,9 +378,10 @@ sorting=nty
  % \includepdf{Images/phan_bien.jpg}
 
 \pagenumbering{roman}
-% \include{Others/commitment}
-% \include{Others/acknowledgement}
-% \include{Others/abstract}
+\include{Others/teacherConfirmation}
+\include{Others/commitment}
+\include{Others/acknowledgement}
+\include{Others/abstract}
 
 \tableofcontents
 \listoffigures

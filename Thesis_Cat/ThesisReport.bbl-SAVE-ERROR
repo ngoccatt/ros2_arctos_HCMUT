@@ -76,6 +76,7 @@
       \field{title}{Effectiveness of VR-based training on improving construction workers’ knowledge, skills, and safety behavior in robotic teleoperation}
       \field{volume}{50}
       \field{year}{2021}
+      \true{nocite}
       \field{pages}{101431}
       \range{pages}{1}
     \endentry
@@ -107,6 +108,45 @@
       \endverb
       \keyw{ros2-tutorial}
     \endentry
+    \entry{ali2025digital}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=ce7ff33befa49863abe6762627230e94}{%
+           family={Ali},
+           familyi={A\bibinitperiod},
+           given={Matsive},
+           giveni={M\bibinitperiod}}}%
+        {{hash=208e5a402a0cceaa64aa730e4d503a62}{%
+           family={Giri},
+           familyi={G\bibinitperiod},
+           given={Sandesh},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e8d228b3bbe1e7bbc6656481f53df716}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Sen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=2e6b72068cd97d6b074240a9b4973c4e}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Qin},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{232e897897c283f8536d060b04f72fba}
+      \strng{fullhash}{b361cacdf8d0af7c50b53b776d9b2bed}
+      \strng{fullhashraw}{b361cacdf8d0af7c50b53b776d9b2bed}
+      \strng{bibnamehash}{b361cacdf8d0af7c50b53b776d9b2bed}
+      \strng{authorbibnamehash}{b361cacdf8d0af7c50b53b776d9b2bed}
+      \strng{authornamehash}{232e897897c283f8536d060b04f72fba}
+      \strng{authorfullhash}{b361cacdf8d0af7c50b53b776d9b2bed}
+      \strng{authorfullhashraw}{b361cacdf8d0af7c50b53b776d9b2bed}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2501.18016}
+      \field{title}{Digital Twin-Enabled Real-Time Control in Robotic Additive Manufacturing via Soft Actor-Critic Reinforcement Learning}
+      \field{year}{2025}
+    \endentry
     \entry{uart}{online}{}{}
       \name{author}{1}{}{%
         {{hash=1197190d95b0f6e82537145fe6948a4b}{%
@@ -135,7 +175,103 @@
       \endverb
       \keyw{uart}
     \endentry
-    \entry{compare-graphic-user}{inproceedings}{}{}
+    \entry{arclab2025beavr}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=0de2113e2cf2a4df407e9fb47cec056a}{%
+           family={ARCLab},
+           familyi={A\bibinitperiod},
+           given={MIT},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{0de2113e2cf2a4df407e9fb47cec056a}
+      \strng{fullhash}{0de2113e2cf2a4df407e9fb47cec056a}
+      \strng{fullhashraw}{0de2113e2cf2a4df407e9fb47cec056a}
+      \strng{bibnamehash}{0de2113e2cf2a4df407e9fb47cec056a}
+      \strng{authorbibnamehash}{0de2113e2cf2a4df407e9fb47cec056a}
+      \strng{authornamehash}{0de2113e2cf2a4df407e9fb47cec056a}
+      \strng{authorfullhash}{0de2113e2cf2a4df407e9fb47cec056a}
+      \strng{authorfullhashraw}{0de2113e2cf2a4df407e9fb47cec056a}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint}
+      \field{title}{BEAVR: Bimanual, multi-Embodiment, Accessible, Virtual Reality Teleoperation System for Robots}
+      \field{year}{2025}
+    \endentry
+    \entry{autolab2021telesurgery}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=e0f0bfcdef97aaed4909571f74f82eae}{%
+           family={AUTOLab},
+           familyi={A\bibinitperiod},
+           given={Berkeley},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{e0f0bfcdef97aaed4909571f74f82eae}
+      \strng{fullhash}{e0f0bfcdef97aaed4909571f74f82eae}
+      \strng{fullhashraw}{e0f0bfcdef97aaed4909571f74f82eae}
+      \strng{bibnamehash}{e0f0bfcdef97aaed4909571f74f82eae}
+      \strng{authorbibnamehash}{e0f0bfcdef97aaed4909571f74f82eae}
+      \strng{authornamehash}{e0f0bfcdef97aaed4909571f74f82eae}
+      \strng{authorfullhash}{e0f0bfcdef97aaed4909571f74f82eae}
+      \strng{authorfullhashraw}{e0f0bfcdef97aaed4909571f74f82eae}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A Digital Twin Framework for Telesurgery in the Presence of Varying Network Quality of Service}
+      \field{year}{2021}
+      \true{nocite}
+    \endentry
+    \entry{casini2025survey}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=e106702319fdc059f29076981e634da2}{%
+           family={Casini},
+           familyi={C\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=9972c4be48f9f687558efcdbeecf91d4}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Jian-Jia},
+           giveni={J\bibinithyphendelim J\bibinitperiod}}}%
+        {{hash=bcdd73174e26b44169c10e9083e72469}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Jing},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c1363097a364153efdd592634b99df00}{%
+           family={Reghenzani},
+           familyi={R\bibinitperiod},
+           given={Federico},
+           giveni={F\bibinitperiod}}}%
+        {{hash=6dc8decf6948b561ece3f87b4f796b76}{%
+           family={Teper},
+           familyi={T\bibinitperiod},
+           given={Harun},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{53554ccad12784788e9c9841e3a50a84}
+      \strng{fullhash}{83eaaca271edacf18aa753b5eebae2bc}
+      \strng{fullhashraw}{83eaaca271edacf18aa753b5eebae2bc}
+      \strng{bibnamehash}{83eaaca271edacf18aa753b5eebae2bc}
+      \strng{authorbibnamehash}{83eaaca271edacf18aa753b5eebae2bc}
+      \strng{authornamehash}{53554ccad12784788e9c9841e3a50a84}
+      \strng{authorfullhash}{83eaaca271edacf18aa753b5eebae2bc}
+      \strng{authorfullhashraw}{83eaaca271edacf18aa753b5eebae2bc}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Leibniz Transactions on Embedded Systems}
+      \field{number}{1}
+      \field{title}{A Survey of Real-Time Support, Analysis, and Advancements in ROS 2}
+      \field{volume}{11}
+      \field{year}{2025}
+      \field{pages}{1\bibrangedash 37}
+      \range{pages}{37}
+    \endentry
+    \entry{chen2023comparing}{article}{}{}
       \name{author}{3}{}{%
         {{hash=0a27d714f6077b9631ee729c620c8a65}{%
            family={Chen},
@@ -166,10 +302,73 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Companion of the 2023 ACM/IEEE International Conference on Human-Robot Interaction}
-      \field{title}{Comparing a graphical user interface, hand gestures and controller in virtual reality for robot teleoperation}
+      \field{title}{Comparing a Graphical User Interface, Hand Gestures and Controller in Virtual Reality for Robot Teleoperation}
       \field{year}{2023}
       \field{pages}{644\bibrangedash 648}
       \range{pages}{5}
+    \endentry
+    \entry{darvish2023teleoperation}{article}{}{}
+      \name{author}{8}{}{%
+        {{hash=6cf106239bf21355a005dd876f5821ab}{%
+           family={Darvish},
+           familyi={D\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=ff28f32747ef1eb83c2521b2e3ab54d3}{%
+           family={Penco},
+           familyi={P\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=0cbd2650f754910d0f542ac4cc652c85}{%
+           family={Ramos},
+           familyi={R\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b7e059b2f9382e88df61a591952244d8}{%
+           family={Cisneros},
+           familyi={C\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6ad3c0cbc9bc7e88c8517ff7f65b9645}{%
+           family={Pratt},
+           familyi={P\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=de5b56177ca6e270a0c17d746b4cb683}{%
+           family={Yoshida},
+           familyi={Y\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=7ec84953bb72bee0129c60ce340e0596}{%
+           family={Ivaldi},
+           familyi={I\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f5d395f7c99325fc4b026ec5867249bf}{%
+           family={Pucci},
+           familyi={P\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{833c8d5b90fc42f662ccce3d28e127a7}
+      \strng{fullhash}{184aeecd1c1e98a15090616959a1d541}
+      \strng{fullhashraw}{184aeecd1c1e98a15090616959a1d541}
+      \strng{bibnamehash}{833c8d5b90fc42f662ccce3d28e127a7}
+      \strng{authorbibnamehash}{833c8d5b90fc42f662ccce3d28e127a7}
+      \strng{authornamehash}{833c8d5b90fc42f662ccce3d28e127a7}
+      \strng{authorfullhash}{184aeecd1c1e98a15090616959a1d541}
+      \strng{authorfullhashraw}{184aeecd1c1e98a15090616959a1d541}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Robotics}
+      \field{number}{3}
+      \field{title}{Teleoperation of humanoid robots: A survey}
+      \field{volume}{39}
+      \field{year}{2023}
+      \field{pages}{1706\bibrangedash 1727}
+      \range{pages}{22}
     \endentry
     \entry{formant}{online}{}{}
       \name{author}{1}{}{%
@@ -190,6 +389,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{What is teleoperation?}
+      \true{nocite}
       \verb{urlraw}
       \verb https://formant.io/resources/learn/learn-teleoperation/
       \endverb
@@ -198,7 +398,7 @@
       \endverb
       \keyw{teleoperation}
     \endentry
-    \entry{compare-interfaces}{inproceedings}{}{}
+    \entry{hetrick2020comparing}{inproceedings}{}{}
       \name{author}{6}{}{%
         {{hash=422acfbb77384381f420d612fd99376a}{%
            family={Hetrick},
@@ -233,9 +433,6 @@
            given={Elizabeth},
            giveni={E\bibinitperiod}}}%
       }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
       \strng{namehash}{3200bcf6acbfbf907b5c36bb7ae719cc}
       \strng{fullhash}{43329af93e4629b273e0f99a0d723b15}
       \strng{fullhashraw}{43329af93e4629b273e0f99a0d723b15}
@@ -249,7 +446,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2020 Systems and Information Engineering Design Symposium (SIEDS)}
-      \field{title}{Comparing virtual reality interfaces for the teleoperation of robots}
+      \field{title}{Comparing Virtual Reality Interfaces for the Teleoperation of Robots}
       \field{year}{2020}
       \field{pages}{1\bibrangedash 7}
       \range{pages}{7}
@@ -296,6 +493,7 @@
       \field{series}{HRI '20}
       \field{title}{Augmented Reality with Multi-view Merging for Robot Teleoperation}
       \field{year}{2020}
+      \true{nocite}
       \field{pages}{260\bibrangedash 262}
       \range{pages}{3}
       \verb{doi}
@@ -308,6 +506,78 @@
       \verb https://doi.org/10.1145/3371382.3378336
       \endverb
       \keyw{augmented reality,multi-view vision,object manipulation,teleoperation}
+    \endentry
+    \entry{Kawatsuma2012EmergencyResponseBy}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=fbc325f814a5d20a9d91c328b8613ba5}{%
+           family={Kawatsuma},
+           familyi={K\bibinitperiod},
+           given={Shinji},
+           giveni={S\bibinitperiod}}}%
+        {{hash=817f5fa1cc7a2457b88fa0cc17f079d7}{%
+           family={Fukushima},
+           familyi={F\bibinitperiod},
+           given={Mineo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fc71204c1f4e2d7a38f88f531edffaf9}{%
+           family={Okada},
+           familyi={O\bibinitperiod},
+           given={Takashi},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{6eb0c7cf783e753ce25ed12ae62640d4}
+      \strng{fullhash}{80347176f919e9d2e394e318f0cc5395}
+      \strng{fullhashraw}{80347176f919e9d2e394e318f0cc5395}
+      \strng{bibnamehash}{80347176f919e9d2e394e318f0cc5395}
+      \strng{authorbibnamehash}{80347176f919e9d2e394e318f0cc5395}
+      \strng{authornamehash}{6eb0c7cf783e753ce25ed12ae62640d4}
+      \strng{authorfullhash}{80347176f919e9d2e394e318f0cc5395}
+      \strng{authorfullhashraw}{80347176f919e9d2e394e318f0cc5395}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Industrial Robot: An International Journal}
+      \field{month}{08}
+      \field{title}{Emergency response by robots to Fukushima-Daiichi accident: Summary and lessons learned}
+      \field{volume}{39}
+      \field{year}{2012}
+      \verb{doi}
+      \verb 10.1108/01439911211249715
+      \endverb
+    \endentry
+    \entry{kawshan2026digital}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=bf3af21ca43ce4d4b3378d5c5fd7e802}{%
+           family={Kawshan},
+           familyi={K\bibinitperiod},
+           given={Dhananjaya},
+           giveni={D\bibinitperiod}}}%
+        {{hash=19d4115f5b42c9a7484a018d7bc23172}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={Qingjin},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{cb8cbf61145680996eace308a89029eb}
+      \strng{fullhash}{cb8cbf61145680996eace308a89029eb}
+      \strng{fullhashraw}{cb8cbf61145680996eace308a89029eb}
+      \strng{bibnamehash}{cb8cbf61145680996eace308a89029eb}
+      \strng{authorbibnamehash}{cb8cbf61145680996eace308a89029eb}
+      \strng{authornamehash}{cb8cbf61145680996eace308a89029eb}
+      \strng{authorfullhash}{cb8cbf61145680996eace308a89029eb}
+      \strng{authorfullhashraw}{cb8cbf61145680996eace308a89029eb}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Machines}
+      \field{number}{4}
+      \field{title}{Digital Twin Framework for Robot Path Planning and Real-Time Execution Using Unity-ROS Integration: Systems Architecture and Experimental Validation}
+      \field{volume}{14}
+      \field{year}{2026}
+      \field{pages}{387}
+      \range{pages}{1}
     \endentry
     \entry{reality-fusion}{misc}{}{}
       \name{author}{5}{}{%
@@ -353,6 +623,7 @@
       \field{eprinttype}{arXiv}
       \field{title}{Reality Fusion: Robust Real-time Immersive Mobile Robot Teleoperation with Volumetric Visual Data Fusion}
       \field{year}{2025}
+      \true{nocite}
       \verb{eprint}
       \verb 2408.01225
       \endverb
@@ -363,7 +634,68 @@
       \verb https://arxiv.org/abs/2408.01225
       \endverb
     \endentry
-    \entry{doi:10.1126/scirobotics.abm6074}{article}{}{}
+    \entry{Luu2025EnhancingRealTime}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=66e013bfdf4f46d326881c75e6846474}{%
+           family={Luu},
+           familyi={L\bibinitperiod},
+           given={Toan},
+           giveni={T\bibinitperiod}}}%
+        {{hash=7188c4953e2208ca80aa3ee642b777fc}{%
+           family={Nguyen},
+           familyi={N\bibinitperiod},
+           given={Quang},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=8a8383f5ec20a5f52d8c9249a4814ed6}{%
+           family={Tran\bibnamedelimb -\bibnamedelima 陳福善},
+           familyi={T\bibinitperiod\bibinitdelim \bibinithyphendelim \bibinitperiod\bibinitdelim 陳\bibinitperiod},
+           given={Thien\bibnamedelima Peter},
+           giveni={T\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=692369c69d93b9f35970575101d9481b}{%
+           family={Tran},
+           familyi={T\bibinitperiod},
+           given={Minh},
+           giveni={M\bibinitperiod}}}%
+        {{hash=64fb7ce003bb1aa33f96b134f07bf8bb}{%
+           family={Ding},
+           familyi={D\bibinitperiod},
+           given={Songlin},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1c1efd1c50847f71ff4731d871beebed}{%
+           family={Kua},
+           familyi={K\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8d63aca5e6393eaa3b4299595b36701c}{%
+           family={Hoang},
+           familyi={H\bibinitperiod},
+           given={Thuong},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{937ef482f046afbba6e5511728196b91}
+      \strng{fullhash}{d5147f2b9080dd412462734a84a6f841}
+      \strng{fullhashraw}{d5147f2b9080dd412462734a84a6f841}
+      \strng{bibnamehash}{937ef482f046afbba6e5511728196b91}
+      \strng{authorbibnamehash}{937ef482f046afbba6e5511728196b91}
+      \strng{authornamehash}{937ef482f046afbba6e5511728196b91}
+      \strng{authorfullhash}{d5147f2b9080dd412462734a84a6f841}
+      \strng{authorfullhashraw}{d5147f2b9080dd412462734a84a6f841}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The International Journal of Advanced Manufacturing Technology}
+      \field{month}{08}
+      \field{title}{Enhancing real-time robot teleoperation with immersive virtual reality in industrial IoT networks}
+      \field{volume}{139}
+      \field{year}{2025}
+      \field{pages}{6233\bibrangedash 6257}
+      \range{pages}{25}
+      \verb{doi}
+      \verb 10.1007/s00170-025-16236-w
+      \endverb
+    \endentry
+    \entry{macenski2022robot}{article}{}{}
       \name{author}{5}{}{%
         {{hash=7b84d10a03303cd00f198fefb38a5da3}{%
            family={Macenski},
@@ -399,6 +731,7 @@
       \strng{authornamehash}{4a195e02383364d4009f77ca22451e11}
       \strng{authorfullhash}{c321d95ccac4f92536f0f1ed99f34d05}
       \strng{authorfullhashraw}{c321d95ccac4f92536f0f1ed99f34d05}
+      \field{extraname}{1}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
@@ -408,11 +741,63 @@
       \field{title}{Robot Operating System 2: Design, architecture, and uses in the wild}
       \field{volume}{7}
       \field{year}{2022}
-      \true{nocite}
+      \field{pages}{eabm6074}
+      \range{pages}{-1}
+    \endentry
+    \entry{StevenRos2Usecases}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=7b84d10a03303cd00f198fefb38a5da3}{%
+           family={Macenski},
+           familyi={M\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0d11ace6e44e4742ea1692d7ddf4819e}{%
+           family={Foote},
+           familyi={F\bibinitperiod},
+           given={Tully},
+           giveni={T\bibinitperiod}}}%
+        {{hash=a8ad4a5f43253f69552460c946e34e49}{%
+           family={Gerkey},
+           familyi={G\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=4e2c9f9d04cf548117105f50a9c8a7a1}{%
+           family={Lalancette},
+           familyi={L\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+        {{hash=fe838d86b89f8983167a3747e11998bb}{%
+           family={Woodall},
+           familyi={W\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a195e02383364d4009f77ca22451e11}
+      \strng{fullhash}{c321d95ccac4f92536f0f1ed99f34d05}
+      \strng{fullhashraw}{c321d95ccac4f92536f0f1ed99f34d05}
+      \strng{bibnamehash}{c321d95ccac4f92536f0f1ed99f34d05}
+      \strng{authorbibnamehash}{c321d95ccac4f92536f0f1ed99f34d05}
+      \strng{authornamehash}{4a195e02383364d4009f77ca22451e11}
+      \strng{authorfullhash}{c321d95ccac4f92536f0f1ed99f34d05}
+      \strng{authorfullhashraw}{c321d95ccac4f92536f0f1ed99f34d05}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The next chapter of the robotics revolution is well underway with the deployment of robots for a broad range of commercial use cases. Even in a myriad of applications and environments, there exists a common vocabulary of components that robots share—the need for a modular, scalable, and reliable architecture; sensing; planning; mobility; and autonomy. The Robot Operating System (ROS) was an integral part of the last chapter, demonstrably expediting robotics research with freely available components and a modular framework. However, ROS 1 was not designed with many necessary production-grade features and algorithms. ROS 2 and its related projects have been redesigned from the ground up to meet the challenges set forth by modern robotic systems in new and exploratory domains at all scales. In this Review, we highlight the philosophical and architectural changes of ROS 2 powering this new chapter in the robotics revolution. We also show through case studies the influence ROS 2 and its adoption has had on accelerating real robot systems to reliable deployment in an assortment of challenging environments. This Review describes ROS 2’s design, features, and performance with four case studies on land, air, sea, and even space.}
+      \field{journaltitle}{Science Robotics}
+      \field{number}{66}
+      \field{title}{Robot Operating System 2: Design, architecture, and uses in the wild}
+      \field{volume}{7}
+      \field{year}{2022}
       \field{pages}{eabm6074}
       \range{pages}{-1}
       \verb{doi}
       \verb 10.1126/scirobotics.abm6074
+      \endverb
+      \verb{eprint}
+      \verb https://www.science.org/doi/pdf/10.1126/scirobotics.abm6074
       \endverb
       \verb{urlraw}
       \verb https://www.science.org/doi/abs/10.1126/scirobotics.abm6074
@@ -449,7 +834,7 @@
       \endverb
       \keyw{moveit}
     \endentry
-    \entry{Vicarios}{article}{}{}
+    \entry{naceri2021vicarios}{article}{}{}
       \name{author}{8}{}{%
         {{hash=0d34e89d68bba7d7f1c04111cf22f69e}{%
            family={Naceri},
@@ -492,9 +877,6 @@
            given={Nikhil},
            giveni={N\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
       \strng{namehash}{b8addde53380132ca83fa78c55d0f3a3}
       \strng{fullhash}{183d9549273ba89f543f5a69087524e3}
       \strng{fullhashraw}{183d9549273ba89f543f5a69087524e3}
@@ -509,11 +891,120 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Intelligent \& Robotic Systems}
       \field{number}{4}
-      \field{title}{The vicarios virtual reality interface for remote robotic teleoperation: Teleporting for intuitive tele-manipulation}
+      \field{title}{The Vicarios Virtual Reality Interface for Remote Robotic Teleoperation: Teleporting for Intuitive Tele-manipulation}
       \field{volume}{101}
       \field{year}{2021}
       \field{pages}{80}
       \range{pages}{1}
+    \endentry
+    \entry{papakonstantinou2025effect}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=ea9976eb18e0efa9df4573825b36f1e2}{%
+           family={Papakonstantinou},
+           familyi={P\bibinitperiod},
+           given={Christos},
+           giveni={C\bibinitperiod}}}%
+        {{hash=0756cac20f920c4a9b90209581d71590}{%
+           family={Giannakos},
+           familyi={G\bibinitperiod},
+           given={Konstantinos},
+           giveni={K\bibinitperiod}}}%
+        {{hash=e0afb13ef19ee3940f8ebbd827b31440}{%
+           family={Kokkonis},
+           familyi={K\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+        {{hash=ea9031e9438bf2154e4c5c1b53e69d09}{%
+           family={Papadopoulou},
+           familyi={P\bibinitperiod},
+           given={Maria\bibnamedelima S},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{d15d0e30dfa947d913467ac30b74a55e}
+      \strng{fullhash}{8221b340ced7eaba70824b92fc7e1dad}
+      \strng{fullhashraw}{8221b340ced7eaba70824b92fc7e1dad}
+      \strng{bibnamehash}{8221b340ced7eaba70824b92fc7e1dad}
+      \strng{authorbibnamehash}{8221b340ced7eaba70824b92fc7e1dad}
+      \strng{authornamehash}{d15d0e30dfa947d913467ac30b74a55e}
+      \strng{authorfullhash}{8221b340ced7eaba70824b92fc7e1dad}
+      \strng{authorfullhashraw}{8221b340ced7eaba70824b92fc7e1dad}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Electronics}
+      \field{number}{24}
+      \field{title}{The Effect of Tactile Feedback on the Manipulation of a Remote Robotic Arm via a Haptic Glove}
+      \field{volume}{14}
+      \field{year}{2025}
+      \true{nocite}
+      \field{pages}{4964}
+      \range{pages}{1}
+    \endentry
+    \entry{pryor2023virtualspace}{inproceedings}{}{}
+      \name{author}{8}{}{%
+        {{hash=b1b361bbbd420b0c073164515cd79744}{%
+           family={Pryor},
+           familyi={P\bibinitperiod},
+           given={Will},
+           giveni={W\bibinitperiod}}}%
+        {{hash=5878652241fffc39331341c980d152d5}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Liam\bibnamedelima J.},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=ec900d15898e1cc95f08ebde71ea1684}{%
+           family={Chatterjee},
+           familyi={C\bibinitperiod},
+           given={Arko},
+           giveni={A\bibinitperiod}}}%
+        {{hash=69d2e0c59ca55138f35d4921419f090d}{%
+           family={Vagvolgyi},
+           familyi={V\bibinitperiod},
+           given={Balazs\bibnamedelima P.},
+           giveni={B\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=12076792c861338859f51703236c6c33}{%
+           family={Deguet},
+           familyi={D\bibinitperiod},
+           given={Anton},
+           giveni={A\bibinitperiod}}}%
+        {{hash=73cf6b62f8a8846667505663acae83e0}{%
+           family={Leonard},
+           familyi={L\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=2aec181bc20a186091af0cd4dc992508}{%
+           family={Whitcomb},
+           familyi={W\bibinitperiod},
+           given={Louis\bibnamedelima L.},
+           giveni={L\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=74973e68a4b4cd252a7686aca739286b}{%
+           family={Kazanzides},
+           familyi={K\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b73d778a7f016ce06fedfc47e62c2e7}
+      \strng{fullhash}{bf93cc001b213674de096a53483b973c}
+      \strng{fullhashraw}{bf93cc001b213674de096a53483b973c}
+      \strng{bibnamehash}{5b73d778a7f016ce06fedfc47e62c2e7}
+      \strng{authorbibnamehash}{5b73d778a7f016ce06fedfc47e62c2e7}
+      \strng{authornamehash}{5b73d778a7f016ce06fedfc47e62c2e7}
+      \strng{authorfullhash}{bf93cc001b213674de096a53483b973c}
+      \strng{authorfullhashraw}{bf93cc001b213674de096a53483b973c}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2023 IEEE International Conference on Robotics and Automation (ICRA)}
+      \field{title}{A Virtual Reality Planning Environment for High-Risk, High-Latency Teleoperation}
+      \field{year}{2023}
+      \field{pages}{11619\bibrangedash 11625}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/ICRA48891.2023.10161029
+      \endverb
+      \keyw{Visualization;Three-dimensional displays;Two dimensional displays;Keyboards;Resists;Manipulators;Mice}
     \endentry
     \entry{ros2-control-humble}{online}{}{}
       \name{author}{1}{}{%
@@ -542,6 +1033,104 @@
       \verb https://control.ros.org/humble/doc/getting_started/getting_started.html#controller-manager
       \endverb
       \keyw{ros2_control}
+    \endentry
+    \entry{Su2022MixedRealityEnhancedHI}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=e4adabd9cfd9667d3f5eced9e3f5fb6c}{%
+           family={Su},
+           familyi={S\bibinitperiod},
+           given={Yunpeng},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=45558071bfee48ea5678dbb2373bcdb5}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Xiao-Qi},
+           giveni={X\bibinithyphendelim Q\bibinitperiod}}}%
+        {{hash=5667aa62f3cd0b6714428c1851334450}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Tony},
+           giveni={T\bibinitperiod}}}%
+        {{hash=6379e2f1999457988d08ca57265a04c0}{%
+           family={Pretty},
+           familyi={P\bibinitperiod},
+           given={Christopher\bibnamedelima G.},
+           giveni={C\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=aabcd62fa239fa15783223b03fe268e0}{%
+           family={Chase},
+           familyi={C\bibinitperiod},
+           given={Geoffrey},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{068bdf16d02a3e6388b8ed4caeb8da0b}
+      \strng{fullhash}{d5a558e31ba1efc78b155bfa96163769}
+      \strng{fullhashraw}{d5a558e31ba1efc78b155bfa96163769}
+      \strng{bibnamehash}{d5a558e31ba1efc78b155bfa96163769}
+      \strng{authorbibnamehash}{d5a558e31ba1efc78b155bfa96163769}
+      \strng{authornamehash}{068bdf16d02a3e6388b8ed4caeb8da0b}
+      \strng{authorfullhash}{d5a558e31ba1efc78b155bfa96163769}
+      \strng{authorfullhashraw}{d5a558e31ba1efc78b155bfa96163769}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Applied Sciences}
+      \field{title}{Mixed-Reality-Enhanced Human–Robot Interaction with an Imitation-Based Mapping Approach for Intuitive Teleoperation of a Robotic Arm-Hand System}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:248632683
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:248632683
+      \endverb
+    \endentry
+    \entry{torrejon2026teleoperation}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=5ead3d948becb32750f3958905690aea}{%
+           family={Torrejón},
+           familyi={T\bibinitperiod},
+           given={Alejandro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2c43644d21cca48befc8446d48c3570d}{%
+           family={Eslava},
+           familyi={E\bibinitperiod},
+           given={Sergio},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a90a68fd79583ed5bcd2dcc0c6c23145}{%
+           family={Calderón},
+           familyi={C\bibinitperiod},
+           given={Jorge},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3381b99daaa6a96ce1108dbe154c51a7}{%
+           family={Núñez},
+           familyi={N\bibinitperiod},
+           given={Pedro},
+           giveni={P\bibinitperiod}}}%
+        {{hash=44f4fcef15da8fd2ba614130f433c5ac}{%
+           family={Bustos},
+           familyi={B\bibinitperiod},
+           given={Pablo},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{8047a31f0ade2634256b57be66bde67a}
+      \strng{fullhash}{09bef666992af56c0ea7a46ef77a0b00}
+      \strng{fullhashraw}{09bef666992af56c0ea7a46ef77a0b00}
+      \strng{bibnamehash}{09bef666992af56c0ea7a46ef77a0b00}
+      \strng{authorbibnamehash}{09bef666992af56c0ea7a46ef77a0b00}
+      \strng{authornamehash}{8047a31f0ade2634256b57be66bde67a}
+      \strng{authorfullhash}{09bef666992af56c0ea7a46ef77a0b00}
+      \strng{authorfullhashraw}{09bef666992af56c0ea7a46ef77a0b00}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Electronics}
+      \field{number}{3}
+      \field{title}{Teleoperation of Dual-Arm Manipulators via VR Interfaces: A Framework Integrating Simulation and Real-World Control}
+      \field{volume}{15}
+      \field{year}{2026}
+      \field{pages}{572}
+      \range{pages}{1}
     \endentry
     \entry{vr-in-arc-welding}{article}{}{}
       \name{author}{5}{}{%
@@ -582,6 +1171,7 @@
       \strng{authornamehash}{0978051a38eac86ac27e41c8378927d6}
       \strng{authorfullhash}{c8c8cd8ee646d3872b04f98a6c75b126}
       \strng{authorfullhashraw}{c8c8cd8ee646d3872b04f98a6c75b126}
+      \field{extraname}{1}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
@@ -590,8 +1180,162 @@
       \field{title}{Virtual reality human-robot collaborative welding: A case study of weaving gas tungsten arc welding}
       \field{volume}{48}
       \field{year}{2019}
+      \true{nocite}
       \field{pages}{210\bibrangedash 217}
       \range{pages}{8}
+    \endentry
+    \entry{wang2024genealogy}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=2ca38ebc0e0cb8064a936205d2da287f}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=0e04240f755161f6091a2a37645ad3f2}{%
+           family={Mao},
+           familyi={M\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=6e16aa4068db42a4d6a601d334f40032}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=ae6f64f7b429f6425fbe070323390f1b}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{9403c06e8c3e03a59558568985d6de3d}
+      \strng{fullhash}{85452d789c28f98ee7cd950478518c6e}
+      \strng{fullhashraw}{85452d789c28f98ee7cd950478518c6e}
+      \strng{bibnamehash}{85452d789c28f98ee7cd950478518c6e}
+      \strng{authorbibnamehash}{85452d789c28f98ee7cd950478518c6e}
+      \strng{authornamehash}{9403c06e8c3e03a59558568985d6de3d}
+      \strng{authorfullhash}{85452d789c28f98ee7cd950478518c6e}
+      \strng{authorfullhashraw}{85452d789c28f98ee7cd950478518c6e}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Automation in Construction}
+      \field{title}{Genealogy of construction robotics}
+      \field{volume}{166}
+      \field{year}{2024}
+      \field{pages}{105607}
+      \range{pages}{1}
+    \endentry
+    \entry{xu2025immersive}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=03e19c58a92aef9decaa2c65c1b7bae8}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Han},
+           giveni={H\bibinitperiod}}}%
+        {{hash=b730539cf8f76e775479b7ca833cb34c}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Mingqi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f5dbc4d4383c25d85b909a2d4dee4384}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Gaofeng},
+           giveni={G\bibinitperiod}}}%
+        {{hash=8001773eb33d8520b85bf2cd2d8f03bd}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Lei},
+           giveni={L\bibinitperiod}}}%
+        {{hash=05022cd8d3c99a8ea69cdd9c6f0fae6b}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={Shichi},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d0b7adc849228ae970bac4fd3f04438a}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Haoliang},
+           giveni={H\bibinitperiod}}}%
+        {{hash=f495cdda14989886bcfdb65c02b7a19d}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Qiang},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{b48659b05fe2368492c661e48653a2cb}
+      \strng{fullhash}{d83ac55d64d5a84f38a265e07592533f}
+      \strng{fullhashraw}{d83ac55d64d5a84f38a265e07592533f}
+      \strng{bibnamehash}{b48659b05fe2368492c661e48653a2cb}
+      \strng{authorbibnamehash}{b48659b05fe2368492c661e48653a2cb}
+      \strng{authornamehash}{b48659b05fe2368492c661e48653a2cb}
+      \strng{authorfullhash}{d83ac55d64d5a84f38a265e07592533f}
+      \strng{authorfullhashraw}{d83ac55d64d5a84f38a265e07592533f}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2501.00822}
+      \field{title}{An Immersive Virtual Reality Bimanual Telerobotic System With Haptic Feedback}
+      \field{year}{2025}
+      \true{nocite}
+    \endentry
+    \entry{zang2023FiveDimensional}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=fc1f4ee29192c580dd6deb4e6db6ca6c}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Qinglei},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=25d3d5da5e06c5db2f64156217467355}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Qinghao},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=14e818a13929ce3acb6b0c1278d7e4d5}{%
+           family={Duan},
+           familyi={D\bibinitperiod},
+           given={Jianguo},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4b46f9884f31b1d5a22ca07b2c05e86c}{%
+           family={Qin},
+           familyi={Q\bibinitperiod},
+           given={Jiyun},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{a2dfe6c55107445126d8b31c56cac608}
+      \strng{fullhash}{14616013ab77d6a6576730a398e8aa21}
+      \strng{fullhashraw}{14616013ab77d6a6576730a398e8aa21}
+      \strng{bibnamehash}{14616013ab77d6a6576730a398e8aa21}
+      \strng{authorbibnamehash}{14616013ab77d6a6576730a398e8aa21}
+      \strng{authornamehash}{a2dfe6c55107445126d8b31c56cac608}
+      \strng{authorfullhash}{14616013ab77d6a6576730a398e8aa21}
+      \strng{authorfullhashraw}{14616013ab77d6a6576730a398e8aa21}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In the realm of industrial robotics, there is a growing challenge in simplifying human–robot collaboration (HRC), particularly in complex settings. The demand for more intuitive teleoperation systems is on the rise. However, optimizing robot control interfaces and streamlining teleoperation remains a formidable task due to the need for operators to possess specialized knowledge and the limitations of traditional methods regarding operational space and time constraints. This study addresses these issues by introducing a virtual reality (VR) HRC system with five-dimensional capabilities. Key advantages of our approach include: (1) real-time observation of robot work, whereby operators can seamlessly monitor the robot’s real-time work environment and motion during teleoperation; (2) leveraging VR device capabilities, whereby the strengths of VR devices are harnessed to simplify robot motion control, significantly reducing the learning time for operators; and (3) adaptability across platforms and environments: our system effortlessly adapts to various platforms and working conditions, ensuring versatility across different terminals and scenarios. This system represents a significant advancement in addressing the challenges of HRC, offering improved teleoperation, simplified control, and enhanced accessibility, particularly for operators with limited prior exposure to robot operation. It elevates the overall HRC experience in complex scenarios.}
+      \field{issn}{2313-7673}
+      \field{journaltitle}{Biomimetics}
+      \field{number}{8}
+      \field{title}{Research on Teleoperated Virtual Reality Human–Robot Five-Dimensional Collaboration System}
+      \field{volume}{8}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.3390/biomimetics8080605
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2313-7673/8/8/605
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2313-7673/8/8/605
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

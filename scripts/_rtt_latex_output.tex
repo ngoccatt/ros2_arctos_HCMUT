@@ -1,0 +1,52 @@
+% ── Tự động tạo bởi scripts/analyze_rtt_latency.py ──────────────────────
+\begin{table}[H]
+\centering
+\caption{Thống kê RTT giữa ứng dụng VR và RosBridge WebSocket theo điều kiện tải mạng}
+\label{tab:rtt-latency}
+\small
+\begin{tblr}{
+    colspec = {|X[3.2,l]|X[1,c]|X[1.2,c]|X[1.2,c]|X[1.2,c]|X[1.2,c]|X[1.2,c]|X[1.2,c]|},
+    hlines,
+    row{1} = {font=\bfseries, bg=gray!20},
+}
+Điều kiện & N & Min (ms) & TB (ms) & Trung vị (ms) & P95 (ms) & P99 (ms) & Max (ms) \\
+Bình thường & 1426 & 0{,}8 & 22{,}6 & 19{,}0 & 52{,}4 & 80{,}0 & 97{,}3 \\
+Tải cao 100 Mbit/s & 1001 & 0{,}7 & 27{,}4 & 23{,}5 & 58{,}3 & 88{,}0 & 99{,}4 \\
+Tải cao 150 Mbit/s & 813 & 0{,}4 & 38{,}7 & 33{,}3 & 82{,}3 & 95{,}8 & 99{,}4 \\
+Tải cao 200 Mbit/s & 955 & 0{,}0 & 50{,}2 & 52{,}8 & 93{,}4 & 98{,}1 & 99{,}8 \\
+\end{tblr}
+\end{table}
+
+Kết quả đo đạc RTT được trình bày tại Bảng~\ref{tab:rtt-latency}.
+Đây là thời gian khứ hồi (Round-Trip Time) tính từ khi Ros2 publish topic
+\texttt{/benchmark} cho đến khi nhận được gói phản hồi \texttt{/ack}
+từ ứng dụng VR thông qua kết nối WebSocket RosBridge tại cổng~9090.
+
+\textbf{Điều kiện mạng bình thường.}
+Trong điều kiện không có tải mạng tải cao, RTT trung bình đạt
+\textbf{22{,}6\,ms} (trung vị 19{,}0\,ms),
+dao động từ 0{,}8\,ms đến 97{,}3\,ms với độ lệch chuẩn
+13{,}9\,ms.
+Ngưỡng P95 ở mức \textbf{52{,}4\,ms} cho thấy 95\% các gói tin
+đến trong vòng 52\,ms -- thỏa mãn tốt yêu cầu điều khiển
+theo thời gian thực với chu kỳ 100\,ms của Ros2-Control.
+
+\textbf{Ảnh hưởng của tải mạng tải cao.}
+Khi áp tải mạng 100\,Mbit/s, RTT trung bình tăng lên
+\textbf{27{,}4\,ms} (+21{,}4\%
+so với điều kiện bình thường), P99 đạt 88{,}0\,ms.
+Ở mức 150\,Mbit/s, RTT trung bình là \textbf{38{,}7\,ms}
+(+71{,}5\%),
+và tại 200\,Mbit/s lên tới \textbf{50{,}2\,ms}
+(+122{,}3\%).
+Mặc dù giá trị trung bình tăng đáng kể khi tải mạng vượt 150\,Mbit/s,
+P99 vẫn nằm dưới 100\,ms ở tất cả các điều kiện kiểm thử,
+đồng nghĩa với việc hệ ít hơn 1\% số gói tin bị trễ vượt mức cho phép
+ngay cả trong điều kiện tải mạng cực cao.
+
+\textbf{Nhận xét chung.}
+RTT giữa ứng dụng VR và Ros2 đạt mức thấp nhờ kết nối mạng LAN nội bộ
+giữa kính Meta Quest~3 và máy PC chạy Ros2 (cùng mạng Wi-Fi 5\,GHz).
+Độ trễ \textasciitilde23\,ms ở điều kiện bình thường
+nhỏ hơn đáng kể so với chu kỳ điều khiển 100\,ms của Ros2-Control,
+đảm bảo rằng lệnh từ ứng dụng VR được truyền đến robot trong cùng chu kỳ điều khiển.
