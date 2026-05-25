@@ -1,0 +1,530 @@
+\chapter{KẾT QUẢ HIỆN THỰC VÀ ĐÁNH GIÁ}
+
+Trong chương này, nhóm sẽ trình bày kết quả của việc hiện thực hai trong 3 module chính trong kiến trúc đề xuất ban đầu cho ứng dụng điều khiển cánh tay robot bằng kính VR, bao gồm khối phần cứng (máy tính RC5 + Cánh tay robot Denso VS-6577) và phần điều khiển bằng Ros2 với PC controller.
+
+\section{Kết quả hiện thực}
+
+\subsection{Điều khiển Robot thông qua RC5}
+
+Ở giai đoạn hai, đề tài đã tập trung cải thiện phương thức điều khiển bằng RC5, và hiện đã có một chu trình điều khiển ổn định và đáng tin cậy hơn rất nhiều so với giai đoạn trước đó. Nhờ việc phát hiện lỗi string đơn giản với CRC length, chương trình RC5 có thể chạy liên tục trong khoảng thời gian dài mà không bị lỗi gián đoạn. Với tốc độ truyền UART được set lên 119200 bit/s, thực nghiệm trong suốt quá trình phát triển cho thấy cứ 1000 lệnh gửi xuống RC5 sẽ có 2 lần lệnh bị lỗi, và chương trình RC5 hiện tại đã giúp loại bỏ vấn đề ngưng hệ thống mỗi khi chuỗi lệnh bị hỏng.
+
+Khi việc xử lý chuỗi được ổn định, thì luồng thực thi để di chuyển cánh tay robot cũng ổn định theo. Với việc tách các hàm chạy theo chu kì, sử dụng ring buffer để tách biệt giữa luồng xử lý chuỗi và luồng thực thi, cánh tay robot có thể chạy với tốc độ cao hơn và nhanh hơn, trong khi vẫn đảm bảo an toàn và chương trình không bị gián đoạn.
+
+\subsection{Hệ thống điều khiển với Ros2}
+
+Dựa trên nền tảng Ros2, đề tài đã xây dựng và tích hợp thành công nhiều module khác nhau: hiện thực Ros2-control với Hardware interface và phần driver, protocol riêng biệt, cấu hình Ros2-controllers, cấu hình MoveIt2 tích hợp với Ros2-Control, tích hợp Gazebo cho mô phỏng thay thế Hardware Interface, sử dụng MoveIt-Servo, tạo custom Service Provider và Action Server, tích hợp RosBridge server cho giao tiếp Ros thông qua web socket. Hiện tại, dự án đang có đến 10 Ros-packages được sử dụng. Chi tiết về cách cài đặt có thể xem qua ở phần Readme của Repo: \href{https://github.com/ngoccatt/ros2_arctos_HCMUT/tree/cat_impl}{ros2\_arctos\_HCMUT}.
+
+Sau khi đã clone repo và chuẩn bị hết tất cả những phụ thuộc môi trường (package ros-humble, python...), ta build dự án từ thư mục gốc bằng lệnh:
+
+\begin{lstlisting}[style=bashstyle]
+root@NaruKiri:~/ros2_ws# colcon build --symlink-install
+\end{lstlisting}
+
+Quá trình build sẽ diễn ra trong vài phút, và thực hiện build 10 module khác nhau như kết quả dưới:
+
+\begin{lstlisting}[style=bashstyle]
+(denso) root@NaruKiri:~/ros2_ws# colcon build --symlink-install
+Starting >>> serial
+Starting >>> denso_description
+Starting >>> denso_interfaces
+Starting >>> denso_moveit_servo
+Starting >>> file_server2
+Finished <<< denso_description [0.31s]
+Starting >>> denso_moveit_config
+Finished <<< serial [0.42s]
+Starting >>> denso_motor_driver
+Finished <<< denso_moveit_servo [0.42s]
+Finished <<< denso_moveit_config [0.33s]
+Finished <<< denso_motor_driver [0.39s]
+Starting >>> denso_hardware_interface
+Finished <<< file_server2 [1.37s]
+Finished <<< denso_interfaces [1.41s]
+Starting >>> denso_remote_control
+Finished <<< denso_hardware_interface [0.83s]
+Starting >>> denso_bringup
+Finished <<< denso_remote_control [0.77s]
+Finished <<< denso_bringup [1.64s]
+
+Summary: 10 packages finished [4.25s]
+\end{lstlisting}
+
+Sau khi build thành công, ta "source" dự án để Ros2 biết được sự tồn tại của chương trình:
+
+\begin{lstlisting}[style=bashstyle]
+root@NaruKiri:~/ros2_ws# source install/setup.bash
+\end{lstlisting}
+
+Sau đó, ta có thể lần lượt chạy các module chính của dự án.
+
+\subsubsection{Hệ thống điều khiển chính với Ros2-Control và MoveIt}
+
+Để chạy chương trình điều khiển chính, người dùng gõ lệnh sau vào terminal
+
+\begin{lstlisting}[style=bashstyle]
+root@NaruKiri:~/ros2_ws# ros2 launch denso_bringup denso_bringup.launch.py use_sim_time:=false
+\end{lstlisting}
+
+File bringup có nhiệm vụ chạy hết tất cả các module liên quan, bao gồm:
+
+\begin{itemize}
+    \item Ros2-control manager
+    \item Robot state publisher
+    \item JointStateBoardcaster Ros2 Controller
+    \item Denso\_arm\_controller
+    \item Denso\_hand\_controller
+    \item Rviz2
+    \item MoveIt2 (MoveGroup)
+    \item V4L2 camera node 1
+    \item V4L2 camera node 2
+\end{itemize}
+
+Toàn bộ module Ros2-Control kèm controllers đều được khởi chạy, có sự tích hợp bởi MoveIt2 phía trên cho planning và Execution. Ngoài ra, các camera node cũng được khởi chạy để plublish các topic camera mà ứng dụng VR có thể sử dụng.
+
+\textbf{Giao diện điều khiển cánh tay robot VS-6577 với Rviz}
+
+Khởi chạy thành công, giao diện Rviz sẽ hiển thị ra như hình, bao gồm mô hình 3D của cánh tay và cả phần tay gắp. Lưu ý rằng mô hình tay gắp trong Rviz hiện tại không phản ánh chính xác hoạt động của của tay gắp, mà được đơn giản hóa hơn. Lý do là vì tay gắp thực tế có liên kết trục phức tạp và không thể xây dựng quan hệ một cha - một con trong URDF.
+
+Trong Rviz, ta có thể thay đổi planning group để thay đổi đối tượng cần điều khiển. \textbf{denso\_arm} dùng để điều khiển sáu trục của cánh tay, còn \textbf{denso\_hand} dùng để điều khiển phần tay gắp. Velocity Scaling và Accel Scaling là tỉ lệ của vận tốc và gia tốc tối đa được cấu hình cho cánh tay. Hiện tại, đồ án nhận thấy Velocity scaling 0.4 cùng Accel. Scaling 0.3 đem lại hiệu quả điều khiển ổn định và mượt mà nhất.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Images/Implementation/bringup1.png}
+        \caption{Giao diện điều khiển chính với Rviz}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Images/Implementation/bringup2.png}
+        \caption{Điều khiển các trục phần cánh tay}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Images/Implementation/bringup3.png}
+        \caption{Điều khiển các trục phần tay gắp}
+    \end{subfigure}
+    \caption{Kết quả khởi chạy hệ thống mô phỏng với Gazebo}
+    \label{fig:eval-gazebo-bringup}
+\end{figure}
+
+Trong hộp thoại MotionPlanning, ở thẻ Joint, ta có thể tùy ý xoay từng trục cánh tay đích (goal state) để xem trạng thái của chúng. Các giá trị góc xoay sẽ được giới hạn, tuân theo thông tin được cấu hình ở file URDF hoặc các file cấu hình khác, nếu có. Khi cần điều khiển robot tương ứng, ta có thể chuyển qua tab Planning. Ở đây có hai chức năng: khi nhấn \textbf{Plan}, MoveIt sẽ thực hiện việc tính toán dựa theo thông tin về robot cũng như thuật toán động lực học đã chọn, và để xuất ra đường đi, hay quỹ đạo tối ưu để đưa robot từ vị trí hiện tại sang vị trí Goal. Lựa chọn \textbf{Execute} sẽ chỉ sáng lên sau khi planning hoàn tất, tức thực thi quá trình điều khiển để cánh tay thực tế có thể đi tới vị trí mục tiêu. Lựa chọn \textbf{Plan \& Execute} sẽ thực hiện tuần tự \textbf{Plan} và tự động \textbf{Execute} sau khi \textbf{Plan} hoàn tất.
+
+Khi bấm \textbf{Execute}, Moveit sẽ bắt đầu gửi các trajectory tới Controller của cánh tay robot, và yêu cầu cánh tay robot quay dần để đạt tới vị trí đích. Từng giá trị Trajectory được truyền xuống Controller, tham gia vai trò của \textbf{update} trong chu kì ba bước. Sau \textbf{update}, các \lstinline[style=inlinecode]{command_interface} sẽ được ghi vào giá trị điều khiển, và \textbf{write} sử dụng các \lstinline[style=inlinecode]{command_interface}, tổng hợp thành một lệnh điều khiển đưa xuống máy RC5 theo định dạng phù hợp. Tiếp đó, \textbf{read} đọc trạng thái góc quay thực tế của cánh tay phản hồi từ RC5, cập nhật vào các \lstinline[style=inlinecode]{state_interface}. Giá trị trạng thái cũng được phản ánh ngay trên mô hình cánh tay Robot trên Rviz, và người dùng có thể thấy mô hình 3D mờ dần dần di chuyển tới vị trí đích.
+
+\subsubsection{Hệ thống điều khiển mô phỏng với Ros2-Control, MoveIt2 và Gazebo}
+
+Gazebo được tích hợp vào hệ thống để giúp cho việc phát triển ứng dụng nhanh chóng hơn, an toàn hơn nhờ môi trường mô phỏng, trước khi thử nghiệm trên cánh tay thực tế. Để chạy hệ thống điều khiển với Gazebo, chạy lện sau trong cửa sổ terminal:
+
+\begin{lstlisting}[style=bashstyle]
+root@NaruKiri:~/ros2_ws# ros2 launch denso_bringup gz_denso_bringup.launch.py use_sim_time:=true
+\end{lstlisting}
+
+So với file bringup cho thiết bị thực tế, gz\_denso\_bringup sẽ chạy các tác vụ sau:
+
+\begin{itemize}
+    \item Gazebo Sim (Ignition)
+    \item Sinh mô hình robot trong Gazebo
+    \item Cầu nối (bridge) giữa clock của Ros2 và clock của Gazebo
+    \item JointStateBoardcaster Ros2 Controller
+    \item Denso\_arm\_controller
+    \item Denso\_hand\_controller
+    \item Rviz2
+    \item MoveIt2 (MoveGroup)
+    \item V4L2 camera node 1
+    \item V4L2 camera node 2
+\end{itemize}
+
+Ngoài việc chạy thêm các tác vụ liên quan tới Gazebo, lưu ý rằng Ros2-control manager đã không khởi chạy. Lý do là Gazebo khi được chọn là Hardware Interface thay thế (sử dụng gz\_ros2\_control::GazeboSimROS2ControlPlugin), nó sẽ tự chạy controller manager tự động, nên việc khởi chạy ros2-controol manager ở bringup là không cần thiết.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Images/Implementation/gz_bringup_1.png}
+        \caption{Gazebo mô phỏng cánh tay robot}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Images/Implementation/gz_bringup_2.png}
+        \caption{Rviz đồng bộ với mô phỏng Gazebo}
+    \end{subfigure}
+    \caption{Kết quả khởi chạy hệ thống mô phỏng với Gazebo}
+    \label{fig:eval-gazebo-bringup}
+\end{figure}
+
+Với hệ thống mô phỏng này, ta hoàn toàn có thể dùng Rviz để Planning, Execute các trục robot và điều khiển tay gắp mà không cần thiết bị thật, đồng thời thấy được phản hồi thay đổi trạng thái cánh tay khi Gazebo thực hiện thao tác di chuyển. Thêm nữa, ta sẽ không thể thực hiện kiểm thử module Hardware Interface do Gazebo đã thay thế module này trong vai trò thực hiện lệnh điều khiển và cập nhật trạng thái. Hệ thống mô phỏng sẽ chỉ hữu ích trong việc kiểm tra các tính năng từ tầng Hardware Interface trở lên: Các Controller, MoveIt và ứng dụng dựa trên MoveIt.
+
+\subsubsection{Denso MoveIt-Servo Service provider}
+
+Sau khi đã khởi chạy hệ thống chính, các module ứng dụng có thể lần lượt chạy để cung cấp phương thức điều khiển từ bên ngoài. Gõ lệnh sau vào terminal để chạy Denso Moveit-Servo:
+
+\begin{lstlisting}[style=bashstyle]
+root@NaruKiri:~/ros2_ws# ros2 launch denso_moveit_servo denso_moveit_servo.launch.py
+\end{lstlisting}
+
+Để có thể kiểm thử nhanh tính năng điều khiển với MoveIt Servo, ta có thể chạy thêm chương trình sau ở một terminal khác để xoay các trục robot bằng bàn phím:
+
+\begin{lstlisting}[style=bashstyle]
+root@NaruKiri:~/ros2_ws# ros2 run denso_moveit_servo servo_keyboard_input
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Images/Implementation/denso_moveitservo.png}
+    \caption{Node Denso MoveIt-Servo sau khi khởi chạy}
+    \label{fig:eval-moveit-servo-node}
+\end{figure}
+
+\subsubsection{Denso Remote Control Action Server}
+
+Tiếp theo, ta có thể chạy Action Server để nhận lệnh điều khiển Action dạng MoveToPose, để xoay robot tới vị trí yêu cầu. Ở một terminal khác, chạy lệnh sau:
+
+\begin{lstlisting}[style=bashstyle]
+root@NaruKiri:~/ros2_ws# ros2 launch denso_remote_control remote_control.launch.py
+\end{lstlisting}
+
+Ta có thể kiểm thử Action server này bằng việc gửi một Action Goal, với định dạng lệnh như sau (lưu ý phải source vào workspace trước khi sử dụng)
+
+\begin{lstlisting}[style=bashstyle]
+ros2 action send_goal /move_to_pose denso_interfaces/action/MoveToPose "{pose: {position: {x: 0.0, y: 0.0, z: 0.0}, orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}}, joints: [0.0, -0.5, 1.0, 0.0, 0.5, 0.0], use_pose: false}"
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Images/Implementation/remote_control.png}
+        \caption{Action Server Remote Control}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Images/Implementation/remote_control_1.png}
+        \caption{Luồng phản hồi của Action Server}
+    \end{subfigure}
+    \caption{Kết quả kiểm thử Denso Remote Control}
+    \label{fig:eval-remote-control}
+\end{figure}
+
+Lệnh trên thực hiện việc điều khiển robot bằng cách sử dụng danh sách giá trị các trục (theo đơn vị rad). Mô phỏng với Gazebo cho thấy robot đã xoay tới vị trí mong muốn.
+
+\subsubsection{RosBridge Server}
+
+Để có thể cho ứng dụng VR giao tiếp với Ros thông qua Web socket, ta cần chạy thêm RosBridge Server. Lệnh sau được sử dụng để chạy server cho kết nối:
+
+\begin{lstlisting}[style=bashstyle]
+root@NaruKiri:~/ros2_ws# ros2 launch file_server2 ros_sharp_communication.launch.py
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.78\linewidth]{Images/Implementation/rosbridge_server.png}
+    \caption{RosBridge Server sẵn sàng kết nối cho ứng dụng VR}
+    \label{fig:eval-rosbridge-server}
+\end{figure}
+
+RosBridge server được khởi chạy tại port 9090, cho phép ứng dụng Unity với Ros-Sharp có thể kết nối tới và sử dụng các topic/service/action tự do.
+
+\subsubsection{Đánh giá về độ trễ Execution trên thiết bị thực tế}
+
+Trong quá trình phát triển, đề tài nhận thấy rằng việc điều khiển cánh tay thực tế luôn có độ trễ: cánh tay robot cần xoay các motor để di chuyển, cần phải có quá trình gia tốc, giảm tốc, có ma sát và ảnh hưởng bởi trọng lực, nên giả định lý tưởng: "với một lệnh điều khiển, cánh tay robot sẽ xoay hoàn tất trước khi nhận lệnh tiếp theo" là khó để đạt được, ít nhất là với hệ thống hiện tại, khi Ros2-Control tính toán trước chuỗi trajectory và gửi lần lượt chuỗi đó theo chu kì cố định. Chính vì vậy, đề tài đã thực hiện nhiều lần kiểm thử để tìm một cấu hình tối ưu, nhằm đồng bộ nhất có thể giữa tần số điều khiển của Ros2 và thời gian hoạt động của cánh tay robot, gồm:
+
+\begin{itemize}
+    \item Cấu hình tốc độ tối đa của từng trục theo tài liệu kĩ thuật chính thức của cánh tay
+    \item Sử dụng Velocity scaling và acceleration scaling gần tương đồng (nhỏ hơn) so với tốc độ của cánh tay ở RC5. Ví dụ, Velocity scaling là 0.4 thì tốc độ cánh tay sẽ là 46\%
+    \item Lựa chọn tần số 10Hz cho hoạt động điều khiển của Ros2-Control, qua đó cho phép  hoạt động từ phía RC5 diễn ra trong 100ms với ba giai đoạn: Nhận lệnh UART (~10ms), Xử lý lệnh UART dạng chuỗi (20-30ms), Xoay cánh tay (60-70ms).
+    \item Phản hồi trạng thái cánh tay từ RC5 lên Ros2 diễn ra mỗi 100ms, tương tự với chu kì điều khiển Ros2
+\end{itemize}
+
+"Độ trễ" được tính toán dựa trên mỗi lần planning với MoveIt2, là sai lệch kể từ lúc Ros2-control ngưng gửi lệnh xuống RC5 cho tới khi cánh tay robot hoàn thành hành động xoay. Bảng thống kê độ trễ từ hai phiên kiểm thử thực tế với tổng cộng 25 goals được trình bày dưới đây:
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=0.92\linewidth,
+    height=6.5cm,
+    xlabel={Goal},
+    ylabel={Thời gian (ms)},
+    xmin=0.5, xmax=25.5,
+    ymin=0, ymax=15000,
+    xtick={1,2,...,25},
+    xticklabel style={font=\scriptsize},
+    yticklabel style={font=\small},
+    ytick={0,2000,4000,6000,8000,10000,12000,14000},
+    grid=both,
+    grid style={line width=0.3pt, draw=gray!30},
+    major grid style={line width=0.5pt, draw=gray!50},
+    legend style={at={(0.98,0.98)}, anchor=north east, font=\small,
+                  draw=gray!50, fill=white, row sep=1pt},
+    legend cell align=left,
+    tick align=outside,
+    axis lines=left,
+    scaled ticks=false,
+]
+% T_tong
+\addplot[color=blue!70, mark=square*, mark size=2pt, line width=1.2pt]
+coordinates {
+    (1,5797)(2,7898)(3,3396)(4,5698)
+    (5,6698)(6,7698)(7,6296)(8,3699)(9,13798)(10,5699)
+    (11,5799)(12,6198)(13,9399)(14,4799)(15,6898)(16,4898)
+    (17,1699)(18,3199)(19,1599)(20,1299)(21,2199)
+    (22,5698)(23,7098)(24,4399)(25,9499)
+};
+\addlegendentry{$T_\text{tổng}$}
+% T_gui
+\addplot[color=teal, mark=triangle*, mark size=2.5pt, line width=1.2pt, dashed]
+coordinates {
+    (1,3698)(2,6598)(3,1497)(4,3700)
+    (5,3699)(6,5799)(7,5797)(8,1599)(9,10199)(10,3099)
+    (11,3099)(12,4399)(13,5799)(14,3099)(15,5098)(16,2498)
+    (17,899)(18,1099)(19,899)(20,599)(21,600)
+    (22,2999)(23,5299)(24,1999)(25,5899)
+};
+\addlegendentry{$T_\text{gửi}$}
+% T_dung
+\addplot[color=red!80, mark=*, mark size=2.5pt, line width=1.5pt]
+coordinates {
+    (1,2099)(2,1300)(3,1899)(4,1999)
+    (5,2999)(6,1899)(7,499)(8,2100)(9,3600)(10,2599)
+    (11,2700)(12,1800)(13,3600)(14,1699)(15,1800)(16,2399)
+    (17,800)(18,2099)(19,700)(20,700)(21,1599)
+    (22,2699)(23,1800)(24,2400)(25,3599)
+};
+\addlegendentry{$T_\text{dừng}$ (độ trễ vật lý)}
+% Duong trung binh T_dung
+\addplot[color=red!80, line width=0.8pt, dotted, domain=0.5:25.5] {2055};
+\addlegendentry{$\overline{T_\text{dừng}}$ = 2055\,ms}
+\end{axis}
+\end{tikzpicture}
+\caption{Biểu đồ độ trễ Execution theo từng goal -- đường đỏ ($T_\text{dừng}$) là độ trễ vật lý sau khi Ros2 ngừng gửi lệnh}
+\label{fig:moveit-latency-chart}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Thống kê tổng hợp độ trễ Execution của MoveIt2 ($N = 25$ goals)}
+\label{tab:moveit-execution-latency}
+\begin{tblr}{
+    colspec = {|X[3.5,l]|X[1.2,c]|X[1.2,c]|X[1.4,c]|X[1.2,c]|},
+    hlines,
+    row{1} = {font=\bfseries, bg=gray!20},
+}
+Chỉ số & Min (ms) & TB (ms) & Trung vị (ms) & Max (ms) \\
+$T_\text{gửi}$ (\texttt{goal\_to\_last\_write}) & 599 & 3599 & 3099 & 10199 \\
+$T_\text{dừng}$ (\texttt{last\_write\_to\_settle}) & 499 & 2055 & 1999 & 3600 \\
+$T_\text{tổng}$ (\texttt{goal\_to\_settle}) & 1299 & 5654 & 5699 & 13798 \\
+\end{tblr}
+\end{table}
+
+Tiêu chí đánh giá trọng tâm là $T_\text{dừng}$ -- khoảng thời gian sau khi MoveIt2 ngừng gửi lệnh mà cánh tay vẫn tiếp tục di chuyển do quán tính cơ học. Đây là giai đoạn Ros2 không còn can thiệp nhưng robot chưa dừng hẳn, thể hiện trực tiếp độ lệch giữa trạng thái điều khiển phần mềm và trạng thái vật lý của cánh tay.
+
+$T_\text{dừng}$ đo được trung bình \textbf{2055\,ms} (trung vị 1999\,ms), dao động từ 499\,ms đến 3600\,ms. Đáng chú ý là $T_\text{dừng}$ ít phụ thuộc vào độ dài quỹ đạo hơn $T_\text{gửi}$: ngay cả với các chuyển động nhỏ (goals 17, 19, 20 -- $T_\text{gửi}$ chỉ 599–899\,ms), $T_\text{dừng}$ vẫn đạt 700–800\,ms, phản ánh thời gian giảm tốc tối thiểu cần thiết để cơ cấu dừng hoàn toàn. Với chuyển động lớn hơn, $T_\text{dừng}$ tăng lên 2000–3600\,ms do động năng cơ học tích lũy lớn hơn.
+
+$T_\text{gửi}$ trung bình \textbf{3599\,ms} ($\approx$\,64\% tổng thời gian) tương đương khoảng 36 bước waypoints tại 10\,Hz. Giá trị này phụ thuộc trực tiếp vào độ phức tạp của quỹ đạo: goal~9 (ngoại lệ, nền vàng) có $T_\text{gửi}$ = 10199\,ms ($\approx$\,102 waypoints) do nhiều bậc tự do đồng thời di chuyển góc lớn, dẫn đến $T_\text{tổng}$ = 13798\,ms.
+
+Nhìn chung, $T_\text{tổng}$ trung bình \textbf{5654\,ms} (trung vị 5699\,ms) là tổng hợp của cả hai giai đoạn. Với cấu hình Velocity scaling 0.4 -- Accel. scaling 0.3 và chu kỳ điều khiển 100\,ms, $T_\text{dừng}$ $\approx$\,2\,s là mức độ trễ vật lý cần chấp nhận trong ứng dụng điều khiển từ kính VR: sau khi thao tác, người dùng cần chờ khoảng 2\,s để cánh tay dừng hoàn toàn và sẵn sàng nhận lệnh tiếp theo.
+
+\subsection{Ứng dụng VR điều khiển cánh tay robot}
+
+Ứng dụng VR được xây dựng thành công và hầu như không có bất kì xung đột package nào - ứng dụng có thể được build thành một file cài đặt và chạy độc lập trên kính VR Meta Quest 3. Các tính năng của ứng dụng cho phép người dùng tự do lựa chọn phương thức điều khiển cánh tay robot và việc điều khiển có tính ổn định, đồng bộ cao với cánh tay thực tế thông qua giao tiếp Ros-sharp. 
+
+\subsubsection{Các tính năng của ứng dụng}
+
+Các tính năng được hỗ trợ bởi ứng dụng bao gồm:
+
+\textbf{Kết nối/ Ngắt kết nối với Ros2 sử dụng địa chỉ IP và port}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Images/Implementation/vr_connect.png}
+        \caption{Trạng thái đã kết nối}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Images/Implementation/vr_disconnect.png}
+        \caption{Trạng thái ngắt kết nối}
+    \end{subfigure}
+    \caption{Giao diện kết nối Ros2 trong ứng dụng VR}
+    \label{fig:eval-vr-connect-disconnect}
+\end{figure}
+
+Khi kết nối thành công, các module và bảng điều khiển khác sẽ hiện ra để người dùng điều khiển robot. Thêm nữa, mọi bảng điều khiển trong ứng dụng để có thể tương tác và nắm được, nên người dùng cũng có thể tự do sắp xếp các bảng điều khiển trong môi trường cho tiện sử dụng.
+
+\textbf{Bật/Tắt hai camera môi trường để quan sát}
+
+Sau khi kết nối, người dùng có thể nhấn vào nút Camera 1 / Camera 2 để mở màn hình video xem dữ liệu truyền từ camera thông qua Ros2 topic. Debug panell được cung cấp kèm theo cho mục đích debug.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Images/Implementation/vr_camera.png}
+    \caption{Hiển thị hai luồng camera trong ứng dụng VR}
+    \label{fig:eval-vr-camera}
+\end{figure}
+
+\textbf{Điều khiển bằng MoveIt-Servo}
+
+Bảng điều khiển cho phép xoay các trục của cánh tay robot thực tế bằng nút "+" hoặc "-" ở hai bên hàng. Ở giữa hàng, giá trị số cho biết góc của trục tương ứng (đơn vị độ).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Images/Implementation/vr_moveit_servo.png}
+    \caption{Bảng điều khiển MoveIt-Servo trong ứng dụng VR}
+    \label{fig:eval-vr-moveit-servo}
+\end{figure}
+
+\textbf{Điều khiển tay gắp với GripperCommand Action}
+
+Việc điều khiển tay gắp được tích hợp trên bảng điều khiển MoveIt-Servo do nó cũng điều khiển thiết bị thực tế trực tiếp và đơn giản. Nút nhấn "Close" và "Open" gửi lệnh để đóng hoặc mở phần tay gắp. Trạng thái tay gắp thực tế được phản hồi qua chính mô hình 3D Denso Robot.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Images/Implementation/vr_gripper_open.png}
+        \caption{Tay gắp ở trạng thái đóng}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Images/Implementation/vr_gripper_close.png}
+        \caption{Tay gắp ở trạng thái mở}
+    \end{subfigure}
+    \caption{Điều khiển tay gắp bằng GripperCommand Action}
+    \label{fig:eval-vr-gripper}
+\end{figure}
+
+\textbf{Điều khiển cánh tay robot thông qua các Slider trên bảng điều khiển}
+
+Nhấn vào nút Joint Rotate để chuyển sang bảng điều khiển bằng Slider. Khi này, một robot thứ hai sẽ xuất hiện, và xoay các trục theo giá trị của slider, nhằm cho người dùng biết cánh tay sẽ ở trạng thái như thế nào ở các vị trí tương ứng. Nhấn nút Execute sẽ gửi lệnh tới MoveToPose action server, nhằm điều khiển cánh tay thực tế đạt đến vị trí mong muốn.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Images/Implementation/vr_joint_rotate.png}
+    \caption{Điều khiển cánh tay bằng slider trong ứng dụng VR}
+    \label{fig:eval-vr-joint-rotate}
+\end{figure}
+
+\textbf{Điều khiển cánh tay robot thông qua tương tác với mô hình tương lai}
+
+Nhấn nút "Robot Grab Rotate" để chuyển sang chế độ điều khiển thông qua việc tương tác (nắm vào kéo) mô hình 3D của cánh tay robot tương lai. Các trục đã được giới hạn để đảm bảo rằng góc kéo không vượt quá ngưỡng hoạt động thực tế của cánh tay robot. Ở phần slider, mỗi trục sẽ thể hiện màu để báo hiệu nếu trục gần đạt đến ngưỡng giới hạn.
+
+Khi đã chỉnh hình dạng của cánh tay robot, nhấn nút Execute sẽ đưa cánh tay thực tế tới vị trí như đã tinh chỉnh.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Images/Implementation/vr_grab_rotate.png}
+        \caption{Giao diện Robot Grab Rotate}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Images/Implementation/vr_grab_rotate_1.png}
+        \caption{Thao tác xoay bằng tương tác trực tiếp}
+    \end{subfigure}
+    \caption{Điều khiển cánh tay bằng tương tác mô hình tương lai}
+    \label{fig:eval-vr-grab-rotate}
+\end{figure}
+
+\subsubsection{Đánh giá độ trễ truyền nhận thông qua Ros-Sharp giữa ứng dụng và Ros2}
+
+Mục tiêu của ứng dụng là đảm bảo tính đồng bộ cao, thời gian thực đối với cánh tay robot thực tế, nên độ trễ truyền nhận giữa ứng dụng và máy PC chạy Ros là một tiêu chí cần kiểm tra. Đề tài thực hiện đo đạc trong quá trình sử dụng ứng dụng bình thường, tính thời gian RTT khi topic joint\_states được publish (tần số publish trùng với tần số của Ros2-control - 100ms), ứng dụng VR sẽ publish vào một topic ack khác, và từ phía Ros sẽ lấy thời gian cách biệt đó cho một vòng RTT. Kết quả đánh giá độ trễ như sau:
+
+% latency RTT here
+
+\subsubsection{Đánh giá hiệu năng ứng dụng trong quá trình hoạt động}
+
+Một trong những vấn đề trong việc phát triển ứng dụng VR đó là đảm bảo người dùng có trải nghiệm sử dụng mượt mà, thoải mái mà không gây gánh nặng nhận thức (cognitive pressure). Meta Quest Developer Hub được sử dụng để thu thập chi tiết dữ liệu hoạt động của ứng dụng, gồm nhiều tiêu chí đánh giá khác nhau để xem xét ứng dụng có đang hoạt động ổn định và tối ưu hay không. Bảng phân tích các tiêu chí và nhận xét được thể hiện ở dưới:
+
+% application metric analysis here.
+
+Dữ liệu được thu thập qua 2 phiên sử dụng ứng dụng liên tục (tổng cộng
+30{,}8\,phút) bằng Meta Quest Developer Hub trên thiết bị Meta Quest~3.
+Bảng~\ref{tab:vr-app-metrics} trình bày các tiêu chí hiệu năng chính được ghi nhận
+trong suốt quá trình hoạt động.
+
+\begin{table}[H]
+\centering
+\caption{Tổng hợp hiệu năng ứng dụng VR trên Meta Quest~3 (2 phiên đo, tổng 30{,}8 phút)}
+\label{tab:vr-app-metrics}
+\small
+\begin{tblr}{
+    colspec = {|X[4.2,l]|X[1.1,c]|X[1.2,c]|X[1.2,c]|X[1.2,c]|X[1.6,c]|},
+    hlines,
+    row{1}  = {font=\bfseries, bg=gray!20},
+    row{2}  = {bg=gray!10, font=\itshape},
+    row{8}  = {bg=gray!10, font=\itshape},
+    row{11} = {bg=gray!10, font=\itshape},
+    row{14} = {bg=gray!10, font=\itshape},
+    row{18} = {bg=gray!10, font=\itshape},
+}
+Tiêu chí & Đơn vị & TB & Min & Max & Mục tiêu \\
+\SetCell[c=6]{l} \textit{Hiệu năng khung hình} \\
+FPS ứng dụng & fps & 66{,}1 & 40 & 74 & $\geq$72 \\
+GPU render time / frame & ms & 7{,}14 & 4{,}55 & 10{,}31 & $\leq$13{,}9 \\
+ATW GPU time / frame & ms & 1{,}66 & 1{,}22 & 4{,}10 & nhỏ \\
+ICFL (frame latency) & ms & 13{,}69 & 13{,}30 & 17{,}80 & nhỏ \\
+Slice headroom & ms & 0{,}68 & 0{,}54 & 3{,}89 & lớn \\
+\SetCell[c=6]{l} \textit{Tải CPU / GPU} \\
+CPU utilization (tổng 8 nhân) & \% & 76{,}3 & 27 & 93 & $<$80 \\
+GPU utilization & \% & 60{,}2 & 41 & 76 & $<$80 \\
+Tần số CPU & MHz & 1941 & 1920 & 2361 & -- \\
+\SetCell[c=6]{l} \textit{Bộ nhớ} \\
+RAM ứng dụng (PSS) & MB & 520 & 492 & 534 & -- \\
+GPU memory vật lý & MB & 339 & 329 & 344 & -- \\
+\SetCell[c=6]{l} \textit{Ổn định khung hình (tổng 2 phiên)} \\
+Stale frames & frames & \SetCell[c=4]{c} 17\,059 & & & 0 \\
+Skipped frames (ATW miss) & frames & \SetCell[c=4]{c} 0 & & & 0 \\
+Shader hitches & lần & \SetCell[c=4]{c} 0 & & & 0 \\
+\SetCell[c=6]{l} \textit{Nhiệt độ thiết bị} \\
+Nhiệt độ pin & \textdegree{}C & 45{,}8 & 41 & 48 & $<$45 \\
+\end{tblr}
+\end{table}
+
+\textbf{Khung hình và độ trễ hiển thị.}
+FPS ứng dụng đạt trung bình \textbf{66{,}1\,fps}, thấp hơn mục tiêu 72\,Hz của Meta Quest~3.
+Nguyên nhân chính là tải CPU trung bình 76{,}3\% với đỉnh 93\% khiến luồng render Unity
+không kịp nộp frame trước deadline của compositor ở một số thời điểm, dẫn đến
+\textbf{17\,059 stale frames} trong 30{,}8 phút sử dụng ($\approx$9{,}2 stale/giây).
+Tuy nhiên, cơ chế \textit{Asynchronous TimeWarp} (ATW) đã bù hoàn toàn:
+\textbf{0 skipped frame} ghi nhận xuyên suốt hai phiên, nghĩa là người dùng
+luôn nhận được hình ảnh hiển thị ở 72\,Hz nhờ ATW tổng hợp frame trung gian từ
+dữ liệu chuyển động đầu mới nhất, đảm bảo không có hiện tượng giật hoặc đứng hình. Về cơ bản, ứng dụng vẫn đạt một mức FPS trung bình lớn hơn 60 FPS, thỏa mãn mục tiêu thiết kế ban đầu của ứng dụng. 
+
+Thời gian GPU render mỗi frame trung bình chỉ \textbf{7{,}14\,ms} -- chiếm
+khoảng 51\% ngân sách 13{,}9\,ms cho phép tại 72\,Hz -- cho thấy pipeline render
+còn dư tốt về mặt GPU. Slice headroom trung bình \textbf{0{,}68\,ms} khá sát ngưỡng
+nhưng không xảy ra trường hợp compositor trễ deadline (0 skipped frames).
+ICFL trung bình 13{,}69\,ms xấp xỉ đúng một chu kỳ 72\,Hz (13{,}9\,ms),
+phù hợp với cấu hình \texttt{minimum\_vsyncs = 1}.
+
+\textbf{Tải CPU và GPU.}
+CPU tổng trung bình \textbf{76{,}3\%} (đỉnh 93\%), GPU trung bình \textbf{60{,}2\%}
+(đỉnh 76\%). GPU còn dư đáng kể và không phải nút cổ chai; điểm nghẽn nằm ở CPU,
+đặc biệt khi ứng dụng xử lý đồng thời: cập nhật mô hình 3D robot từ Ros-Sharp,
+tính toán IK cho chế độ Robot Grab Rotate và render scene VR.
+Tần số CPU dao động từ 1920\,MHz đến 2361\,MHz, cho thấy hệ thống boosted clock
+khi cần nhưng không xảy ra throttling (tần số không giảm dưới mức nền).
+
+\textbf{Bộ nhớ.}
+Ứng dụng tiêu thụ trung bình \textbf{520\,MB} RAM (PSS), đỉnh 534\,MB, cùng
+$\approx$339\,MB GPU memory vật lý -- mức sử dụng bộ nhớ ổn định và không tăng
+theo thời gian, không có dấu hiệu memory leak trong suốt hai phiên kiểm thử.
+
+\textbf{Nhiệt độ.}
+Nhiệt độ pin đo được trung bình \textbf{45{,}8\,\textdegree{}C}, đỉnh \textbf{48\,\textdegree{}C}
+-- vượt nhẹ ngưỡng 45\,\textdegree{}C Meta khuyến nghị cho trải nghiệm thoải mái,
+nhưng chưa đạt ngưỡng kích hoạt throttling nhiệt (\textasciitilde53\,\textdegree{}C).
+Người dùng sử dụng liên tục trên 20\,phút có thể cảm nhận thiết bị ấm nhẹ tại vùng
+pin, song không ảnh hưởng đến hiệu năng hay sự an toàn của thiết bị.
+
+
+

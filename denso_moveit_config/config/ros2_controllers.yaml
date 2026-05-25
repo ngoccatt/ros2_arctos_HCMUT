@@ -1,0 +1,133 @@
+# This config file is used by ros2_control
+# Each JointTrajectoryController provides an action interface. Given the yaml moveit_controllers.yaml, 
+# MoveIt automatically connects to this action interface.
+controller_manager:
+  ros__parameters:
+    update_rate: 10 # Hz ([read -> update -> write] cycle is executed 10 times per second - 100ms per cycle)
+
+    denso_arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    denso_hand_controller:
+      type: position_controllers/GripperActionController
+
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+denso_arm_controller:
+  ros__parameters:
+    joints:
+      - X_joint
+      - Y_joint
+      - Z_joint
+      - A_joint
+      - B_joint
+      - C_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+
+    state_publish_rate: 25.0
+    action_monitor_rate: 10.0
+
+    allow_partial_joints_goal: true
+    state_tolerance_check: false  # Disable tolerance checking for simplicity
+
+    allow_nonzero_velocity_at_trajectory_end: false
+    # allow_integration_in_goal_trajectories: true   # Allow servo's incremental trajectories
+    # open_loop_control: true                        # Don't reject trajectory based on current state mismatch
+
+# Refer: https://control.ros.org/humble/doc/ros2_controllers/gripper_controllers/doc/userdoc.html
+denso_hand_controller:
+  ros__parameters:
+    joint: gripper_gear_right_joint
+
+    goal_tolerance: 0.1               # rad — tolerated error for declaring success (default 0.01 is too tight)
+    stall_velocity_threshold: 0.001   # rad/s — velocity below this is considered stalling (default)
+    stall_timeout: 2.0                # seconds — how long to wait after stall before deciding abort/success
+    action_monitor_rate: 10.0         # Hz — rate at which goal progress is evaluated
+
+
+denso_hardware_interface:
+  ros__parameters:
+    motors:
+      X_joint:
+        motor_id: 1
+        requires_homing: false
+        inverted: false            # for application: app request go to 10 rad, but raw request to 10 rad
+        inverted_feedback: false  # for can communication: raw request go to 1000, but motor run to -1000
+        gear_ratio: 1.0
+        hardware_type: MKS_57D
+        zero_position: 0.0
+        lower_limit: -170.0  # lower_limit, in degree
+        upper_limit: 170.0   # upper_limit, in degree
+      Y_joint:
+        motor_id: 2
+        requires_homing: false
+        inverted: false            # for application: app request go to 10 rad, but raw request to 10 rad
+        inverted_feedback: false  # for case of request go to 1000, but motor run to -1000
+        gear_ratio: 1.0
+        hardware_type: MKS_57D
+        zero_position: 0.0
+        lower_limit: -100.0  # lower_limit, in degree
+        upper_limit: 135.0   # upper_limit, in degree
+      Z_joint:
+        motor_id: 3
+        requires_homing: false
+        inverted: false            # for application: app request go to 10 rad, but raw request to 10 rad
+        inverted_feedback: false  # for case of request go to 1000, but motor run to -1000
+        gear_ratio: 1.0
+        hardware_type: MKS_42D
+        zero_position: 0.0
+        lower_limit: -119.0             # lower limit, in degree
+        upper_limit: 169.0           # upper limit, in degree
+      A_joint:
+        motor_id: 4
+        requires_homing: false
+        inverted: false            # for application: app request go to 10 rad, but raw request to 10 rad
+        inverted_feedback: false  # for case of request go to 1000, but motor run to -1000
+        gear_ratio: 1.0
+        hardware_type: MKS_42D
+        zero_position: 0.0
+        lower_limit: -190.0         # lower limit, in degree
+        upper_limit: 190.0          # upper limit, in degree
+      B_joint:                    
+        motor_id: 5
+        requires_homing: false
+        inverted: false             # for application: app request go to 10 rad, but raw request to 10 rad (validated)
+        inverted_feedback: false     # for case of request go to 1000, but motor run to -1000 (validated)
+        gear_ratio: 1.0
+        hardware_type: MKS_42D
+        zero_position: -0.0
+        lower_limit: -90.0         # lower limit, in degree
+        upper_limit: 90.0          # upper limit, in degree
+      C_joint:
+        motor_id: 6
+        requires_homing: false
+        inverted: false                # for application: app request go to 10 rad, but raw request to 10 rad
+        inverted_feedback: false      # for case of request go to 1000, but motor run to -1000
+        gear_ratio: 1.0
+        hardware_type: MKS_42D
+        zero_position: -0.0
+        lower_limit: -360.0     # lower limit, in degree
+        upper_limit: 360.0      # upper limit, in degree
+    
+# this should be the name of the node, not namespace name.
+denso_hand_interface:
+  ros__parameters: 
+    gripper:
+      gripper_gear_right_joint:
+        motor_id: 7
+        requires_homing: false
+        inverted: false                 # for application: app request go to 10 rad, but raw request to 10 rad
+        inverted_feedback: false        # for case of request go to 1000, but motor run to -1000
+        gear_ratio: 1.0
+        hardware_type: MKS_42D
+        zero_position: 5.0
+        lower_limit: 5.0              # lower limit (close), in degree (0.087266 rad)
+        upper_limit: 85.0             # upper limit (open), in degree (1.48353 rad)
+        velocity: 200.0 
+        acceleration: 20.0

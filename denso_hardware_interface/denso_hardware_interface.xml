@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--Plugin description file: a required XML file that describes a plugin’s library name, class type, namespace, description, and interface type-->
+<!--https://control.ros.org/humble/doc/ros2_control_demos/example_7/doc/userdoc.html#:~:text=Plugin%20description%20file%20(hardware)-->
+<library path="denso_interface">
+  <class name="denso_interface/DensoInterface"
+    type="denso_interface::DensoInterface"
+    base_class_type="hardware_interface::SystemInterface">
+    <description>The Denso hardware interface for ROS 2 Control</description>
+  </class>
+  <class name="denso_hand_interface/DensoHandInterface"
+    type="denso_hand_interface::DensoHandInterface"
+    base_class_type="hardware_interface::SystemInterface">
+    <description>The Denso hand hardware interface for ROS 2 Control</description>
+  </class>
+</library>

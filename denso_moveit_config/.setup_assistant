@@ -1,0 +1,27 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: denso_description
+    relative_path: urdf/denso.xacro
+  srdf:
+    relative_path: config/denso.srdf
+  package_settings:
+    author_name: Tran Ngoc Cat
+    author_email: ngoccatt@gmail.com
+    generated_timestamp: 1759158227
+  control_xacro:
+    command:
+      - position
+      - velocity
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+      - velocity
+    state:
+      - position
+      - velocity

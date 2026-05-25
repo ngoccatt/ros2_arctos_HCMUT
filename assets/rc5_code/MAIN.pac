@@ -1,12 +1,9 @@
 '!TITLE "MAIN"
 PROGRAM MAIN
     DEFIN li1
-    REM Head of Queue
+    REM ========= I1 notify that new string data is received. after processed, set I1 to 0 to wait for new data.
     I1 = 0
-    REM Tail of Queue
-    I2 = 0
-    REM LENGTH of Queue
-    I3 = 0
+    REM ========= I4 and I5 used for ring buffer for processed joint.
     I4 = 0
     I5 = 0
     FLUSH #1
@@ -17,7 +14,7 @@ PROGRAM MAIN
     RUN TASK0, C = 10
     DELAY 20
     REM ==== Process recevied data
-    RUN TASK1, C = 15
+    RUN TASK1CRC, C = 15
     REM ==== RUN ROBOT
     RUN TASK3, C = 35
     REM ==== Transmit current joint

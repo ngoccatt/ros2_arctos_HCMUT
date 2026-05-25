@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="denso">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import denso urdf file -->
+    <xacro:include filename="$(find denso_description)/urdf/denso.xacro" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="denso.ros2_control.xacro" />
+    <xacro:include filename="denso_hand.ros2_control.xacro" />
+
+
+    <xacro:denso_ros2_control name="GazeboSimSystem" initial_positions_file="$(arg initial_positions_file)" sim="true"/>
+    <xacro:denso_hand_ros2_control name="HandGazeboSimSystem" initial_positions_file="$(arg initial_positions_file)" sim="true"/>
+</robot>

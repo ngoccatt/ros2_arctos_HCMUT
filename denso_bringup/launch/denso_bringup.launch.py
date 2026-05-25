@@ -1,0 +1,184 @@
+from launch import LaunchDescription
+from launch.actions import RegisterEventHandler, DeclareLaunchArgument
+from launch.event_handlers import OnProcessExit
+from launch.actions import IncludeLaunchDescription, LogInfo
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, Command, FindExecutable
+from ament_index_python.packages import get_package_share_directory
+from launch_ros.actions import Node
+from moveit_configs_utils import MoveItConfigsBuilder
+import os
+
+
+def generate_launch_description():
+    # Get package paths
+    denso_hardware_interface_dir = get_package_share_directory('denso_hardware_interface')
+    denso_moveit_dir = get_package_share_directory('denso_moveit_config')
+
+    # MoveItConfigsBuilder automatically do the following:
+    # .robot_description: create urdf file using command: xacro denso.urdf.xacro
+    # .robot_description_semantic
+    moveit_config = (
+        MoveItConfigsBuilder("denso")
+        .robot_description(file_path="config/denso.urdf.xacro")
+        .robot_description_semantic(file_path="config/denso.srdf")
+        .trajectory_execution(file_path="config/moveit_controllers.yaml")
+        .planning_pipelines(pipelines=["ompl", "chomp"])
+        .to_moveit_configs()
+    )
+
+    rviz_base = os.path.join(get_package_share_directory("denso_moveit_config"), "config")
+    rviz_full_config = os.path.join(rviz_base, "moveit_chomp.rviz")
+    rviz_empty_config = os.path.join(rviz_base, "moveit.rviz")
+
+    rviz_node = Node(
+        package="rviz2",
+        executable="rviz2",
+        output="screen",
+        arguments=["-d", rviz_empty_config],
+        parameters=[
+            moveit_config.robot_description,
+            moveit_config.robot_description_semantic,
+            moveit_config.planning_pipelines,
+            moveit_config.robot_description_kinematics,
+        ],
+    )
+    # Nodes
+    # publish the state of robot to TF (transform)
+    robot_state_pub_node = Node(
+        package="robot_state_publisher",
+        executable="robot_state_publisher",
+        name="robot_state_publisher",
+        output="both",
+        parameters=[moveit_config.robot_description],
+    )
+
+    # Parameters
+    robot_controllers = os.path.join(
+        denso_moveit_dir, 'config', 'ros2_controllers.yaml'
+    )
+
+    control_node = Node(
+        package="controller_manager",
+        executable="ros2_control_node",
+        parameters=[robot_controllers],
+        output={'stdout': 'screen', 'stderr': 'screen'},
+        arguments=[
+            '--ros-args',
+            # '--log-level', 'debug',
+            '--log-level', 'denso_hardware_interface:=info',
+            '--log-level', 'controller_manager:=info'
+        ],
+        remappings={
+             ("/controller_manager/robot_description", "/robot_description"),
+        }
+    )
+
+    joint_state_broadcaster_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
+    )
+
+    robot_arm_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["denso_arm_controller", "--controller-manager", "/controller_manager"],
+    )
+
+    robot_hand_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["denso_hand_controller", "--controller-manager", "/controller_manager"],
+    )
+
+    # Include MoveIt Launch
+    move_group_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            PathJoinSubstitution([denso_moveit_dir, "launch", "move_group.launch.py"])
+        )
+    )
+
+    # Ensure joint state broadcaster starts before controllers
+    delay_robot_arm_controller_spawner = RegisterEventHandler(
+        event_handler=OnProcessExit(
+            target_action=joint_state_broadcaster_spawner,
+            on_exit=[robot_arm_controller_spawner, robot_hand_controller_spawner],
+        )
+    )
+
+    # Delay rviz and moveit launch until controllers are ready
+    delay_rviz_and_moveit_launch = RegisterEventHandler(
+        event_handler=OnProcessExit(
+            target_action=robot_arm_controller_spawner,
+            on_exit=[rviz_node, move_group_launch]
+        ))
+    
+    camera_node1 = Node(
+        package='v4l2_camera',
+        executable='v4l2_camera_node',
+        name='v4l2_camera_1',
+        output='screen',
+        parameters=[
+            {
+                'video_device': '/dev/video0',     
+                'image_size': [640, 480],
+                'pixel_format': 'YUYV',             
+                'output_encoding': 'rgb8', 
+                'qos_overrides': {
+                    '/camera/image_raw': {
+                        'publisher': {
+                            'reliability': 'best_effort',
+                            'history': 'keep_last',
+                            'depth': 100,
+                        }
+                    }
+                }
+            }
+        ],
+        remappings=[
+            ('image_raw', '/camera_1/image_raw'),
+            ('camera_info', '/camera_1/camera_info'),
+            ('image_raw/compressed', '/camera_1/image_raw/compressed'),
+        ]
+    )
+
+    camera_node2 = Node(
+        package='v4l2_camera',
+        executable='v4l2_camera_node',
+        name='v4l2_camera_2',
+        output='screen',
+        parameters=[
+            {
+                'video_device': '/dev/video2',     
+                'image_size': [640, 480],
+                'pixel_format': 'YUYV',             
+                'output_encoding': 'rgb8', 
+                'qos_overrides': {
+                    '/camera/image_raw': {
+                        'publisher': {
+                            'reliability': 'best_effort',
+                            'history': 'keep_last',
+                            'depth': 100,
+                        }
+                    }
+                }
+            }
+        ],
+        remappings=[
+            ('image_raw', '/camera_2/image_raw'),
+            ('camera_info', '/camera_2/camera_info'),
+            ('image_raw/compressed', '/camera_2/image_raw/compressed'),
+        ]
+    )
+    
+    return LaunchDescription([
+        LogInfo(msg=["Launching Denso Bringup with RViz..."]),
+        control_node,
+        robot_state_pub_node,
+        joint_state_broadcaster_spawner,
+        delay_robot_arm_controller_spawner,
+        delay_rviz_and_moveit_launch,
+        camera_node1,
+        camera_node2,
+    ])

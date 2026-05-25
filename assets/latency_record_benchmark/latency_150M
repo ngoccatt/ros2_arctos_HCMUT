@@ -1,0 +1,1646 @@
+INFO] [1779673746.615245588] [topic_latency_benchmark]: No paired samples yet.
+[INFO] [1779673749.090387086] [topic_latency_benchmark]: /ack received at 1779673749.090385675 s  payload='1779673749015189335'
+[INFO] [1779673749.090435451] [topic_latency_benchmark]: Latency /benchmark → /ack: 75.196 ms  (sample 1)
+[INFO] [1779673749.139848700] [topic_latency_benchmark]: /ack received at 1779673749.139847279 s  payload='1779673749115134909'
+[INFO] [1779673749.139899507] [topic_latency_benchmark]: Latency /benchmark → /ack: 24.712 ms  (sample 2)
+[INFO] [1779673749.229792766] [topic_latency_benchmark]: /ack received at 1779673749.229790926 s  payload='1779673749215139096'
+[INFO] [1779673749.229844226] [topic_latency_benchmark]: Latency /benchmark → /ack: 14.652 ms  (sample 3)
+[INFO] [1779673749.339860955] [topic_latency_benchmark]: /ack received at 1779673749.339859486 s  payload='1779673749315142837'
+[INFO] [1779673749.339906429] [topic_latency_benchmark]: Latency /benchmark → /ack: 24.717 ms  (sample 4)
+[INFO] [1779673749.439842935] [topic_latency_benchmark]: /ack received at 1779673749.439838409 s  payload='1779673749415137095'
+[INFO] [1779673749.439924148] [topic_latency_benchmark]: Latency /benchmark → /ack: 24.701 ms  (sample 5)
+[INFO] [1779673749.540182021] [topic_latency_benchmark]: /ack received at 1779673749.540180445 s  payload='1779673749515137035'
+[INFO] [1779673749.540226262] [topic_latency_benchmark]: Latency /benchmark → /ack: 25.043 ms  (sample 6)
+[INFO] [1779673749.640777498] [topic_latency_benchmark]: /ack received at 1779673749.640776157 s  payload='1779673749615126591'
+[INFO] [1779673749.640818022] [topic_latency_benchmark]: Latency /benchmark → /ack: 25.650 ms  (sample 7)
+[INFO] [1779673749.741277653] [topic_latency_benchmark]: /ack received at 1779673749.741275549 s  payload='1779673749715112009'
+[INFO] [1779673749.741322420] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.164 ms  (sample 8)
+[INFO] [1779673749.829731361] [topic_latency_benchmark]: /ack received at 1779673749.829730034 s  payload='1779673749815161974'
+[INFO] [1779673749.829761632] [topic_latency_benchmark]: Latency /benchmark → /ack: 14.568 ms  (sample 9)
+[INFO] [1779673749.947513852] [topic_latency_benchmark]: /ack received at 1779673749.947512627 s  payload='1779673749915123587'
+[INFO] [1779673749.947548896] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.389 ms  (sample 10)
+[INFO] [1779673750.035808511] [topic_latency_benchmark]: /ack received at 1779673750.035807371 s  payload='1779673750015119891'
+[INFO] [1779673750.035849911] [topic_latency_benchmark]: Latency /benchmark → /ack: 20.688 ms  (sample 11)
+[INFO] [1779673750.138479764] [topic_latency_benchmark]: /ack received at 1779673750.138478994 s  payload='1779673750115150069'
+[INFO] [1779673750.138511574] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.329 ms  (sample 12)
+[INFO] [1779673750.237438359] [topic_latency_benchmark]: /ack received at 1779673750.237435102 s  payload='1779673750215115204'
+[INFO] [1779673750.237484702] [topic_latency_benchmark]: Latency /benchmark → /ack: 22.320 ms  (sample 13)
+[INFO] [1779673750.346731662] [topic_latency_benchmark]: /ack received at 1779673750.346730709 s  payload='1779673750315142657'
+[INFO] [1779673750.346765398] [topic_latency_benchmark]: Latency /benchmark → /ack: 31.588 ms  (sample 14)
+[INFO] [1779673750.436913380] [topic_latency_benchmark]: /ack received at 1779673750.436912060 s  payload='1779673750415120493'
+[INFO] [1779673750.436952877] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.792 ms  (sample 15)
+[INFO] [1779673750.546924744] [topic_latency_benchmark]: /ack received at 1779673750.546923637 s  payload='1779673750515121287'
+[INFO] [1779673750.546959623] [topic_latency_benchmark]: Latency /benchmark → /ack: 31.802 ms  (sample 16)
+[INFO] [1779673750.646864273] [topic_latency_benchmark]: /ack received at 1779673750.646862745 s  payload='1779673750615145790'
+[INFO] [1779673750.646907663] [topic_latency_benchmark]: Latency /benchmark → /ack: 31.717 ms  (sample 17)
+[INFO] [1779673750.747009385] [topic_latency_benchmark]: /ack received at 1779673750.747008324 s  payload='1779673750715138183'
+[INFO] [1779673750.747046055] [topic_latency_benchmark]: Latency /benchmark → /ack: 31.870 ms  (sample 18)
+[INFO] [1779673750.835374260] [topic_latency_benchmark]: /ack received at 1779673750.835372686 s  payload='1779673750815139576'
+[INFO] [1779673750.835413820] [topic_latency_benchmark]: Latency /benchmark → /ack: 20.233 ms  (sample 19)
+[INFO] [1779673751.003778413] [topic_latency_benchmark]: /ack received at 1779673751.003777266 s  payload='1779673750915121526'
+[INFO] [1779673751.003811427] [topic_latency_benchmark]: Latency /benchmark → /ack: 88.656 ms  (sample 20)
+[INFO] [1779673751.036113543] [topic_latency_benchmark]: /ack received at 1779673751.036112070 s  payload='1779673751015108105'
+[INFO] [1779673751.036148216] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.004 ms  (sample 21)
+[INFO] [1779673751.147184999] [topic_latency_benchmark]: /ack received at 1779673751.147183895 s  payload='1779673751115130630'
+[INFO] [1779673751.147229098] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.053 ms  (sample 22)
+[INFO] [1779673751.236563928] [topic_latency_benchmark]: /ack received at 1779673751.236562967 s  payload='1779673751215104077'
+[INFO] [1779673751.236601452] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.459 ms  (sample 23)
+[INFO] [1779673751.336389834] [topic_latency_benchmark]: /ack received at 1779673751.336388826 s  payload='1779673751315134982'
+[INFO] [1779673751.336420383] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.254 ms  (sample 24)
+[INFO] [1779673751.447425103] [topic_latency_benchmark]: /ack received at 1779673751.447423935 s  payload='1779673751415127422'
+[INFO] [1779673751.447457065] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.297 ms  (sample 25)
+[INFO] [1779673751.537293725] [topic_latency_benchmark]: /ack received at 1779673751.537292242 s  payload='1779673751515126870'
+[INFO] [1779673751.537329644] [topic_latency_benchmark]: Latency /benchmark → /ack: 22.165 ms  (sample 26)
+[INFO] [1779673751.615126310] [topic_latency_benchmark]: Stats over 26 samples: min=14.568 ms  avg=29.308 ms  max=88.656 ms
+[INFO] [1779673751.645104881] [topic_latency_benchmark]: /ack received at 1779673751.645103693 s  payload='1779673751615094395'
+[INFO] [1779673751.645138207] [topic_latency_benchmark]: Latency /benchmark → /ack: 30.009 ms  (sample 27)
+[INFO] [1779673751.733549564] [topic_latency_benchmark]: /ack received at 1779673751.733548641 s  payload='1779673751715092402'
+[INFO] [1779673751.733582067] [topic_latency_benchmark]: Latency /benchmark → /ack: 18.456 ms  (sample 28)
+[INFO] [1779673751.832565005] [topic_latency_benchmark]: /ack received at 1779673751.832563162 s  payload='1779673751815090916'
+[INFO] [1779673751.832612718] [topic_latency_benchmark]: Latency /benchmark → /ack: 17.472 ms  (sample 29)
+[INFO] [1779673751.957484202] [topic_latency_benchmark]: /ack received at 1779673751.957482576 s  payload='1779673751915094001'
+[INFO] [1779673751.957530740] [topic_latency_benchmark]: Latency /benchmark → /ack: 42.389 ms  (sample 30)
+[INFO] [1779673752.057250616] [topic_latency_benchmark]: /ack received at 1779673752.057248831 s  payload='1779673752015090218'
+[INFO] [1779673752.057292463] [topic_latency_benchmark]: Latency /benchmark → /ack: 42.159 ms  (sample 31)
+[INFO] [1779673752.144001626] [topic_latency_benchmark]: /ack received at 1779673752.144000769 s  payload='1779673752115083599'
+[INFO] [1779673752.144049956] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.917 ms  (sample 32)
+[INFO] [1779673752.232332181] [topic_latency_benchmark]: /ack received at 1779673752.232331038 s  payload='1779673752215105375'
+[INFO] [1779673752.232370531] [topic_latency_benchmark]: Latency /benchmark → /ack: 17.226 ms  (sample 33)
+[INFO] [1779673752.332831562] [topic_latency_benchmark]: /ack received at 1779673752.332829952 s  payload='1779673752315090820'
+[INFO] [1779673752.332872401] [topic_latency_benchmark]: Latency /benchmark → /ack: 17.739 ms  (sample 34)
+[INFO] [1779673752.512091913] [topic_latency_benchmark]: /ack received at 1779673752.512090206 s  payload='1779673752415089997'
+[INFO] [1779673752.512135137] [topic_latency_benchmark]: Latency /benchmark → /ack: 97.000 ms  (sample 35)
+[INFO] [1779673752.543492774] [topic_latency_benchmark]: /ack received at 1779673752.543492079 s  payload='1779673752515070832'
+[INFO] [1779673752.543518793] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.421 ms  (sample 36)
+[INFO] [1779673752.643147571] [topic_latency_benchmark]: /ack received at 1779673752.643146276 s  payload='1779673752615079008'
+[INFO] [1779673752.643178452] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.067 ms  (sample 37)
+[INFO] [1779673752.743993072] [topic_latency_benchmark]: /ack received at 1779673752.743991852 s  payload='1779673752715078593'
+[INFO] [1779673752.744025364] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.913 ms  (sample 38)
+[INFO] [1779673752.844685296] [topic_latency_benchmark]: /ack received at 1779673752.844681740 s  payload='1779673752815076653'
+[INFO] [1779673752.844747732] [topic_latency_benchmark]: Latency /benchmark → /ack: 29.605 ms  (sample 39)
+[INFO] [1779673753.007007978] [topic_latency_benchmark]: /ack received at 1779673753.007004499 s  payload='1779673752915081877'
+[INFO] [1779673753.007084708] [topic_latency_benchmark]: Latency /benchmark → /ack: 91.923 ms  (sample 40)
+[INFO] [1779673753.043879231] [topic_latency_benchmark]: /ack received at 1779673753.043878078 s  payload='1779673753015059108'
+[INFO] [1779673753.043925613] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.819 ms  (sample 41)
+[INFO] [1779673753.143611194] [topic_latency_benchmark]: /ack received at 1779673753.143609762 s  payload='1779673753115086336'
+[INFO] [1779673753.143649780] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.523 ms  (sample 42)
+[INFO] [1779673753.233475736] [topic_latency_benchmark]: /ack received at 1779673753.233474731 s  payload='1779673753215068219'
+[INFO] [1779673753.233506338] [topic_latency_benchmark]: Latency /benchmark → /ack: 18.407 ms  (sample 43)
+[INFO] [1779673753.374699367] [topic_latency_benchmark]: /ack received at 1779673753.374698400 s  payload='1779673753315092296'
+[INFO] [1779673753.374729004] [topic_latency_benchmark]: Latency /benchmark → /ack: 59.606 ms  (sample 44)
+[INFO] [1779673753.463568620] [topic_latency_benchmark]: /ack received at 1779673753.463567734 s  payload='1779673753415096256'
+[INFO] [1779673753.463606727] [topic_latency_benchmark]: Latency /benchmark → /ack: 48.471 ms  (sample 45)
+[INFO] [1779673753.577680932] [topic_latency_benchmark]: /ack received at 1779673753.577680111 s  payload='1779673753515091500'
+[INFO] [1779673753.577713510] [topic_latency_benchmark]: Latency /benchmark → /ack: 62.589 ms  (sample 46)
+[INFO] [1779673753.664409733] [topic_latency_benchmark]: /ack received at 1779673753.664408684 s  payload='1779673753615087527'
+[INFO] [1779673753.664443144] [topic_latency_benchmark]: Latency /benchmark → /ack: 49.321 ms  (sample 47)
+[INFO] [1779673753.753050592] [topic_latency_benchmark]: /ack received at 1779673753.753049612 s  payload='1779673753715059142'
+[INFO] [1779673753.753081360] [topic_latency_benchmark]: Latency /benchmark → /ack: 37.990 ms  (sample 48)
+[INFO] [1779673753.849385774] [topic_latency_benchmark]: /ack received at 1779673753.849384785 s  payload='1779673753815076727'
+[INFO] [1779673753.849420686] [topic_latency_benchmark]: Latency /benchmark → /ack: 34.308 ms  (sample 49)
+[INFO] [1779673753.971672114] [topic_latency_benchmark]: /ack received at 1779673753.971670628 s  payload='1779673753915037848'
+[INFO] [1779673753.971753367] [topic_latency_benchmark]: Latency /benchmark → /ack: 56.633 ms  (sample 50)
+[INFO] [1779673754.077692111] [topic_latency_benchmark]: /ack received at 1779673754.077690840 s  payload='1779673754015084371'
+[INFO] [1779673754.077725847] [topic_latency_benchmark]: Latency /benchmark → /ack: 62.607 ms  (sample 51)
+[INFO] [1779673754.149298817] [topic_latency_benchmark]: /ack received at 1779673754.149297714 s  payload='1779673754115057155'
+[INFO] [1779673754.149333398] [topic_latency_benchmark]: Latency /benchmark → /ack: 34.241 ms  (sample 52)
+[INFO] [1779673754.271725784] [topic_latency_benchmark]: /ack received at 1779673754.271724224 s  payload='1779673754215081288'
+[INFO] [1779673754.271777056] [topic_latency_benchmark]: Latency /benchmark → /ack: 56.643 ms  (sample 53)
+[INFO] [1779673754.341655799] [topic_latency_benchmark]: /ack received at 1779673754.341654778 s  payload='1779673754315075675'
+[INFO] [1779673754.341688379] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.579 ms  (sample 54)
+[INFO] [1779673754.506190767] [topic_latency_benchmark]: /ack received at 1779673754.506189585 s  payload='1779673754415058089'
+[INFO] [1779673754.506223684] [topic_latency_benchmark]: Latency /benchmark → /ack: 91.132 ms  (sample 55)
+[INFO] [1779673754.640489951] [topic_latency_benchmark]: /ack received at 1779673754.640488863 s  payload='1779673754515056785'
+[INFO] [1779673754.640526655] [topic_latency_benchmark]: Latency /benchmark → /ack: 25.413 ms  (sample 56)
+[INFO] [1779673754.739739760] [topic_latency_benchmark]: /ack received at 1779673754.739738703 s  payload='1779673754615075755'
+[INFO] [1779673754.739769197] [topic_latency_benchmark]: Latency /benchmark → /ack: 24.681 ms  (sample 57)
+[INFO] [1779673754.782022276] [topic_latency_benchmark]: /ack received at 1779673754.782021046 s  payload='1779673754715057368'
+[INFO] [1779673754.782059787] [topic_latency_benchmark]: Latency /benchmark → /ack: 66.964 ms  (sample 58)
+[INFO] [1779673754.871203455] [topic_latency_benchmark]: /ack received at 1779673754.871201754 s  payload='1779673754815026128'
+[INFO] [1779673754.871243427] [topic_latency_benchmark]: Latency /benchmark → /ack: 56.176 ms  (sample 59)
+[INFO] [1779673754.959952596] [topic_latency_benchmark]: /ack received at 1779673754.959950924 s  payload='1779673754915037169'
+[INFO] [1779673754.959999477] [topic_latency_benchmark]: Latency /benchmark → /ack: 44.914 ms  (sample 60)
+[INFO] [1779673755.038450342] [topic_latency_benchmark]: /ack received at 1779673755.038448811 s  payload='1779673755015080702'
+[INFO] [1779673755.038510274] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.368 ms  (sample 61)
+[INFO] [1779673755.149351099] [topic_latency_benchmark]: /ack received at 1779673755.149349928 s  payload='1779673755115068393'
+[INFO] [1779673755.149386087] [topic_latency_benchmark]: Latency /benchmark → /ack: 34.282 ms  (sample 62)
+[INFO] [1779673755.249739338] [topic_latency_benchmark]: /ack received at 1779673755.249738216 s  payload='1779673755215064898'
+[INFO] [1779673755.249776241] [topic_latency_benchmark]: Latency /benchmark → /ack: 34.673 ms  (sample 63)
+[INFO] [1779673755.338435112] [topic_latency_benchmark]: /ack received at 1779673755.338433743 s  payload='1779673755315033355'
+[INFO] [1779673755.338483111] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.400 ms  (sample 64)
+[INFO] [1779673755.470969485] [topic_latency_benchmark]: /ack received at 1779673755.470968246 s  payload='1779673755415070486'
+[INFO] [1779673755.471012726] [topic_latency_benchmark]: Latency /benchmark → /ack: 55.898 ms  (sample 65)
+[INFO] [1779673755.545374887] [topic_latency_benchmark]: /ack received at 1779673755.545371056 s  payload='1779673755515057831'
+[INFO] [1779673755.545444689] [topic_latency_benchmark]: Latency /benchmark → /ack: 30.313 ms  (sample 66)
+[INFO] [1779673755.782415306] [topic_latency_benchmark]: /ack received at 1779673755.782413721 s  payload='1779673755615082263'
+[INFO] [1779673755.782453559] [topic_latency_benchmark]: Latency /benchmark → /ack: 67.342 ms  (sample 67)
+[INFO] [1779673755.827686654] [topic_latency_benchmark]: /ack received at 1779673755.827685356 s  payload='1779673755715071519'
+[INFO] [1779673755.827727840] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.660 ms  (sample 68)
+[INFO] [1779673756.239033357] [topic_latency_benchmark]: /ack received at 1779673756.239032269 s  payload='1779673755815025612'
+[INFO] [1779673756.239070771] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.982 ms  (sample 69)
+[INFO] [1779673756.239088341] [topic_latency_benchmark]: /ack received at 1779673756.239088058 s  payload='1779673755915023721'
+[INFO] [1779673756.239094348] [topic_latency_benchmark]: Latency /benchmark → /ack: 24.038 ms  (sample 70)
+[INFO] [1779673756.239103514] [topic_latency_benchmark]: /ack received at 1779673756.239103317 s  payload='1779673756015021898'
+[INFO] [1779673756.239112520] [topic_latency_benchmark]: Latency /benchmark → /ack: 24.053 ms  (sample 71)
+[INFO] [1779673756.267157166] [topic_latency_benchmark]: /ack received at 1779673756.267156124 s  payload='1779673756115054112'
+[INFO] [1779673756.267195840] [topic_latency_benchmark]: Latency /benchmark → /ack: 52.106 ms  (sample 72)
+[INFO] [1779673756.267456307] [topic_latency_benchmark]: /ack received at 1779673756.267456293 s  payload='1779673756215050640'
+[INFO] [1779673756.267461595] [topic_latency_benchmark]: Latency /benchmark → /ack: 52.406 ms  (sample 73)
+[INFO] [1779673756.365570556] [topic_latency_benchmark]: /ack received at 1779673756.365567446 s  payload='1779673756315019747'
+[INFO] [1779673756.365687070] [topic_latency_benchmark]: Latency /benchmark → /ack: 50.548 ms  (sample 74)
+[INFO] [1779673756.502779601] [topic_latency_benchmark]: /ack received at 1779673756.502778053 s  payload='1779673756415017027'
+[INFO] [1779673756.502812735] [topic_latency_benchmark]: Latency /benchmark → /ack: 87.761 ms  (sample 75)
+[INFO] [1779673756.567178815] [topic_latency_benchmark]: /ack received at 1779673756.567175627 s  payload='1779673756515043411'
+[INFO] [1779673756.567216998] [topic_latency_benchmark]: Latency /benchmark → /ack: 52.132 ms  (sample 76)
+[INFO] [1779673756.615071773] [topic_latency_benchmark]: Stats over 76 samples: min=12.660 ms  avg=37.412 ms  max=97.000 ms
+[INFO] [1779673756.667553479] [topic_latency_benchmark]: /ack received at 1779673756.667552471 s  payload='1779673756615044328'
+[INFO] [1779673756.667598021] [topic_latency_benchmark]: Latency /benchmark → /ack: 52.508 ms  (sample 77)
+[INFO] [1779673756.811122661] [topic_latency_benchmark]: /ack received at 1779673756.811121702 s  payload='1779673756715017167'
+[INFO] [1779673756.811159134] [topic_latency_benchmark]: Latency /benchmark → /ack: 96.104 ms  (sample 78)
+[INFO] [1779673756.983782737] [topic_latency_benchmark]: /ack received at 1779673756.983781576 s  payload='1779673756814995573'
+[INFO] [1779673756.983812441] [topic_latency_benchmark]: Latency /benchmark → /ack: 68.733 ms  (sample 79)
+[INFO] [1779673756.995300817] [topic_latency_benchmark]: /ack received at 1779673756.995300531 s  payload='1779673756915049013'
+[INFO] [1779673756.995324230] [topic_latency_benchmark]: Latency /benchmark → /ack: 80.251 ms  (sample 80)
+[INFO] [1779673757.078059093] [topic_latency_benchmark]: /ack received at 1779673757.078056097 s  payload='1779673757015040375'
+[INFO] [1779673757.078101295] [topic_latency_benchmark]: Latency /benchmark → /ack: 63.016 ms  (sample 81)
+[INFO] [1779673757.195688423] [topic_latency_benchmark]: /ack received at 1779673757.195687532 s  payload='1779673757115037276'
+[INFO] [1779673757.195720805] [topic_latency_benchmark]: Latency /benchmark → /ack: 80.650 ms  (sample 82)
+[INFO] [1779673757.316097694] [topic_latency_benchmark]: /ack received at 1779673757.316094637 s  payload='1779673757215009197'
+[INFO] [1779673757.316145673] [topic_latency_benchmark]: Latency /benchmark → /ack: 1.062 ms  (sample 83)
+[INFO] [1779673757.377597972] [topic_latency_benchmark]: /ack received at 1779673757.377596617 s  payload='1779673757315033164'
+[INFO] [1779673757.377637427] [topic_latency_benchmark]: Latency /benchmark → /ack: 62.564 ms  (sample 84)
+[INFO] [1779673757.541772262] [topic_latency_benchmark]: /ack received at 1779673757.541769266 s  payload='1779673757415005403'
+[INFO] [1779673757.541850646] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.772 ms  (sample 85)
+[INFO] [1779673757.609810108] [topic_latency_benchmark]: /ack received at 1779673757.609808922 s  payload='1779673757514997499'
+[INFO] [1779673757.609853478] [topic_latency_benchmark]: Latency /benchmark → /ack: 94.811 ms  (sample 86)
+[INFO] [1779673757.811136152] [topic_latency_benchmark]: /ack received at 1779673757.811135054 s  payload='1779673757614982666'
+[INFO] [1779673757.811179731] [topic_latency_benchmark]: Latency /benchmark → /ack: 96.142 ms  (sample 87)
+[INFO] [1779673757.899603120] [topic_latency_benchmark]: /ack received at 1779673757.899602175 s  payload='1779673757714992754'
+[INFO] [1779673757.899633501] [topic_latency_benchmark]: Latency /benchmark → /ack: 84.623 ms  (sample 88)
+[INFO] [1779673757.973929019] [topic_latency_benchmark]: /ack received at 1779673757.973927498 s  payload='1779673757814979420'
+[INFO] [1779673757.973980335] [topic_latency_benchmark]: Latency /benchmark → /ack: 58.941 ms  (sample 89)
+[INFO] [1779673757.974410046] [topic_latency_benchmark]: /ack received at 1779673757.974409819 s  payload='1779673757914986396'
+[INFO] [1779673757.974416930] [topic_latency_benchmark]: Latency /benchmark → /ack: 59.423 ms  (sample 90)
+[INFO] [1779673758.062662276] [topic_latency_benchmark]: /ack received at 1779673758.062659264 s  payload='1779673758014988382'
+[INFO] [1779673758.062732971] [topic_latency_benchmark]: Latency /benchmark → /ack: 47.671 ms  (sample 91)
+[INFO] [1779673758.186643548] [topic_latency_benchmark]: /ack received at 1779673758.186642408 s  payload='1779673758115005624'
+[INFO] [1779673758.186678744] [topic_latency_benchmark]: Latency /benchmark → /ack: 71.637 ms  (sample 92)
+[INFO] [1779673758.263534517] [topic_latency_benchmark]: /ack received at 1779673758.263531208 s  payload='1779673758215000147'
+[INFO] [1779673758.263575284] [topic_latency_benchmark]: Latency /benchmark → /ack: 48.531 ms  (sample 93)
+[INFO] [1779673758.374651574] [topic_latency_benchmark]: /ack received at 1779673758.374650717 s  payload='1779673758314989285'
+[INFO] [1779673758.374684840] [topic_latency_benchmark]: Latency /benchmark → /ack: 59.661 ms  (sample 94)
+[INFO] [1779673758.652928461] [topic_latency_benchmark]: /ack received at 1779673758.652926922 s  payload='1779673758414983214'
+[INFO] [1779673758.652974979] [topic_latency_benchmark]: Latency /benchmark → /ack: 37.923 ms  (sample 95)
+[INFO] [1779673758.693165608] [topic_latency_benchmark]: /ack received at 1779673758.693161726 s  payload='1779673758515019539'
+[INFO] [1779673758.693227919] [topic_latency_benchmark]: Latency /benchmark → /ack: 78.158 ms  (sample 96)
+[INFO] [1779673758.693392764] [topic_latency_benchmark]: /ack received at 1779673758.693392277 s  payload='1779673758615004126'
+[INFO] [1779673758.693408057] [topic_latency_benchmark]: Latency /benchmark → /ack: 78.388 ms  (sample 97)
+[INFO] [1779673758.751402559] [topic_latency_benchmark]: /ack received at 1779673758.751400948 s  payload='1779673758714975058'
+[INFO] [1779673758.751447465] [topic_latency_benchmark]: Latency /benchmark → /ack: 36.426 ms  (sample 98)
+[INFO] [1779673758.883382701] [topic_latency_benchmark]: /ack received at 1779673758.883380651 s  payload='1779673758814983362'
+[INFO] [1779673758.883439605] [topic_latency_benchmark]: Latency /benchmark → /ack: 68.397 ms  (sample 99)
+[INFO] [1779673758.948333141] [topic_latency_benchmark]: /ack received at 1779673758.948331594 s  payload='1779673758914992114'
+[INFO] [1779673758.948372364] [topic_latency_benchmark]: Latency /benchmark → /ack: 33.339 ms  (sample 100)
+[INFO] [1779673759.037410152] [topic_latency_benchmark]: /ack received at 1779673759.037408590 s  payload='1779673759014983167'
+[INFO] [1779673759.037462470] [topic_latency_benchmark]: Latency /benchmark → /ack: 22.425 ms  (sample 101)
+[INFO] [1779673759.227291764] [topic_latency_benchmark]: /ack received at 1779673759.227290154 s  payload='1779673759114980092'
+[INFO] [1779673759.227333967] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.279 ms  (sample 102)
+[INFO] [1779673759.273402606] [topic_latency_benchmark]: /ack received at 1779673759.273402214 s  payload='1779673759215011083'
+[INFO] [1779673759.273430987] [topic_latency_benchmark]: Latency /benchmark → /ack: 58.391 ms  (sample 103)
+[INFO] [1779673759.359056108] [topic_latency_benchmark]: /ack received at 1779673759.359055042 s  payload='1779673759314968245'
+[INFO] [1779673759.359090283] [topic_latency_benchmark]: Latency /benchmark → /ack: 44.087 ms  (sample 104)
+[INFO] [1779673759.537958478] [topic_latency_benchmark]: /ack received at 1779673759.537956953 s  payload='1779673759414973202'
+[INFO] [1779673759.538002026] [topic_latency_benchmark]: Latency /benchmark → /ack: 22.981 ms  (sample 105)
+[INFO] [1779673759.569382233] [topic_latency_benchmark]: /ack received at 1779673759.569380283 s  payload='1779673759514975432'
+[INFO] [1779673759.569429841] [topic_latency_benchmark]: Latency /benchmark → /ack: 54.405 ms  (sample 106)
+[INFO] [1779673759.647796400] [topic_latency_benchmark]: /ack received at 1779673759.647794724 s  payload='1779673759614923554'
+[INFO] [1779673759.647837921] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.871 ms  (sample 107)
+[INFO] [1779673759.759045929] [topic_latency_benchmark]: /ack received at 1779673759.759042025 s  payload='1779673759714970065'
+[INFO] [1779673759.759088633] [topic_latency_benchmark]: Latency /benchmark → /ack: 44.072 ms  (sample 108)
+[INFO] [1779673759.859561012] [topic_latency_benchmark]: /ack received at 1779673759.859559059 s  payload='1779673759814968066'
+[INFO] [1779673759.859612950] [topic_latency_benchmark]: Latency /benchmark → /ack: 44.591 ms  (sample 109)
+[INFO] [1779673759.969381631] [topic_latency_benchmark]: /ack received at 1779673759.969380140 s  payload='1779673759914926443'
+[INFO] [1779673759.969426501] [topic_latency_benchmark]: Latency /benchmark → /ack: 54.454 ms  (sample 110)
+[INFO] [1779673760.079325095] [topic_latency_benchmark]: /ack received at 1779673760.079324484 s  payload='1779673760014987941'
+[INFO] [1779673760.079386060] [topic_latency_benchmark]: Latency /benchmark → /ack: 64.337 ms  (sample 111)
+[INFO] [1779673760.215711566] [topic_latency_benchmark]: /ack received at 1779673760.215709925 s  payload='1779673760114968298'
+[INFO] [1779673760.215762369] [topic_latency_benchmark]: Latency /benchmark → /ack: 0.746 ms  (sample 112)
+[INFO] [1779673760.270032034] [topic_latency_benchmark]: /ack received at 1779673760.270029068 s  payload='1779673760214964128'
+[INFO] [1779673760.270080662] [topic_latency_benchmark]: Latency /benchmark → /ack: 55.065 ms  (sample 113)
+[INFO] [1779673760.349476287] [topic_latency_benchmark]: /ack received at 1779673760.349475145 s  payload='1779673760314963421'
+[INFO] [1779673760.349514769] [topic_latency_benchmark]: Latency /benchmark → /ack: 34.512 ms  (sample 114)
+[INFO] [1779673760.448758018] [topic_latency_benchmark]: /ack received at 1779673760.448756456 s  payload='1779673760414955051'
+[INFO] [1779673760.448803304] [topic_latency_benchmark]: Latency /benchmark → /ack: 33.802 ms  (sample 115)
+[INFO] [1779673760.538514257] [topic_latency_benchmark]: /ack received at 1779673760.538512945 s  payload='1779673760514956129'
+[INFO] [1779673760.538551501] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.557 ms  (sample 116)
+[INFO] [1779673760.627628193] [topic_latency_benchmark]: /ack received at 1779673760.627626419 s  payload='1779673760614957351'
+[INFO] [1779673760.627678643] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.669 ms  (sample 117)
+[INFO] [1779673760.733759119] [topic_latency_benchmark]: /ack received at 1779673760.733757973 s  payload='1779673760714953696'
+[INFO] [1779673760.733802827] [topic_latency_benchmark]: Latency /benchmark → /ack: 18.804 ms  (sample 118)
+[INFO] [1779673760.879547871] [topic_latency_benchmark]: /ack received at 1779673760.879546404 s  payload='1779673760814956351'
+[INFO] [1779673760.879594282] [topic_latency_benchmark]: Latency /benchmark → /ack: 64.590 ms  (sample 119)
+[INFO] [1779673761.001980332] [topic_latency_benchmark]: /ack received at 1779673761.001976490 s  payload='1779673760914975913'
+[INFO] [1779673761.002060936] [topic_latency_benchmark]: Latency /benchmark → /ack: 87.001 ms  (sample 120)
+[INFO] [1779673761.044849396] [topic_latency_benchmark]: /ack received at 1779673761.044848680 s  payload='1779673761014967484'
+[INFO] [1779673761.044931364] [topic_latency_benchmark]: Latency /benchmark → /ack: 29.881 ms  (sample 121)
+[INFO] [1779673761.144328896] [topic_latency_benchmark]: /ack received at 1779673761.144327641 s  payload='1779673761114971565'
+[INFO] [1779673761.144364377] [topic_latency_benchmark]: Latency /benchmark → /ack: 29.356 ms  (sample 122)
+[INFO] [1779673761.244093806] [topic_latency_benchmark]: /ack received at 1779673761.244092703 s  payload='1779673761214937547'
+[INFO] [1779673761.244126597] [topic_latency_benchmark]: Latency /benchmark → /ack: 29.155 ms  (sample 123)
+[INFO] [1779673761.343890759] [topic_latency_benchmark]: /ack received at 1779673761.343886852 s  payload='1779673761314926438'
+[INFO] [1779673761.343935939] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.960 ms  (sample 124)
+[INFO] [1779673761.445343368] [topic_latency_benchmark]: /ack received at 1779673761.445339441 s  payload='1779673761414917994'
+[INFO] [1779673761.445417633] [topic_latency_benchmark]: Latency /benchmark → /ack: 30.421 ms  (sample 125)
+[INFO] [1779673761.576900261] [topic_latency_benchmark]: /ack received at 1779673761.576898575 s  payload='1779673761514942829'
+[INFO] [1779673761.576950997] [topic_latency_benchmark]: Latency /benchmark → /ack: 61.956 ms  (sample 126)
+[INFO] [1779673761.614962423] [topic_latency_benchmark]: Stats over 126 samples: min=0.746 ms  avg=42.257 ms  max=97.000 ms
+[INFO] [1779673761.656424833] [topic_latency_benchmark]: /ack received at 1779673761.656423330 s  payload='1779673761614931566'
+[INFO] [1779673761.656464623] [topic_latency_benchmark]: Latency /benchmark → /ack: 41.492 ms  (sample 127)
+[INFO] [1779673761.809270968] [topic_latency_benchmark]: /ack received at 1779673761.809268475 s  payload='1779673761714935126'
+[INFO] [1779673761.809332158] [topic_latency_benchmark]: Latency /benchmark → /ack: 94.333 ms  (sample 128)
+[INFO] [1779673761.916668179] [topic_latency_benchmark]: /ack received at 1779673761.916666508 s  payload='1779673761814920939'
+[INFO] [1779673761.916708868] [topic_latency_benchmark]: Latency /benchmark → /ack: 1.687 ms  (sample 129)
+[INFO] [1779673761.997367452] [topic_latency_benchmark]: /ack received at 1779673761.997365713 s  payload='1779673761914979698'
+[INFO] [1779673761.997411455] [topic_latency_benchmark]: Latency /benchmark → /ack: 82.386 ms  (sample 130)
+[INFO] [1779673762.133781695] [topic_latency_benchmark]: /ack received at 1779673762.133780241 s  payload='1779673762014924197'
+[INFO] [1779673762.133827715] [topic_latency_benchmark]: Latency /benchmark → /ack: 18.865 ms  (sample 131)
+[INFO] [1779673762.215876217] [topic_latency_benchmark]: /ack received at 1779673762.215875149 s  payload='1779673762114915096'
+[INFO] [1779673762.215913740] [topic_latency_benchmark]: Latency /benchmark → /ack: 0.954 ms  (sample 132)
+[INFO] [1779673762.276488060] [topic_latency_benchmark]: /ack received at 1779673762.276486874 s  payload='1779673762214920778'
+[INFO] [1779673762.276526380] [topic_latency_benchmark]: Latency /benchmark → /ack: 61.566 ms  (sample 133)
+[INFO] [1779673762.355093820] [topic_latency_benchmark]: /ack received at 1779673762.355092525 s  payload='1779673762314920291'
+[INFO] [1779673762.355125075] [topic_latency_benchmark]: Latency /benchmark → /ack: 40.172 ms  (sample 134)
+[INFO] [1779673762.542297128] [topic_latency_benchmark]: /ack received at 1779673762.542295694 s  payload='1779673762414919386'
+[INFO] [1779673762.542343287] [topic_latency_benchmark]: Latency /benchmark → /ack: 27.370 ms  (sample 135)
+[INFO] [1779673762.576426854] [topic_latency_benchmark]: /ack received at 1779673762.576425076 s  payload='1779673762514925882'
+[INFO] [1779673762.576474859] [topic_latency_benchmark]: Latency /benchmark → /ack: 61.499 ms  (sample 136)
+[INFO] [1779673762.665147404] [topic_latency_benchmark]: /ack received at 1779673762.665146351 s  payload='1779673762614955960'
+[INFO] [1779673762.665180096] [topic_latency_benchmark]: Latency /benchmark → /ack: 50.190 ms  (sample 137)
+[INFO] [1779673762.741692179] [topic_latency_benchmark]: /ack received at 1779673762.741690874 s  payload='1779673762714933551'
+[INFO] [1779673762.741721221] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.757 ms  (sample 138)
+[INFO] [1779673762.854623791] [topic_latency_benchmark]: /ack received at 1779673762.854622364 s  payload='1779673762814921554'
+[INFO] [1779673762.854665712] [topic_latency_benchmark]: Latency /benchmark → /ack: 39.701 ms  (sample 139)
+[INFO] [1779673762.971798971] [topic_latency_benchmark]: /ack received at 1779673762.971797466 s  payload='1779673762914932746'
+[INFO] [1779673762.971842043] [topic_latency_benchmark]: Latency /benchmark → /ack: 56.865 ms  (sample 140)
+[INFO] [1779673763.042881528] [topic_latency_benchmark]: /ack received at 1779673763.042879820 s  payload='1779673763014941312'
+[INFO] [1779673763.042929060] [topic_latency_benchmark]: Latency /benchmark → /ack: 27.938 ms  (sample 141)
+[INFO] [1779673763.207814446] [topic_latency_benchmark]: /ack received at 1779673763.207813025 s  payload='1779673763114944445'
+[INFO] [1779673763.207847322] [topic_latency_benchmark]: Latency /benchmark → /ack: 92.869 ms  (sample 142)
+[INFO] [1779673763.271550903] [topic_latency_benchmark]: /ack received at 1779673763.271549463 s  payload='1779673763214912558'
+[INFO] [1779673763.271581399] [topic_latency_benchmark]: Latency /benchmark → /ack: 56.637 ms  (sample 143)
+[INFO] [1779673763.345556332] [topic_latency_benchmark]: /ack received at 1779673763.345555305 s  payload='1779673763314908092'
+[INFO] [1779673763.345588089] [topic_latency_benchmark]: Latency /benchmark → /ack: 30.647 ms  (sample 144)
+[INFO] [1779673763.488549218] [topic_latency_benchmark]: /ack received at 1779673763.488548040 s  payload='1779673763414901028'
+[INFO] [1779673763.488582160] [topic_latency_benchmark]: Latency /benchmark → /ack: 73.647 ms  (sample 145)
+[INFO] [1779673763.628917202] [topic_latency_benchmark]: /ack received at 1779673763.628916264 s  payload='1779673763514899396'
+[INFO] [1779673763.628949797] [topic_latency_benchmark]: Latency /benchmark → /ack: 14.015 ms  (sample 146)
+[INFO] [1779673763.647016044] [topic_latency_benchmark]: /ack received at 1779673763.647014856 s  payload='1779673763614901010'
+[INFO] [1779673763.647054901] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.114 ms  (sample 147)
+[INFO] [1779673763.803596102] [topic_latency_benchmark]: /ack received at 1779673763.803593874 s  payload='1779673763714925208'
+[INFO] [1779673763.803641080] [topic_latency_benchmark]: Latency /benchmark → /ack: 88.669 ms  (sample 148)
+[INFO] [1779673763.871756919] [topic_latency_benchmark]: /ack received at 1779673763.871755362 s  payload='1779673763814894976'
+[INFO] [1779673763.871797985] [topic_latency_benchmark]: Latency /benchmark → /ack: 56.860 ms  (sample 149)
+[INFO] [1779673764.015960803] [topic_latency_benchmark]: /ack received at 1779673764.015959263 s  payload='1779673763914902919'
+[INFO] [1779673764.016005568] [topic_latency_benchmark]: Latency /benchmark → /ack: 1.095 ms  (sample 150)
+[INFO] [1779673764.075785233] [topic_latency_benchmark]: /ack received at 1779673764.075783730 s  payload='1779673764014864223'
+[INFO] [1779673764.075826410] [topic_latency_benchmark]: Latency /benchmark → /ack: 60.919 ms  (sample 151)
+[INFO] [1779673764.172602423] [topic_latency_benchmark]: /ack received at 1779673764.172600746 s  payload='1779673764114932905'
+[INFO] [1779673764.172647066] [topic_latency_benchmark]: Latency /benchmark → /ack: 57.668 ms  (sample 152)
+[INFO] [1779673764.293008492] [topic_latency_benchmark]: /ack received at 1779673764.293006897 s  payload='1779673764214897680'
+[INFO] [1779673764.293048447] [topic_latency_benchmark]: Latency /benchmark → /ack: 78.109 ms  (sample 153)
+[INFO] [1779673764.347346458] [topic_latency_benchmark]: /ack received at 1779673764.347344637 s  payload='1779673764314885256'
+[INFO] [1779673764.347387308] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.459 ms  (sample 154)
+[INFO] [1779673764.471483184] [topic_latency_benchmark]: /ack received at 1779673764.471481562 s  payload='1779673764414895341'
+[INFO] [1779673764.471529396] [topic_latency_benchmark]: Latency /benchmark → /ack: 56.586 ms  (sample 155)
+[INFO] [1779673764.535960608] [topic_latency_benchmark]: /ack received at 1779673764.535959005 s  payload='1779673764514890735'
+[INFO] [1779673764.535999249] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.068 ms  (sample 156)
+[INFO] [1779673764.647869226] [topic_latency_benchmark]: /ack received at 1779673764.647867203 s  payload='1779673764614927903'
+[INFO] [1779673764.647921284] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.939 ms  (sample 157)
+[INFO] [1779673764.735035112] [topic_latency_benchmark]: /ack received at 1779673764.735033274 s  payload='1779673764714889869'
+[INFO] [1779673764.735075312] [topic_latency_benchmark]: Latency /benchmark → /ack: 20.143 ms  (sample 158)
+[INFO] [1779673764.835635675] [topic_latency_benchmark]: /ack received at 1779673764.835634232 s  payload='1779673764814887729'
+[INFO] [1779673764.835677021] [topic_latency_benchmark]: Latency /benchmark → /ack: 20.746 ms  (sample 159)
+[INFO] [1779673764.936493271] [topic_latency_benchmark]: /ack received at 1779673764.936491489 s  payload='1779673764914887523'
+[INFO] [1779673764.936535548] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.604 ms  (sample 160)
+[INFO] [1779673765.036046572] [topic_latency_benchmark]: /ack received at 1779673765.036044836 s  payload='1779673765015062957'
+[INFO] [1779673765.036089576] [topic_latency_benchmark]: Latency /benchmark → /ack: 20.982 ms  (sample 161)
+[INFO] [1779673765.136350286] [topic_latency_benchmark]: /ack received at 1779673765.136349440 s  payload='1779673765114907727'
+[INFO] [1779673765.136378516] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.442 ms  (sample 162)
+[INFO] [1779673765.246868985] [topic_latency_benchmark]: /ack received at 1779673765.246867657 s  payload='1779673765214876608'
+[INFO] [1779673765.246907181] [topic_latency_benchmark]: Latency /benchmark → /ack: 31.991 ms  (sample 163)
+[INFO] [1779673765.346964796] [topic_latency_benchmark]: /ack received at 1779673765.346962929 s  payload='1779673765314898784'
+[INFO] [1779673765.347009899] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.064 ms  (sample 164)
+[INFO] [1779673765.437061315] [topic_latency_benchmark]: /ack received at 1779673765.437059641 s  payload='1779673765414884764'
+[INFO] [1779673765.437106661] [topic_latency_benchmark]: Latency /benchmark → /ack: 22.175 ms  (sample 165)
+[INFO] [1779673765.536481941] [topic_latency_benchmark]: /ack received at 1779673765.536479950 s  payload='1779673765514876324'
+[INFO] [1779673765.536527147] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.604 ms  (sample 166)
+[INFO] [1779673765.667381452] [topic_latency_benchmark]: /ack received at 1779673765.667379618 s  payload='1779673765614871797'
+[INFO] [1779673765.667425121] [topic_latency_benchmark]: Latency /benchmark → /ack: 52.508 ms  (sample 167)
+[INFO] [1779673765.743290838] [topic_latency_benchmark]: /ack received at 1779673765.743287325 s  payload='1779673765714871759'
+[INFO] [1779673765.743339732] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.415 ms  (sample 168)
+[INFO] [1779673765.879699186] [topic_latency_benchmark]: /ack received at 1779673765.879696369 s  payload='1779673765814885074'
+[INFO] [1779673765.879753284] [topic_latency_benchmark]: Latency /benchmark → /ack: 64.811 ms  (sample 169)
+[INFO] [1779673765.967444218] [topic_latency_benchmark]: /ack received at 1779673765.967440128 s  payload='1779673765914873135'
+[INFO] [1779673765.967513561] [topic_latency_benchmark]: Latency /benchmark → /ack: 52.567 ms  (sample 170)
+[INFO] [1779673766.099180519] [topic_latency_benchmark]: /ack received at 1779673766.099179029 s  payload='1779673766014868675'
+[INFO] [1779673766.099224067] [topic_latency_benchmark]: Latency /benchmark → /ack: 84.310 ms  (sample 171)
+[INFO] [1779673766.134661149] [topic_latency_benchmark]: /ack received at 1779673766.134659529 s  payload='1779673766114863997'
+[INFO] [1779673766.134705288] [topic_latency_benchmark]: Latency /benchmark → /ack: 19.796 ms  (sample 172)
+[INFO] [1779673766.244457471] [topic_latency_benchmark]: /ack received at 1779673766.244456053 s  payload='1779673766214910048'
+[INFO] [1779673766.244501816] [topic_latency_benchmark]: Latency /benchmark → /ack: 29.546 ms  (sample 173)
+[INFO] [1779673766.374901575] [topic_latency_benchmark]: /ack received at 1779673766.374897718 s  payload='1779673766314865275'
+[INFO] [1779673766.374973689] [topic_latency_benchmark]: Latency /benchmark → /ack: 60.032 ms  (sample 174)
+[INFO] [1779673766.432462548] [topic_latency_benchmark]: /ack received at 1779673766.432460546 s  payload='1779673766414881022'
+[INFO] [1779673766.432510550] [topic_latency_benchmark]: Latency /benchmark → /ack: 17.580 ms  (sample 175)
+[INFO] [1779673766.533777670] [topic_latency_benchmark]: /ack received at 1779673766.533776045 s  payload='1779673766514888225'
+[INFO] [1779673766.533822749] [topic_latency_benchmark]: Latency /benchmark → /ack: 18.888 ms  (sample 176)
+[INFO] [1779673766.614893490] [topic_latency_benchmark]: Stats over 176 samples: min=0.746 ms  avg=41.953 ms  max=97.000 ms
+[INFO] [1779673766.635113709] [topic_latency_benchmark]: /ack received at 1779673766.635112762 s  payload='1779673766614861703'
+[INFO] [1779673766.635157507] [topic_latency_benchmark]: Latency /benchmark → /ack: 20.251 ms  (sample 177)
+[INFO] [1779673766.743534190] [topic_latency_benchmark]: /ack received at 1779673766.743530750 s  payload='1779673766714989347'
+[INFO] [1779673766.743576899] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.541 ms  (sample 178)
+[INFO] [1779673766.932578604] [topic_latency_benchmark]: /ack received at 1779673766.932577848 s  payload='1779673766814852094'
+[INFO] [1779673766.932611788] [topic_latency_benchmark]: Latency /benchmark → /ack: 17.699 ms  (sample 179)
+[INFO] [1779673766.975307646] [topic_latency_benchmark]: /ack received at 1779673766.975306511 s  payload='1779673766914879306'
+[INFO] [1779673766.975341871] [topic_latency_benchmark]: Latency /benchmark → /ack: 60.427 ms  (sample 180)
+[INFO] [1779673767.038758522] [topic_latency_benchmark]: /ack received at 1779673767.038757086 s  payload='1779673767014853114'
+[INFO] [1779673767.038803632] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.904 ms  (sample 181)
+[INFO] [1779673767.132192352] [topic_latency_benchmark]: /ack received at 1779673767.132190466 s  payload='1779673767114873513'
+[INFO] [1779673767.132233594] [topic_latency_benchmark]: Latency /benchmark → /ack: 17.317 ms  (sample 182)
+[INFO] [1779673767.263937955] [topic_latency_benchmark]: /ack received at 1779673767.263936043 s  payload='1779673767214849236'
+[INFO] [1779673767.263981176] [topic_latency_benchmark]: Latency /benchmark → /ack: 49.087 ms  (sample 183)
+[INFO] [1779673767.332317500] [topic_latency_benchmark]: /ack received at 1779673767.332316160 s  payload='1779673767314872029'
+[INFO] [1779673767.332357879] [topic_latency_benchmark]: Latency /benchmark → /ack: 17.444 ms  (sample 184)
+[INFO] [1779673767.453663466] [topic_latency_benchmark]: /ack received at 1779673767.453661919 s  payload='1779673767414845274'
+[INFO] [1779673767.453707664] [topic_latency_benchmark]: Latency /benchmark → /ack: 38.817 ms  (sample 185)
+[INFO] [1779673767.544169424] [topic_latency_benchmark]: /ack received at 1779673767.544167757 s  payload='1779673767514874939'
+[INFO] [1779673767.544213619] [topic_latency_benchmark]: Latency /benchmark → /ack: 29.293 ms  (sample 186)
+[INFO] [1779673767.642790533] [topic_latency_benchmark]: /ack received at 1779673767.642789364 s  payload='1779673767614865243'
+[INFO] [1779673767.642822986] [topic_latency_benchmark]: Latency /benchmark → /ack: 27.924 ms  (sample 187)
+[INFO] [1779673767.763791167] [topic_latency_benchmark]: /ack received at 1779673767.763790131 s  payload='1779673767714865778'
+[INFO] [1779673767.763822999] [topic_latency_benchmark]: Latency /benchmark → /ack: 48.924 ms  (sample 188)
+[INFO] [1779673767.863440840] [topic_latency_benchmark]: /ack received at 1779673767.863439560 s  payload='1779673767814831703'
+[INFO] [1779673767.863471075] [topic_latency_benchmark]: Latency /benchmark → /ack: 48.608 ms  (sample 189)
+[INFO] [1779673767.975498206] [topic_latency_benchmark]: /ack received at 1779673767.975497007 s  payload='1779673767914835444'
+[INFO] [1779673767.975528222] [topic_latency_benchmark]: Latency /benchmark → /ack: 60.662 ms  (sample 190)
+[INFO] [1779673768.048789454] [topic_latency_benchmark]: /ack received at 1779673768.048788309 s  payload='1779673768014830538'
+[INFO] [1779673768.048825934] [topic_latency_benchmark]: Latency /benchmark → /ack: 33.958 ms  (sample 191)
+[INFO] [1779673768.159242337] [topic_latency_benchmark]: /ack received at 1779673768.159240961 s  payload='1779673768114834065'
+[INFO] [1779673768.159274607] [topic_latency_benchmark]: Latency /benchmark → /ack: 44.407 ms  (sample 192)
+[INFO] [1779673768.259521557] [topic_latency_benchmark]: /ack received at 1779673768.259519815 s  payload='1779673768214823769'
+[INFO] [1779673768.259568166] [topic_latency_benchmark]: Latency /benchmark → /ack: 44.696 ms  (sample 193)
+[INFO] [1779673768.349480712] [topic_latency_benchmark]: /ack received at 1779673768.349478960 s  payload='1779673768314870501'
+[INFO] [1779673768.349526168] [topic_latency_benchmark]: Latency /benchmark → /ack: 34.608 ms  (sample 194)
+[INFO] [1779673768.517105091] [topic_latency_benchmark]: /ack received at 1779673768.517103672 s  payload='1779673768414834334'
+[INFO] [1779673768.517146886] [topic_latency_benchmark]: Latency /benchmark → /ack: 2.304 ms  (sample 195)
+[INFO] [1779673768.559445549] [topic_latency_benchmark]: /ack received at 1779673768.559443951 s  payload='1779673768514799738'
+[INFO] [1779673768.559487362] [topic_latency_benchmark]: Latency /benchmark → /ack: 44.644 ms  (sample 196)
+[INFO] [1779673768.649642876] [topic_latency_benchmark]: /ack received at 1779673768.649641037 s  payload='1779673768614951555'
+[INFO] [1779673768.649696510] [topic_latency_benchmark]: Latency /benchmark → /ack: 34.689 ms  (sample 197)
+[INFO] [1779673768.751123985] [topic_latency_benchmark]: /ack received at 1779673768.751122236 s  payload='1779673768714826580'
+[INFO] [1779673768.751171718] [topic_latency_benchmark]: Latency /benchmark → /ack: 36.296 ms  (sample 198)
+[INFO] [1779673768.918394316] [topic_latency_benchmark]: /ack received at 1779673768.918392658 s  payload='1779673768814825050'
+[INFO] [1779673768.918436120] [topic_latency_benchmark]: Latency /benchmark → /ack: 3.568 ms  (sample 199)
+[INFO] [1779673768.982219122] [topic_latency_benchmark]: /ack received at 1779673768.982217550 s  payload='1779673768914824108'
+[INFO] [1779673768.982257250] [topic_latency_benchmark]: Latency /benchmark → /ack: 67.393 ms  (sample 200)
+[INFO] [1779673769.226720199] [topic_latency_benchmark]: /ack received at 1779673769.226716518 s  payload='1779673769014815672'
+[INFO] [1779673769.226782867] [topic_latency_benchmark]: Latency /benchmark → /ack: 11.897 ms  (sample 201)
+[INFO] [1779673769.259398036] [topic_latency_benchmark]: /ack received at 1779673769.259395838 s  payload='1779673769114825229'
+[INFO] [1779673769.259445932] [topic_latency_benchmark]: Latency /benchmark → /ack: 44.577 ms  (sample 202)
+[INFO] [1779673769.259474906] [topic_latency_benchmark]: /ack received at 1779673769.259474516 s  payload='1779673769214819060'
+[INFO] [1779673769.259488078] [topic_latency_benchmark]: Latency /benchmark → /ack: 44.655 ms  (sample 203)
+[INFO] [1779673769.359026069] [topic_latency_benchmark]: /ack received at 1779673769.359024286 s  payload='1779673769314822873'
+[INFO] [1779673769.359068419] [topic_latency_benchmark]: Latency /benchmark → /ack: 44.202 ms  (sample 204)
+[INFO] [1779673769.459418849] [topic_latency_benchmark]: /ack received at 1779673769.459417105 s  payload='1779673769414817204'
+[INFO] [1779673769.459461390] [topic_latency_benchmark]: Latency /benchmark → /ack: 44.600 ms  (sample 205)
+[INFO] [1779673769.549321322] [topic_latency_benchmark]: /ack received at 1779673769.549319983 s  payload='1779673769514845942'
+[INFO] [1779673769.549363684] [topic_latency_benchmark]: Latency /benchmark → /ack: 34.474 ms  (sample 206)
+[INFO] [1779673769.649211600] [topic_latency_benchmark]: /ack received at 1779673769.649210215 s  payload='1779673769614806766'
+[INFO] [1779673769.649254606] [topic_latency_benchmark]: Latency /benchmark → /ack: 34.403 ms  (sample 207)
+[INFO] [1779673769.755992359] [topic_latency_benchmark]: /ack received at 1779673769.755990744 s  payload='1779673769714811663'
+[INFO] [1779673769.756038382] [topic_latency_benchmark]: Latency /benchmark → /ack: 41.179 ms  (sample 208)
+[INFO] [1779673769.833475412] [topic_latency_benchmark]: /ack received at 1779673769.833474398 s  payload='1779673769814798748'
+[INFO] [1779673769.833517498] [topic_latency_benchmark]: Latency /benchmark → /ack: 18.675 ms  (sample 209)
+[INFO] [1779673769.945978533] [topic_latency_benchmark]: /ack received at 1779673769.945976496 s  payload='1779673769914806571'
+[INFO] [1779673769.946023119] [topic_latency_benchmark]: Latency /benchmark → /ack: 31.170 ms  (sample 210)
+[INFO] [1779673770.055531661] [topic_latency_benchmark]: /ack received at 1779673770.055530071 s  payload='1779673770014806427'
+[INFO] [1779673770.055574498] [topic_latency_benchmark]: Latency /benchmark → /ack: 40.724 ms  (sample 211)
+[INFO] [1779673770.145222776] [topic_latency_benchmark]: /ack received at 1779673770.145221710 s  payload='1779673770114795841'
+[INFO] [1779673770.145253751] [topic_latency_benchmark]: Latency /benchmark → /ack: 30.426 ms  (sample 212)
+[INFO] [1779673770.267080380] [topic_latency_benchmark]: /ack received at 1779673770.267078638 s  payload='1779673770214825490'
+[INFO] [1779673770.267126630] [topic_latency_benchmark]: Latency /benchmark → /ack: 52.253 ms  (sample 213)
+[INFO] [1779673770.400036133] [topic_latency_benchmark]: /ack received at 1779673770.400032759 s  payload='1779673770314789788'
+[INFO] [1779673770.400067215] [topic_latency_benchmark]: Latency /benchmark → /ack: 85.243 ms  (sample 214)
+[INFO] [1779673770.486951187] [topic_latency_benchmark]: /ack received at 1779673770.486947775 s  payload='1779673770414798522'
+[INFO] [1779673770.487010053] [topic_latency_benchmark]: Latency /benchmark → /ack: 72.149 ms  (sample 215)
+[INFO] [1779673770.555958199] [topic_latency_benchmark]: /ack received at 1779673770.555957079 s  payload='1779673770514789775'
+[INFO] [1779673770.555994513] [topic_latency_benchmark]: Latency /benchmark → /ack: 41.167 ms  (sample 216)
+[INFO] [1779673770.645098046] [topic_latency_benchmark]: /ack received at 1779673770.645097256 s  payload='1779673770614832234'
+[INFO] [1779673770.645133295] [topic_latency_benchmark]: Latency /benchmark → /ack: 30.265 ms  (sample 217)
+[INFO] [1779673770.767354684] [topic_latency_benchmark]: /ack received at 1779673770.767351627 s  payload='1779673770714787297'
+[INFO] [1779673770.767411439] [topic_latency_benchmark]: Latency /benchmark → /ack: 52.564 ms  (sample 218)
+[INFO] [1779673770.855316619] [topic_latency_benchmark]: /ack received at 1779673770.855315447 s  payload='1779673770814784066'
+[INFO] [1779673770.855347747] [topic_latency_benchmark]: Latency /benchmark → /ack: 40.531 ms  (sample 219)
+[INFO] [1779673770.935672984] [topic_latency_benchmark]: /ack received at 1779673770.935672045 s  payload='1779673770914780564'
+[INFO] [1779673770.935704426] [topic_latency_benchmark]: Latency /benchmark → /ack: 20.891 ms  (sample 220)
+[INFO] [1779673771.055677120] [topic_latency_benchmark]: /ack received at 1779673771.055675983 s  payload='1779673771014805183'
+[INFO] [1779673771.055709727] [topic_latency_benchmark]: Latency /benchmark → /ack: 40.871 ms  (sample 221)
+[INFO] [1779673771.156188585] [topic_latency_benchmark]: /ack received at 1779673771.156187057 s  payload='1779673771114782105'
+[INFO] [1779673771.156231435] [topic_latency_benchmark]: Latency /benchmark → /ack: 41.405 ms  (sample 222)
+[INFO] [1779673771.245729964] [topic_latency_benchmark]: /ack received at 1779673771.245728731 s  payload='1779673771214804051'
+[INFO] [1779673771.245761491] [topic_latency_benchmark]: Latency /benchmark → /ack: 30.925 ms  (sample 223)
+[INFO] [1779673771.355822166] [topic_latency_benchmark]: /ack received at 1779673771.355820894 s  payload='1779673771314783579'
+[INFO] [1779673771.355854897] [topic_latency_benchmark]: Latency /benchmark → /ack: 41.037 ms  (sample 224)
+[INFO] [1779673771.442166062] [topic_latency_benchmark]: /ack received at 1779673771.442162752 s  payload='1779673771414775241'
+[INFO] [1779673771.442196816] [topic_latency_benchmark]: Latency /benchmark → /ack: 27.387 ms  (sample 225)
+[INFO] [1779673771.552322453] [topic_latency_benchmark]: /ack received at 1779673771.552319527 s  payload='1779673771514801562'
+[INFO] [1779673771.552370976] [topic_latency_benchmark]: Latency /benchmark → /ack: 37.518 ms  (sample 226)
+[INFO] [1779673771.614826644] [topic_latency_benchmark]: Stats over 226 samples: min=0.746 ms  avg=40.948 ms  max=97.000 ms
+[INFO] [1779673771.635977101] [topic_latency_benchmark]: /ack received at 1779673771.635976553 s  payload='1779673771614793343'
+[INFO] [1779673771.635994487] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.183 ms  (sample 227)
+[INFO] [1779673771.752839841] [topic_latency_benchmark]: /ack received at 1779673771.752838612 s  payload='1779673771714799351'
+[INFO] [1779673771.752872634] [topic_latency_benchmark]: Latency /benchmark → /ack: 38.039 ms  (sample 228)
+[INFO] [1779673771.827708838] [topic_latency_benchmark]: /ack received at 1779673771.827705383 s  payload='1779673771814795398'
+[INFO] [1779673771.827738261] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.910 ms  (sample 229)
+[INFO] [1779673771.963012120] [topic_latency_benchmark]: /ack received at 1779673771.963011026 s  payload='1779673771914766626'
+[INFO] [1779673771.963042893] [topic_latency_benchmark]: Latency /benchmark → /ack: 48.244 ms  (sample 230)
+[INFO] [1779673772.027558159] [topic_latency_benchmark]: /ack received at 1779673772.027557373 s  payload='1779673772014788686'
+[INFO] [1779673772.027618021] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.769 ms  (sample 231)
+[INFO] [1779673772.144052037] [topic_latency_benchmark]: /ack received at 1779673772.144051313 s  payload='1779673772114764927'
+[INFO] [1779673772.144086161] [topic_latency_benchmark]: Latency /benchmark → /ack: 29.286 ms  (sample 232)
+[INFO] [1779673772.241615247] [topic_latency_benchmark]: /ack received at 1779673772.241614103 s  payload='1779673772214791058'
+[INFO] [1779673772.241647486] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.823 ms  (sample 233)
+[INFO] [1779673772.341827504] [topic_latency_benchmark]: /ack received at 1779673772.341825962 s  payload='1779673772314760405'
+[INFO] [1779673772.341864434] [topic_latency_benchmark]: Latency /benchmark → /ack: 27.066 ms  (sample 234)
+[INFO] [1779673772.463887545] [topic_latency_benchmark]: /ack received at 1779673772.463886261 s  payload='1779673772414758964'
+[INFO] [1779673772.463938806] [topic_latency_benchmark]: Latency /benchmark → /ack: 49.127 ms  (sample 235)
+[INFO] [1779673772.594572248] [topic_latency_benchmark]: /ack received at 1779673772.594571352 s  payload='1779673772514757898'
+[INFO] [1779673772.594615563] [topic_latency_benchmark]: Latency /benchmark → /ack: 79.813 ms  (sample 236)
+[INFO] [1779673772.627972414] [topic_latency_benchmark]: /ack received at 1779673772.627969742 s  payload='1779673772614773609'
+[INFO] [1779673772.628019140] [topic_latency_benchmark]: Latency /benchmark → /ack: 13.196 ms  (sample 237)
+[INFO] [1779673772.742786333] [topic_latency_benchmark]: /ack received at 1779673772.742784739 s  payload='1779673772714772610'
+[INFO] [1779673772.742828974] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.012 ms  (sample 238)
+[INFO] [1779673772.853925649] [topic_latency_benchmark]: /ack received at 1779673772.853922367 s  payload='1779673772814790679'
+[INFO] [1779673772.853960885] [topic_latency_benchmark]: Latency /benchmark → /ack: 39.132 ms  (sample 239)
+[INFO] [1779673773.015309671] [topic_latency_benchmark]: /ack received at 1779673773.015308619 s  payload='1779673772914750877'
+[INFO] [1779673773.015345928] [topic_latency_benchmark]: Latency /benchmark → /ack: 0.554 ms  (sample 240)
+[INFO] [1779673773.028240311] [topic_latency_benchmark]: /ack received at 1779673773.028238297 s  payload='1779673773014754150'
+[INFO] [1779673773.028264173] [topic_latency_benchmark]: Latency /benchmark → /ack: 13.484 ms  (sample 241)
+[INFO] [1779673773.127934972] [topic_latency_benchmark]: /ack received at 1779673773.127933979 s  payload='1779673773114749941'
+[INFO] [1779673773.127966701] [topic_latency_benchmark]: Latency /benchmark → /ack: 13.184 ms  (sample 242)
+[INFO] [1779673773.238706132] [topic_latency_benchmark]: /ack received at 1779673773.238704920 s  payload='1779673773214744702'
+[INFO] [1779673773.238738971] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.960 ms  (sample 243)
+[INFO] [1779673773.384027736] [topic_latency_benchmark]: /ack received at 1779673773.384026289 s  payload='1779673773314746312'
+[INFO] [1779673773.384062711] [topic_latency_benchmark]: Latency /benchmark → /ack: 69.280 ms  (sample 244)
+[INFO] [1779673773.451354678] [topic_latency_benchmark]: /ack received at 1779673773.451353788 s  payload='1779673773414743347'
+[INFO] [1779673773.451386549] [topic_latency_benchmark]: Latency /benchmark → /ack: 36.610 ms  (sample 245)
+[INFO] [1779673773.537632032] [topic_latency_benchmark]: /ack received at 1779673773.537631035 s  payload='1779673773514844350'
+[INFO] [1779673773.537664845] [topic_latency_benchmark]: Latency /benchmark → /ack: 22.787 ms  (sample 246)
+[INFO] [1779673773.636563857] [topic_latency_benchmark]: /ack received at 1779673773.636560917 s  payload='1779673773614738000'
+[INFO] [1779673773.636629232] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.823 ms  (sample 247)
+[INFO] [1779673773.740123868] [topic_latency_benchmark]: /ack received at 1779673773.740122795 s  payload='1779673773714737678'
+[INFO] [1779673773.740156714] [topic_latency_benchmark]: Latency /benchmark → /ack: 25.385 ms  (sample 248)
+[INFO] [1779673773.851453420] [topic_latency_benchmark]: /ack received at 1779673773.851450443 s  payload='1779673773814735074'
+[INFO] [1779673773.851494963] [topic_latency_benchmark]: Latency /benchmark → /ack: 36.715 ms  (sample 249)
+[INFO] [1779673773.939965427] [topic_latency_benchmark]: /ack received at 1779673773.939962864 s  payload='1779673773914750414'
+[INFO] [1779673773.939998034] [topic_latency_benchmark]: Latency /benchmark → /ack: 25.212 ms  (sample 250)
+[INFO] [1779673774.039686149] [topic_latency_benchmark]: /ack received at 1779673774.039684534 s  payload='1779673774014734744'
+[INFO] [1779673774.039731069] [topic_latency_benchmark]: Latency /benchmark → /ack: 24.950 ms  (sample 251)
+[INFO] [1779673774.151530873] [topic_latency_benchmark]: /ack received at 1779673774.151529789 s  payload='1779673774114764520'
+[INFO] [1779673774.151565181] [topic_latency_benchmark]: Latency /benchmark → /ack: 36.765 ms  (sample 252)
+[INFO] [1779673774.251007127] [topic_latency_benchmark]: /ack received at 1779673774.251006126 s  payload='1779673774214731356'
+[INFO] [1779673774.251040564] [topic_latency_benchmark]: Latency /benchmark → /ack: 36.275 ms  (sample 253)
+[INFO] [1779673774.361516259] [topic_latency_benchmark]: /ack received at 1779673774.361515284 s  payload='1779673774314728149'
+[INFO] [1779673774.361548143] [topic_latency_benchmark]: Latency /benchmark → /ack: 46.787 ms  (sample 254)
+[INFO] [1779673774.451544719] [topic_latency_benchmark]: /ack received at 1779673774.451543570 s  payload='1779673774414704757'
+[INFO] [1779673774.451577750] [topic_latency_benchmark]: Latency /benchmark → /ack: 36.839 ms  (sample 255)
+[INFO] [1779673774.537862770] [topic_latency_benchmark]: /ack received at 1779673774.537861586 s  payload='1779673774514726961'
+[INFO] [1779673774.537896725] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.135 ms  (sample 256)
+[INFO] [1779673774.625923328] [topic_latency_benchmark]: /ack received at 1779673774.625921965 s  payload='1779673774614726052'
+[INFO] [1779673774.625957094] [topic_latency_benchmark]: Latency /benchmark → /ack: 11.196 ms  (sample 257)
+[INFO] [1779673774.726911104] [topic_latency_benchmark]: /ack received at 1779673774.726909876 s  payload='1779673774714729441'
+[INFO] [1779673774.726947947] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.180 ms  (sample 258)
+[INFO] [1779673774.834287273] [topic_latency_benchmark]: /ack received at 1779673774.834284067 s  payload='1779673774814721914'
+[INFO] [1779673774.834328924] [topic_latency_benchmark]: Latency /benchmark → /ack: 19.562 ms  (sample 259)
+[INFO] [1779673774.991249212] [topic_latency_benchmark]: /ack received at 1779673774.991247654 s  payload='1779673774914719886'
+[INFO] [1779673774.991293960] [topic_latency_benchmark]: Latency /benchmark → /ack: 76.528 ms  (sample 260)
+[INFO] [1779673775.034156193] [topic_latency_benchmark]: /ack received at 1779673775.034154177 s  payload='1779673775014722878'
+[INFO] [1779673775.034202862] [topic_latency_benchmark]: Latency /benchmark → /ack: 19.431 ms  (sample 261)
+[INFO] [1779673775.161709876] [topic_latency_benchmark]: /ack received at 1779673775.161707878 s  payload='1779673775114715612'
+[INFO] [1779673775.161752623] [topic_latency_benchmark]: Latency /benchmark → /ack: 46.992 ms  (sample 262)
+[INFO] [1779673775.251398450] [topic_latency_benchmark]: /ack received at 1779673775.251396656 s  payload='1779673775214719788'
+[INFO] [1779673775.251445716] [topic_latency_benchmark]: Latency /benchmark → /ack: 36.677 ms  (sample 263)
+[INFO] [1779673775.351481166] [topic_latency_benchmark]: /ack received at 1779673775.351479292 s  payload='1779673775314715242'
+[INFO] [1779673775.351523629] [topic_latency_benchmark]: Latency /benchmark → /ack: 36.764 ms  (sample 264)
+[INFO] [1779673775.440041851] [topic_latency_benchmark]: /ack received at 1779673775.440039873 s  payload='1779673775414716564'
+[INFO] [1779673775.440088831] [topic_latency_benchmark]: Latency /benchmark → /ack: 25.323 ms  (sample 265)
+[INFO] [1779673775.527805445] [topic_latency_benchmark]: /ack received at 1779673775.527803659 s  payload='1779673775514717916'
+[INFO] [1779673775.527850548] [topic_latency_benchmark]: Latency /benchmark → /ack: 13.086 ms  (sample 266)
+[INFO] [1779673775.627798545] [topic_latency_benchmark]: /ack received at 1779673775.627796888 s  payload='1779673775614715118'
+[INFO] [1779673775.627840827] [topic_latency_benchmark]: Latency /benchmark → /ack: 13.082 ms  (sample 267)
+[INFO] [1779673775.741712528] [topic_latency_benchmark]: /ack received at 1779673775.741710901 s  payload='1779673775714713583'
+[INFO] [1779673775.741754898] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.997 ms  (sample 268)
+[INFO] [1779673775.827275816] [topic_latency_benchmark]: /ack received at 1779673775.827274084 s  payload='1779673775814713896'
+[INFO] [1779673775.827319288] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.560 ms  (sample 269)
+[INFO] [1779673776.008531436] [topic_latency_benchmark]: /ack received at 1779673776.008529425 s  payload='1779673775914708390'
+[INFO] [1779673776.008579697] [topic_latency_benchmark]: Latency /benchmark → /ack: 93.821 ms  (sample 270)
+[INFO] [1779673776.040998244] [topic_latency_benchmark]: /ack received at 1779673776.040996790 s  payload='1779673776014664437'
+[INFO] [1779673776.041044491] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.332 ms  (sample 271)
+[INFO] [1779673776.127750780] [topic_latency_benchmark]: /ack received at 1779673776.127748966 s  payload='1779673776114816607'
+[INFO] [1779673776.127802515] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.932 ms  (sample 272)
+[INFO] [1779673776.252866871] [topic_latency_benchmark]: /ack received at 1779673776.252865076 s  payload='1779673776214755776'
+[INFO] [1779673776.252905514] [topic_latency_benchmark]: Latency /benchmark → /ack: 38.109 ms  (sample 273)
+[INFO] [1779673776.327506712] [topic_latency_benchmark]: /ack received at 1779673776.327505112 s  payload='1779673776314713182'
+[INFO] [1779673776.327549945] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.792 ms  (sample 274)
+[INFO] [1779673776.427037607] [topic_latency_benchmark]: /ack received at 1779673776.427035809 s  payload='1779673776414699511'
+[INFO] [1779673776.427080155] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.336 ms  (sample 275)
+[INFO] [1779673776.542573006] [topic_latency_benchmark]: /ack received at 1779673776.542571783 s  payload='1779673776514711319'
+[INFO] [1779673776.542618732] [topic_latency_benchmark]: Latency /benchmark → /ack: 27.860 ms  (sample 276)
+[INFO] [1779673776.614742039] [topic_latency_benchmark]: Stats over 276 samples: min=0.554 ms  avg=38.943 ms  max=97.000 ms
+[INFO] [1779673776.692516977] [topic_latency_benchmark]: /ack received at 1779673776.692515135 s  payload='1779673776614700189'
+[INFO] [1779673776.692564228] [topic_latency_benchmark]: Latency /benchmark → /ack: 77.815 ms  (sample 277)
+[INFO] [1779673776.729607602] [topic_latency_benchmark]: /ack received at 1779673776.729606628 s  payload='1779673776714687267'
+[INFO] [1779673776.729634949] [topic_latency_benchmark]: Latency /benchmark → /ack: 14.919 ms  (sample 278)
+[INFO] [1779673776.829487339] [topic_latency_benchmark]: /ack received at 1779673776.829486609 s  payload='1779673776814687315'
+[INFO] [1779673776.829520458] [topic_latency_benchmark]: Latency /benchmark → /ack: 14.799 ms  (sample 279)
+[INFO] [1779673776.965629659] [topic_latency_benchmark]: /ack received at 1779673776.965627909 s  payload='1779673776914696979'
+[INFO] [1779673776.965676250] [topic_latency_benchmark]: Latency /benchmark → /ack: 50.931 ms  (sample 280)
+[INFO] [1779673777.040808799] [topic_latency_benchmark]: /ack received at 1779673777.040807962 s  payload='1779673777014685196'
+[INFO] [1779673777.040841830] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.123 ms  (sample 281)
+[INFO] [1779673777.129698793] [topic_latency_benchmark]: /ack received at 1779673777.129697323 s  payload='1779673777114689446'
+[INFO] [1779673777.129734491] [topic_latency_benchmark]: Latency /benchmark → /ack: 15.008 ms  (sample 282)
+[INFO] [1779673777.229876829] [topic_latency_benchmark]: /ack received at 1779673777.229875803 s  payload='1779673777214683041'
+[INFO] [1779673777.229908235] [topic_latency_benchmark]: Latency /benchmark → /ack: 15.193 ms  (sample 283)
+[INFO] [1779673777.340871448] [topic_latency_benchmark]: /ack received at 1779673777.340870380 s  payload='1779673777314679260'
+[INFO] [1779673777.340903430] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.191 ms  (sample 284)
+[INFO] [1779673777.451293469] [topic_latency_benchmark]: /ack received at 1779673777.451292753 s  payload='1779673777414679632'
+[INFO] [1779673777.451327767] [topic_latency_benchmark]: Latency /benchmark → /ack: 36.613 ms  (sample 285)
+[INFO] [1779673777.597837167] [topic_latency_benchmark]: /ack received at 1779673777.597835541 s  payload='1779673777514686454'
+[INFO] [1779673777.597888497] [topic_latency_benchmark]: Latency /benchmark → /ack: 83.149 ms  (sample 286)
+[INFO] [1779673777.640324960] [topic_latency_benchmark]: /ack received at 1779673777.640322208 s  payload='1779673777614668253'
+[INFO] [1779673777.640356572] [topic_latency_benchmark]: Latency /benchmark → /ack: 25.654 ms  (sample 287)
+[INFO] [1779673777.739914887] [topic_latency_benchmark]: /ack received at 1779673777.739913464 s  payload='1779673777714716432'
+[INFO] [1779673777.739954878] [topic_latency_benchmark]: Latency /benchmark → /ack: 25.197 ms  (sample 288)
+[INFO] [1779673777.892723205] [topic_latency_benchmark]: /ack received at 1779673777.892721653 s  payload='1779673777814678008'
+[INFO] [1779673777.892770134] [topic_latency_benchmark]: Latency /benchmark → /ack: 78.044 ms  (sample 289)
+[INFO] [1779673777.940310137] [topic_latency_benchmark]: /ack received at 1779673777.940309048 s  payload='1779673777914667218'
+[INFO] [1779673777.940345279] [topic_latency_benchmark]: Latency /benchmark → /ack: 25.642 ms  (sample 290)
+[INFO] [1779673778.093374082] [topic_latency_benchmark]: /ack received at 1779673778.093372583 s  payload='1779673778014675370'
+[INFO] [1779673778.093422905] [topic_latency_benchmark]: Latency /benchmark → /ack: 78.697 ms  (sample 291)
+[INFO] [1779673778.171511729] [topic_latency_benchmark]: /ack received at 1779673778.171509981 s  payload='1779673778114666387'
+[INFO] [1779673778.171554761] [topic_latency_benchmark]: Latency /benchmark → /ack: 56.844 ms  (sample 292)
+[INFO] [1779673778.237403632] [topic_latency_benchmark]: /ack received at 1779673778.237402439 s  payload='1779673778214663427'
+[INFO] [1779673778.237442242] [topic_latency_benchmark]: Latency /benchmark → /ack: 22.739 ms  (sample 293)
+[INFO] [1779673778.351758906] [topic_latency_benchmark]: /ack received at 1779673778.351757288 s  payload='1779673778314669900'
+[INFO] [1779673778.351813734] [topic_latency_benchmark]: Latency /benchmark → /ack: 37.087 ms  (sample 294)
+[INFO] [1779673778.449249510] [topic_latency_benchmark]: /ack received at 1779673778.449247837 s  payload='1779673778414668600'
+[INFO] [1779673778.449293894] [topic_latency_benchmark]: Latency /benchmark → /ack: 34.579 ms  (sample 295)
+[INFO] [1779673778.551929717] [topic_latency_benchmark]: /ack received at 1779673778.551928043 s  payload='1779673778514668533'
+[INFO] [1779673778.551972745] [topic_latency_benchmark]: Latency /benchmark → /ack: 37.260 ms  (sample 296)
+[INFO] [1779673778.647005856] [topic_latency_benchmark]: /ack received at 1779673778.647004128 s  payload='1779673778614661221'
+[INFO] [1779673778.647046942] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.343 ms  (sample 297)
+[INFO] [1779673778.736771741] [topic_latency_benchmark]: /ack received at 1779673778.736770153 s  payload='1779673778714660605'
+[INFO] [1779673778.736812064] [topic_latency_benchmark]: Latency /benchmark → /ack: 22.109 ms  (sample 298)
+[INFO] [1779673778.892925713] [topic_latency_benchmark]: /ack received at 1779673778.892923832 s  payload='1779673778814665376'
+[INFO] [1779673778.892967198] [topic_latency_benchmark]: Latency /benchmark → /ack: 78.259 ms  (sample 299)
+[INFO] [1779673778.950562274] [topic_latency_benchmark]: /ack received at 1779673778.950561047 s  payload='1779673778914671818'
+[INFO] [1779673778.950606533] [topic_latency_benchmark]: Latency /benchmark → /ack: 35.889 ms  (sample 300)
+[INFO] [1779673779.136122750] [topic_latency_benchmark]: /ack received at 1779673779.136121511 s  payload='1779673779014602661'
+[INFO] [1779673779.136158974] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.516 ms  (sample 301)
+[INFO] [1779673779.147485217] [topic_latency_benchmark]: /ack received at 1779673779.147485018 s  payload='1779673779114605556'
+[INFO] [1779673779.147495791] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.879 ms  (sample 302)
+[INFO] [1779673779.271760468] [topic_latency_benchmark]: /ack received at 1779673779.271759272 s  payload='1779673779214638074'
+[INFO] [1779673779.271816600] [topic_latency_benchmark]: Latency /benchmark → /ack: 57.121 ms  (sample 303)
+[INFO] [1779673779.348335192] [topic_latency_benchmark]: /ack received at 1779673779.348333836 s  payload='1779673779314607150'
+[INFO] [1779673779.348367501] [topic_latency_benchmark]: Latency /benchmark → /ack: 33.727 ms  (sample 304)
+[INFO] [1779673779.435428325] [topic_latency_benchmark]: /ack received at 1779673779.435427427 s  payload='1779673779414614394'
+[INFO] [1779673779.435463817] [topic_latency_benchmark]: Latency /benchmark → /ack: 20.813 ms  (sample 305)
+[INFO] [1779673779.536159261] [topic_latency_benchmark]: /ack received at 1779673779.536158323 s  payload='1779673779514605490'
+[INFO] [1779673779.536214256] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.553 ms  (sample 306)
+[INFO] [1779673779.647213920] [topic_latency_benchmark]: /ack received at 1779673779.647212744 s  payload='1779673779614606897'
+[INFO] [1779673779.647245979] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.606 ms  (sample 307)
+[INFO] [1779673779.730751991] [topic_latency_benchmark]: /ack received at 1779673779.730750799 s  payload='1779673779714610319'
+[INFO] [1779673779.730797312] [topic_latency_benchmark]: Latency /benchmark → /ack: 16.140 ms  (sample 308)
+[INFO] [1779673779.836145889] [topic_latency_benchmark]: /ack received at 1779673779.836143970 s  payload='1779673779814602760'
+[INFO] [1779673779.836194058] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.541 ms  (sample 309)
+[INFO] [1779673779.951991039] [topic_latency_benchmark]: /ack received at 1779673779.951990128 s  payload='1779673779914608317'
+[INFO] [1779673779.952025640] [topic_latency_benchmark]: Latency /benchmark → /ack: 37.382 ms  (sample 310)
+[INFO] [1779673780.043369046] [topic_latency_benchmark]: /ack received at 1779673780.043367863 s  payload='1779673780014616474'
+[INFO] [1779673780.043402100] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.751 ms  (sample 311)
+[INFO] [1779673780.143067338] [topic_latency_benchmark]: /ack received at 1779673780.143063784 s  payload='1779673780114609155'
+[INFO] [1779673780.143104927] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.455 ms  (sample 312)
+[INFO] [1779673780.232025149] [topic_latency_benchmark]: /ack received at 1779673780.232023716 s  payload='1779673780214607156'
+[INFO] [1779673780.232057595] [topic_latency_benchmark]: Latency /benchmark → /ack: 17.417 ms  (sample 313)
+[INFO] [1779673780.342993117] [topic_latency_benchmark]: /ack received at 1779673780.342991352 s  payload='1779673780314608997'
+[INFO] [1779673780.343036690] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.382 ms  (sample 314)
+[INFO] [1779673780.431506180] [topic_latency_benchmark]: /ack received at 1779673780.431504965 s  payload='1779673780414606171'
+[INFO] [1779673780.431536603] [topic_latency_benchmark]: Latency /benchmark → /ack: 16.899 ms  (sample 315)
+[INFO] [1779673780.554465524] [topic_latency_benchmark]: /ack received at 1779673780.554464817 s  payload='1779673780514603532'
+[INFO] [1779673780.554496390] [topic_latency_benchmark]: Latency /benchmark → /ack: 39.861 ms  (sample 316)
+[INFO] [1779673780.653166102] [topic_latency_benchmark]: /ack received at 1779673780.653163195 s  payload='1779673780614605328'
+[INFO] [1779673780.653220410] [topic_latency_benchmark]: Latency /benchmark → /ack: 38.558 ms  (sample 317)
+[INFO] [1779673780.776926469] [topic_latency_benchmark]: /ack received at 1779673780.776924849 s  payload='1779673780714610069'
+[INFO] [1779673780.776956490] [topic_latency_benchmark]: Latency /benchmark → /ack: 62.315 ms  (sample 318)
+[INFO] [1779673780.842954250] [topic_latency_benchmark]: /ack received at 1779673780.842952967 s  payload='1779673780814599682'
+[INFO] [1779673780.842983688] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.353 ms  (sample 319)
+[INFO] [1779673781.001547063] [topic_latency_benchmark]: /ack received at 1779673781.001545429 s  payload='1779673780914608603'
+[INFO] [1779673781.001585214] [topic_latency_benchmark]: Latency /benchmark → /ack: 86.937 ms  (sample 320)
+[INFO] [1779673781.057097975] [topic_latency_benchmark]: /ack received at 1779673781.057096004 s  payload='1779673781014606893'
+[INFO] [1779673781.057144730] [topic_latency_benchmark]: Latency /benchmark → /ack: 42.489 ms  (sample 321)
+[INFO] [1779673781.158555333] [topic_latency_benchmark]: /ack received at 1779673781.158554316 s  payload='1779673781114610991'
+[INFO] [1779673781.158590862] [topic_latency_benchmark]: Latency /benchmark → /ack: 43.943 ms  (sample 322)
+[INFO] [1779673781.226670971] [topic_latency_benchmark]: /ack received at 1779673781.226670027 s  payload='1779673781214607295'
+[INFO] [1779673781.226737269] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.063 ms  (sample 323)
+[INFO] [1779673781.352656144] [topic_latency_benchmark]: /ack received at 1779673781.352655411 s  payload='1779673781314638110'
+[INFO] [1779673781.352687167] [topic_latency_benchmark]: Latency /benchmark → /ack: 38.017 ms  (sample 324)
+[INFO] [1779673781.470488639] [topic_latency_benchmark]: /ack received at 1779673781.470487595 s  payload='1779673781414604561'
+[INFO] [1779673781.470520451] [topic_latency_benchmark]: Latency /benchmark → /ack: 55.883 ms  (sample 325)
+[INFO] [1779673781.543487338] [topic_latency_benchmark]: /ack received at 1779673781.543486118 s  payload='1779673781514607564'
+[INFO] [1779673781.543520812] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.879 ms  (sample 326)
+[INFO] [1779673781.614616834] [topic_latency_benchmark]: Stats over 326 samples: min=0.554 ms  avg=38.625 ms  max=97.000 ms
+[INFO] [1779673781.640419623] [topic_latency_benchmark]: /ack received at 1779673781.640418530 s  payload='1779673781614600592'
+[INFO] [1779673781.640454402] [topic_latency_benchmark]: Latency /benchmark → /ack: 25.818 ms  (sample 327)
+[INFO] [1779673781.740517873] [topic_latency_benchmark]: /ack received at 1779673781.740516901 s  payload='1779673781714599048'
+[INFO] [1779673781.740546089] [topic_latency_benchmark]: Latency /benchmark → /ack: 25.918 ms  (sample 328)
+[INFO] [1779673781.853514473] [topic_latency_benchmark]: /ack received at 1779673781.853513241 s  payload='1779673781814631433'
+[INFO] [1779673781.853544730] [topic_latency_benchmark]: Latency /benchmark → /ack: 38.882 ms  (sample 329)
+[INFO] [1779673781.985333203] [topic_latency_benchmark]: /ack received at 1779673781.985332251 s  payload='1779673781914607794'
+[INFO] [1779673781.985365233] [topic_latency_benchmark]: Latency /benchmark → /ack: 70.724 ms  (sample 330)
+[INFO] [1779673782.040918510] [topic_latency_benchmark]: /ack received at 1779673782.040917873 s  payload='1779673782014601279'
+[INFO] [1779673782.040945741] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.317 ms  (sample 331)
+[INFO] [1779673782.140851010] [topic_latency_benchmark]: /ack received at 1779673782.140849829 s  payload='1779673782114602953'
+[INFO] [1779673782.140882354] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.247 ms  (sample 332)
+[INFO] [1779673782.306431318] [topic_latency_benchmark]: /ack received at 1779673782.306430578 s  payload='1779673782214633022'
+[INFO] [1779673782.306463791] [topic_latency_benchmark]: Latency /benchmark → /ack: 91.797 ms  (sample 333)
+[INFO] [1779673782.359719945] [topic_latency_benchmark]: /ack received at 1779673782.359719276 s  payload='1779673782314596413'
+[INFO] [1779673782.359745532] [topic_latency_benchmark]: Latency /benchmark → /ack: 45.123 ms  (sample 334)
+[INFO] [1779673782.495415262] [topic_latency_benchmark]: /ack received at 1779673782.495414019 s  payload='1779673782414597143'
+[INFO] [1779673782.495447661] [topic_latency_benchmark]: Latency /benchmark → /ack: 80.817 ms  (sample 335)
+[INFO] [1779673782.548796828] [topic_latency_benchmark]: /ack received at 1779673782.548795938 s  payload='1779673782514631968'
+[INFO] [1779673782.548824737] [topic_latency_benchmark]: Latency /benchmark → /ack: 34.164 ms  (sample 336)
+[INFO] [1779673782.671410810] [topic_latency_benchmark]: /ack received at 1779673782.671409607 s  payload='1779673782614597592'
+[INFO] [1779673782.671442767] [topic_latency_benchmark]: Latency /benchmark → /ack: 56.812 ms  (sample 337)
+[INFO] [1779673782.749083259] [topic_latency_benchmark]: /ack received at 1779673782.749082088 s  payload='1779673782714594488'
+[INFO] [1779673782.749114605] [topic_latency_benchmark]: Latency /benchmark → /ack: 34.488 ms  (sample 338)
+[INFO] [1779673782.859260486] [topic_latency_benchmark]: /ack received at 1779673782.859259367 s  payload='1779673782814596473'
+[INFO] [1779673782.859294794] [topic_latency_benchmark]: Latency /benchmark → /ack: 44.663 ms  (sample 339)
+[INFO] [1779673782.945421354] [topic_latency_benchmark]: /ack received at 1779673782.945420265 s  payload='1779673782914593891'
+[INFO] [1779673782.945455845] [topic_latency_benchmark]: Latency /benchmark → /ack: 30.826 ms  (sample 340)
+[INFO] [1779673783.061122015] [topic_latency_benchmark]: /ack received at 1779673783.061120749 s  payload='1779673783014633693'
+[INFO] [1779673783.061152262] [topic_latency_benchmark]: Latency /benchmark → /ack: 46.487 ms  (sample 341)
+[INFO] [1779673783.149472324] [topic_latency_benchmark]: /ack received at 1779673783.149471283 s  payload='1779673783114592791'
+[INFO] [1779673783.149503908] [topic_latency_benchmark]: Latency /benchmark → /ack: 34.878 ms  (sample 342)
+[INFO] [1779673783.254688586] [topic_latency_benchmark]: /ack received at 1779673783.254687786 s  payload='1779673783214621762'
+[INFO] [1779673783.254719505] [topic_latency_benchmark]: Latency /benchmark → /ack: 40.066 ms  (sample 343)
+[INFO] [1779673783.337396204] [topic_latency_benchmark]: /ack received at 1779673783.337395191 s  payload='1779673783314628633'
+[INFO] [1779673783.337438528] [topic_latency_benchmark]: Latency /benchmark → /ack: 22.767 ms  (sample 344)
+[INFO] [1779673783.443483773] [topic_latency_benchmark]: /ack received at 1779673783.443482637 s  payload='1779673783414625356'
+[INFO] [1779673783.443516854] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.857 ms  (sample 345)
+[INFO] [1779673783.681188249] [topic_latency_benchmark]: /ack received at 1779673783.681187391 s  payload='1779673783514584168'
+[INFO] [1779673783.681221996] [topic_latency_benchmark]: Latency /benchmark → /ack: 66.608 ms  (sample 346)
+[INFO] [1779673783.681720069] [topic_latency_benchmark]: /ack received at 1779673783.681719780 s  payload='1779673783614579709'
+[INFO] [1779673783.681726118] [topic_latency_benchmark]: Latency /benchmark → /ack: 67.140 ms  (sample 347)
+[INFO] [1779673783.769276969] [topic_latency_benchmark]: /ack received at 1779673783.769275188 s  payload='1779673783714617526'
+[INFO] [1779673783.769319411] [topic_latency_benchmark]: Latency /benchmark → /ack: 54.658 ms  (sample 348)
+[INFO] [1779673783.925858262] [topic_latency_benchmark]: /ack received at 1779673783.925856113 s  payload='1779673783814576932'
+[INFO] [1779673783.925889232] [topic_latency_benchmark]: Latency /benchmark → /ack: 11.281 ms  (sample 349)
+[INFO] [1779673783.980716935] [topic_latency_benchmark]: /ack received at 1779673783.980715990 s  payload='1779673783914575360'
+[INFO] [1779673783.980752996] [topic_latency_benchmark]: Latency /benchmark → /ack: 66.141 ms  (sample 350)
+[INFO] [1779673784.108982504] [topic_latency_benchmark]: /ack received at 1779673784.108980894 s  payload='1779673784014572275'
+[INFO] [1779673784.109027204] [topic_latency_benchmark]: Latency /benchmark → /ack: 94.409 ms  (sample 351)
+[INFO] [1779673784.155409827] [topic_latency_benchmark]: /ack received at 1779673784.155408382 s  payload='1779673784114563507'
+[INFO] [1779673784.155451834] [topic_latency_benchmark]: Latency /benchmark → /ack: 40.845 ms  (sample 352)
+[INFO] [1779673784.267023093] [topic_latency_benchmark]: /ack received at 1779673784.267021656 s  payload='1779673784214576044'
+[INFO] [1779673784.267066684] [topic_latency_benchmark]: Latency /benchmark → /ack: 52.445 ms  (sample 353)
+[INFO] [1779673784.366626372] [topic_latency_benchmark]: /ack received at 1779673784.366625071 s  payload='1779673784314629636'
+[INFO] [1779673784.366663848] [topic_latency_benchmark]: Latency /benchmark → /ack: 51.995 ms  (sample 354)
+[INFO] [1779673784.600258816] [topic_latency_benchmark]: /ack received at 1779673784.600255728 s  payload='1779673784414610396'
+[INFO] [1779673784.600323538] [topic_latency_benchmark]: Latency /benchmark → /ack: 85.689 ms  (sample 355)
+[INFO] [1779673784.613524654] [topic_latency_benchmark]: /ack received at 1779673784.613523245 s  payload='1779673784514567006'
+[INFO] [1779673784.613557062] [topic_latency_benchmark]: Latency /benchmark → /ack: 98.956 ms  (sample 356)
+[INFO] [1779673784.689696686] [topic_latency_benchmark]: /ack received at 1779673784.689695597 s  payload='1779673784614556125'
+[INFO] [1779673784.689732186] [topic_latency_benchmark]: Latency /benchmark → /ack: 75.139 ms  (sample 357)
+[INFO] [1779673784.899264307] [topic_latency_benchmark]: /ack received at 1779673784.899262428 s  payload='1779673784714569197'
+[INFO] [1779673784.899305714] [topic_latency_benchmark]: Latency /benchmark → /ack: 84.695 ms  (sample 358)
+[INFO] [1779673784.926038663] [topic_latency_benchmark]: /ack received at 1779673784.926037073 s  payload='1779673784814567796'
+[INFO] [1779673784.926083938] [topic_latency_benchmark]: Latency /benchmark → /ack: 11.424 ms  (sample 359)
+[INFO] [1779673785.000207806] [topic_latency_benchmark]: /ack received at 1779673785.000205994 s  payload='1779673784914612877'
+[INFO] [1779673785.000252425] [topic_latency_benchmark]: Latency /benchmark → /ack: 85.593 ms  (sample 360)
+[INFO] [1779673785.066326295] [topic_latency_benchmark]: /ack received at 1779673785.066324949 s  payload='1779673785014552270'
+[INFO] [1779673785.066361271] [topic_latency_benchmark]: Latency /benchmark → /ack: 51.773 ms  (sample 361)
+[INFO] [1779673785.167504156] [topic_latency_benchmark]: /ack received at 1779673785.167502642 s  payload='1779673785114563601'
+[INFO] [1779673785.167547125] [topic_latency_benchmark]: Latency /benchmark → /ack: 52.939 ms  (sample 362)
+[INFO] [1779673785.266176576] [topic_latency_benchmark]: /ack received at 1779673785.266175032 s  payload='1779673785214561831'
+[INFO] [1779673785.266214074] [topic_latency_benchmark]: Latency /benchmark → /ack: 51.613 ms  (sample 363)
+[INFO] [1779673785.388519641] [topic_latency_benchmark]: /ack received at 1779673785.388516188 s  payload='1779673785314602375'
+[INFO] [1779673785.388577209] [topic_latency_benchmark]: Latency /benchmark → /ack: 73.914 ms  (sample 364)
+[INFO] [1779673785.526086562] [topic_latency_benchmark]: /ack received at 1779673785.526085377 s  payload='1779673785414597116'
+[INFO] [1779673785.526127440] [topic_latency_benchmark]: Latency /benchmark → /ack: 11.528 ms  (sample 365)
+[INFO] [1779673785.651963860] [topic_latency_benchmark]: /ack received at 1779673785.651961327 s  payload='1779673785514557235'
+[INFO] [1779673785.652019198] [topic_latency_benchmark]: Latency /benchmark → /ack: 37.406 ms  (sample 366)
+[INFO] [1779673785.652987211] [topic_latency_benchmark]: /ack received at 1779673785.652986526 s  payload='1779673785614555645'
+[INFO] [1779673785.653004662] [topic_latency_benchmark]: Latency /benchmark → /ack: 38.431 ms  (sample 367)
+[INFO] [1779673785.762805069] [topic_latency_benchmark]: /ack received at 1779673785.762803793 s  payload='1779673785714554534'
+[INFO] [1779673785.762849433] [topic_latency_benchmark]: Latency /benchmark → /ack: 48.249 ms  (sample 368)
+[INFO] [1779673785.852074511] [topic_latency_benchmark]: /ack received at 1779673785.852072716 s  payload='1779673785814602301'
+[INFO] [1779673785.852118159] [topic_latency_benchmark]: Latency /benchmark → /ack: 37.470 ms  (sample 369)
+[INFO] [1779673785.999649445] [topic_latency_benchmark]: /ack received at 1779673785.999647856 s  payload='1779673785914550869'
+[INFO] [1779673785.999698352] [topic_latency_benchmark]: Latency /benchmark → /ack: 85.097 ms  (sample 370)
+[INFO] [1779673786.055771721] [topic_latency_benchmark]: /ack received at 1779673786.055769920 s  payload='1779673786014552936'
+[INFO] [1779673786.055823858] [topic_latency_benchmark]: Latency /benchmark → /ack: 41.217 ms  (sample 371)
+[INFO] [1779673786.163406296] [topic_latency_benchmark]: /ack received at 1779673786.163403273 s  payload='1779673786114549416'
+[INFO] [1779673786.163465145] [topic_latency_benchmark]: Latency /benchmark → /ack: 48.854 ms  (sample 372)
+[INFO] [1779673786.251696573] [topic_latency_benchmark]: /ack received at 1779673786.251694918 s  payload='1779673786214546871'
+[INFO] [1779673786.251740783] [topic_latency_benchmark]: Latency /benchmark → /ack: 37.148 ms  (sample 373)
+[INFO] [1779673786.351571590] [topic_latency_benchmark]: /ack received at 1779673786.351568937 s  payload='1779673786314544439'
+[INFO] [1779673786.351648530] [topic_latency_benchmark]: Latency /benchmark → /ack: 37.024 ms  (sample 374)
+[INFO] [1779673786.442363090] [topic_latency_benchmark]: /ack received at 1779673786.442361593 s  payload='1779673786414560412'
+[INFO] [1779673786.442422774] [topic_latency_benchmark]: Latency /benchmark → /ack: 27.801 ms  (sample 375)
+[INFO] [1779673786.541172929] [topic_latency_benchmark]: /ack received at 1779673786.541171551 s  payload='1779673786514540753'
+[INFO] [1779673786.541216888] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.631 ms  (sample 376)
+[INFO] [1779673786.614606642] [topic_latency_benchmark]: Stats over 376 samples: min=0.554 ms  avg=40.031 ms  max=98.956 ms
+[INFO] [1779673786.668287963] [topic_latency_benchmark]: /ack received at 1779673786.668287039 s  payload='1779673786614567763'
+[INFO] [1779673786.668320848] [topic_latency_benchmark]: Latency /benchmark → /ack: 53.719 ms  (sample 377)
+[INFO] [1779673786.741980501] [topic_latency_benchmark]: /ack received at 1779673786.741979122 s  payload='1779673786714576156'
+[INFO] [1779673786.742009454] [topic_latency_benchmark]: Latency /benchmark → /ack: 27.403 ms  (sample 378)
+[INFO] [1779673786.975318753] [topic_latency_benchmark]: /ack received at 1779673786.975317717 s  payload='1779673786814559098'
+[INFO] [1779673786.975354152] [topic_latency_benchmark]: Latency /benchmark → /ack: 60.762 ms  (sample 379)
+[INFO] [1779673787.015418876] [topic_latency_benchmark]: /ack received at 1779673787.015418053 s  payload='1779673786914556109'
+[INFO] [1779673787.015453478] [topic_latency_benchmark]: Latency /benchmark → /ack: 0.860 ms  (sample 380)
+[INFO] [1779673787.052692112] [topic_latency_benchmark]: /ack received at 1779673787.052690506 s  payload='1779673787014558271'
+[INFO] [1779673787.052729933] [topic_latency_benchmark]: Latency /benchmark → /ack: 38.132 ms  (sample 381)
+[INFO] [1779673787.142353341] [topic_latency_benchmark]: /ack received at 1779673787.142350197 s  payload='1779673787114554283'
+[INFO] [1779673787.142411744] [topic_latency_benchmark]: Latency /benchmark → /ack: 27.796 ms  (sample 382)
+[INFO] [1779673787.226681053] [topic_latency_benchmark]: /ack received at 1779673787.226677656 s  payload='1779673787214547913'
+[INFO] [1779673787.226767316] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.130 ms  (sample 383)
+[INFO] [1779673787.397887359] [topic_latency_benchmark]: /ack received at 1779673787.397886276 s  payload='1779673787314513237'
+[INFO] [1779673787.397917216] [topic_latency_benchmark]: Latency /benchmark → /ack: 83.373 ms  (sample 384)
+[INFO] [1779673787.458296416] [topic_latency_benchmark]: /ack received at 1779673787.458295584 s  payload='1779673787414500077'
+[INFO] [1779673787.458326835] [topic_latency_benchmark]: Latency /benchmark → /ack: 43.795 ms  (sample 385)
+[INFO] [1779673787.536567132] [topic_latency_benchmark]: /ack received at 1779673787.536566257 s  payload='1779673787514549845'
+[INFO] [1779673787.536606506] [topic_latency_benchmark]: Latency /benchmark → /ack: 22.016 ms  (sample 386)
+[INFO] [1779673787.637750821] [topic_latency_benchmark]: /ack received at 1779673787.637749672 s  payload='1779673787614515372'
+[INFO] [1779673787.637793506] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.234 ms  (sample 387)
+[INFO] [1779673787.773308921] [topic_latency_benchmark]: /ack received at 1779673787.773307323 s  payload='1779673787714514652'
+[INFO] [1779673787.773348959] [topic_latency_benchmark]: Latency /benchmark → /ack: 58.793 ms  (sample 388)
+[INFO] [1779673787.847626982] [topic_latency_benchmark]: /ack received at 1779673787.847625732 s  payload='1779673787814512652'
+[INFO] [1779673787.847657653] [topic_latency_benchmark]: Latency /benchmark → /ack: 33.113 ms  (sample 389)
+[INFO] [1779673787.948070789] [topic_latency_benchmark]: /ack received at 1779673787.948068142 s  payload='1779673787914510716'
+[INFO] [1779673787.948102945] [topic_latency_benchmark]: Latency /benchmark → /ack: 33.557 ms  (sample 390)
+[INFO] [1779673788.047467666] [topic_latency_benchmark]: /ack received at 1779673788.047466755 s  payload='1779673788014505508'
+[INFO] [1779673788.047498030] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.961 ms  (sample 391)
+[INFO] [1779673788.137175438] [topic_latency_benchmark]: /ack received at 1779673788.137172461 s  payload='1779673788114502339'
+[INFO] [1779673788.137220781] [topic_latency_benchmark]: Latency /benchmark → /ack: 22.670 ms  (sample 392)
+[INFO] [1779673788.247839457] [topic_latency_benchmark]: /ack received at 1779673788.247837782 s  payload='1779673788214536742'
+[INFO] [1779673788.247877280] [topic_latency_benchmark]: Latency /benchmark → /ack: 33.301 ms  (sample 393)
+[INFO] [1779673788.325547127] [topic_latency_benchmark]: /ack received at 1779673788.325546026 s  payload='1779673788314498849'
+[INFO] [1779673788.325570897] [topic_latency_benchmark]: Latency /benchmark → /ack: 11.047 ms  (sample 394)
+[INFO] [1779673788.425589253] [topic_latency_benchmark]: /ack received at 1779673788.425585270 s  payload='1779673788414502181'
+[INFO] [1779673788.425617139] [topic_latency_benchmark]: Latency /benchmark → /ack: 11.083 ms  (sample 395)
+[INFO] [1779673788.547332357] [topic_latency_benchmark]: /ack received at 1779673788.547331333 s  payload='1779673788514510435'
+[INFO] [1779673788.547367600] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.821 ms  (sample 396)
+[INFO] [1779673788.690484491] [topic_latency_benchmark]: /ack received at 1779673788.690483093 s  payload='1779673788614500022'
+[INFO] [1779673788.690515251] [topic_latency_benchmark]: Latency /benchmark → /ack: 75.983 ms  (sample 397)
+[INFO] [1779673788.732332207] [topic_latency_benchmark]: /ack received at 1779673788.732328892 s  payload='1779673788714500485'
+[INFO] [1779673788.732417542] [topic_latency_benchmark]: Latency /benchmark → /ack: 17.828 ms  (sample 398)
+[INFO] [1779673788.837102922] [topic_latency_benchmark]: /ack received at 1779673788.837101936 s  payload='1779673788814498098'
+[INFO] [1779673788.837137473] [topic_latency_benchmark]: Latency /benchmark → /ack: 22.604 ms  (sample 399)
+[INFO] [1779673788.955178611] [topic_latency_benchmark]: /ack received at 1779673788.955177546 s  payload='1779673788914493829'
+[INFO] [1779673788.955211129] [topic_latency_benchmark]: Latency /benchmark → /ack: 40.684 ms  (sample 400)
+[INFO] [1779673789.026522933] [topic_latency_benchmark]: /ack received at 1779673789.026522160 s  payload='1779673789014494587'
+[INFO] [1779673789.026556041] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.027 ms  (sample 401)
+[INFO] [1779673789.144550349] [topic_latency_benchmark]: /ack received at 1779673789.144549131 s  payload='1779673789114493557'
+[INFO] [1779673789.144599621] [topic_latency_benchmark]: Latency /benchmark → /ack: 30.056 ms  (sample 402)
+[INFO] [1779673789.254185269] [topic_latency_benchmark]: /ack received at 1779673789.254184008 s  payload='1779673789214531581'
+[INFO] [1779673789.254216712] [topic_latency_benchmark]: Latency /benchmark → /ack: 39.652 ms  (sample 403)
+[INFO] [1779673789.326493420] [topic_latency_benchmark]: /ack received at 1779673789.326491833 s  payload='1779673789314488950'
+[INFO] [1779673789.326525586] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.003 ms  (sample 404)
+[INFO] [1779673789.443117423] [topic_latency_benchmark]: /ack received at 1779673789.443115950 s  payload='1779673789414484933'
+[INFO] [1779673789.443149454] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.631 ms  (sample 405)
+[INFO] [1779673789.554986152] [topic_latency_benchmark]: /ack received at 1779673789.554985285 s  payload='1779673789514492875'
+[INFO] [1779673789.555015591] [topic_latency_benchmark]: Latency /benchmark → /ack: 40.492 ms  (sample 406)
+[INFO] [1779673789.678513765] [topic_latency_benchmark]: /ack received at 1779673789.678512812 s  payload='1779673789614494494'
+[INFO] [1779673789.678545869] [topic_latency_benchmark]: Latency /benchmark → /ack: 64.018 ms  (sample 407)
+[INFO] [1779673789.743360950] [topic_latency_benchmark]: /ack received at 1779673789.743360043 s  payload='1779673789714478309'
+[INFO] [1779673789.743393065] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.882 ms  (sample 408)
+[INFO] [1779673789.827366082] [topic_latency_benchmark]: /ack received at 1779673789.827365160 s  payload='1779673789814479868'
+[INFO] [1779673789.827403492] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.885 ms  (sample 409)
+[INFO] [1779673789.954425150] [topic_latency_benchmark]: /ack received at 1779673789.954424381 s  payload='1779673789914480258'
+[INFO] [1779673789.954459495] [topic_latency_benchmark]: Latency /benchmark → /ack: 39.944 ms  (sample 410)
+[INFO] [1779673790.043087971] [topic_latency_benchmark]: /ack received at 1779673790.043086767 s  payload='1779673790014477133'
+[INFO] [1779673790.043122531] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.610 ms  (sample 411)
+[INFO] [1779673790.142866245] [topic_latency_benchmark]: /ack received at 1779673790.142865419 s  payload='1779673790114477732'
+[INFO] [1779673790.142898897] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.388 ms  (sample 412)
+[INFO] [1779673790.264572014] [topic_latency_benchmark]: /ack received at 1779673790.264569998 s  payload='1779673790214474490'
+[INFO] [1779673790.264629459] [topic_latency_benchmark]: Latency /benchmark → /ack: 50.096 ms  (sample 413)
+[INFO] [1779673790.355394665] [topic_latency_benchmark]: /ack received at 1779673790.355393171 s  payload='1779673790314501998'
+[INFO] [1779673790.355429515] [topic_latency_benchmark]: Latency /benchmark → /ack: 40.891 ms  (sample 414)
+[INFO] [1779673790.543291004] [topic_latency_benchmark]: /ack received at 1779673790.543290138 s  payload='1779673790414499487'
+[INFO] [1779673790.543321577] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.793 ms  (sample 415)
+[INFO] [1779673790.582720770] [topic_latency_benchmark]: /ack received at 1779673790.582719088 s  payload='1779673790514496881'
+[INFO] [1779673790.582747311] [topic_latency_benchmark]: Latency /benchmark → /ack: 68.222 ms  (sample 416)
+[INFO] [1779673790.629087716] [topic_latency_benchmark]: /ack received at 1779673790.629086733 s  payload='1779673790614462756'
+[INFO] [1779673790.629113648] [topic_latency_benchmark]: Latency /benchmark → /ack: 14.624 ms  (sample 417)
+[INFO] [1779673790.740783089] [topic_latency_benchmark]: /ack received at 1779673790.740782022 s  payload='1779673790714471967'
+[INFO] [1779673790.740816243] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.310 ms  (sample 418)
+[INFO] [1779673790.838923055] [topic_latency_benchmark]: /ack received at 1779673790.838921785 s  payload='1779673790814469143'
+[INFO] [1779673790.838962111] [topic_latency_benchmark]: Latency /benchmark → /ack: 24.453 ms  (sample 419)
+[INFO] [1779673790.985947576] [topic_latency_benchmark]: /ack received at 1779673790.985946655 s  payload='1779673790914463214'
+[INFO] [1779673790.985980782] [topic_latency_benchmark]: Latency /benchmark → /ack: 71.484 ms  (sample 420)
+[INFO] [1779673791.066985386] [topic_latency_benchmark]: /ack received at 1779673791.066984177 s  payload='1779673791014460403'
+[INFO] [1779673791.067019663] [topic_latency_benchmark]: Latency /benchmark → /ack: 52.524 ms  (sample 421)
+[INFO] [1779673791.142064638] [topic_latency_benchmark]: /ack received at 1779673791.142063379 s  payload='1779673791114458921'
+[INFO] [1779673791.142100741] [topic_latency_benchmark]: Latency /benchmark → /ack: 27.604 ms  (sample 422)
+[INFO] [1779673791.251478937] [topic_latency_benchmark]: /ack received at 1779673791.251477003 s  payload='1779673791214411861'
+[INFO] [1779673791.251520077] [topic_latency_benchmark]: Latency /benchmark → /ack: 37.065 ms  (sample 423)
+[INFO] [1779673791.338904668] [topic_latency_benchmark]: /ack received at 1779673791.338903189 s  payload='1779673791314464451'
+[INFO] [1779673791.338935044] [topic_latency_benchmark]: Latency /benchmark → /ack: 24.439 ms  (sample 424)
+[INFO] [1779673791.472088243] [topic_latency_benchmark]: /ack received at 1779673791.472086668 s  payload='1779673791414485215'
+[INFO] [1779673791.472123693] [topic_latency_benchmark]: Latency /benchmark → /ack: 57.601 ms  (sample 425)
+[INFO] [1779673791.560790368] [topic_latency_benchmark]: /ack received at 1779673791.560789585 s  payload='1779673791514454577'
+[INFO] [1779673791.560827363] [topic_latency_benchmark]: Latency /benchmark → /ack: 46.335 ms  (sample 426)
+[INFO] [1779673791.614475435] [topic_latency_benchmark]: Stats over 426 samples: min=0.554 ms  avg=39.454 ms  max=98.956 ms
+[INFO] [1779673791.682912908] [topic_latency_benchmark]: /ack received at 1779673791.682911634 s  payload='1779673791614449280'
+[INFO] [1779673791.682946523] [topic_latency_benchmark]: Latency /benchmark → /ack: 68.462 ms  (sample 427)
+[INFO] [1779673791.739034216] [topic_latency_benchmark]: /ack received at 1779673791.739032745 s  payload='1779673791714447945'
+[INFO] [1779673791.739074245] [topic_latency_benchmark]: Latency /benchmark → /ack: 24.585 ms  (sample 428)
+[INFO] [1779673791.838796271] [topic_latency_benchmark]: /ack received at 1779673791.838794947 s  payload='1779673791814448284'
+[INFO] [1779673791.838828820] [topic_latency_benchmark]: Latency /benchmark → /ack: 24.347 ms  (sample 429)
+[INFO] [1779673791.938788800] [topic_latency_benchmark]: /ack received at 1779673791.938787222 s  payload='1779673791914447685'
+[INFO] [1779673791.938819364] [topic_latency_benchmark]: Latency /benchmark → /ack: 24.340 ms  (sample 430)
+[INFO] [1779673792.039039080] [topic_latency_benchmark]: /ack received at 1779673792.039038181 s  payload='1779673792014477836'
+[INFO] [1779673792.039074609] [topic_latency_benchmark]: Latency /benchmark → /ack: 24.560 ms  (sample 431)
+[INFO] [1779673792.138696840] [topic_latency_benchmark]: /ack received at 1779673792.138695717 s  payload='1779673792114443541'
+[INFO] [1779673792.138728511] [topic_latency_benchmark]: Latency /benchmark → /ack: 24.252 ms  (sample 432)
+[INFO] [1779673792.239817251] [topic_latency_benchmark]: /ack received at 1779673792.239816427 s  payload='1779673792214441929'
+[INFO] [1779673792.239845580] [topic_latency_benchmark]: Latency /benchmark → /ack: 25.374 ms  (sample 433)
+[INFO] [1779673792.361211950] [topic_latency_benchmark]: /ack received at 1779673792.361210346 s  payload='1779673792314443218'
+[INFO] [1779673792.361248404] [topic_latency_benchmark]: Latency /benchmark → /ack: 46.767 ms  (sample 434)
+[INFO] [1779673792.446377841] [topic_latency_benchmark]: /ack received at 1779673792.446376801 s  payload='1779673792414435464'
+[INFO] [1779673792.446413291] [topic_latency_benchmark]: Latency /benchmark → /ack: 31.941 ms  (sample 435)
+[INFO] [1779673792.546088457] [topic_latency_benchmark]: /ack received at 1779673792.546087503 s  payload='1779673792514436834'
+[INFO] [1779673792.546120722] [topic_latency_benchmark]: Latency /benchmark → /ack: 31.651 ms  (sample 436)
+[INFO] [1779673792.646243228] [topic_latency_benchmark]: /ack received at 1779673792.646242142 s  payload='1779673792614434922'
+[INFO] [1779673792.646277334] [topic_latency_benchmark]: Latency /benchmark → /ack: 31.807 ms  (sample 437)
+[INFO] [1779673792.760719389] [topic_latency_benchmark]: /ack received at 1779673792.760718107 s  payload='1779673792714433657'
+[INFO] [1779673792.760753019] [topic_latency_benchmark]: Latency /benchmark → /ack: 46.284 ms  (sample 438)
+[INFO] [1779673792.914873145] [topic_latency_benchmark]: /ack received at 1779673792.914871693 s  payload='1779673792814457934'
+[INFO] [1779673792.914912893] [topic_latency_benchmark]: Latency /benchmark → /ack: 0.434 ms  (sample 439)
+[INFO] [1779673793.067425035] [topic_latency_benchmark]: /ack received at 1779673793.067424059 s  payload='1779673792914437970'
+[INFO] [1779673793.067469376] [topic_latency_benchmark]: Latency /benchmark → /ack: 52.958 ms  (sample 440)
+[INFO] [1779673793.266610237] [topic_latency_benchmark]: /ack received at 1779673793.266608953 s  payload='1779673793014465584'
+[INFO] [1779673793.266646262] [topic_latency_benchmark]: Latency /benchmark → /ack: 52.146 ms  (sample 441)
+[INFO] [1779673793.325285530] [topic_latency_benchmark]: /ack received at 1779673793.325284719 s  payload='1779673793114451312'
+[INFO] [1779673793.325316985] [topic_latency_benchmark]: Latency /benchmark → /ack: 10.829 ms  (sample 442)
+[INFO] [1779673793.325334117] [topic_latency_benchmark]: /ack received at 1779673793.325334072 s  payload='1779673793214462608'
+[INFO] [1779673793.325339702] [topic_latency_benchmark]: Latency /benchmark → /ack: 10.879 ms  (sample 443)
+[INFO] [1779673793.378271453] [topic_latency_benchmark]: /ack received at 1779673793.378270149 s  payload='1779673793314455149'
+[INFO] [1779673793.378304516] [topic_latency_benchmark]: Latency /benchmark → /ack: 63.815 ms  (sample 444)
+[INFO] [1779673793.447583082] [topic_latency_benchmark]: /ack received at 1779673793.447582006 s  payload='1779673793414422986'
+[INFO] [1779673793.447620696] [topic_latency_benchmark]: Latency /benchmark → /ack: 33.159 ms  (sample 445)
+[INFO] [1779673793.536286527] [topic_latency_benchmark]: /ack received at 1779673793.536285639 s  payload='1779673793514450667'
+[INFO] [1779673793.536320233] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.835 ms  (sample 446)
+[INFO] [1779673793.684037893] [topic_latency_benchmark]: /ack received at 1779673793.684036493 s  payload='1779673793614502636'
+[INFO] [1779673793.684073357] [topic_latency_benchmark]: Latency /benchmark → /ack: 69.534 ms  (sample 447)
+[INFO] [1779673793.737649932] [topic_latency_benchmark]: /ack received at 1779673793.737648726 s  payload='1779673793714446758'
+[INFO] [1779673793.737679278] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.202 ms  (sample 448)
+[INFO] [1779673793.829609791] [topic_latency_benchmark]: /ack received at 1779673793.829608440 s  payload='1779673793814437872'
+[INFO] [1779673793.829640376] [topic_latency_benchmark]: Latency /benchmark → /ack: 15.170 ms  (sample 449)
+[INFO] [1779673793.977989139] [topic_latency_benchmark]: /ack received at 1779673793.977987528 s  payload='1779673793914387963'
+[INFO] [1779673793.978037083] [topic_latency_benchmark]: Latency /benchmark → /ack: 63.600 ms  (sample 450)
+[INFO] [1779673794.030566712] [topic_latency_benchmark]: /ack received at 1779673794.030565739 s  payload='1779673794014433237'
+[INFO] [1779673794.030608557] [topic_latency_benchmark]: Latency /benchmark → /ack: 16.132 ms  (sample 451)
+[INFO] [1779673794.156379748] [topic_latency_benchmark]: /ack received at 1779673794.156378508 s  payload='1779673794114411574'
+[INFO] [1779673794.156411079] [topic_latency_benchmark]: Latency /benchmark → /ack: 41.967 ms  (sample 452)
+[INFO] [1779673794.231153732] [topic_latency_benchmark]: /ack received at 1779673794.231152534 s  payload='1779673794214412309'
+[INFO] [1779673794.231189137] [topic_latency_benchmark]: Latency /benchmark → /ack: 16.740 ms  (sample 453)
+[INFO] [1779673794.367275625] [topic_latency_benchmark]: /ack received at 1779673794.367274523 s  payload='1779673794314410956'
+[INFO] [1779673794.367308307] [topic_latency_benchmark]: Latency /benchmark → /ack: 52.864 ms  (sample 454)
+[INFO] [1779673794.515164141] [topic_latency_benchmark]: /ack received at 1779673794.515162945 s  payload='1779673794414408051'
+[INFO] [1779673794.515226107] [topic_latency_benchmark]: Latency /benchmark → /ack: 0.753 ms  (sample 455)
+[INFO] [1779673794.578962717] [topic_latency_benchmark]: /ack received at 1779673794.578961372 s  payload='1779673794514409913'
+[INFO] [1779673794.578997871] [topic_latency_benchmark]: Latency /benchmark → /ack: 64.551 ms  (sample 456)
+[INFO] [1779673794.710339212] [topic_latency_benchmark]: /ack received at 1779673794.710338116 s  payload='1779673794614405675'
+[INFO] [1779673794.710370670] [topic_latency_benchmark]: Latency /benchmark → /ack: 95.932 ms  (sample 457)
+[INFO] [1779673794.774741372] [topic_latency_benchmark]: /ack received at 1779673794.774739981 s  payload='1779673794714395391'
+[INFO] [1779673794.774777023] [topic_latency_benchmark]: Latency /benchmark → /ack: 60.345 ms  (sample 458)
+[INFO] [1779673794.846915554] [topic_latency_benchmark]: /ack received at 1779673794.846914530 s  payload='1779673794814407811'
+[INFO] [1779673794.846944270] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.507 ms  (sample 459)
+[INFO] [1779673795.063720335] [topic_latency_benchmark]: /ack received at 1779673795.063719511 s  payload='1779673794914394106'
+[INFO] [1779673795.063755911] [topic_latency_benchmark]: Latency /benchmark → /ack: 49.322 ms  (sample 460)
+[INFO] [1779673795.088893591] [topic_latency_benchmark]: /ack received at 1779673795.088892698 s  payload='1779673795014397787'
+[INFO] [1779673795.088927068] [topic_latency_benchmark]: Latency /benchmark → /ack: 74.495 ms  (sample 461)
+[INFO] [1779673795.180096767] [topic_latency_benchmark]: /ack received at 1779673795.180093765 s  payload='1779673795114404204'
+[INFO] [1779673795.180135960] [topic_latency_benchmark]: Latency /benchmark → /ack: 65.690 ms  (sample 462)
+[INFO] [1779673795.275332965] [topic_latency_benchmark]: /ack received at 1779673795.275331497 s  payload='1779673795214386777'
+[INFO] [1779673795.275366709] [topic_latency_benchmark]: Latency /benchmark → /ack: 60.945 ms  (sample 463)
+[INFO] [1779673795.346914811] [topic_latency_benchmark]: /ack received at 1779673795.346913815 s  payload='1779673795314386161'
+[INFO] [1779673795.346940616] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.528 ms  (sample 464)
+[INFO] [1779673795.475448907] [topic_latency_benchmark]: /ack received at 1779673795.475445986 s  payload='1779673795414384149'
+[INFO] [1779673795.475484443] [topic_latency_benchmark]: Latency /benchmark → /ack: 61.062 ms  (sample 465)
+[INFO] [1779673795.553712599] [topic_latency_benchmark]: /ack received at 1779673795.553711653 s  payload='1779673795514388989'
+[INFO] [1779673795.553745922] [topic_latency_benchmark]: Latency /benchmark → /ack: 39.323 ms  (sample 466)
+[INFO] [1779673795.663455609] [topic_latency_benchmark]: /ack received at 1779673795.663454533 s  payload='1779673795614392640'
+[INFO] [1779673795.663485926] [topic_latency_benchmark]: Latency /benchmark → /ack: 49.062 ms  (sample 467)
+[INFO] [1779673795.762995521] [topic_latency_benchmark]: /ack received at 1779673795.762994766 s  payload='1779673795714380310'
+[INFO] [1779673795.763027369] [topic_latency_benchmark]: Latency /benchmark → /ack: 48.614 ms  (sample 468)
+[INFO] [1779673795.894760496] [topic_latency_benchmark]: /ack received at 1779673795.894759417 s  payload='1779673795814386307'
+[INFO] [1779673795.894794095] [topic_latency_benchmark]: Latency /benchmark → /ack: 80.373 ms  (sample 469)
+[INFO] [1779673795.973869411] [topic_latency_benchmark]: /ack received at 1779673795.973868370 s  payload='1779673795914372116'
+[INFO] [1779673795.973899814] [topic_latency_benchmark]: Latency /benchmark → /ack: 59.496 ms  (sample 470)
+[INFO] [1779673796.106560408] [topic_latency_benchmark]: /ack received at 1779673796.106559515 s  payload='1779673796014401389'
+[INFO] [1779673796.106597706] [topic_latency_benchmark]: Latency /benchmark → /ack: 92.158 ms  (sample 471)
+[INFO] [1779673796.163145787] [topic_latency_benchmark]: /ack received at 1779673796.163144588 s  payload='1779673796114391453'
+[INFO] [1779673796.163173232] [topic_latency_benchmark]: Latency /benchmark → /ack: 48.753 ms  (sample 472)
+[INFO] [1779673796.274917872] [topic_latency_benchmark]: /ack received at 1779673796.274916887 s  payload='1779673796214381207'
+[INFO] [1779673796.274949835] [topic_latency_benchmark]: Latency /benchmark → /ack: 60.536 ms  (sample 473)
+[INFO] [1779673796.379935339] [topic_latency_benchmark]: /ack received at 1779673796.379934311 s  payload='1779673796314383279'
+[INFO] [1779673796.379966111] [topic_latency_benchmark]: Latency /benchmark → /ack: 65.551 ms  (sample 474)
+[INFO] [1779673796.496579283] [topic_latency_benchmark]: /ack received at 1779673796.496575594 s  payload='1779673796414394335'
+[INFO] [1779673796.496621995] [topic_latency_benchmark]: Latency /benchmark → /ack: 82.181 ms  (sample 475)
+[INFO] [1779673796.576286954] [topic_latency_benchmark]: /ack received at 1779673796.576285839 s  payload='1779673796514395433'
+[INFO] [1779673796.576318533] [topic_latency_benchmark]: Latency /benchmark → /ack: 61.891 ms  (sample 476)
+[INFO] [1779673796.614444153] [topic_latency_benchmark]: Stats over 476 samples: min=0.434 ms  avg=40.006 ms  max=98.956 ms
+[INFO] [1779673796.667630751] [topic_latency_benchmark]: /ack received at 1779673796.667628050 s  payload='1779673796614393386'
+[INFO] [1779673796.667651280] [topic_latency_benchmark]: Latency /benchmark → /ack: 53.235 ms  (sample 477)
+[INFO] [1779673796.778577484] [topic_latency_benchmark]: /ack received at 1779673796.778576374 s  payload='1779673796714389636'
+[INFO] [1779673796.778617788] [topic_latency_benchmark]: Latency /benchmark → /ack: 64.187 ms  (sample 478)
+[INFO] [1779673796.866627522] [topic_latency_benchmark]: /ack received at 1779673796.866624594 s  payload='1779673796814389785'
+[INFO] [1779673796.866711411] [topic_latency_benchmark]: Latency /benchmark → /ack: 52.235 ms  (sample 479)
+[INFO] [1779673796.993630265] [topic_latency_benchmark]: /ack received at 1779673796.993629217 s  payload='1779673796914382751'
+[INFO] [1779673796.993681505] [topic_latency_benchmark]: Latency /benchmark → /ack: 79.247 ms  (sample 480)
+[INFO] [1779673797.066715511] [topic_latency_benchmark]: /ack received at 1779673797.066714525 s  payload='1779673797014377996'
+[INFO] [1779673797.066773037] [topic_latency_benchmark]: Latency /benchmark → /ack: 52.337 ms  (sample 481)
+[INFO] [1779673797.180706163] [topic_latency_benchmark]: /ack received at 1779673797.180702925 s  payload='1779673797114396692'
+[INFO] [1779673797.180738850] [topic_latency_benchmark]: Latency /benchmark → /ack: 66.306 ms  (sample 482)
+[INFO] [1779673797.280361105] [topic_latency_benchmark]: /ack received at 1779673797.280360222 s  payload='1779673797214406067'
+[INFO] [1779673797.280391761] [topic_latency_benchmark]: Latency /benchmark → /ack: 65.954 ms  (sample 483)
+[INFO] [1779673797.426631956] [topic_latency_benchmark]: /ack received at 1779673797.426630974 s  payload='1779673797314387104'
+[INFO] [1779673797.426666684] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.271 ms  (sample 484)
+[INFO] [1779673797.492138627] [topic_latency_benchmark]: /ack received at 1779673797.492135525 s  payload='1779673797414359558'
+[INFO] [1779673797.492179787] [topic_latency_benchmark]: Latency /benchmark → /ack: 77.776 ms  (sample 485)
+[INFO] [1779673797.548584025] [topic_latency_benchmark]: /ack received at 1779673797.548583031 s  payload='1779673797514365585'
+[INFO] [1779673797.548621839] [topic_latency_benchmark]: Latency /benchmark → /ack: 34.217 ms  (sample 486)
+[INFO] [1779673797.667086017] [topic_latency_benchmark]: /ack received at 1779673797.667084694 s  payload='1779673797614353307'
+[INFO] [1779673797.667125392] [topic_latency_benchmark]: Latency /benchmark → /ack: 52.731 ms  (sample 487)
+[INFO] [1779673797.737753998] [topic_latency_benchmark]: /ack received at 1779673797.737750769 s  payload='1779673797714390133'
+[INFO] [1779673797.737788451] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.361 ms  (sample 488)
+[INFO] [1779673797.849324268] [topic_latency_benchmark]: /ack received at 1779673797.849323511 s  payload='1779673797814388829'
+[INFO] [1779673797.849379836] [topic_latency_benchmark]: Latency /benchmark → /ack: 34.935 ms  (sample 489)
+[INFO] [1779673797.980720078] [topic_latency_benchmark]: /ack received at 1779673797.980716944 s  payload='1779673797914394009'
+[INFO] [1779673797.980761060] [topic_latency_benchmark]: Latency /benchmark → /ack: 66.323 ms  (sample 490)
+[INFO] [1779673798.055086773] [topic_latency_benchmark]: /ack received at 1779673798.055085897 s  payload='1779673798014388345'
+[INFO] [1779673798.055120381] [topic_latency_benchmark]: Latency /benchmark → /ack: 40.698 ms  (sample 491)
+[INFO] [1779673798.155801785] [topic_latency_benchmark]: /ack received at 1779673798.155800819 s  payload='1779673798114386596'
+[INFO] [1779673798.155834743] [topic_latency_benchmark]: Latency /benchmark → /ack: 41.414 ms  (sample 492)
+[INFO] [1779673798.254911884] [topic_latency_benchmark]: /ack received at 1779673798.254909039 s  payload='1779673798214407249'
+[INFO] [1779673798.254954543] [topic_latency_benchmark]: Latency /benchmark → /ack: 40.502 ms  (sample 493)
+[INFO] [1779673798.354705888] [topic_latency_benchmark]: /ack received at 1779673798.354702950 s  payload='1779673798314527435'
+[INFO] [1779673798.354751965] [topic_latency_benchmark]: Latency /benchmark → /ack: 40.175 ms  (sample 494)
+[INFO] [1779673798.466463045] [topic_latency_benchmark]: /ack received at 1779673798.466461420 s  payload='1779673798414374790'
+[INFO] [1779673798.466521492] [topic_latency_benchmark]: Latency /benchmark → /ack: 52.087 ms  (sample 495)
+[INFO] [1779673798.688458393] [topic_latency_benchmark]: /ack received at 1779673798.688457012 s  payload='1779673798514386451'
+[INFO] [1779673798.688506020] [topic_latency_benchmark]: Latency /benchmark → /ack: 74.072 ms  (sample 496)
+[INFO] [1779673798.725623281] [topic_latency_benchmark]: /ack received at 1779673798.725621700 s  payload='1779673798614384984'
+[INFO] [1779673798.725656127] [topic_latency_benchmark]: Latency /benchmark → /ack: 11.283 ms  (sample 497)
+[INFO] [1779673798.755161972] [topic_latency_benchmark]: /ack received at 1779673798.755161047 s  payload='1779673798714339274'
+[INFO] [1779673798.755189320] [topic_latency_benchmark]: Latency /benchmark → /ack: 40.822 ms  (sample 498)
+[INFO] [1779673798.850569852] [topic_latency_benchmark]: /ack received at 1779673798.850568533 s  payload='1779673798814345759'
+[INFO] [1779673798.850617616] [topic_latency_benchmark]: Latency /benchmark → /ack: 36.223 ms  (sample 499)
+[INFO] [1779673799.014983785] [topic_latency_benchmark]: /ack received at 1779673799.014982224 s  payload='1779673798914344453'
+[INFO] [1779673799.015027879] [topic_latency_benchmark]: Latency /benchmark → /ack: 0.641 ms  (sample 500)
+[INFO] [1779673799.077055131] [topic_latency_benchmark]: /ack received at 1779673799.077053547 s  payload='1779673799014341700'
+[INFO] [1779673799.077096651] [topic_latency_benchmark]: Latency /benchmark → /ack: 62.712 ms  (sample 501)
+[INFO] [1779673799.158440882] [topic_latency_benchmark]: /ack received at 1779673799.158439398 s  payload='1779673799114331826'
+[INFO] [1779673799.158477952] [topic_latency_benchmark]: Latency /benchmark → /ack: 44.108 ms  (sample 502)
+[INFO] [1779673799.236859355] [topic_latency_benchmark]: /ack received at 1779673799.236857891 s  payload='1779673799214371007'
+[INFO] [1779673799.236898320] [topic_latency_benchmark]: Latency /benchmark → /ack: 22.487 ms  (sample 503)
+[INFO] [1779673799.337665801] [topic_latency_benchmark]: /ack received at 1779673799.337664366 s  payload='1779673799314338270'
+[INFO] [1779673799.337710513] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.326 ms  (sample 504)
+[INFO] [1779673799.499831640] [topic_latency_benchmark]: /ack received at 1779673799.499830246 s  payload='1779673799414371291'
+[INFO] [1779673799.499877630] [topic_latency_benchmark]: Latency /benchmark → /ack: 85.459 ms  (sample 505)
+[INFO] [1779673799.555243857] [topic_latency_benchmark]: /ack received at 1779673799.555242777 s  payload='1779673799514320749'
+[INFO] [1779673799.555277028] [topic_latency_benchmark]: Latency /benchmark → /ack: 40.922 ms  (sample 506)
+[INFO] [1779673799.637649387] [topic_latency_benchmark]: /ack received at 1779673799.637648106 s  payload='1779673799614330839'
+[INFO] [1779673799.637688897] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.317 ms  (sample 507)
+[INFO] [1779673799.740974324] [topic_latency_benchmark]: /ack received at 1779673799.740972519 s  payload='1779673799714286677'
+[INFO] [1779673799.741018464] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.686 ms  (sample 508)
+[INFO] [1779673800.002911598] [topic_latency_benchmark]: /ack received at 1779673800.002909660 s  payload='1779673799814328317'
+[INFO] [1779673800.002958560] [topic_latency_benchmark]: Latency /benchmark → /ack: 88.573 ms  (sample 509)
+[INFO] [1779673800.102916067] [topic_latency_benchmark]: /ack received at 1779673800.102914572 s  payload='1779673799914337118'
+[INFO] [1779673800.102955710] [topic_latency_benchmark]: Latency /benchmark → /ack: 88.596 ms  (sample 510)
+[INFO] [1779673800.126345404] [topic_latency_benchmark]: /ack received at 1779673800.126344681 s  payload='1779673800014318908'
+[INFO] [1779673800.126368629] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.036 ms  (sample 511)
+[INFO] [1779673800.163448155] [topic_latency_benchmark]: /ack received at 1779673800.163446665 s  payload='1779673800114308519'
+[INFO] [1779673800.163485700] [topic_latency_benchmark]: Latency /benchmark → /ack: 49.138 ms  (sample 512)
+[INFO] [1779673800.251077198] [topic_latency_benchmark]: /ack received at 1779673800.251075506 s  payload='1779673800214322809'
+[INFO] [1779673800.251124462] [topic_latency_benchmark]: Latency /benchmark → /ack: 36.753 ms  (sample 513)
+[INFO] [1779673800.353553465] [topic_latency_benchmark]: /ack received at 1779673800.353552341 s  payload='1779673800314357674'
+[INFO] [1779673800.353595309] [topic_latency_benchmark]: Latency /benchmark → /ack: 39.195 ms  (sample 514)
+[INFO] [1779673800.453294991] [topic_latency_benchmark]: /ack received at 1779673800.453292370 s  payload='1779673800414380638'
+[INFO] [1779673800.453366253] [topic_latency_benchmark]: Latency /benchmark → /ack: 38.912 ms  (sample 515)
+[INFO] [1779673800.614992404] [topic_latency_benchmark]: /ack received at 1779673800.614991188 s  payload='1779673800514475970'
+[INFO] [1779673800.615030027] [topic_latency_benchmark]: Latency /benchmark → /ack: 0.667 ms  (sample 516)
+[INFO] [1779673800.663025581] [topic_latency_benchmark]: /ack received at 1779673800.663024187 s  payload='1779673800614324470'
+[INFO] [1779673800.663065829] [topic_latency_benchmark]: Latency /benchmark → /ack: 48.700 ms  (sample 517)
+[INFO] [1779673800.773241942] [topic_latency_benchmark]: /ack received at 1779673800.773240328 s  payload='1779673800714314005'
+[INFO] [1779673800.773286632] [topic_latency_benchmark]: Latency /benchmark → /ack: 58.926 ms  (sample 518)
+[INFO] [1779673800.893492653] [topic_latency_benchmark]: /ack received at 1779673800.893490791 s  payload='1779673800814313725'
+[INFO] [1779673800.893538413] [topic_latency_benchmark]: Latency /benchmark → /ack: 79.177 ms  (sample 519)
+[INFO] [1779673800.963508027] [topic_latency_benchmark]: /ack received at 1779673800.963506460 s  payload='1779673800914309465'
+[INFO] [1779673800.963555126] [topic_latency_benchmark]: Latency /benchmark → /ack: 49.197 ms  (sample 520)
+[INFO] [1779673801.114870314] [topic_latency_benchmark]: /ack received at 1779673801.114868402 s  payload='1779673801014341909'
+[INFO] [1779673801.114918426] [topic_latency_benchmark]: Latency /benchmark → /ack: 0.557 ms  (sample 521)
+[INFO] [1779673801.141237023] [topic_latency_benchmark]: /ack received at 1779673801.141235828 s  payload='1779673801114311028'
+[INFO] [1779673801.141271497] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.925 ms  (sample 522)
+[INFO] [1779673801.315057458] [topic_latency_benchmark]: /ack received at 1779673801.315056086 s  payload='1779673801214341479'
+[INFO] [1779673801.315099970] [topic_latency_benchmark]: Latency /benchmark → /ack: 0.750 ms  (sample 523)
+[INFO] [1779673801.341263503] [topic_latency_benchmark]: /ack received at 1779673801.341262817 s  payload='1779673801314306176'
+[INFO] [1779673801.341290251] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.957 ms  (sample 524)
+[INFO] [1779673801.458864350] [topic_latency_benchmark]: /ack received at 1779673801.458862066 s  payload='1779673801414303598'
+[INFO] [1779673801.458912432] [topic_latency_benchmark]: Latency /benchmark → /ack: 44.559 ms  (sample 525)
+[INFO] [1779673801.558482445] [topic_latency_benchmark]: /ack received at 1779673801.558480501 s  payload='1779673801514301874'
+[INFO] [1779673801.558536971] [topic_latency_benchmark]: Latency /benchmark → /ack: 44.178 ms  (sample 526)
+[INFO] [1779673801.614373422] [topic_latency_benchmark]: Stats over 526 samples: min=0.434 ms  avg=40.340 ms  max=98.956 ms
+[INFO] [1779673801.638100478] [topic_latency_benchmark]: /ack received at 1779673801.638099194 s  payload='1779673801614332998'
+[INFO] [1779673801.638143896] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.766 ms  (sample 527)
+[INFO] [1779673801.736672015] [topic_latency_benchmark]: /ack received at 1779673801.736670732 s  payload='1779673801714292779'
+[INFO] [1779673801.736709746] [topic_latency_benchmark]: Latency /benchmark → /ack: 22.378 ms  (sample 528)
+[INFO] [1779673801.858549205] [topic_latency_benchmark]: /ack received at 1779673801.858547449 s  payload='1779673801814297282'
+[INFO] [1779673801.858601917] [topic_latency_benchmark]: Latency /benchmark → /ack: 44.250 ms  (sample 529)
+[INFO] [1779673801.958135839] [topic_latency_benchmark]: /ack received at 1779673801.958131790 s  payload='1779673801914329668'
+[INFO] [1779673801.958183529] [topic_latency_benchmark]: Latency /benchmark → /ack: 43.802 ms  (sample 530)
+[INFO] [1779673802.069365293] [topic_latency_benchmark]: /ack received at 1779673802.069364071 s  payload='1779673802014288873'
+[INFO] [1779673802.069407667] [topic_latency_benchmark]: Latency /benchmark → /ack: 55.075 ms  (sample 531)
+[INFO] [1779673802.327370576] [topic_latency_benchmark]: /ack received at 1779673802.327368975 s  payload='1779673802114326389'
+[INFO] [1779673802.327412359] [topic_latency_benchmark]: Latency /benchmark → /ack: 13.081 ms  (sample 532)
+[INFO] [1779673802.426230279] [topic_latency_benchmark]: /ack received at 1779673802.426229239 s  payload='1779673802214314331'
+[INFO] [1779673802.426286994] [topic_latency_benchmark]: Latency /benchmark → /ack: 11.949 ms  (sample 533)
+[INFO] [1779673802.426301450] [topic_latency_benchmark]: /ack received at 1779673802.426301241 s  payload='1779673802314287813'
+[INFO] [1779673802.426307249] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.021 ms  (sample 534)
+[INFO] [1779673802.495343566] [topic_latency_benchmark]: /ack received at 1779673802.495342016 s  payload='1779673802414279932'
+[INFO] [1779673802.495376822] [topic_latency_benchmark]: Latency /benchmark → /ack: 81.062 ms  (sample 535)
+[INFO] [1779673802.558394032] [topic_latency_benchmark]: /ack received at 1779673802.558393002 s  payload='1779673802514274318'
+[INFO] [1779673802.558422985] [topic_latency_benchmark]: Latency /benchmark → /ack: 44.119 ms  (sample 536)
+[INFO] [1779673802.636558621] [topic_latency_benchmark]: /ack received at 1779673802.636555195 s  payload='1779673802614304001'
+[INFO] [1779673802.636596993] [topic_latency_benchmark]: Latency /benchmark → /ack: 22.251 ms  (sample 537)
+[INFO] [1779673802.737052775] [topic_latency_benchmark]: /ack received at 1779673802.737051487 s  payload='1779673802714305457'
+[INFO] [1779673802.737093135] [topic_latency_benchmark]: Latency /benchmark → /ack: 22.746 ms  (sample 538)
+[INFO] [1779673802.857989740] [topic_latency_benchmark]: /ack received at 1779673802.857988596 s  payload='1779673802814272780'
+[INFO] [1779673802.858021422] [topic_latency_benchmark]: Latency /benchmark → /ack: 43.716 ms  (sample 539)
+[INFO] [1779673802.947435271] [topic_latency_benchmark]: /ack received at 1779673802.947433949 s  payload='1779673802914277544'
+[INFO] [1779673802.947466009] [topic_latency_benchmark]: Latency /benchmark → /ack: 33.157 ms  (sample 540)
+[INFO] [1779673803.037247671] [topic_latency_benchmark]: /ack received at 1779673803.037244320 s  payload='1779673803014299317'
+[INFO] [1779673803.037278892] [topic_latency_benchmark]: Latency /benchmark → /ack: 22.945 ms  (sample 541)
+[INFO] [1779673803.243479185] [topic_latency_benchmark]: /ack received at 1779673803.243477821 s  payload='1779673803114275307'
+[INFO] [1779673803.243508616] [topic_latency_benchmark]: Latency /benchmark → /ack: 29.211 ms  (sample 542)
+[INFO] [1779673803.285579818] [topic_latency_benchmark]: /ack received at 1779673803.285578728 s  payload='1779673803214267024'
+[INFO] [1779673803.285622026] [topic_latency_benchmark]: Latency /benchmark → /ack: 71.312 ms  (sample 543)
+[INFO] [1779673803.326791242] [topic_latency_benchmark]: /ack received at 1779673803.326790094 s  payload='1779673803314299724'
+[INFO] [1779673803.326827103] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.490 ms  (sample 544)
+[INFO] [1779673803.442789518] [topic_latency_benchmark]: /ack received at 1779673803.442788363 s  payload='1779673803414292122'
+[INFO] [1779673803.442819717] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.496 ms  (sample 545)
+[INFO] [1779673803.543243084] [topic_latency_benchmark]: /ack received at 1779673803.543241024 s  payload='1779673803514267347'
+[INFO] [1779673803.543284685] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.974 ms  (sample 546)
+[INFO] [1779673803.643336535] [topic_latency_benchmark]: /ack received at 1779673803.643335104 s  payload='1779673803614291307'
+[INFO] [1779673803.643368465] [topic_latency_benchmark]: Latency /benchmark → /ack: 29.044 ms  (sample 547)
+[INFO] [1779673803.842741892] [topic_latency_benchmark]: /ack received at 1779673803.842737198 s  payload='1779673803714257949'
+[INFO] [1779673803.842771711] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.481 ms  (sample 548)
+[INFO] [1779673804.011860460] [topic_latency_benchmark]: /ack received at 1779673804.011859179 s  payload='1779673803814255938'
+[INFO] [1779673804.011896352] [topic_latency_benchmark]: Latency /benchmark → /ack: 97.604 ms  (sample 549)
+[INFO] [1779673804.043884007] [topic_latency_benchmark]: /ack received at 1779673804.043883085 s  payload='1779673803914255146'
+[INFO] [1779673804.043921841] [topic_latency_benchmark]: Latency /benchmark → /ack: 29.476 ms  (sample 550)
+[INFO] [1779673804.055488323] [topic_latency_benchmark]: /ack received at 1779673804.055487394 s  payload='1779673804014406710'
+[INFO] [1779673804.055512806] [topic_latency_benchmark]: Latency /benchmark → /ack: 41.081 ms  (sample 551)
+[INFO] [1779673804.253545253] [topic_latency_benchmark]: /ack received at 1779673804.253543854 s  payload='1779673804114414447'
+[INFO] [1779673804.253596579] [topic_latency_benchmark]: Latency /benchmark → /ack: 39.276 ms  (sample 552)
+[INFO] [1779673804.275966768] [topic_latency_benchmark]: /ack received at 1779673804.275966167 s  payload='1779673804214268399'
+[INFO] [1779673804.275992017] [topic_latency_benchmark]: Latency /benchmark → /ack: 61.698 ms  (sample 553)
+[INFO] [1779673804.407918342] [topic_latency_benchmark]: /ack received at 1779673804.407917261 s  payload='1779673804314505604'
+[INFO] [1779673804.407996077] [topic_latency_benchmark]: Latency /benchmark → /ack: 93.412 ms  (sample 554)
+[INFO] [1779673804.532227587] [topic_latency_benchmark]: /ack received at 1779673804.532223701 s  payload='1779673804414239248'
+[INFO] [1779673804.532282222] [topic_latency_benchmark]: Latency /benchmark → /ack: 18.000 ms  (sample 555)
+[INFO] [1779673804.664634915] [topic_latency_benchmark]: /ack received at 1779673804.664633512 s  payload='1779673804514223627'
+[INFO] [1779673804.664672400] [topic_latency_benchmark]: Latency /benchmark → /ack: 50.339 ms  (sample 556)
+[INFO] [1779673804.686083085] [topic_latency_benchmark]: /ack received at 1779673804.686082125 s  payload='1779673804614294745'
+[INFO] [1779673804.686114706] [topic_latency_benchmark]: Latency /benchmark → /ack: 71.787 ms  (sample 557)
+[INFO] [1779673804.726508942] [topic_latency_benchmark]: /ack received at 1779673804.726508141 s  payload='1779673804714243620'
+[INFO] [1779673804.726534975] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.265 ms  (sample 558)
+[INFO] [1779673804.865037418] [topic_latency_benchmark]: /ack received at 1779673804.865035772 s  payload='1779673804814240775'
+[INFO] [1779673804.865079661] [topic_latency_benchmark]: Latency /benchmark → /ack: 50.795 ms  (sample 559)
+[INFO] [1779673804.949964673] [topic_latency_benchmark]: /ack received at 1779673804.949963331 s  payload='1779673804914383403'
+[INFO] [1779673804.950002644] [topic_latency_benchmark]: Latency /benchmark → /ack: 35.580 ms  (sample 560)
+[INFO] [1779673805.040518631] [topic_latency_benchmark]: /ack received at 1779673805.040516615 s  payload='1779673805014240019'
+[INFO] [1779673805.040565306] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.277 ms  (sample 561)
+[INFO] [1779673805.150898997] [topic_latency_benchmark]: /ack received at 1779673805.150897503 s  payload='1779673805114247625'
+[INFO] [1779673805.150940744] [topic_latency_benchmark]: Latency /benchmark → /ack: 36.650 ms  (sample 562)
+[INFO] [1779673805.239001013] [topic_latency_benchmark]: /ack received at 1779673805.238999605 s  payload='1779673805214276535'
+[INFO] [1779673805.239042397] [topic_latency_benchmark]: Latency /benchmark → /ack: 24.723 ms  (sample 563)
+[INFO] [1779673805.339349273] [topic_latency_benchmark]: /ack received at 1779673805.339346886 s  payload='1779673805314241433'
+[INFO] [1779673805.339409110] [topic_latency_benchmark]: Latency /benchmark → /ack: 25.105 ms  (sample 564)
+[INFO] [1779673805.482912163] [topic_latency_benchmark]: /ack received at 1779673805.482910395 s  payload='1779673805414231267'
+[INFO] [1779673805.482956785] [topic_latency_benchmark]: Latency /benchmark → /ack: 68.679 ms  (sample 565)
+[INFO] [1779673805.571605745] [topic_latency_benchmark]: /ack received at 1779673805.571604490 s  payload='1779673805514231692'
+[INFO] [1779673805.571638807] [topic_latency_benchmark]: Latency /benchmark → /ack: 57.373 ms  (sample 566)
+[INFO] [1779673805.651664273] [topic_latency_benchmark]: /ack received at 1779673805.651662350 s  payload='1779673805614218407'
+[INFO] [1779673805.651716490] [topic_latency_benchmark]: Latency /benchmark → /ack: 37.444 ms  (sample 567)
+[INFO] [1779673805.729007992] [topic_latency_benchmark]: /ack received at 1779673805.729006529 s  payload='1779673805714230898'
+[INFO] [1779673805.729103963] [topic_latency_benchmark]: Latency /benchmark → /ack: 14.776 ms  (sample 568)
+[INFO] [1779673805.839355755] [topic_latency_benchmark]: /ack received at 1779673805.839354277 s  payload='1779673805814252964'
+[INFO] [1779673805.839390778] [topic_latency_benchmark]: Latency /benchmark → /ack: 25.101 ms  (sample 569)
+[INFO] [1779673805.961866562] [topic_latency_benchmark]: /ack received at 1779673805.961865187 s  payload='1779673805914261748'
+[INFO] [1779673805.961903693] [topic_latency_benchmark]: Latency /benchmark → /ack: 47.603 ms  (sample 570)
+[INFO] [1779673806.039086510] [topic_latency_benchmark]: /ack received at 1779673806.039085627 s  payload='1779673806014222738'
+[INFO] [1779673806.039121818] [topic_latency_benchmark]: Latency /benchmark → /ack: 24.863 ms  (sample 571)
+[INFO] [1779673806.139308904] [topic_latency_benchmark]: /ack received at 1779673806.139307976 s  payload='1779673806114244001'
+[INFO] [1779673806.139340028] [topic_latency_benchmark]: Latency /benchmark → /ack: 25.064 ms  (sample 572)
+[INFO] [1779673806.240125373] [topic_latency_benchmark]: /ack received at 1779673806.240123987 s  payload='1779673806214250867'
+[INFO] [1779673806.240167939] [topic_latency_benchmark]: Latency /benchmark → /ack: 25.873 ms  (sample 573)
+[INFO] [1779673806.350801025] [topic_latency_benchmark]: /ack received at 1779673806.350799322 s  payload='1779673806314249530'
+[INFO] [1779673806.350844517] [topic_latency_benchmark]: Latency /benchmark → /ack: 36.550 ms  (sample 574)
+[INFO] [1779673806.439355156] [topic_latency_benchmark]: /ack received at 1779673806.439353704 s  payload='1779673806414224637'
+[INFO] [1779673806.439400134] [topic_latency_benchmark]: Latency /benchmark → /ack: 25.129 ms  (sample 575)
+[INFO] [1779673806.561300590] [topic_latency_benchmark]: /ack received at 1779673806.561299086 s  payload='1779673806514262941'
+[INFO] [1779673806.561346321] [topic_latency_benchmark]: Latency /benchmark → /ack: 47.036 ms  (sample 576)
+[INFO] [1779673806.614292661] [topic_latency_benchmark]: Stats over 576 samples: min=0.434 ms  avg=40.091 ms  max=98.956 ms
+[INFO] [1779673806.626179744] [topic_latency_benchmark]: /ack received at 1779673806.626178503 s  payload='1779673806614252225'
+[INFO] [1779673806.626213709] [topic_latency_benchmark]: Latency /benchmark → /ack: 11.926 ms  (sample 577)
+[INFO] [1779673806.815100968] [topic_latency_benchmark]: /ack received at 1779673806.815099478 s  payload='1779673806714246154'
+[INFO] [1779673806.815143102] [topic_latency_benchmark]: Latency /benchmark → /ack: 0.832 ms  (sample 578)
+[INFO] [1779673806.846501970] [topic_latency_benchmark]: /ack received at 1779673806.846500874 s  payload='1779673806814267375'
+[INFO] [1779673806.846532880] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.233 ms  (sample 579)
+[INFO] [1779673806.971389067] [topic_latency_benchmark]: /ack received at 1779673806.971387386 s  payload='1779673806914297543'
+[INFO] [1779673806.971437042] [topic_latency_benchmark]: Latency /benchmark → /ack: 57.090 ms  (sample 580)
+[INFO] [1779673807.168401519] [topic_latency_benchmark]: /ack received at 1779673807.168399811 s  payload='1779673807014210946'
+[INFO] [1779673807.168447583] [topic_latency_benchmark]: Latency /benchmark → /ack: 54.163 ms  (sample 581)
+[INFO] [1779673807.235405230] [topic_latency_benchmark]: /ack received at 1779673807.235403299 s  payload='1779673807114236831'
+[INFO] [1779673807.235448201] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.158 ms  (sample 582)
+[INFO] [1779673807.278795405] [topic_latency_benchmark]: /ack received at 1779673807.278793812 s  payload='1779673807214245289'
+[INFO] [1779673807.278838100] [topic_latency_benchmark]: Latency /benchmark → /ack: 64.548 ms  (sample 583)
+[INFO] [1779673807.335508279] [topic_latency_benchmark]: /ack received at 1779673807.335506439 s  payload='1779673807314180149'
+[INFO] [1779673807.335552947] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.326 ms  (sample 584)
+[INFO] [1779673807.457074066] [topic_latency_benchmark]: /ack received at 1779673807.457071781 s  payload='1779673807414209644'
+[INFO] [1779673807.457127762] [topic_latency_benchmark]: Latency /benchmark → /ack: 42.862 ms  (sample 585)
+[INFO] [1779673807.535253591] [topic_latency_benchmark]: /ack received at 1779673807.535251856 s  payload='1779673807514208078'
+[INFO] [1779673807.535296420] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.044 ms  (sample 586)
+[INFO] [1779673807.646760855] [topic_latency_benchmark]: /ack received at 1779673807.646759272 s  payload='1779673807614195587'
+[INFO] [1779673807.646798472] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.564 ms  (sample 587)
+[INFO] [1779673807.735784990] [topic_latency_benchmark]: /ack received at 1779673807.735783339 s  payload='1779673807714205077'
+[INFO] [1779673807.735829294] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.578 ms  (sample 588)
+[INFO] [1779673807.835231726] [topic_latency_benchmark]: /ack received at 1779673807.835231066 s  payload='1779673807814225488'
+[INFO] [1779673807.835262595] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.005 ms  (sample 589)
+[INFO] [1779673808.011978663] [topic_latency_benchmark]: /ack received at 1779673808.011976957 s  payload='1779673807914229469'
+[INFO] [1779673808.012024705] [topic_latency_benchmark]: Latency /benchmark → /ack: 97.748 ms  (sample 590)
+[INFO] [1779673808.113633727] [topic_latency_benchmark]: /ack received at 1779673808.113631725 s  payload='1779673808014208079'
+[INFO] [1779673808.113683870] [topic_latency_benchmark]: Latency /benchmark → /ack: 99.424 ms  (sample 591)
+[INFO] [1779673808.136571973] [topic_latency_benchmark]: /ack received at 1779673808.136570930 s  payload='1779673808114203765'
+[INFO] [1779673808.136605712] [topic_latency_benchmark]: Latency /benchmark → /ack: 22.367 ms  (sample 592)
+[INFO] [1779673808.283839786] [topic_latency_benchmark]: /ack received at 1779673808.283837080 s  payload='1779673808214227169'
+[INFO] [1779673808.283895750] [topic_latency_benchmark]: Latency /benchmark → /ack: 69.610 ms  (sample 593)
+[INFO] [1779673808.411944216] [topic_latency_benchmark]: /ack received at 1779673808.411942720 s  payload='1779673808314199102'
+[INFO] [1779673808.411988720] [topic_latency_benchmark]: Latency /benchmark → /ack: 97.744 ms  (sample 594)
+[INFO] [1779673808.458295181] [topic_latency_benchmark]: /ack received at 1779673808.458293676 s  payload='1779673808414177197'
+[INFO] [1779673808.458335681] [topic_latency_benchmark]: Latency /benchmark → /ack: 44.117 ms  (sample 595)
+[INFO] [1779673808.633311295] [topic_latency_benchmark]: /ack received at 1779673808.633309126 s  payload='1779673808514185466'
+[INFO] [1779673808.633366430] [topic_latency_benchmark]: Latency /benchmark → /ack: 19.121 ms  (sample 596)
+[INFO] [1779673808.667300585] [topic_latency_benchmark]: /ack received at 1779673808.667299509 s  payload='1779673808614187979'
+[INFO] [1779673808.667363385] [topic_latency_benchmark]: Latency /benchmark → /ack: 53.112 ms  (sample 597)
+[INFO] [1779673808.733454055] [topic_latency_benchmark]: /ack received at 1779673808.733450890 s  payload='1779673808714183358'
+[INFO] [1779673808.733488524] [topic_latency_benchmark]: Latency /benchmark → /ack: 19.268 ms  (sample 598)
+[INFO] [1779673808.853030926] [topic_latency_benchmark]: /ack received at 1779673808.853027344 s  payload='1779673808814186327'
+[INFO] [1779673808.853079489] [topic_latency_benchmark]: Latency /benchmark → /ack: 38.841 ms  (sample 599)
+[INFO] [1779673808.932257185] [topic_latency_benchmark]: /ack received at 1779673808.932253599 s  payload='1779673808914177936'
+[INFO] [1779673808.932306934] [topic_latency_benchmark]: Latency /benchmark → /ack: 18.076 ms  (sample 600)
+[INFO] [1779673809.032122439] [topic_latency_benchmark]: /ack received at 1779673809.032121181 s  payload='1779673809014147376'
+[INFO] [1779673809.032165861] [topic_latency_benchmark]: Latency /benchmark → /ack: 17.974 ms  (sample 601)
+[INFO] [1779673809.189067240] [topic_latency_benchmark]: /ack received at 1779673809.189065456 s  payload='1779673809114188756'
+[INFO] [1779673809.189112248] [topic_latency_benchmark]: Latency /benchmark → /ack: 74.877 ms  (sample 602)
+[INFO] [1779673809.232390285] [topic_latency_benchmark]: /ack received at 1779673809.232389212 s  payload='1779673809214171398'
+[INFO] [1779673809.232424657] [topic_latency_benchmark]: Latency /benchmark → /ack: 18.218 ms  (sample 603)
+[INFO] [1779673809.342676848] [topic_latency_benchmark]: /ack received at 1779673809.342675686 s  payload='1779673809314176919'
+[INFO] [1779673809.342708128] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.499 ms  (sample 604)
+[INFO] [1779673809.443388881] [topic_latency_benchmark]: /ack received at 1779673809.443387508 s  payload='1779673809414179683'
+[INFO] [1779673809.443434476] [topic_latency_benchmark]: Latency /benchmark → /ack: 29.208 ms  (sample 605)
+[INFO] [1779673809.531491365] [topic_latency_benchmark]: /ack received at 1779673809.531490088 s  payload='1779673809514170423'
+[INFO] [1779673809.531524478] [topic_latency_benchmark]: Latency /benchmark → /ack: 17.320 ms  (sample 606)
+[INFO] [1779673809.632359617] [topic_latency_benchmark]: /ack received at 1779673809.632356405 s  payload='1779673809614167767'
+[INFO] [1779673809.632412131] [topic_latency_benchmark]: Latency /benchmark → /ack: 18.189 ms  (sample 607)
+[INFO] [1779673809.742577696] [topic_latency_benchmark]: /ack received at 1779673809.742576361 s  payload='1779673809714171270'
+[INFO] [1779673809.742641281] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.405 ms  (sample 608)
+[INFO] [1779673809.853632810] [topic_latency_benchmark]: /ack received at 1779673809.853631496 s  payload='1779673809814162944'
+[INFO] [1779673809.853668104] [topic_latency_benchmark]: Latency /benchmark → /ack: 39.469 ms  (sample 609)
+[INFO] [1779673809.939786066] [topic_latency_benchmark]: /ack received at 1779673809.939785242 s  payload='1779673809914155512'
+[INFO] [1779673809.939814430] [topic_latency_benchmark]: Latency /benchmark → /ack: 25.630 ms  (sample 610)
+[INFO] [1779673810.040299014] [topic_latency_benchmark]: /ack received at 1779673810.040297508 s  payload='1779673810014163552'
+[INFO] [1779673810.040339612] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.134 ms  (sample 611)
+[INFO] [1779673810.152052636] [topic_latency_benchmark]: /ack received at 1779673810.152050972 s  payload='1779673810114171343'
+[INFO] [1779673810.152100396] [topic_latency_benchmark]: Latency /benchmark → /ack: 37.880 ms  (sample 612)
+[INFO] [1779673810.279656711] [topic_latency_benchmark]: /ack received at 1779673810.279655695 s  payload='1779673810214154550'
+[INFO] [1779673810.279689493] [topic_latency_benchmark]: Latency /benchmark → /ack: 65.501 ms  (sample 613)
+[INFO] [1779673810.352595515] [topic_latency_benchmark]: /ack received at 1779673810.352593899 s  payload='1779673810314153616'
+[INFO] [1779673810.352632475] [topic_latency_benchmark]: Latency /benchmark → /ack: 38.440 ms  (sample 614)
+[INFO] [1779673810.487728961] [topic_latency_benchmark]: /ack received at 1779673810.487727642 s  payload='1779673810414154109'
+[INFO] [1779673810.487769061] [topic_latency_benchmark]: Latency /benchmark → /ack: 73.573 ms  (sample 615)
+[INFO] [1779673810.587008711] [topic_latency_benchmark]: /ack received at 1779673810.587007284 s  payload='1779673810514151853'
+[INFO] [1779673810.587049598] [topic_latency_benchmark]: Latency /benchmark → /ack: 72.855 ms  (sample 616)
+[INFO] [1779673810.649694802] [topic_latency_benchmark]: /ack received at 1779673810.649693489 s  payload='1779673810614149266'
+[INFO] [1779673810.649732081] [topic_latency_benchmark]: Latency /benchmark → /ack: 35.544 ms  (sample 617)
+[INFO] [1779673810.759488963] [topic_latency_benchmark]: /ack received at 1779673810.759487391 s  payload='1779673810714147047'
+[INFO] [1779673810.759522773] [topic_latency_benchmark]: Latency /benchmark → /ack: 45.341 ms  (sample 618)
+[INFO] [1779673810.840680633] [topic_latency_benchmark]: /ack received at 1779673810.840679407 s  payload='1779673810814147937'
+[INFO] [1779673810.840716430] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.531 ms  (sample 619)
+[INFO] [1779673810.960463510] [topic_latency_benchmark]: /ack received at 1779673810.960461855 s  payload='1779673810914142538'
+[INFO] [1779673810.960511534] [topic_latency_benchmark]: Latency /benchmark → /ack: 46.319 ms  (sample 620)
+[INFO] [1779673811.048889825] [topic_latency_benchmark]: /ack received at 1779673811.048888683 s  payload='1779673811014141931'
+[INFO] [1779673811.048928075] [topic_latency_benchmark]: Latency /benchmark → /ack: 34.747 ms  (sample 621)
+[INFO] [1779673811.229606553] [topic_latency_benchmark]: /ack received at 1779673811.229605198 s  payload='1779673811114140478'
+[INFO] [1779673811.229641170] [topic_latency_benchmark]: Latency /benchmark → /ack: 15.466 ms  (sample 622)
+[INFO] [1779673811.270750570] [topic_latency_benchmark]: /ack received at 1779673811.270749092 s  payload='1779673811214138876'
+[INFO] [1779673811.270783454] [topic_latency_benchmark]: Latency /benchmark → /ack: 56.610 ms  (sample 623)
+[INFO] [1779673811.359564674] [topic_latency_benchmark]: /ack received at 1779673811.359563351 s  payload='1779673811314135206'
+[INFO] [1779673811.359604982] [topic_latency_benchmark]: Latency /benchmark → /ack: 45.428 ms  (sample 624)
+[INFO] [1779673811.470581012] [topic_latency_benchmark]: /ack received at 1779673811.470579624 s  payload='1779673811414134883'
+[INFO] [1779673811.470621104] [topic_latency_benchmark]: Latency /benchmark → /ack: 56.445 ms  (sample 625)
+[INFO] [1779673811.598903023] [topic_latency_benchmark]: /ack received at 1779673811.598901987 s  payload='1779673811514149003'
+[INFO] [1779673811.598940617] [topic_latency_benchmark]: Latency /benchmark → /ack: 84.753 ms  (sample 626)
+[INFO] [1779673811.614142987] [topic_latency_benchmark]: Stats over 626 samples: min=0.434 ms  avg=40.150 ms  max=99.424 ms
+[INFO] [1779673811.648522787] [topic_latency_benchmark]: /ack received at 1779673811.648521185 s  payload='1779673811614123890'
+[INFO] [1779673811.648554118] [topic_latency_benchmark]: Latency /benchmark → /ack: 34.397 ms  (sample 627)
+[INFO] [1779673811.737298400] [topic_latency_benchmark]: /ack received at 1779673811.737296104 s  payload='1779673811714133252'
+[INFO] [1779673811.737348018] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.163 ms  (sample 628)
+[INFO] [1779673811.837692912] [topic_latency_benchmark]: /ack received at 1779673811.837691307 s  payload='1779673811814129756'
+[INFO] [1779673811.837727947] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.562 ms  (sample 629)
+[INFO] [1779673811.987615314] [topic_latency_benchmark]: /ack received at 1779673811.987613916 s  payload='1779673811914127062'
+[INFO] [1779673811.987651789] [topic_latency_benchmark]: Latency /benchmark → /ack: 73.487 ms  (sample 630)
+[INFO] [1779673812.049269149] [topic_latency_benchmark]: /ack received at 1779673812.049268246 s  payload='1779673812014125195'
+[INFO] [1779673812.049304600] [topic_latency_benchmark]: Latency /benchmark → /ack: 35.143 ms  (sample 631)
+[INFO] [1779673812.156979674] [topic_latency_benchmark]: /ack received at 1779673812.156978369 s  payload='1779673812114126185'
+[INFO] [1779673812.157022277] [topic_latency_benchmark]: Latency /benchmark → /ack: 42.852 ms  (sample 632)
+[INFO] [1779673812.237130502] [topic_latency_benchmark]: /ack received at 1779673812.237129211 s  payload='1779673812214130518'
+[INFO] [1779673812.237171154] [topic_latency_benchmark]: Latency /benchmark → /ack: 22.999 ms  (sample 633)
+[INFO] [1779673812.337399493] [topic_latency_benchmark]: /ack received at 1779673812.337398052 s  payload='1779673812314124418'
+[INFO] [1779673812.337443457] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.274 ms  (sample 634)
+[INFO] [1779673812.467847566] [topic_latency_benchmark]: /ack received at 1779673812.467846394 s  payload='1779673812414150576'
+[INFO] [1779673812.467883237] [topic_latency_benchmark]: Latency /benchmark → /ack: 53.696 ms  (sample 635)
+[INFO] [1779673812.566707816] [topic_latency_benchmark]: /ack received at 1779673812.566704035 s  payload='1779673812514118740'
+[INFO] [1779673812.566763169] [topic_latency_benchmark]: Latency /benchmark → /ack: 52.585 ms  (sample 636)
+[INFO] [1779673812.644420645] [topic_latency_benchmark]: /ack received at 1779673812.644417524 s  payload='1779673812614146913'
+[INFO] [1779673812.644519802] [topic_latency_benchmark]: Latency /benchmark → /ack: 30.270 ms  (sample 637)
+[INFO] [1779673812.766277399] [topic_latency_benchmark]: /ack received at 1779673812.766276360 s  payload='1779673812714115135'
+[INFO] [1779673812.766307922] [topic_latency_benchmark]: Latency /benchmark → /ack: 52.161 ms  (sample 638)
+[INFO] [1779673812.844375518] [topic_latency_benchmark]: /ack received at 1779673812.844374418 s  payload='1779673812814143532'
+[INFO] [1779673812.844406572] [topic_latency_benchmark]: Latency /benchmark → /ack: 30.231 ms  (sample 639)
+[INFO] [1779673812.955519724] [topic_latency_benchmark]: /ack received at 1779673812.955518723 s  payload='1779673812914149711'
+[INFO] [1779673812.955551454] [topic_latency_benchmark]: Latency /benchmark → /ack: 41.369 ms  (sample 640)
+[INFO] [1779673813.056650867] [topic_latency_benchmark]: /ack received at 1779673813.056649923 s  payload='1779673813014112718'
+[INFO] [1779673813.056684431] [topic_latency_benchmark]: Latency /benchmark → /ack: 42.537 ms  (sample 641)
+[INFO] [1779673813.137789819] [topic_latency_benchmark]: /ack received at 1779673813.137787580 s  payload='1779673813114139553'
+[INFO] [1779673813.137850957] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.648 ms  (sample 642)
+[INFO] [1779673813.238062818] [topic_latency_benchmark]: /ack received at 1779673813.238060474 s  payload='1779673813214125658'
+[INFO] [1779673813.238123745] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.935 ms  (sample 643)
+[INFO] [1779673813.337860985] [topic_latency_benchmark]: /ack received at 1779673813.337858677 s  payload='1779673813314144774'
+[INFO] [1779673813.337918710] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.714 ms  (sample 644)
+[INFO] [1779673813.437901864] [topic_latency_benchmark]: /ack received at 1779673813.437900305 s  payload='1779673813414142667'
+[INFO] [1779673813.437956272] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.758 ms  (sample 645)
+[INFO] [1779673813.537440079] [topic_latency_benchmark]: /ack received at 1779673813.537438393 s  payload='1779673813514143256'
+[INFO] [1779673813.537483495] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.295 ms  (sample 646)
+[INFO] [1779673813.637714064] [topic_latency_benchmark]: /ack received at 1779673813.637712240 s  payload='1779673813614106278'
+[INFO] [1779673813.637773807] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.606 ms  (sample 647)
+[INFO] [1779673813.738476095] [topic_latency_benchmark]: /ack received at 1779673813.738475323 s  payload='1779673813714100794'
+[INFO] [1779673813.738511130] [topic_latency_benchmark]: Latency /benchmark → /ack: 24.374 ms  (sample 648)
+[INFO] [1779673813.840780060] [topic_latency_benchmark]: /ack received at 1779673813.840778589 s  payload='1779673813814137485'
+[INFO] [1779673813.840824047] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.641 ms  (sample 649)
+[INFO] [1779673813.950366447] [topic_latency_benchmark]: /ack received at 1779673813.950365782 s  payload='1779673813914094305'
+[INFO] [1779673813.950394235] [topic_latency_benchmark]: Latency /benchmark → /ack: 36.271 ms  (sample 650)
+[INFO] [1779673814.051449071] [topic_latency_benchmark]: /ack received at 1779673814.051447392 s  payload='1779673814014101854'
+[INFO] [1779673814.051494174] [topic_latency_benchmark]: Latency /benchmark → /ack: 37.346 ms  (sample 651)
+[INFO] [1779673814.141069246] [topic_latency_benchmark]: /ack received at 1779673814.141067982 s  payload='1779673814114093504'
+[INFO] [1779673814.141115939] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.974 ms  (sample 652)
+[INFO] [1779673814.240468080] [topic_latency_benchmark]: /ack received at 1779673814.240466356 s  payload='1779673814214105260'
+[INFO] [1779673814.240511681] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.361 ms  (sample 653)
+[INFO] [1779673814.340386810] [topic_latency_benchmark]: /ack received at 1779673814.340383291 s  payload='1779673814314096863'
+[INFO] [1779673814.340431299] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.286 ms  (sample 654)
+[INFO] [1779673814.440099671] [topic_latency_benchmark]: /ack received at 1779673814.440098286 s  payload='1779673814414096557'
+[INFO] [1779673814.440141789] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.002 ms  (sample 655)
+[INFO] [1779673814.563246300] [topic_latency_benchmark]: /ack received at 1779673814.563244820 s  payload='1779673814514088022'
+[INFO] [1779673814.563289433] [topic_latency_benchmark]: Latency /benchmark → /ack: 49.157 ms  (sample 656)
+[INFO] [1779673814.640286831] [topic_latency_benchmark]: /ack received at 1779673814.640285254 s  payload='1779673814614131242'
+[INFO] [1779673814.640331955] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.154 ms  (sample 657)
+[INFO] [1779673814.741205416] [topic_latency_benchmark]: /ack received at 1779673814.741204739 s  payload='1779673814714079997'
+[INFO] [1779673814.741232692] [topic_latency_benchmark]: Latency /benchmark → /ack: 27.125 ms  (sample 658)
+[INFO] [1779673814.842008381] [topic_latency_benchmark]: /ack received at 1779673814.842006922 s  payload='1779673814814091333'
+[INFO] [1779673814.842044494] [topic_latency_benchmark]: Latency /benchmark → /ack: 27.916 ms  (sample 659)
+[INFO] [1779673814.952398655] [topic_latency_benchmark]: /ack received at 1779673814.952396393 s  payload='1779673814914087300'
+[INFO] [1779673814.952434164] [topic_latency_benchmark]: Latency /benchmark → /ack: 38.309 ms  (sample 660)
+[INFO] [1779673815.052204380] [topic_latency_benchmark]: /ack received at 1779673815.052203417 s  payload='1779673815014108169'
+[INFO] [1779673815.052239209] [topic_latency_benchmark]: Latency /benchmark → /ack: 38.095 ms  (sample 661)
+[INFO] [1779673815.152468405] [topic_latency_benchmark]: /ack received at 1779673815.152467489 s  payload='1779673815114078206'
+[INFO] [1779673815.152500451] [topic_latency_benchmark]: Latency /benchmark → /ack: 38.389 ms  (sample 662)
+[INFO] [1779673815.241509173] [topic_latency_benchmark]: /ack received at 1779673815.241507769 s  payload='1779673815214104467'
+[INFO] [1779673815.241568161] [topic_latency_benchmark]: Latency /benchmark → /ack: 27.403 ms  (sample 663)
+[INFO] [1779673815.362529242] [topic_latency_benchmark]: /ack received at 1779673815.362528086 s  payload='1779673815314106978'
+[INFO] [1779673815.362564198] [topic_latency_benchmark]: Latency /benchmark → /ack: 48.421 ms  (sample 664)
+[INFO] [1779673815.482624496] [topic_latency_benchmark]: /ack received at 1779673815.482623339 s  payload='1779673815414095077'
+[INFO] [1779673815.482660051] [topic_latency_benchmark]: Latency /benchmark → /ack: 68.528 ms  (sample 665)
+[INFO] [1779673815.546895402] [topic_latency_benchmark]: /ack received at 1779673815.546894073 s  payload='1779673815514069558'
+[INFO] [1779673815.546929580] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.825 ms  (sample 666)
+[INFO] [1779673815.647192573] [topic_latency_benchmark]: /ack received at 1779673815.647190094 s  payload='1779673815614066895'
+[INFO] [1779673815.647226695] [topic_latency_benchmark]: Latency /benchmark → /ack: 33.123 ms  (sample 667)
+[INFO] [1779673815.748088944] [topic_latency_benchmark]: /ack received at 1779673815.748088121 s  payload='1779673815714067564'
+[INFO] [1779673815.748120839] [topic_latency_benchmark]: Latency /benchmark → /ack: 34.020 ms  (sample 668)
+[INFO] [1779673815.973036146] [topic_latency_benchmark]: /ack received at 1779673815.973031998 s  payload='1779673815814065874'
+[INFO] [1779673815.973082325] [topic_latency_benchmark]: Latency /benchmark → /ack: 58.967 ms  (sample 669)
+[INFO] [1779673816.005831541] [topic_latency_benchmark]: /ack received at 1779673816.005829811 s  payload='1779673815914065007'
+[INFO] [1779673816.005879219] [topic_latency_benchmark]: Latency /benchmark → /ack: 91.765 ms  (sample 670)
+[INFO] [1779673816.048084345] [topic_latency_benchmark]: /ack received at 1779673816.048083305 s  payload='1779673816014053594'
+[INFO] [1779673816.048116231] [topic_latency_benchmark]: Latency /benchmark → /ack: 34.030 ms  (sample 671)
+[INFO] [1779673816.146947415] [topic_latency_benchmark]: /ack received at 1779673816.146946192 s  payload='1779673816114096020'
+[INFO] [1779673816.146978990] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.850 ms  (sample 672)
+[INFO] [1779673816.231578213] [topic_latency_benchmark]: /ack received at 1779673816.231576204 s  payload='1779673816214104187'
+[INFO] [1779673816.231629951] [topic_latency_benchmark]: Latency /benchmark → /ack: 17.472 ms  (sample 673)
+[INFO] [1779673816.346395932] [topic_latency_benchmark]: /ack received at 1779673816.346394539 s  payload='1779673816314092669'
+[INFO] [1779673816.346433528] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.302 ms  (sample 674)
+[INFO] [1779673816.447755838] [topic_latency_benchmark]: /ack received at 1779673816.447754860 s  payload='1779673816414091198'
+[INFO] [1779673816.447788838] [topic_latency_benchmark]: Latency /benchmark → /ack: 33.664 ms  (sample 675)
+[INFO] [1779673816.536198089] [topic_latency_benchmark]: /ack received at 1779673816.536196947 s  payload='1779673816514054819'
+[INFO] [1779673816.536230753] [topic_latency_benchmark]: Latency /benchmark → /ack: 22.142 ms  (sample 676)
+[INFO] [1779673816.614123834] [topic_latency_benchmark]: Stats over 676 samples: min=0.434 ms  avg=39.793 ms  max=99.424 ms
+[INFO] [1779673816.638102585] [topic_latency_benchmark]: /ack received at 1779673816.638101339 s  payload='1779673816614082870'
+[INFO] [1779673816.638142964] [topic_latency_benchmark]: Latency /benchmark → /ack: 24.018 ms  (sample 677)
+[INFO] [1779673816.746989058] [topic_latency_benchmark]: /ack received at 1779673816.746987343 s  payload='1779673816714058724'
+[INFO] [1779673816.747030584] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.929 ms  (sample 678)
+[INFO] [1779673816.846437644] [topic_latency_benchmark]: /ack received at 1779673816.846436262 s  payload='1779673816814051686'
+[INFO] [1779673816.846473538] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.385 ms  (sample 679)
+[INFO] [1779673816.926220202] [topic_latency_benchmark]: /ack received at 1779673816.926218510 s  payload='1779673816914050438'
+[INFO] [1779673816.926257351] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.168 ms  (sample 680)
+[INFO] [1779673817.047090539] [topic_latency_benchmark]: /ack received at 1779673817.047089100 s  payload='1779673817014051517'
+[INFO] [1779673817.047135395] [topic_latency_benchmark]: Latency /benchmark → /ack: 33.038 ms  (sample 681)
+[INFO] [1779673817.136336944] [topic_latency_benchmark]: /ack received at 1779673817.136335373 s  payload='1779673817114045749'
+[INFO] [1779673817.136377215] [topic_latency_benchmark]: Latency /benchmark → /ack: 22.290 ms  (sample 682)
+[INFO] [1779673817.243353528] [topic_latency_benchmark]: /ack received at 1779673817.243351460 s  payload='1779673817214057306'
+[INFO] [1779673817.243394421] [topic_latency_benchmark]: Latency /benchmark → /ack: 29.294 ms  (sample 683)
+[INFO] [1779673817.343477686] [topic_latency_benchmark]: /ack received at 1779673817.343476057 s  payload='1779673817314050501'
+[INFO] [1779673817.343520967] [topic_latency_benchmark]: Latency /benchmark → /ack: 29.425 ms  (sample 684)
+[INFO] [1779673817.453963505] [topic_latency_benchmark]: /ack received at 1779673817.453962564 s  payload='1779673817414045870'
+[INFO] [1779673817.453999671] [topic_latency_benchmark]: Latency /benchmark → /ack: 39.917 ms  (sample 685)
+[INFO] [1779673817.544469587] [topic_latency_benchmark]: /ack received at 1779673817.544467688 s  payload='1779673817514049280'
+[INFO] [1779673817.544511661] [topic_latency_benchmark]: Latency /benchmark → /ack: 30.419 ms  (sample 686)
+[INFO] [1779673817.632250079] [topic_latency_benchmark]: /ack received at 1779673817.632248402 s  payload='1779673817614074580'
+[INFO] [1779673817.632290058] [topic_latency_benchmark]: Latency /benchmark → /ack: 18.174 ms  (sample 687)
+[INFO] [1779673817.732179821] [topic_latency_benchmark]: /ack received at 1779673817.732178688 s  payload='1779673817714037088'
+[INFO] [1779673817.732213825] [topic_latency_benchmark]: Latency /benchmark → /ack: 18.142 ms  (sample 688)
+[INFO] [1779673817.942379495] [topic_latency_benchmark]: /ack received at 1779673817.942377806 s  payload='1779673817814043298'
+[INFO] [1779673817.942437342] [topic_latency_benchmark]: Latency /benchmark → /ack: 28.326 ms  (sample 689)
+[INFO] [1779673817.953842089] [topic_latency_benchmark]: /ack received at 1779673817.953841448 s  payload='1779673817914051857'
+[INFO] [1779673817.953864020] [topic_latency_benchmark]: Latency /benchmark → /ack: 39.790 ms  (sample 690)
+[INFO] [1779673818.032354779] [topic_latency_benchmark]: /ack received at 1779673818.032353163 s  payload='1779673818014033051'
+[INFO] [1779673818.032394466] [topic_latency_benchmark]: Latency /benchmark → /ack: 18.320 ms  (sample 691)
+[INFO] [1779673818.128256364] [topic_latency_benchmark]: /ack received at 1779673818.128254890 s  payload='1779673818114065013'
+[INFO] [1779673818.128291467] [topic_latency_benchmark]: Latency /benchmark → /ack: 14.190 ms  (sample 692)
+[INFO] [1779673818.232503651] [topic_latency_benchmark]: /ack received at 1779673818.232502222 s  payload='1779673818214035237'
+[INFO] [1779673818.232544024] [topic_latency_benchmark]: Latency /benchmark → /ack: 18.467 ms  (sample 693)
+[INFO] [1779673818.332345390] [topic_latency_benchmark]: /ack received at 1779673818.332344532 s  payload='1779673818314056126'
+[INFO] [1779673818.332378660] [topic_latency_benchmark]: Latency /benchmark → /ack: 18.288 ms  (sample 694)
+[INFO] [1779673818.427401027] [topic_latency_benchmark]: /ack received at 1779673818.427399874 s  payload='1779673818414020365'
+[INFO] [1779673818.427439747] [topic_latency_benchmark]: Latency /benchmark → /ack: 13.379 ms  (sample 695)
+[INFO] [1779673818.543749857] [topic_latency_benchmark]: /ack received at 1779673818.543748379 s  payload='1779673818514040960'
+[INFO] [1779673818.543792989] [topic_latency_benchmark]: Latency /benchmark → /ack: 29.707 ms  (sample 696)
+[INFO] [1779673818.643313280] [topic_latency_benchmark]: /ack received at 1779673818.643311501 s  payload='1779673818614027180'
+[INFO] [1779673818.643361167] [topic_latency_benchmark]: Latency /benchmark → /ack: 29.285 ms  (sample 697)
+[INFO] [1779673818.726430708] [topic_latency_benchmark]: /ack received at 1779673818.726429701 s  payload='1779673818714051363'
+[INFO] [1779673818.726457875] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.378 ms  (sample 698)
+[INFO] [1779673818.833008155] [topic_latency_benchmark]: /ack received at 1779673818.833007336 s  payload='1779673818814052612'
+[INFO] [1779673818.833043293] [topic_latency_benchmark]: Latency /benchmark → /ack: 18.955 ms  (sample 699)
+[INFO] [1779673818.950128216] [topic_latency_benchmark]: /ack received at 1779673818.950124741 s  payload='1779673818914019924'
+[INFO] [1779673818.950175065] [topic_latency_benchmark]: Latency /benchmark → /ack: 36.105 ms  (sample 700)
+[INFO] [1779673819.039202559] [topic_latency_benchmark]: /ack received at 1779673819.039201498 s  payload='1779673819014040380'
+[INFO] [1779673819.039233834] [topic_latency_benchmark]: Latency /benchmark → /ack: 25.161 ms  (sample 701)
+[INFO] [1779673819.139008997] [topic_latency_benchmark]: /ack received at 1779673819.139006138 s  payload='1779673819114032516'
+[INFO] [1779673819.139044111] [topic_latency_benchmark]: Latency /benchmark → /ack: 24.974 ms  (sample 702)
+[INFO] [1779673819.229028824] [topic_latency_benchmark]: /ack received at 1779673819.229027510 s  payload='1779673819214034387'
+[INFO] [1779673819.229057493] [topic_latency_benchmark]: Latency /benchmark → /ack: 14.993 ms  (sample 703)
+[INFO] [1779673819.349011252] [topic_latency_benchmark]: /ack received at 1779673819.349009514 s  payload='1779673819314028495'
+[INFO] [1779673819.349066040] [topic_latency_benchmark]: Latency /benchmark → /ack: 34.981 ms  (sample 704)
+[INFO] [1779673819.465155508] [topic_latency_benchmark]: /ack received at 1779673819.465154648 s  payload='1779673819414001114'
+[INFO] [1779673819.465189007] [topic_latency_benchmark]: Latency /benchmark → /ack: 51.153 ms  (sample 705)
+[INFO] [1779673819.547615226] [topic_latency_benchmark]: /ack received at 1779673819.547614098 s  payload='1779673819514017899'
+[INFO] [1779673819.547644281] [topic_latency_benchmark]: Latency /benchmark → /ack: 33.596 ms  (sample 706)
+[INFO] [1779673819.628980739] [topic_latency_benchmark]: /ack received at 1779673819.628976822 s  payload='1779673819614034784'
+[INFO] [1779673819.629012546] [topic_latency_benchmark]: Latency /benchmark → /ack: 14.942 ms  (sample 707)
+[INFO] [1779673819.738369459] [topic_latency_benchmark]: /ack received at 1779673819.738368273 s  payload='1779673819714030337'
+[INFO] [1779673819.738405270] [topic_latency_benchmark]: Latency /benchmark → /ack: 24.338 ms  (sample 708)
+[INFO] [1779673819.870777666] [topic_latency_benchmark]: /ack received at 1779673819.870776653 s  payload='1779673819814001150'
+[INFO] [1779673819.870811121] [topic_latency_benchmark]: Latency /benchmark → /ack: 56.775 ms  (sample 709)
+[INFO] [1779673819.970521484] [topic_latency_benchmark]: /ack received at 1779673819.970520496 s  payload='1779673819914027288'
+[INFO] [1779673819.970552250] [topic_latency_benchmark]: Latency /benchmark → /ack: 56.493 ms  (sample 710)
+[INFO] [1779673820.039681733] [topic_latency_benchmark]: /ack received at 1779673820.039680481 s  payload='1779673820013993201'
+[INFO] [1779673820.039716541] [topic_latency_benchmark]: Latency /benchmark → /ack: 25.687 ms  (sample 711)
+[INFO] [1779673820.140299954] [topic_latency_benchmark]: /ack received at 1779673820.140296936 s  payload='1779673820114025412'
+[INFO] [1779673820.140332052] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.272 ms  (sample 712)
+[INFO] [1779673820.314523977] [topic_latency_benchmark]: /ack received at 1779673820.314522982 s  payload='1779673820213992826'
+[INFO] [1779673820.314556602] [topic_latency_benchmark]: Latency /benchmark → /ack: 0.558 ms  (sample 713)
+[INFO] [1779673820.453975155] [topic_latency_benchmark]: /ack received at 1779673820.453974247 s  payload='1779673820313964495'
+[INFO] [1779673820.454009577] [topic_latency_benchmark]: Latency /benchmark → /ack: 39.982 ms  (sample 714)
+[INFO] [1779673820.471774509] [topic_latency_benchmark]: /ack received at 1779673820.471772671 s  payload='1779673820413991947'
+[INFO] [1779673820.471804805] [topic_latency_benchmark]: Latency /benchmark → /ack: 57.781 ms  (sample 715)
+[INFO] [1779673820.539078757] [topic_latency_benchmark]: /ack received at 1779673820.539077997 s  payload='1779673820513982055'
+[INFO] [1779673820.539107711] [topic_latency_benchmark]: Latency /benchmark → /ack: 25.096 ms  (sample 716)
+[INFO] [1779673820.634551088] [topic_latency_benchmark]: /ack received at 1779673820.634549856 s  payload='1779673820613989631'
+[INFO] [1779673820.634583169] [topic_latency_benchmark]: Latency /benchmark → /ack: 20.560 ms  (sample 717)
+[INFO] [1779673820.735330306] [topic_latency_benchmark]: /ack received at 1779673820.735329390 s  payload='1779673820714012790'
+[INFO] [1779673820.735360036] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.316 ms  (sample 718)
+[INFO] [1779673820.845747378] [topic_latency_benchmark]: /ack received at 1779673820.845746517 s  payload='1779673820814012474'
+[INFO] [1779673820.845780898] [topic_latency_benchmark]: Latency /benchmark → /ack: 31.734 ms  (sample 719)
+[INFO] [1779673820.935473098] [topic_latency_benchmark]: /ack received at 1779673820.935472488 s  payload='1779673820914010182'
+[INFO] [1779673820.935498223] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.462 ms  (sample 720)
+[INFO] [1779673821.035330283] [topic_latency_benchmark]: /ack received at 1779673821.035327435 s  payload='1779673821013978227'
+[INFO] [1779673821.035358451] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.349 ms  (sample 721)
+[INFO] [1779673821.135072672] [topic_latency_benchmark]: /ack received at 1779673821.135071993 s  payload='1779673821114002536'
+[INFO] [1779673821.135099816] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.069 ms  (sample 722)
+[INFO] [1779673821.235021419] [topic_latency_benchmark]: /ack received at 1779673821.235018492 s  payload='1779673821214004774'
+[INFO] [1779673821.235063642] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.014 ms  (sample 723)
+[INFO] [1779673821.345730167] [topic_latency_benchmark]: /ack received at 1779673821.345729113 s  payload='1779673821314003416'
+[INFO] [1779673821.345759532] [topic_latency_benchmark]: Latency /benchmark → /ack: 31.726 ms  (sample 724)
+[INFO] [1779673821.436262718] [topic_latency_benchmark]: /ack received at 1779673821.436261654 s  payload='1779673821413996342'
+[INFO] [1779673821.436291888] [topic_latency_benchmark]: Latency /benchmark → /ack: 22.265 ms  (sample 725)
+[INFO] [1779673821.535081805] [topic_latency_benchmark]: /ack received at 1779673821.535078287 s  payload='1779673821514001385'
+[INFO] [1779673821.535127591] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.077 ms  (sample 726)
+[INFO] [1779673821.614021949] [topic_latency_benchmark]: Stats over 726 samples: min=0.434 ms  avg=38.907 ms  max=99.424 ms
+[INFO] [1779673821.646644589] [topic_latency_benchmark]: /ack received at 1779673821.646643877 s  payload='1779673821613998838'
+[INFO] [1779673821.646667754] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.645 ms  (sample 727)
+[INFO] [1779673821.736334565] [topic_latency_benchmark]: /ack received at 1779673821.736333847 s  payload='1779673821713965324'
+[INFO] [1779673821.736360954] [topic_latency_benchmark]: Latency /benchmark → /ack: 22.368 ms  (sample 728)
+[INFO] [1779673821.835627484] [topic_latency_benchmark]: /ack received at 1779673821.835626602 s  payload='1779673821814001645'
+[INFO] [1779673821.835658620] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.625 ms  (sample 729)
+[INFO] [1779673821.935010268] [topic_latency_benchmark]: /ack received at 1779673821.935008764 s  payload='1779673821913992757'
+[INFO] [1779673821.935051349] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.016 ms  (sample 730)
+[INFO] [1779673822.035216887] [topic_latency_benchmark]: /ack received at 1779673822.035215855 s  payload='1779673822013987843'
+[INFO] [1779673822.035246904] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.228 ms  (sample 731)
+[INFO] [1779673822.134864571] [topic_latency_benchmark]: /ack received at 1779673822.134863377 s  payload='1779673822113992770'
+[INFO] [1779673822.134902245] [topic_latency_benchmark]: Latency /benchmark → /ack: 20.871 ms  (sample 732)
+[INFO] [1779673822.234891555] [topic_latency_benchmark]: /ack received at 1779673822.234890461 s  payload='1779673822213984190'
+[INFO] [1779673822.234921829] [topic_latency_benchmark]: Latency /benchmark → /ack: 20.906 ms  (sample 733)
+[INFO] [1779673822.331979781] [topic_latency_benchmark]: /ack received at 1779673822.331976652 s  payload='1779673822313961044'
+[INFO] [1779673822.332022598] [topic_latency_benchmark]: Latency /benchmark → /ack: 18.016 ms  (sample 734)
+[INFO] [1779673822.544086973] [topic_latency_benchmark]: /ack received at 1779673822.544085264 s  payload='1779673822413962341'
+[INFO] [1779673822.544133697] [topic_latency_benchmark]: Latency /benchmark → /ack: 30.116 ms  (sample 735)
+[INFO] [1779673822.589060888] [topic_latency_benchmark]: /ack received at 1779673822.589060068 s  payload='1779673822513969390'
+[INFO] [1779673822.589092476] [topic_latency_benchmark]: Latency /benchmark → /ack: 75.091 ms  (sample 736)
+[INFO] [1779673822.643554734] [topic_latency_benchmark]: /ack received at 1779673822.643553972 s  payload='1779673822613953155'
+[INFO] [1779673822.643579645] [topic_latency_benchmark]: Latency /benchmark → /ack: 29.601 ms  (sample 737)
+[INFO] [1779673822.732238266] [topic_latency_benchmark]: /ack received at 1779673822.732236385 s  payload='1779673822713965781'
+[INFO] [1779673822.732282167] [topic_latency_benchmark]: Latency /benchmark → /ack: 18.271 ms  (sample 738)
+[INFO] [1779673822.832350790] [topic_latency_benchmark]: /ack received at 1779673822.832349539 s  payload='1779673822813962967'
+[INFO] [1779673822.832394994] [topic_latency_benchmark]: Latency /benchmark → /ack: 18.386 ms  (sample 739)
+[INFO] [1779673822.974945193] [topic_latency_benchmark]: /ack received at 1779673822.974941492 s  payload='1779673822913985189'
+[INFO] [1779673822.975007257] [topic_latency_benchmark]: Latency /benchmark → /ack: 60.956 ms  (sample 740)
+[INFO] [1779673823.032345918] [topic_latency_benchmark]: /ack received at 1779673823.032344103 s  payload='1779673823013966139'
+[INFO] [1779673823.032398483] [topic_latency_benchmark]: Latency /benchmark → /ack: 18.378 ms  (sample 741)
+[INFO] [1779673823.143056050] [topic_latency_benchmark]: /ack received at 1779673823.143054962 s  payload='1779673823113958783'
+[INFO] [1779673823.143096668] [topic_latency_benchmark]: Latency /benchmark → /ack: 29.096 ms  (sample 742)
+[INFO] [1779673823.232021254] [topic_latency_benchmark]: /ack received at 1779673823.232019901 s  payload='1779673823213954889'
+[INFO] [1779673823.232055178] [topic_latency_benchmark]: Latency /benchmark → /ack: 18.065 ms  (sample 743)
+[INFO] [1779673823.343644488] [topic_latency_benchmark]: /ack received at 1779673823.343642950 s  payload='1779673823313952770'
+[INFO] [1779673823.343708109] [topic_latency_benchmark]: Latency /benchmark → /ack: 29.690 ms  (sample 744)
+[INFO] [1779673823.431790901] [topic_latency_benchmark]: /ack received at 1779673823.431789398 s  payload='1779673823413947265'
+[INFO] [1779673823.431856866] [topic_latency_benchmark]: Latency /benchmark → /ack: 17.842 ms  (sample 745)
+[INFO] [1779673823.543436560] [topic_latency_benchmark]: /ack received at 1779673823.543432474 s  payload='1779673823513965887'
+[INFO] [1779673823.543486281] [topic_latency_benchmark]: Latency /benchmark → /ack: 29.466 ms  (sample 746)
+[INFO] [1779673823.643001120] [topic_latency_benchmark]: /ack received at 1779673823.642999649 s  payload='1779673823613946244'
+[INFO] [1779673823.643039074] [topic_latency_benchmark]: Latency /benchmark → /ack: 29.053 ms  (sample 747)
+[INFO] [1779673823.731519880] [topic_latency_benchmark]: /ack received at 1779673823.731518507 s  payload='1779673823713925772'
+[INFO] [1779673823.731557251] [topic_latency_benchmark]: Latency /benchmark → /ack: 17.593 ms  (sample 748)
+[INFO] [1779673823.831921418] [topic_latency_benchmark]: /ack received at 1779673823.831920624 s  payload='1779673823813942144'
+[INFO] [1779673823.831947716] [topic_latency_benchmark]: Latency /benchmark → /ack: 17.978 ms  (sample 749)
+[INFO] [1779673823.975444344] [topic_latency_benchmark]: /ack received at 1779673823.975441456 s  payload='1779673823913943123'
+[INFO] [1779673823.975476551] [topic_latency_benchmark]: Latency /benchmark → /ack: 61.498 ms  (sample 750)
+[INFO] [1779673824.047421179] [topic_latency_benchmark]: /ack received at 1779673824.047418118 s  payload='1779673824013970191'
+[INFO] [1779673824.047472747] [topic_latency_benchmark]: Latency /benchmark → /ack: 33.448 ms  (sample 751)
+[INFO] [1779673824.152581349] [topic_latency_benchmark]: /ack received at 1779673824.152580500 s  payload='1779673824113964631'
+[INFO] [1779673824.152617863] [topic_latency_benchmark]: Latency /benchmark → /ack: 38.616 ms  (sample 752)
+[INFO] [1779673824.247700389] [topic_latency_benchmark]: /ack received at 1779673824.247696638 s  payload='1779673824213942004'
+[INFO] [1779673824.247773886] [topic_latency_benchmark]: Latency /benchmark → /ack: 33.755 ms  (sample 753)
+[INFO] [1779673824.352139573] [topic_latency_benchmark]: /ack received at 1779673824.352138519 s  payload='1779673824313933402'
+[INFO] [1779673824.352171997] [topic_latency_benchmark]: Latency /benchmark → /ack: 38.205 ms  (sample 754)
+[INFO] [1779673824.464414718] [topic_latency_benchmark]: /ack received at 1779673824.464413404 s  payload='1779673824413948072'
+[INFO] [1779673824.464447460] [topic_latency_benchmark]: Latency /benchmark → /ack: 50.465 ms  (sample 755)
+[INFO] [1779673824.539585790] [topic_latency_benchmark]: /ack received at 1779673824.539584875 s  payload='1779673824513955645'
+[INFO] [1779673824.539623854] [topic_latency_benchmark]: Latency /benchmark → /ack: 25.629 ms  (sample 756)
+[INFO] [1779673824.660187512] [topic_latency_benchmark]: /ack received at 1779673824.660186291 s  payload='1779673824613925307'
+[INFO] [1779673824.660224943] [topic_latency_benchmark]: Latency /benchmark → /ack: 46.261 ms  (sample 757)
+[INFO] [1779673824.749924208] [topic_latency_benchmark]: /ack received at 1779673824.749923229 s  payload='1779673824713930259'
+[INFO] [1779673824.749955656] [topic_latency_benchmark]: Latency /benchmark → /ack: 35.993 ms  (sample 758)
+[INFO] [1779673824.861253373] [topic_latency_benchmark]: /ack received at 1779673824.861252069 s  payload='1779673824813928286'
+[INFO] [1779673824.861288330] [topic_latency_benchmark]: Latency /benchmark → /ack: 47.324 ms  (sample 759)
+[INFO] [1779673824.939616600] [topic_latency_benchmark]: /ack received at 1779673824.939615250 s  payload='1779673824913922044'
+[INFO] [1779673824.939649257] [topic_latency_benchmark]: Latency /benchmark → /ack: 25.693 ms  (sample 760)
+[INFO] [1779673825.061289393] [topic_latency_benchmark]: /ack received at 1779673825.061288118 s  payload='1779673825014060045'
+[INFO] [1779673825.061320788] [topic_latency_benchmark]: Latency /benchmark → /ack: 47.228 ms  (sample 761)
+[INFO] [1779673825.172528534] [topic_latency_benchmark]: /ack received at 1779673825.172526836 s  payload='1779673825113947046'
+[INFO] [1779673825.172576920] [topic_latency_benchmark]: Latency /benchmark → /ack: 58.580 ms  (sample 762)
+[INFO] [1779673825.248471864] [topic_latency_benchmark]: /ack received at 1779673825.248470783 s  payload='1779673825213947802'
+[INFO] [1779673825.248505759] [topic_latency_benchmark]: Latency /benchmark → /ack: 34.523 ms  (sample 763)
+[INFO] [1779673825.348769124] [topic_latency_benchmark]: /ack received at 1779673825.348767996 s  payload='1779673825313922334'
+[INFO] [1779673825.348817463] [topic_latency_benchmark]: Latency /benchmark → /ack: 34.846 ms  (sample 764)
+[INFO] [1779673825.501835652] [topic_latency_benchmark]: /ack received at 1779673825.501834154 s  payload='1779673825413925029'
+[INFO] [1779673825.501867468] [topic_latency_benchmark]: Latency /benchmark → /ack: 87.909 ms  (sample 765)
+[INFO] [1779673825.573581086] [topic_latency_benchmark]: /ack received at 1779673825.573579550 s  payload='1779673825513901351'
+[INFO] [1779673825.573632979] [topic_latency_benchmark]: Latency /benchmark → /ack: 59.678 ms  (sample 766)
+[INFO] [1779673825.651891267] [topic_latency_benchmark]: /ack received at 1779673825.651890516 s  payload='1779673825613901112'
+[INFO] [1779673825.651917531] [topic_latency_benchmark]: Latency /benchmark → /ack: 37.989 ms  (sample 767)
+[INFO] [1779673825.852271784] [topic_latency_benchmark]: /ack received at 1779673825.852270842 s  payload='1779673825713900474'
+[INFO] [1779673825.852305423] [topic_latency_benchmark]: Latency /benchmark → /ack: 38.339 ms  (sample 768)
+[INFO] [1779673825.890757453] [topic_latency_benchmark]: /ack received at 1779673825.890756130 s  payload='1779673825813931612'
+[INFO] [1779673825.890789725] [topic_latency_benchmark]: Latency /benchmark → /ack: 76.825 ms  (sample 769)
+[INFO] [1779673825.952947095] [topic_latency_benchmark]: /ack received at 1779673825.952946186 s  payload='1779673825913898779'
+[INFO] [1779673825.952984711] [topic_latency_benchmark]: Latency /benchmark → /ack: 39.047 ms  (sample 770)
+[INFO] [1779673826.054742992] [topic_latency_benchmark]: /ack received at 1779673826.054741859 s  payload='1779673826013901801'
+[INFO] [1779673826.054772577] [topic_latency_benchmark]: Latency /benchmark → /ack: 40.840 ms  (sample 771)
+[INFO] [1779673826.226004902] [topic_latency_benchmark]: /ack received at 1779673826.226003885 s  payload='1779673826113896825'
+[INFO] [1779673826.226039481] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.106 ms  (sample 772)
+[INFO] [1779673826.403013444] [topic_latency_benchmark]: /ack received at 1779673826.403011799 s  payload='1779673826213897827'
+[INFO] [1779673826.403045144] [topic_latency_benchmark]: Latency /benchmark → /ack: 89.114 ms  (sample 773)
+[INFO] [1779673826.537119359] [topic_latency_benchmark]: /ack received at 1779673826.537118196 s  payload='1779673826313898191'
+[INFO] [1779673826.537150023] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.225 ms  (sample 774)
+[INFO] [1779673826.580479455] [topic_latency_benchmark]: /ack received at 1779673826.580477715 s  payload='1779673826413886251'
+[INFO] [1779673826.580523400] [topic_latency_benchmark]: Latency /benchmark → /ack: 66.584 ms  (sample 775)
+[INFO] [1779673826.580554918] [topic_latency_benchmark]: /ack received at 1779673826.580554485 s  payload='1779673826513893820'
+[INFO] [1779673826.580569130] [topic_latency_benchmark]: Latency /benchmark → /ack: 66.661 ms  (sample 776)
+[INFO] [1779673826.613918111] [topic_latency_benchmark]: Stats over 776 samples: min=0.434 ms  avg=38.808 ms  max=99.424 ms
+[INFO] [1779673826.690802771] [topic_latency_benchmark]: /ack received at 1779673826.690801382 s  payload='1779673826613892095'
+[INFO] [1779673826.690838748] [topic_latency_benchmark]: Latency /benchmark → /ack: 76.909 ms  (sample 777)
+[INFO] [1779673826.737593485] [topic_latency_benchmark]: /ack received at 1779673826.737585783 s  payload='1779673826713897247'
+[INFO] [1779673826.737652803] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.689 ms  (sample 778)
+[INFO] [1779673826.870571938] [topic_latency_benchmark]: /ack received at 1779673826.870569944 s  payload='1779673826813905432'
+[INFO] [1779673826.870631586] [topic_latency_benchmark]: Latency /benchmark → /ack: 56.665 ms  (sample 779)
+[INFO] [1779673826.944886574] [topic_latency_benchmark]: /ack received at 1779673826.944883347 s  payload='1779673826913919586'
+[INFO] [1779673826.944922986] [topic_latency_benchmark]: Latency /benchmark → /ack: 30.964 ms  (sample 780)
+[INFO] [1779673827.137317351] [topic_latency_benchmark]: /ack received at 1779673827.137315989 s  payload='1779673827013907455'
+[INFO] [1779673827.137364454] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.400 ms  (sample 781)
+[INFO] [1779673827.186816431] [topic_latency_benchmark]: /ack received at 1779673827.186812639 s  payload='1779673827113916396'
+[INFO] [1779673827.186858226] [topic_latency_benchmark]: Latency /benchmark → /ack: 72.896 ms  (sample 782)
+[INFO] [1779673827.255526529] [topic_latency_benchmark]: /ack received at 1779673827.255525351 s  payload='1779673827213914199'
+[INFO] [1779673827.255559934] [topic_latency_benchmark]: Latency /benchmark → /ack: 41.611 ms  (sample 783)
+[INFO] [1779673827.345101859] [topic_latency_benchmark]: /ack received at 1779673827.345100403 s  payload='1779673827313892547'
+[INFO] [1779673827.345145424] [topic_latency_benchmark]: Latency /benchmark → /ack: 31.208 ms  (sample 784)
+[INFO] [1779673827.455427836] [topic_latency_benchmark]: /ack received at 1779673827.455425978 s  payload='1779673827413890430'
+[INFO] [1779673827.455474127] [topic_latency_benchmark]: Latency /benchmark → /ack: 41.536 ms  (sample 785)
+[INFO] [1779673827.588039132] [topic_latency_benchmark]: /ack received at 1779673827.588037729 s  payload='1779673827513898089'
+[INFO] [1779673827.588083766] [topic_latency_benchmark]: Latency /benchmark → /ack: 74.139 ms  (sample 786)
+[INFO] [1779673827.654501110] [topic_latency_benchmark]: /ack received at 1779673827.654499054 s  payload='1779673827613882350'
+[INFO] [1779673827.654545754] [topic_latency_benchmark]: Latency /benchmark → /ack: 40.617 ms  (sample 787)
+[INFO] [1779673827.737272229] [topic_latency_benchmark]: /ack received at 1779673827.737269402 s  payload='1779673827713884004'
+[INFO] [1779673827.737329039] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.386 ms  (sample 788)
+[INFO] [1779673827.837648366] [topic_latency_benchmark]: /ack received at 1779673827.837646484 s  payload='1779673827813916242'
+[INFO] [1779673827.837693730] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.730 ms  (sample 789)
+[INFO] [1779673827.976798650] [topic_latency_benchmark]: /ack received at 1779673827.976796865 s  payload='1779673827913880766'
+[INFO] [1779673827.976841620] [topic_latency_benchmark]: Latency /benchmark → /ack: 62.916 ms  (sample 790)
+[INFO] [1779673828.040180385] [topic_latency_benchmark]: /ack received at 1779673828.040179014 s  payload='1779673828013877505'
+[INFO] [1779673828.040222944] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.301 ms  (sample 791)
+[INFO] [1779673828.150960850] [topic_latency_benchmark]: /ack received at 1779673828.150959730 s  payload='1779673828113878079'
+[INFO] [1779673828.151002093] [topic_latency_benchmark]: Latency /benchmark → /ack: 37.081 ms  (sample 792)
+[INFO] [1779673828.260595784] [topic_latency_benchmark]: /ack received at 1779673828.260594606 s  payload='1779673828213904194'
+[INFO] [1779673828.260631455] [topic_latency_benchmark]: Latency /benchmark → /ack: 46.690 ms  (sample 793)
+[INFO] [1779673828.326862043] [topic_latency_benchmark]: /ack received at 1779673828.326860189 s  payload='1779673828313870739'
+[INFO] [1779673828.326900101] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.990 ms  (sample 794)
+[INFO] [1779673828.583175864] [topic_latency_benchmark]: /ack received at 1779673828.583174467 s  payload='1779673828413873574'
+[INFO] [1779673828.583215715] [topic_latency_benchmark]: Latency /benchmark → /ack: 69.270 ms  (sample 795)
+[INFO] [1779673828.593693125] [topic_latency_benchmark]: /ack received at 1779673828.593692780 s  payload='1779673828513904134'
+[INFO] [1779673828.593709696] [topic_latency_benchmark]: Latency /benchmark → /ack: 79.788 ms  (sample 796)
+[INFO] [1779673828.641327355] [topic_latency_benchmark]: /ack received at 1779673828.641325474 s  payload='1779673828613859414'
+[INFO] [1779673828.641367097] [topic_latency_benchmark]: Latency /benchmark → /ack: 27.466 ms  (sample 797)
+[INFO] [1779673828.741138233] [topic_latency_benchmark]: /ack received at 1779673828.741136312 s  payload='1779673828713867491'
+[INFO] [1779673828.741184618] [topic_latency_benchmark]: Latency /benchmark → /ack: 27.269 ms  (sample 798)
+[INFO] [1779673828.851113589] [topic_latency_benchmark]: /ack received at 1779673828.851112127 s  payload='1779673828813867648'
+[INFO] [1779673828.851155013] [topic_latency_benchmark]: Latency /benchmark → /ack: 37.245 ms  (sample 799)
+[INFO] [1779673828.982982573] [topic_latency_benchmark]: /ack received at 1779673828.982980490 s  payload='1779673828913874448'
+[INFO] [1779673828.983040418] [topic_latency_benchmark]: Latency /benchmark → /ack: 69.106 ms  (sample 800)
+[INFO] [1779673829.050732019] [topic_latency_benchmark]: /ack received at 1779673829.050731182 s  payload='1779673829013851038'
+[INFO] [1779673829.050762252] [topic_latency_benchmark]: Latency /benchmark → /ack: 36.880 ms  (sample 801)
+[INFO] [1779673829.150752709] [topic_latency_benchmark]: /ack received at 1779673829.150750875 s  payload='1779673829113864432'
+[INFO] [1779673829.150794356] [topic_latency_benchmark]: Latency /benchmark → /ack: 36.887 ms  (sample 802)
+[INFO] [1779673829.227281607] [topic_latency_benchmark]: /ack received at 1779673829.227279902 s  payload='1779673829213858106'
+[INFO] [1779673829.227321144] [topic_latency_benchmark]: Latency /benchmark → /ack: 13.422 ms  (sample 803)
+[INFO] [1779673829.340616069] [topic_latency_benchmark]: /ack received at 1779673829.340614557 s  payload='1779673829313858407'
+[INFO] [1779673829.340660836] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.756 ms  (sample 804)
+[INFO] [1779673829.426094540] [topic_latency_benchmark]: /ack received at 1779673829.426093578 s  payload='1779673829413851510'
+[INFO] [1779673829.426129444] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.242 ms  (sample 805)
+[INFO] [1779673829.540480168] [topic_latency_benchmark]: /ack received at 1779673829.540478468 s  payload='1779673829513855665'
+[INFO] [1779673829.540523031] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.623 ms  (sample 806)
+[INFO] [1779673829.640496206] [topic_latency_benchmark]: /ack received at 1779673829.640494585 s  payload='1779673829613817201'
+[INFO] [1779673829.640540101] [topic_latency_benchmark]: Latency /benchmark → /ack: 26.677 ms  (sample 807)
+[INFO] [1779673829.735726794] [topic_latency_benchmark]: /ack received at 1779673829.735725164 s  payload='1779673829713846542'
+[INFO] [1779673829.735774939] [topic_latency_benchmark]: Latency /benchmark → /ack: 21.879 ms  (sample 808)
+[INFO] [1779673829.846380894] [topic_latency_benchmark]: /ack received at 1779673829.846379042 s  payload='1779673829813845931'
+[INFO] [1779673829.846422761] [topic_latency_benchmark]: Latency /benchmark → /ack: 32.533 ms  (sample 809)
+[INFO] [1779673830.014692615] [topic_latency_benchmark]: /ack received at 1779673830.014691353 s  payload='1779673829913844988'
+[INFO] [1779673830.014737659] [topic_latency_benchmark]: Latency /benchmark → /ack: 0.845 ms  (sample 810)
+[INFO] [1779673830.037503484] [topic_latency_benchmark]: /ack received at 1779673830.037502527 s  payload='1779673830013846137'
+[INFO] [1779673830.037529077] [topic_latency_benchmark]: Latency /benchmark → /ack: 23.656 ms  (sample 811)
+[INFO] [1779673830.147737774] [topic_latency_benchmark]: /ack received at 1779673830.147736311 s  payload='1779673830113845533'
+[INFO] [1779673830.147786441] [topic_latency_benchmark]: Latency /benchmark → /ack: 33.891 ms  (sample 812)
+[INFO] [1779673830.226459093] [topic_latency_benchmark]: /ack received at 1779673830.226457357 s  payload='1779673830213844976'
+[INFO] [1779673830.226506086] [topic_latency_benchmark]: Latency /benchmark → /ack: 12.612 ms  (sample 813)
+[INFO] [1779673831.613828653] [topic_latency_benchmark]: Stats over 813 samples: min=0.434 ms  avg=38.717 ms  max=99.424 ms
+[INFO] [1779673836.613743340] [topic_latency_benchmark]: Stats over 813 samples: min=0.434 ms  avg=38.717 ms  max=99.424 ms
+^C[INFO] [1779673839.030166549] [rclcpp]: signal_handler(SIGINT/SIGTERM)
