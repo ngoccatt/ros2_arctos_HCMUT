@@ -176,6 +176,38 @@ Phần tiếp theo mô tả các khối chính trong mô hình kiến trúc theo
 
 Khối Driver là tầng dưới cùng trong kiến trúc Ros2-Control, có vai trò giao tiếp trực tiếp với phần cứng - cánh tay robot VS-6577E thông qua máy điều khiển RC5 và tay gắp Gripper-A thông qua Driver-Hat-A. Cả hai bộ điều khiển trung gian: RC5 và Driver-Hat-A đều hỗ trợ giao thức UART, do đó khối \lstinline[style=inlinecode]{UartProtocol} có thể được tái sử dụng ở cả hai phía. Tuy nhiên, mỗi driver sẽ khởi tạo một đối tượng \lstinline[style=inlinecode]{UartProtocol} riêng để đảm bảo quá trình truyền nhận dữ liệu tách biệt và không xung đột.
 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    drvN/.style={draw=blue!60, fill=blue!12, rounded corners=3pt,
+                 minimum width=3.2cm, minimum height=0.7cm, text centered, font=\small},
+    hwN/.style={draw=red!50, fill=red!10, rounded corners=3pt,
+                minimum width=3.2cm, minimum height=0.7cm, text centered, font=\small},
+    grpB/.style={draw=blue!40, dashed, rounded corners=5pt, inner sep=10pt, fill=blue!3},
+    myA/.style={-Stealth, thick}
+]
+% Arm Driver column (software driver nodes only)
+\node[drvN] (md) at (0,1.5)    {\texttt{MotorDriver}};
+\node[drvN] (u1) at (0,0.5)    {\texttt{UartProtocol}};
+% Hand Driver column (software driver nodes only)
+\node[drvN] (sd) at (4.5,1.5)  {\texttt{ServoDriver}};
+\node[drvN] (u2) at (4.5,0.5)  {\texttt{UartProtocol}};
+% Hardware devices -- outside the driver software groups
+\node[hwN]  (r5) at (0,-0.7)   {\textbf{RC5}};
+\node[hwN]  (ha) at (4.5,-0.7) {\textbf{Driver-Hat-A}};
+\draw[myA] (md) -- (u1);
+\draw[myA] (u1) -- (r5);
+\draw[myA] (sd) -- (u2);
+\draw[myA] (u2) -- (ha);
+\begin{scope}[on background layer]
+  \node[grpB, fit=(md)(u1), label=above:{\small\textbf{Arm Driver}}] {};
+  \node[grpB, fit=(sd)(u2), label=above:{\small\textbf{Hand Driver}}] {};
+\end{scope}
+\end{tikzpicture}
+\caption{Sơ đồ khối Driver}
+\label{fig:driver-block}
+\end{figure}
+
 \subsubsection{Khối UartProtocol} 
 
 Khối UartProtocol được xây dựng các chức năng để hỗ trợ truyền/nhận dữ liệu UART, phân tích dữ liệu theo định dạng đã đề xuất và lưu trữ dữ liệu nhận được để tránh mất gói tin. Một số tính năng của module này có thể kể tới như:
@@ -256,6 +288,29 @@ Do nội dung file URDF tương đối lớn và nhiều, đề tài thực hi�
 \subsection{Khối Hardware Interface}
 
 Hardware interface là module ở tầng thứ hai trong kiến trúc Ros2-Control, có vai trò làm cầu nối trung gian giữa phần \textbf{Controller} và \textbf{Driver}. Hardware interface sẽ cung cấp các \textbf{command interface} để Controller có thể điều khiển, và \textbf{state interfaces} để cập nhật trạng thái của thiết bị thực từ Driver lên cho Controller, tuân theo thiết kế phần mềm được quy định trong Ros2-Control đối với thành phần Hardware interface. Với việc điều khiển hai thiết bị khác nhau: cánh tay VS-6577 thông qua RC5 và Gripper-A thông qua Driver-Hat-A, hệ thống cần hai hardware interface riêng biệt do cách thức hoạt động khác nhau. Trong phần hiện thực, hai lớp chính được dùng là \lstinline[style=inlinecode]{DensoInterface} cho cánh tay robot và \lstinline[style=inlinecode]{DensoHandInterface} cho tay gắp.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    hiN/.style={draw=green!60, fill=green!12, rounded corners=3pt,
+                minimum width=3.5cm, minimum height=0.7cm, text centered, font=\small},
+    layN/.style={draw=gray!50, fill=gray!10, rounded corners=3pt,
+                 minimum width=9cm, minimum height=0.7cm, text centered, font=\footnotesize},
+    grpB/.style={draw=green!50, dashed, rounded corners=5pt, inner sep=8pt, fill=green!3},
+    BD/.style={Stealth-Stealth, thick, gray!70}
+]
+\node[layN] (cl) at (0,2)      {\textbf{Controllers}};
+\node[hiN]  (di) at (-2.2,0.8) {\texttt{DensoInterface}};
+\node[hiN]  (dh) at ( 2.2,0.8) {\texttt{DensoHandInterface}};
+\draw[BD] (cl.south -| di.north) -- (di.north) node[midway, left,  font=\tiny]{cmd/state};
+\draw[BD] (cl.south -| dh.north) -- (dh.north) node[midway, right, font=\tiny]{cmd/state};
+\begin{scope}[on background layer]
+  \node[grpB, fit=(di)(dh), label=above:{\small\textbf{Hardware Interface}}] {};
+\end{scope}
+\end{tikzpicture}
+\caption{Sơ đồ khối Hardware Interface trong kiến trúc Ros2-Control}
+\label{fig:hw-interface-block}
+\end{figure}
 
 \subsubsection{Quá trình khởi động Hardware Interface}
 
@@ -386,6 +441,33 @@ Chuyển qua luồng đọc của DensoHandInterface, ta cần trước nhất g
 \subsection{Khối Controllers}
 
 Khối Controllers là lớp thứ 3 trong kiến trúc Ros2 Control, đảm nhiệm vai trò tạo ra những bộ điều khiển (controller) làm nhiệm vụ cập nhật (update) trong chuỗi chu kì ba bước: read-update-write. Với việc dùng Ros2 Control, người dùng có thể tự mình viết một bộ controller riêng, hoặc tận dụng những controller đã được phát triển sẵn bởi framework. Những controller được phát triển này đã được tổng quát hóa để phù hợp cho nhiều loại robot thông dụng khác nhau, cũng như có khả năng tích hợp tốt với MoveIt2 và Nav2. Chính vì vậy, đề tài ưu tiên sử dụng ba loại controller thông dụng cho dự án cánh tay robot có kèm tay gắp, bao gồm: JointTrajectoryController, GripperActionController và JointStateBoardcaster. Mỗi loại controller được khởi tạo với một tên riêng biệt, nhằm phục vụ mục tiêu điều khiển khác nhau.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    cN/.style={draw=gray!60, fill=gray!10, rounded corners=3pt,
+               minimum width=4cm, minimum height=0.9cm,
+               text width=3.8cm, text centered, align=center, font=\small},
+    mN/.style={draw=gray!70, fill=gray!20, rounded corners=3pt,
+               minimum width=14cm, minimum height=0.7cm,
+               text centered, font=\small},
+    grpB/.style={draw=gray!60, dashed, rounded corners=5pt, inner sep=8pt},
+    myA/.style={-Stealth, thick}
+]
+\node[mN] (mgr) at (0,2)    {\textbf{Controller Manager}};
+\node[cN] (jtc) at (-5,0.6) {\texttt{denso\_arm\_controller}\\{\tiny JointTrajectoryController}};
+\node[cN] (gac) at ( 0,0.6) {\texttt{denso\_hand\_controller}\\{\tiny GripperActionController}};
+\node[cN] (jsb) at ( 5,0.6) {\texttt{joint\_state\_broadcaster}\\{\tiny JointStateBroadcaster}};
+\draw[myA] (mgr.south -| jtc.north) -- (jtc.north);
+\draw[myA] (mgr.south -| gac.north) -- (gac.north);
+\draw[myA] (mgr.south -| jsb.north) -- (jsb.north);
+\begin{scope}[on background layer]
+  \node[grpB, fit=(mgr)(jtc)(gac)(jsb)] {};
+\end{scope}
+\end{tikzpicture}
+\caption{Sơ đồ khối Controllers trong kiến trúc Ros2-Control}
+\label{fig:controllers-block}
+\end{figure}
 
 Trước nhất, ta cần cấu hình thuộc tính chung cho controller manager trong file ros2\_controller.yaml, cụ thể:
 
@@ -536,6 +618,35 @@ Joint\_state\_boardcaster - như tên gọi - là một controller không phải
 
 MoveIt2 là lớp thứ 4 trong kiến trúc đề xuất này, đóng vai trò là một giải pháp giúp điều khiển robot một cách hiệu quả với sự tích hợp chặt chẽ với Ros2-Control. Moveit2 sẽ tự động kết nối với Ros2-Control để điều khiển các Controller thực hiện chức năng "update". \href{https://moveit.picknik.ai/humble/doc/examples/setup_assistant/setup_assistant_tutorial.html}{MoveIt Setup Assistant} là một bộ tool được đề tài tận dụng để có thể sinh ra những file cấu hình cần thiết cho việc sử dụng MoveIt2, cũng như tạo sự liên kết giữa MoveIt2 và các Ros2-Controller đã chuẩn bị. Bộ tool hỗ trợ sinh ra thư mục "moveit\_config", gồm một số file chính như sau:
 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    mvN/.style={draw=yellow!70!black, fill=yellow!15, rounded corners=3pt,
+                minimum width=2.8cm, minimum height=0.75cm, text centered, font=\small},
+    appN/.style={draw=orange!70, fill=orange!12, rounded corners=3pt,
+                 minimum width=3.3cm, minimum height=0.9cm,
+                 text centered, align=center, font=\small},
+    grpB/.style={draw=yellow!60!black, dashed, rounded corners=5pt, inner sep=8pt, fill=yellow!5},
+    appG/.style={draw=orange!50, dashed, rounded corners=5pt, inner sep=8pt, fill=orange!5},
+    myA/.style={-Stealth, thick}
+]
+\node[appN] (dr) at (-3,2.3) {\texttt{Denso Remote Control}\\{\tiny Action Server}};
+\node[appN] (ds) at ( 1.5,2.3) {\texttt{Denso MoveIt Servo}\\{\tiny Service Provider}};
+\node[mvN] (sc) at (-5.25,0.5) {SimpleCtrl Manager};
+\node[mvN] (pl) at (-1.75,0.5) {Path Planning};
+\node[mvN] (sv) at ( 1.75,0.5) {Moveit Servo};
+\node[mvN] (rv) at ( 5.25,0.5) {\textbf{Rviz}};
+\draw[myA] (dr.south) -- ++(0,-0.3) -| (pl.north);
+\draw[myA] (ds.south) -- (sv.north);
+\begin{scope}[on background layer]
+  \node[grpB, fit=(pl)(sc)(sv)(rv), label=below:{\small\textbf{MoveIt2}}] {};
+  \node[appG, fit=(dr)(ds), label=above:{\small\textbf{Lớp ứng dụng}}] {};
+\end{scope}
+\end{tikzpicture}
+\caption{Sơ đồ khối MoveIt2 và lớp ứng dụng}
+\label{fig:moveit2-block}
+\end{figure}
+
 \begin{Verbatim}
 moveit_config
 └── config
@@ -567,6 +678,38 @@ Ngoài khối planning, MoveIt2 cũng hỗ trợ package \href{https://moveit.pi
 \subsection{Khối ứng dụng}
 
 Khối ứng dụng bao gồm các khối các module nhỏ riêng biệt, được phát triển dựa trên sự hỗ trợ của MoveIt2 cho để điều khiển cánh tay robot thực tế. Ở lớp này, nhiều loại ứng dụng có thể được phát triển, tuy nhiên trong giới hạn đề tài hiện tại sẽ chỉ xây dựng lớp ứng dụng để cung cấp phương thức điều khiển cho thành phần bên ngoài muốn giao tiếp với hệ thống. Hiện tại, khối ứng dụng cho phép thiết bị bên ngoài (Kính VR) giao tiếp với Ros2 bên trong thông qua Denso Moveit Servo (Service Provider) và Denso Remote Control (Action Server).
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    rbN/.style={draw=purple!60, fill=purple!10, rounded corners=3pt,
+                minimum width=8cm, minimum height=0.85cm,
+                text centered, font=\small},
+    appN/.style={draw=orange!70, fill=orange!15, rounded corners=3pt,
+                 minimum width=3.8cm, minimum height=1cm,
+                 text centered, align=center, font=\small},
+    mvN/.style={draw=yellow!70!black, fill=yellow!15, rounded corners=3pt,
+                minimum width=8cm, minimum height=0.85cm,
+                text centered, font=\small},
+    appG/.style={draw=orange!60, dashed, rounded corners=5pt, inner sep=10pt, fill=orange!5},
+    myA/.style={-Stealth, thick},
+    myAB/.style={Stealth-Stealth, thick, gray!70}
+]
+\node[rbN]  (rb) at (0, 3)     {\textbf{RosBridge Server}};
+\node[appN] (dr) at (-2.5, 1.5) {\texttt{Denso Remote Control}\\{\tiny Action Server}};
+\node[appN] (ds) at ( 2.5, 1.5) {\texttt{Denso MoveIt Servo}\\{\tiny Service Provider}};
+\node[mvN]  (mv) at (0, 0)     {\textbf{MoveIt2} (Path Planning / MoveIt Servo)};
+\draw[myAB] (rb.south -| dr.north) -- (dr.north) node[midway, left,  font=\tiny]{Goal / Result};
+\draw[myAB] (rb.south -| ds.north) -- (ds.north) node[midway, right, font=\tiny]{Req / Resp};
+\draw[myA] (dr.south) -- (mv.north -| dr.south) node[midway, left,  font=\tiny]{Plan \& Execute};
+\draw[myA] (ds.south) -- (mv.north -| ds.south) node[midway, right, font=\tiny]{Servo Cmd};
+\begin{scope}[on background layer]
+  \node[appG, fit=(dr)(ds), label=above:{\small\textbf{Lớp ứng dụng}}] {};
+\end{scope}
+\end{tikzpicture}
+\caption{Sơ đồ khối lớp ứng dụng}
+\label{fig:app-block}
+\end{figure}
 
 \subsubsection{Denso MoveIt Servo}
 
@@ -765,6 +908,33 @@ Thiết kế hiện tại cho thấy sự cân bằng giữa độ ổn định 
 
 Trong quá trình phát triển, để giảm bớt sự phụ thuộc vào thiết bị thực tế và tăng tốc thời gian phát triển các module lớp ứng dụng trở lên, Gazebo Ignition được xây dựng để làm hệ thống mô phỏng điều khiển thay thế phần Hardware Interface trở xuống. Việc tận dụng Gazebo trong quá trình phát triển ứng dụng giúp nhà phát triển có thể nhanh chóng kiểm tra cách hoạt động của robot trong chuỗi điều khiển của mình, và thực hiện sửa đổi cho phù hợp, giảm gánh nặng và khả năng lỗi lên thiết bị thực tế. 
 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    cN/.style={draw=gray!60, fill=gray!10, rounded corners=3pt,
+               minimum width=9cm, minimum height=0.7cm, text centered, font=\small},
+    gN/.style={draw=orange!60, fill=orange!12, rounded corners=3pt,
+               minimum width=9cm, minimum height=0.85cm,
+               text centered, align=center, font=\small},
+    sN/.style={draw=orange!80, fill=orange!25, rounded corners=3pt,
+               minimum width=9cm, minimum height=0.85cm,
+               text centered, align=center, font=\small},
+    grpB/.style={draw=orange!50, dashed, rounded corners=5pt, inner sep=8pt, fill=orange!5},
+    myA/.style={-Stealth, thick}
+]
+\node[cN] (ct) at (0,2)    {\textbf{Controllers} (JointTrajectoryController, GripperActionController)};
+\node[gN] (gz) at (0,0.8)  {\texttt{GazeboSimSystem}\\{\footnotesize thay thế Hardware Interface và Driver}};
+\node[sN] (sm) at (0,-0.5) {\textbf{Gazebo Simulation}\\{\footnotesize Mô phỏng cánh tay VS-6577 và tay gắp Gripper-A}};
+\draw[myA] (ct) -- (gz) node[midway, right, font=\small]{cmd/state};
+\draw[myA] (gz) -- (sm);
+\begin{scope}[on background layer]
+  \node[grpB, fit=(gz)(sm), label=below:{\small\textbf{Gazebo}}] {};
+\end{scope}
+\end{tikzpicture}
+\caption{Sơ đồ mô phỏng với Gazebo thay thế phần Hardware Interface và Driver}
+\label{fig:gazebo-block}
+\end{figure}
+
 Để có thể tích hợp Gazebo vào dự án, ta sẽ cần thực hiện một số thay đổi sau:
 
 \begin{enumerate}
@@ -939,7 +1109,7 @@ Kiến trúc phần mềm cho ứng dụng VR, tương tự cũng sẽ bao gồm
     \label{fig:vr-app-architecture}
 \end{figure}
 
-\subsubsection{Module tương tác VR}
+\subsection{Module tương tác VR}
 
 Điểm ấn tượng của module Meta XR SDK, đó là được thiết kế để nhà phát triển có thể dễ dàng bắt đầu một dự án VR/AR trên Unity với các "building block" gói gọn những tính năng thông dụng nhất để có thể sử dụng ngay. Thành phần cốt lõi nhất của một ứng dụng sử dụng Meta XR SDK là Camera Rig, với đầy đủ những tính năng như:
 
@@ -968,7 +1138,7 @@ Việc tương tác được với vật thể cũng là một yếu tố quan t
 
 Các Panel điều khiển trong ứng dụng sử dụng cả 3 loại tương tác, và một mô hình 3D "Grab Future Denso Robot" sử dụng Grab Interactable cho phép người dùng tương tác và xoay từng trục của cánh tay một cách trực quan.
 
-\subsubsection{Module giao tiếp Ros2}
+\subsection{Module giao tiếp Ros2}
 
 Sơ đồ bên dưới thể hiện kiến trúc tổng quát của module giao tiếp với Ros2 thông qua Web socket. Ros connector là trung tâm của kết nối, một khi khởi tạo và kết nối thành công sẽ cho phép ứng dụng subscribe/publish tới các topic, cũng như sử dụng Service và Action theo nhu cầu. Dữ liệu truyền từ ứng dụng VR sử dụng Ros-Sharp và Ros2 cùng Ros Bridge là các chuỗi JSON theo format message thống nhất.
 
