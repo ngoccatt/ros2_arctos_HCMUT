@@ -108,8 +108,73 @@ def main():
     def fmti(v):
         return str(int(round(v)))
 
+    def fmt_plot(v):
+        return f"{v:.1f}"
+
+    x_labels = [label for label, _, _ in results]
+    x_coords = ", ".join(x_labels)
+
+    def plot_coords(metric: str) -> str:
+        lines = []
+        for label, _, s in results:
+            lines.append(f"    ({label}, {fmt_plot(s[metric])})")
+        return "\n".join(lines)
+
     # ── Sinh LaTeX ────────────────────────────────────────────────────────────
+    figure_latex = f"""\\begin{{figure}}[H]
+\\centering
+\\begin{{tikzpicture}}
+\\begin{{axis}}[
+    ybar,
+    width=0.88\\linewidth,
+    height=6cm,
+    bar width=12pt,
+    xlabel={{Điều kiện tải mạng}},
+    ylabel={{RTT (ms)}},
+    symbolic x coords={{{x_coords}}},
+    xtick=data,
+    xticklabel style={{font=\\small}},
+    ymin=0, ymax=110,
+    ytick={{0,20,40,60,80,100}},
+    ymajorgrids=true,
+    major grid style={{line width=0.4pt, draw=gray!40}},
+    legend style={{at={{(0.98,0.98)}}, anchor=north east, font=\\small,
+                  draw=gray!40, fill=white}},
+    legend cell align=left,
+    axis lines=left,
+    enlarge x limits=0.20,
+]
+% Trung bình (TB)
+\\addplot[fill=blue!60, draw=blue!80] coordinates {{
+{plot_coords("mean")}
+}};
+\\addlegendentry{{TB}}
+% P50 (Trung vị)
+\\addplot[fill=green!60, draw=green!80!black] coordinates {{
+{plot_coords("median")}
+}};
+\\addlegendentry{{P50}}
+% P95
+\\addplot[fill=orange!70, draw=orange!90] coordinates {{
+{plot_coords("p95")}
+}};
+\\addlegendentry{{P95}}
+% P99
+\\addplot[fill=red!60, draw=red!80] coordinates {{
+{plot_coords("p99")}
+}};
+\\addlegendentry{{P99}}
+\\end{{axis}}
+\\end{{tikzpicture}}
+\\caption{{RTT (TB / P50 / P95 / P99) theo điều kiện tải mạng Wi-Fi giữa ứng dụng VR (Meta Quest~3) và Ros2 (PC)}}
+\\label{{fig:rtt-bar-chart}}
+\\end{{figure}}
+"""
+
     latex = r"""% ── Tự động tạo bởi scripts/analyze_rtt_latency.py ──────────────────────
+"""
+    latex += figure_latex
+    latex += r"""
 \begin{table}[H]
 \centering
 \caption{Thống kê RTT giữa ứng dụng VR và RosBridge WebSocket theo điều kiện tải mạng}
@@ -140,7 +205,7 @@ def main():
     inc200 = pct_inc(normal_s["mean"], r200_s["mean"]) if r200_s else 0
 
     latex += f"""
-Kết quả đo đạc RTT được trình bày tại Bảng~\\ref{{tab:rtt-latency}}.
+Kết quả đo đạc RTT được trình bày tại Bảng~\\ref{{tab:rtt-latency}} và Hình~\\ref{{fig:rtt-bar-chart}}.
 Đây là thời gian khứ hồi (Round-Trip Time) tính từ khi Ros2 publish topic
 \\texttt{{/benchmark}} cho đến khi nhận được gói phản hồi \\texttt{{/ack}}
 từ ứng dụng VR thông qua kết nối WebSocket RosBridge tại cổng~9090.

@@ -445,10 +445,14 @@ Khi đã chỉnh hình dạng của cánh tay robot, nhấn nút Execute sẽ đ
 \begin{itemize}
     \item Node Ros2 (PC) publish một gói tin \texttt{std\_msgs/String} lên topic \texttt{/benchmark} mỗi 100\,ms. Payload của gói tin chứa timestamp gửi dưới dạng chuỗi số nanosecond (\texttt{rclcpp::Clock}) để định danh gói.
     \item Ứng dụng VR (Meta Quest~3) subscribe \texttt{/benchmark} thông qua Ros-Sharp/RosBridge WebSocket, sau khi nhận được gói tin, ngay lập tức publish phản hồi lên topic \texttt{/ack} với nội dung payload tương tự.
-    \item Khi node Ros2 nhận được \texttt{/ack}, nó tính RTT bằng công thức: $\text{RTT} = t_{\text{ack received}} - t_{\text{last benchmark publish}}$, với $t$ là thời gian của ROS clock trên cùng máy PC.
+    \item Khi node Ros2 nhận được \texttt{/ack}, nó tính RTT bằng công thức: 
+    
+    $\text{RTT} = t_{\text{ack received}} - t_{\text{last benchmark publish}}$, 
+    
+    với $t$ là thời gian của ROS clock trên cùng máy PC.
 \end{itemize}
 
-Phép đo bao gồm toàn bộ đường đi: serialize → WebSocket (PC → Quest~3) → xử lý tại VR app → WebSocket (Quest~3 → PC) → deserialize. Đây là RTT thực tế của vòng giao tiếp điều khiển, không phải chỉ độ trễ mạng đơn thuần.
+Phép đo bao gồm toàn bộ đường đi: Ros2 --> ứng dụng VR --> Ros2. Đây là RTT thực tế của vòng giao tiếp điều khiển, chịu một phần ảnh hưởng của độ trễ mạng kết nối.
 
 Để đánh giá khả năng chịu tải mạng, đề tài sử dụng công cụ \textbf{iperf} để mô phỏng băng thông tải cao trên cùng kết nối Wi-Fi. iperf là công cụ đo lường hiệu năng mạng mã nguồn mở, có khả năng tạo ra luồng lưu lượng UDP/TCP liên tục với băng thông tùy chỉnh. Lệnh sử dụng:
 
@@ -490,6 +494,14 @@ Trong đó: \texttt{-c} chỉ định địa chỉ IP của server iperf (máy P
     (200 Mbit/s, 50.2)
 };
 \addlegendentry{TB}
+% P50 (Trung vị)
+\addplot[fill=green!60, draw=green!80!black] coordinates {
+    (Bình thường, 19.0)
+    (100 Mbit/s, 23.5)
+    (150 Mbit/s, 33.3)
+    (200 Mbit/s, 52.8)
+};
+\addlegendentry{P50}
 % P95
 \addplot[fill=orange!70, draw=orange!90] coordinates {
     (Bình thường, 52.4)
@@ -508,7 +520,7 @@ Trong đó: \texttt{-c} chỉ định địa chỉ IP của server iperf (máy P
 \addlegendentry{P99}
 \end{axis}
 \end{tikzpicture}
-\caption{RTT (TB / P95 / P99) theo điều kiện tải mạng Wi-Fi giữa ứng dụng VR (Meta Quest~3) và Ros2 (PC)}
+\caption{RTT (TB / P50 / P95 / P99) theo điều kiện tải mạng Wi-Fi giữa ứng dụng VR (Meta Quest~3) và Ros2 (PC)}
 \label{fig:rtt-bar-chart}
 \end{figure}
 
@@ -545,30 +557,25 @@ Khi áp lưu lượng nền 100\,Mbit/s bằng iperf, RTT trung bình tăng lên
 \textbf{27{,}4\,ms} ($+$21{,}4\% so với điều kiện bình thường), P99 tăng lên 88{,}0\,ms.
 Ở mức 150\,Mbit/s, RTT trung bình là \textbf{38{,}7\,ms} ($+$71{,}5\%),
 và tại 200\,Mbit/s lên tới \textbf{50{,}2\,ms} ($+$122{,}3\%).
-RTT tăng theo xu hướng gần tuyến tính với băng thông tải cao, phản ánh tác
-động của tranh chấp băng thông Wi-Fi 5\,GHz lên độ trễ WebSocket.
+RTT tăng theo xu hướng gần tuyến tính với băng thông tải cao, nên để đảm bảo ứng dụng VR có thể giao tiếp hiệu quả với độ trễ thấp, độ lớn của dữ liệu truyền nhận cũng như tính chất của mạng cần được quan tâm.
 
 \textbf{Nhận xét chung.}
-Mặc dù RTT tăng đáng kể ở tải mạng cao, giá trị tuyệt đối vẫn ở mức thấp nhờ
-kết nối Wi-Fi 5\,GHz nội bộ giữa kính Meta Quest~3 và PC chạy Ros2.
-Ở điều kiện sử dụng thực tế (không có lưu lượng cạnh tranh lớn), RTT trung bình
-$\approx$23\,ms cho thấy kết nối Ros-Sharp/RosBridge đủ nhanh để truyền lệnh
-điều khiển và nhận phản hồi trạng thái robot một cách mượt mà.
+Có thể thấy, độ trễ của giao tiếp giữa ứng dụng VR và Ros2 thông qua Ros-sharp vẫn chịu ảnh hưởng của tải mạng, với số liệu cho thấy thời gian RTT tăng dần khi tải mạng tăng cao. Thêm nữa, với việc sử dụng Ros-Sharp, cơ chế giao tiếp giữa ROS2 với kính VR vẫn là giao tiếp thông qua Web Socket (dạng TCP/IP), do đó chịu ảnh hưởng của cơ chế Head-of-line-blocking và nỗ lực truyền dữ liệu tin cậy, cho cả gói tin quan trọng (như /joint\_states) và dữ liệu ảnh lớn (image\_raw), nên sẽ gặp vấn đề nếu lượng dữ liệu truyền đi tăng thêm hoặc mạng bị chập chờn. Để tăng tính hiệu quả của giao tiếp, phương thức giao tiếp sử dụng UDP nên được cân nhắc, có thể thay thế sử dụng Web Socket bằng WebRTC (cho phép tách biệt truyền gói tin dạng UDP cho dữ liệu camera/ cloud sensor, hoặc dữ liệu quan trọng thì sử dụng TCP) với \href{https://docs.phntm.io/bridge/}{Phantom bridge}, và bên phía Unity sẽ phát triển bộ kết nối/ giao tiếp sử dụng WebRTC, trao đổi dữ liệu theo giao thức \href{https://github.com/RobotWebTools/rosbridge_suite/blob/ros2/ROSBRIDGE_PROTOCOL.md#422-default-qos-settings}{RosBridge Protocol V2} để phù hợp theo yêu cầu của Ros2.
+
+Trong đề tài hiện tại, với lợi thế của mạng Wifi cục bộ và việc xây dựng ứng dụng ROS2 sử dụng C++, độ trễ giữa ứng dụng VR và ROS2 rơi vào khoảng 20ms trong điều kiện sử dụng bình thường, qua đó giúp cho việc truyền dữ liệu hình ảnh cũng như đồng bộ trạng thái hoạt động trong 10ms. 
 
 \subsubsection{Đánh giá hiệu năng ứng dụng trong quá trình hoạt động}
 
 Một trong những vấn đề trong việc phát triển ứng dụng VR đó là đảm bảo người dùng có trải nghiệm sử dụng mượt mà, thoải mái mà không gây gánh nặng nhận thức (cognitive pressure). Meta Quest Developer Hub được sử dụng để thu thập chi tiết dữ liệu hoạt động của ứng dụng, gồm nhiều tiêu chí đánh giá khác nhau để xem xét ứng dụng có đang hoạt động ổn định và tối ưu hay không. Bảng phân tích các tiêu chí và nhận xét được thể hiện ở dưới:
 
-% application metric analysis here.
-
-Dữ liệu được thu thập qua 2 phiên sử dụng ứng dụng liên tục (tổng cộng
-30{,}8\,phút) bằng Meta Quest Developer Hub trên thiết bị Meta Quest~3.
+Dữ liệu được thu thập qua 1 phiên sử dụng ứng dụng liên tục (tổng cộng
+27{,}3\,phút) bằng Meta Quest Developer Hub trên thiết bị Meta Quest 3.
 Bảng~\ref{tab:vr-app-metrics} trình bày các tiêu chí hiệu năng chính được ghi nhận
 trong suốt quá trình hoạt động.
 
 \begin{table}[H]
 \centering
-\caption{Tổng hợp hiệu năng ứng dụng VR trên Meta Quest~3 (2 phiên đo, tổng 30{,}8 phút)}
+\caption{Tổng hợp hiệu năng ứng dụng VR trên Meta Quest~3 (1 phiên đo, tổng 27{,}3 phút)}
 \label{tab:vr-app-metrics}
 \small
 \begin{tblr}{
@@ -583,63 +590,133 @@ trong suốt quá trình hoạt động.
 }
 Tiêu chí & Đơn vị & TB & Min & Max & Mục tiêu \\
 \SetCell[c=6]{l} \textit{Hiệu năng khung hình} \\
-FPS ứng dụng & fps & 66{,}1 & 40 & 74 & $\geq$72 \\
-GPU render time / frame & ms & 7{,}14 & 4{,}55 & 10{,}31 & $\leq$13{,}9 \\
-ATW GPU time / frame & ms & 1{,}66 & 1{,}22 & 4{,}10 & nhỏ \\
-ICFL (frame latency) & ms & 13{,}69 & 13{,}30 & 17{,}80 & nhỏ \\
-Slice headroom & ms & 0{,}68 & 0{,}54 & 3{,}89 & lớn \\
+FPS trung bình & fps & 72{,}0 & 62 & 73 & $\geq$72 \\
+GPU render time / frame & ms & 8{,}60 & 5{,}95 & 11{,}03 & $\leq$13{,}9 \\
+ATW GPU time / frame & ms & 1{,}56 & 1{,}12 & 3{,}31 & nhỏ \\
 \SetCell[c=6]{l} \textit{Tải CPU / GPU} \\
-CPU utilization (tổng 8 nhân) & \% & 76{,}3 & 27 & 93 & $<$80 \\
-GPU utilization & \% & 60{,}2 & 41 & 76 & $<$80 \\
-Tần số CPU & MHz & 1941 & 1920 & 2361 & -- \\
+CPU utilization (tổng 8 nhân) & \% & 52{,}8 & 35 & 69 & $<$80 \\
+GPU utilization & \% & 75{,}1 & 55 & 83 & $<$80 \\
+Tần số CPU & MHz & 1511 & 1228 & 2361 & -- \\
 \SetCell[c=6]{l} \textit{Bộ nhớ} \\
-RAM ứng dụng (PSS) & MB & 520 & 492 & 534 & -- \\
-GPU memory vật lý & MB & 339 & 329 & 344 & -- \\
+RAM ứng dụng (PSS) & MB & 1010{,}7 & 940 & 1038 & -- \\
+GPU memory vật lý & MB & 344{,}2 & 335 & 346 & -- \\
 \SetCell[c=6]{l} \textit{Ổn định khung hình (tổng 2 phiên)} \\
-Stale frames & frames & \SetCell[c=4]{c} 17\,059 & & & 0 \\
+Stale frames & frames & \SetCell[c=4]{c} 4307 & & & 0 \\
 Skipped frames (ATW miss) & frames & \SetCell[c=4]{c} 0 & & & 0 \\
 Shader hitches & lần & \SetCell[c=4]{c} 0 & & & 0 \\
 \SetCell[c=6]{l} \textit{Nhiệt độ thiết bị} \\
-Nhiệt độ pin & \textdegree{}C & 45{,}8 & 41 & 48 & $<$45 \\
+Nhiệt độ pin & \textdegree{}C & 46{,}3 & 43 & 47 & $<$45 \\
 \end{tblr}
 \end{table}
 
 \textbf{Khung hình và độ trễ hiển thị.}
-FPS ứng dụng đạt trung bình \textbf{66{,}1\,fps}, thấp hơn mục tiêu 72\,Hz của Meta Quest~3.
-Nguyên nhân chính là tải CPU trung bình 76{,}3\% với đỉnh 93\% khiến luồng render Unity
-không kịp nộp frame trước deadline của compositor ở một số thời điểm, dẫn đến
-\textbf{17\,059 stale frames} trong 30{,}8 phút sử dụng ($\approx$9{,}2 stale/giây).
-Tuy nhiên, cơ chế \textit{Asynchronous TimeWarp} (ATW) đã bù hoàn toàn:
-\textbf{0 skipped frame} ghi nhận xuyên suốt hai phiên, nghĩa là người dùng
-luôn nhận được hình ảnh hiển thị ở 72\,Hz nhờ ATW tổng hợp frame trung gian từ
-dữ liệu chuyển động đầu mới nhất, đảm bảo không có hiện tượng giật hoặc đứng hình. Về cơ bản, ứng dụng vẫn đạt một mức FPS trung bình lớn hơn 60 FPS, thỏa mãn mục tiêu thiết kế ban đầu của ứng dụng. 
 
-Thời gian GPU render mỗi frame trung bình chỉ \textbf{7{,}14\,ms} -- chiếm
-khoảng 51\% ngân sách 13{,}9\,ms cho phép tại 72\,Hz -- cho thấy pipeline render
-còn dư tốt về mặt GPU. Slice headroom trung bình \textbf{0{,}68\,ms} khá sát ngưỡng
-nhưng không xảy ra trường hợp compositor trễ deadline (0 skipped frames).
-ICFL trung bình 13{,}69\,ms xấp xỉ đúng một chu kỳ 72\,Hz (13{,}9\,ms),
-phù hợp với cấu hình \texttt{minimum\_vsyncs = 1}.
+\textit{FPS ứng dụng} là số khung hình Unity render được mỗi giây, phản ánh trực tiếp
+trải nghiệm mượt mà của người dùng trong môi trường VR. Theo yêu cầu VRC.Quest.Performance.1
+của Meta \cite{meta_vrc_performance}, ứng dụng phải duy trì tối thiểu \textbf{60\,fps} liên tục
+trong suốt phiên sử dụng; mục tiêu lý tưởng với Meta Quest~3 cấu hình mặc định là bám sát
+\textbf{72\,fps} (refresh rate của màn hình). FPS dưới 60 kéo dài gây hiện tượng giật và
+tăng nguy cơ say chuyển động (motion sickness). Ứng dụng đạt trung bình \textbf{72{,}0\,fps}
+(min 62, max 73), bám sát ngưỡng 72\,fps trong phần lớn phiên sử dụng -- cải thiện đáng kể
+so với các phiên đo trước đây.
+
+\textit{GPU render time / frame} (App GPU Time) là thời gian GPU hoàn thành toàn bộ công việc
+đồ hoạ cho một frame. Đây là chỉ số then chốt để xác định ứng dụng đang bị bottleneck tại
+CPU hay GPU \cite{meta_ovr_best_practices}. Ngân sách frame phụ thuộc vào refresh rate mục
+tiêu: tại 72\,Hz là \textbf{13{,}88\,ms}, tại 90\,Hz là 11{,}11\,ms và tại 120\,Hz là
+8{,}33\,ms. Nếu App GPU Time vượt ngân sách, ứng dụng bị GPU-bound; ngược lại nếu App GPU
+Time thấp nhưng FPS vẫn không đạt, ứng dụng bị CPU-bound. Giá trị đo được \textbf{8{,}60\,ms}
+trung bình -- khoảng 62\% ngân sách -- cho thấy pipeline render còn dư headroom; kết hợp với
+GPU utilization trung bình 75\%, GPU đang trở thành nút cổ chai chính.
+
+\textit{ATW GPU time / frame} (TimeWarp GPU Time) là thời gian GPU dành riêng cho cơ chế
+Asynchronous TimeWarp (ATW) ở tầng compositor của Horizon OS. ATW chạy hoàn toàn độc lập
+với ứng dụng: khi ứng dụng không kịp nộp frame đúng hạn, ATW tổng hợp frame trung gian
+bằng cách biến đổi frame cũ nhất theo dữ liệu chuyển động đầu mới nhất, duy trì refresh
+rate hiển thị. Chỉ số này cần giữ ở mức thấp để không tranh chấp GPU headroom với app;
+đỉnh quá cao có thể dẫn tới screen tear \cite{meta_ovr_stats}. Ứng dụng đạt
+\textbf{1{,}56\,ms} trung bình (đỉnh 3{,}31\,ms), ở mức an toàn và không cạnh tranh với
+App GPU Time.
 
 \textbf{Tải CPU và GPU.}
-CPU tổng trung bình \textbf{76{,}3\%} (đỉnh 93\%), GPU trung bình \textbf{60{,}2\%}
-(đỉnh 76\%). GPU còn dư đáng kể và không phải nút cổ chai; điểm nghẽn nằm ở CPU,
-đặc biệt khi ứng dụng xử lý đồng thời: cập nhật mô hình 3D robot từ Ros-Sharp,
-tính toán IK cho chế độ Robot Grab Rotate và render scene VR.
-Tần số CPU dao động từ 1920\,MHz đến 2361\,MHz, cho thấy hệ thống boosted clock
-khi cần nhưng không xảy ra throttling (tần số không giảm dưới mức nền).
+
+\textit{CPU utilization} ở đây là tổng mức sử dụng CPU trên cả 8 nhân của SoC Snapdragon
+XR2 Gen~2. Cần lưu ý rằng chỉ số này không phân biệt luồng render với các luồng khác
+(Ros-Sharp, networking, IK). Mức tải dưới \textbf{80\%} được khuyến nghị để tránh scheduling
+pressure ảnh hưởng tới deadline renderer \cite{meta_ovr_stats}; trên 90\% kéo dài sẽ bắt
+đầu gây stale frame. Ứng dụng đạt \textbf{52{,}8\%} trung bình với đỉnh \textbf{69\%},
+còn dư headroom tốt. CPU không còn là nút cổ chai trong phiên này, nhờ một số cải thiện sau:
+
+\begin{itemize}
+    \item \textbf{Tắt mipmaps*}: Trong hàm xử lý ảnh của \textbf{CompressedImageSubscriber}, Texture2D Apply dữ liệu ảnh với tham số \textbf{updateMipmaps = false} và makeNoLongerReadable = false. "Mipmaps" là một khái niệm trong Unity, có vai trò tạo ra nhiều mức độ ảnh (level) cho một đối tượng, và hỗ trợ tự động chọn độ phân giải của đối tượng đó tùy theo khoảng cách với camera. Nếu Camera gần, thì mức độ chi tiết ảnh của đối tượng sẽ giữ chất lượng gốc, nhưng càng ra xa, thì sẽ sử dụng level 1 (nửa độ phân giải), level 2 (1/4 độ phân giải)... Điều này giúp cho game tiết kiệm đáng kể chi phí render hình ảnh đối tượng, giảm tải cho GPU. Tuy nhiên, cơ chế này chỉ phù hợp cho một đối tượng với hình ảnh cố định. Đối với hình ảnh từ camera liên tục thay đổi (30FPS), tính năng này khiến cho Mipmaps bị tính lại liên tục, gây một lượng tải rất lớn cho CPU. Ngoài ra, ảnh camera cũng chỉ được hiển thị trên UI canvas, trên một mặt phẳng, nên việc sử dụng cơ chế Mipmaps là không cần thiết. 
+    \item \textbf{Giãn cách lệnh Publish cho MoveIt-Servo control}: Khi nhấn nút xoay robot bằng MoveIt-Servo, hàm được thiết kế ban đầu là gửi lệnh publish liên tục theo framerate. Tuy nhiên, với ~72fps, lệnh publish được gửi với tần số nhanh (13.66ms / 1 lần publish). Điều này vô tình tăng tải xử lý cho CPU để thực hiện publish tới ROS, trong khi đó MoveIt-Servo được cấu hình là chỉ dừng xoay khi lệnh tới trễ hơn 300ms. Do đó, các lớp (Class) Publish vào MoveIt-Servo sẽ chỉ gửi đi mỗi 100ms thay vì mỗi frame, giúp giảm đáng kể tải CPU phải xử lý.
+\end{itemize}
+
+\textit{GPU utilization} là mức sử dụng GPU tổng thể của ứng dụng. Ngưỡng
+dưới \textbf{80\%} là bình thường; từ 80--90\% bắt đầu có rủi ro scheduling GPU gây frame
+drop; 100\% kéo dài nghĩa là GPU-bound hoàn toàn \cite{meta_ovr_stats}. Ứng dụng đạt
+\textbf{75{,}1\%} trung bình (đỉnh 83\%), tiệm cận ngưỡng an toàn 80\%. Chỉ số này
+nhất quán với App GPU Time ở mức 8{,}60\,ms (62\% ngân sách) và xác nhận GPU hiện là
+nút cổ chai chính; đỉnh 83\% cho thấy cần tối ưu hóa draw call và shader để tránh frame drop. Tuy vậy, đây vẫn là một mức tiêu thụ GPU chấp nhận được, và cho ra kết quả hoạt động ứng dụng có FPS trung bình nằm ở mức 72FPS.
+
+\textit{Tần số CPU} phản ánh cơ chế DVFS (Dynamic Voltage and Frequency Scaling) của SoC:
+xung tăng tự động khi tải cao và giảm khi nhiệt độ tiệm cận ngưỡng throttle nhiệt. Tần số
+dao động từ \textbf{1228\,MHz} đến \textbf{2361\,MHz} trong suốt phiên, cho thấy hệ thống
+boost clock khi cần nhưng chưa xảy ra throttle (nếu throttle, tần số sẽ tụt đột ngột
+xuống dưới mức nền và kèm theo FPS giảm bất thường).
 
 \textbf{Bộ nhớ.}
-Ứng dụng tiêu thụ trung bình \textbf{520\,MB} RAM (PSS), đỉnh 534\,MB, cùng
-$\approx$339\,MB GPU memory vật lý -- mức sử dụng bộ nhớ ổn định và không tăng
-theo thời gian, không có dấu hiệu memory leak trong suốt hai phiên kiểm thử.
 
-\textbf{Nhiệt độ.}
-Nhiệt độ pin đo được trung bình \textbf{45{,}8\,\textdegree{}C}, đỉnh \textbf{48\,\textdegree{}C}
--- vượt nhẹ ngưỡng 45\,\textdegree{}C Meta khuyến nghị cho trải nghiệm thoải mái,
-nhưng chưa đạt ngưỡng kích hoạt throttling nhiệt (\textasciitilde53\,\textdegree{}C).
-Người dùng sử dụng liên tục trên 20\,phút có thể cảm nhận thiết bị ấm nhẹ tại vùng
-pin, song không ảnh hưởng đến hiệu năng hay sự an toàn của thiết bị.
+\textit{RAM ứng dụng (PSS -- Proportional Set Size)} là dấu chân bộ nhớ RAM thực tế của
+tiến trình, trong đó các vùng nhớ chia sẻ với tiến trình khác chỉ được tính theo tỉ lệ sử
+dụng. PSS chính xác hơn RSS (Resident Set Size) vì tránh đếm trùng bộ nhớ chia sẻ, đây là
+chỉ số chuẩn Android để theo dõi footprint thực \cite{android_memory_overview}. Giá trị
+\textbf{1010{,}7\,MB} trung bình (đỉnh 1038\,MB) ổn định, không tăng tuyến tính theo thời gian,
+không có dấu hiệu memory leak -- chứng tỏ Unity đang giải phóng Texture2D từ luồng ảnh
+camera và các object tạm đúng cách. Mức PSS cao hơn so với báo cáo trước đó là do bật tính năng Development Build (để theo dõi hiệu năng ứng dụng và hỗ trợ Profiling) cùng Immersive Debugging (một tính năng đặc biệt dành cho thiết bị Meta Quest, cho phép hiển thị bảng Debug Log của Unity ngay trong ứng dụng).
+
+\textit{GPU memory vật lý} là phần bộ nhớ đồ hoạ thực tế ứng dụng chiếm dụng cho
+texture, framebuffer, mesh buffer và shader. Giá trị \textbf{344{,}2\,MB} trung bình (đỉnh
+346\,MB) ổn định, phản ánh asset 3D của cánh tay robot Denso cùng các shader được tải vào
+VRAM một lần và giữ xuyên suốt phiên, không có spike lớn do texture streaming bất thường.
+
+\textbf{Ổn định khung hình.}
+
+\textit{Stale frames} là số lần compositor đã sẵn sàng hiển thị frame mới nhưng ứng dụng
+chưa nộp frame đúng hạn, khiến compositor phải dùng lại frame cũ và nhờ ATW bù chuyển động.
+Khác với skipped frame, stale frame vẫn được hiển thị nhờ ATW nhưng nội dung scene chưa
+được cập nhật -- người dùng có thể nhận thấy lag nhỏ giữa chuyển động đầu và phản hồi
+hình ảnh \cite{meta_ovr_stats}. \textbf{4307 stale frames} trong 27{,}3 phút
+($\approx$2{,}6/giây) -- giảm hơn 75\% so với phiên đo trước (17\,059 stale frames),
+phản ánh cải thiện rõ rệt sau khi tối ưu hoá luồng điều khiển. Stale frame còn lại chủ yếu
+xuất hiện tại các thời điểm GPU utilization đạt đỉnh 83\%; hướng cải thiện tiếp theo là
+tối ưu GPU load để đưa stale frame về gần 0.
+
+\textit{Skipped frames (ATW miss)} là số frame bị compositor bỏ qua hoàn toàn -- tức kể
+cả ATW cũng không kịp tổng hợp frame trước deadline scan-out của màn hình. Đây là tình
+huống nghiêm trọng nhất: người dùng thấy hình ảnh bị đứng/nhảy cóc, đây là nguyên nhân
+hàng đầu gây motion sickness. Mục tiêu cứng của Meta là \textbf{0 skipped frame}
+\cite{meta_ovr_stats}. Kết quả đo được \textbf{0 skipped frames} trong toàn phiên
+là lý tưởng, xác nhận ATW GPU time (1{,}56\,ms) đủ thấp để compositor luôn hoàn thành
+trước deadline dù ứng dụng có bị stale.
+
+\textit{Shader hitches} là số lần Unity phải compile shader lúc runtime (pipeline
+compilation stall), gây frame drop đột ngột thường thấy ở lần chạy đầu sau cài đặt khi
+shader cache còn trống. Sau khi shader được compile và cache lại, hitches không còn xuất
+hiện ở các phiên tiếp theo \cite{meta_ovr_best_practices}. \textbf{0 shader hitches} trong
+phiên đo xác nhận shader đã được warm-up đúng cách trước khi thu thập dữ liệu (theo như Meta Quest, để đánh giá chính xác hiệu năng ứng dụng, sẽ cần phải khởi động ứng dụng lần đầu tiên để compile toàn bộ shader, sau đó mới tiến hành đo đạc).
+
+\textbf{Nhiệt độ thiết bị.}
+
+\textit{Nhiệt độ pin} là chỉ báo gián tiếp về nguy cơ thermal throttle của headset. Meta
+Quest 3 có ba power state do Horizon OS quản lý \cite{meta_ovr_stats}: \textbf{NORMAL} (hoạt
+động bình thường), \textbf{SAVE} (giảm xung CPU/GPU để tản nhiệt, khoảng \textasciitilde45--50\,°C
+tuỳ cảm biến), và \textbf{DANGER} (hiển thị cảnh báo quá nhiệt và buộc giảm hiệu năng
+nghiêm trọng, khoảng \textasciitilde53\,°C). Khi vào SAVE, FPS và chất lượng render bị
+giảm tự động dù ứng dụng không thay đổi. Nhiệt độ pin đo được \textbf{46{,}3\,°C} trung
+bình (đỉnh 47\,°C) vượt nhẹ mức 45\,°C Meta khuyến nghị cho trải nghiệm thoải mái nhưng
+chưa đạt ngưỡng SAVE hay DANGER. Thiết bị duy trì ổn định ở power state NORMAL trong suốt
+phiên 27{,}3 phút;
 
 
 

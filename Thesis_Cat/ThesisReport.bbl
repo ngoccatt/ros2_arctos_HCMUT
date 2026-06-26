@@ -850,6 +850,133 @@
       \field{pages}{80}
       \range{pages}{1}
     \endentry
+    \entry{meta_vrc_performance}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=350a86b0327152e3a50596538f38a5db}{%
+           family={{Meta Platforms, Inc.}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{350a86b0327152e3a50596538f38a5db}
+      \strng{fullhash}{350a86b0327152e3a50596538f38a5db}
+      \strng{fullhashraw}{350a86b0327152e3a50596538f38a5db}
+      \strng{bibnamehash}{350a86b0327152e3a50596538f38a5db}
+      \strng{authorbibnamehash}{350a86b0327152e3a50596538f38a5db}
+      \strng{authornamehash}{350a86b0327152e3a50596538f38a5db}
+      \strng{authorfullhash}{350a86b0327152e3a50596538f38a5db}
+      \strng{authorfullhashraw}{350a86b0327152e3a50596538f38a5db}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{VRC.Quest.Performance -- Performance Requirements for Quest Apps}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developers.meta.com/horizon/documentation/native/android/ts-ovr-best-practices/
+      \endverb
+      \verb{url}
+      \verb https://developers.meta.com/horizon/documentation/native/android/ts-ovr-best-practices/
+      \endverb
+    \endentry
+    \entry{meta_ovr_best_practices}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=350a86b0327152e3a50596538f38a5db}{%
+           family={{Meta Platforms, Inc.}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{350a86b0327152e3a50596538f38a5db}
+      \strng{fullhash}{350a86b0327152e3a50596538f38a5db}
+      \strng{fullhashraw}{350a86b0327152e3a50596538f38a5db}
+      \strng{bibnamehash}{350a86b0327152e3a50596538f38a5db}
+      \strng{authorbibnamehash}{350a86b0327152e3a50596538f38a5db}
+      \strng{authornamehash}{350a86b0327152e3a50596538f38a5db}
+      \strng{authorfullhash}{350a86b0327152e3a50596538f38a5db}
+      \strng{authorfullhashraw}{350a86b0327152e3a50596538f38a5db}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OVR Best Practices -- App Performance Guidelines for Meta Quest}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developers.meta.com/horizon/documentation/native/android/ts-ovr-best-practices/
+      \endverb
+      \verb{url}
+      \verb https://developers.meta.com/horizon/documentation/native/android/ts-ovr-best-practices/
+      \endverb
+    \endentry
+    \entry{meta_ovr_stats}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=350a86b0327152e3a50596538f38a5db}{%
+           family={{Meta Platforms, Inc.}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{350a86b0327152e3a50596538f38a5db}
+      \strng{fullhash}{350a86b0327152e3a50596538f38a5db}
+      \strng{fullhashraw}{350a86b0327152e3a50596538f38a5db}
+      \strng{bibnamehash}{350a86b0327152e3a50596538f38a5db}
+      \strng{authorbibnamehash}{350a86b0327152e3a50596538f38a5db}
+      \strng{authornamehash}{350a86b0327152e3a50596538f38a5db}
+      \strng{authorfullhash}{350a86b0327152e3a50596538f38a5db}
+      \strng{authorfullhashraw}{350a86b0327152e3a50596538f38a5db}
+      \field{extraname}{3}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OVR Metrics Tool -- Stats and Definitions}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developers.meta.com/horizon/documentation/native/android/ts-ovrstats/
+      \endverb
+      \verb{url}
+      \verb https://developers.meta.com/horizon/documentation/native/android/ts-ovrstats/
+      \endverb
+    \endentry
+    \entry{android_memory_overview}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=7b568e72d25af32b0cec03e49cbf3f70}{%
+           family={{Google LLC}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{7b568e72d25af32b0cec03e49cbf3f70}
+      \strng{fullhash}{7b568e72d25af32b0cec03e49cbf3f70}
+      \strng{fullhashraw}{7b568e72d25af32b0cec03e49cbf3f70}
+      \strng{bibnamehash}{7b568e72d25af32b0cec03e49cbf3f70}
+      \strng{authorbibnamehash}{7b568e72d25af32b0cec03e49cbf3f70}
+      \strng{authornamehash}{7b568e72d25af32b0cec03e49cbf3f70}
+      \strng{authorfullhash}{7b568e72d25af32b0cec03e49cbf3f70}
+      \strng{authorfullhashraw}{7b568e72d25af32b0cec03e49cbf3f70}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Overview of Android Memory Management}
+      \field{urlday}{7}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.android.com/topic/performance/memory-overview
+      \endverb
+      \verb{url}
+      \verb https://developer.android.com/topic/performance/memory-overview
+      \endverb
+    \endentry
     \entry{reality-fusion}{misc}{}{}
       \name{author}{5}{}{%
         {{hash=815a2cdb03036dc2884fcf0472f759cf}{%
@@ -886,8 +1013,8 @@
       \strng{authornamehash}{bc4908476129f5d39803e51d00d66921}
       \strng{authorfullhash}{d187ded47484f2571cf0a46fa2193ff6}
       \strng{authorfullhashraw}{d187ded47484f2571cf0a46fa2193ff6}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.RO}
@@ -937,8 +1064,8 @@
       \strng{authornamehash}{83c3e615cdbdfbc583a6db20ee355e31}
       \strng{authorfullhash}{d45bd02329c5c77bbe5580c092d65a9f}
       \strng{authorfullhashraw}{d45bd02329c5c77bbe5580c092d65a9f}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This paper proposes a user-friendly teleoperation interface for manipulation. We provide the user with a view of the scene augmented with depth information from local cameras to provide visibility in occluded areas during manipulation tasks. This gives an improved sense of the 3D environment which results in better task performance. Further, we monitor the pose of the robot's end effector in real-time so that we are able to superimpose a virtual representation into the scene when parts are occluded. The integration of these features enables the user to perform difficult manipulation tasks when the action environment is normally occluded in the main camera view.We performed preliminary studies with this new setup and users provided positive feedback regarding the proposed augmented reality (AR) system.}
@@ -975,8 +1102,8 @@
       \strng{authornamehash}{e2ef951ab8d64c8a53679506cad7aed8}
       \strng{authorfullhash}{e2ef951ab8d64c8a53679506cad7aed8}
       \strng{authorfullhashraw}{e2ef951ab8d64c8a53679506cad7aed8}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{What is teleoperation?}
@@ -1003,8 +1130,8 @@
       \strng{authornamehash}{1197190d95b0f6e82537145fe6948a4b}
       \strng{authorfullhash}{1197190d95b0f6e82537145fe6948a4b}
       \strng{authorfullhashraw}{1197190d95b0f6e82537145fe6948a4b}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Uart: a hardware communication protocol}
@@ -1031,8 +1158,8 @@
       \strng{authornamehash}{aba3aa931662562ba28fd1f0a05f64bf}
       \strng{authorfullhash}{aba3aa931662562ba28fd1f0a05f64bf}
       \strng{authorfullhashraw}{aba3aa931662562ba28fd1f0a05f64bf}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Ros2\_Control: Humble}
@@ -1059,8 +1186,8 @@
       \strng{authornamehash}{c1a7f3693d1e2e5f5821b1b351260e9b}
       \strng{authorfullhash}{c1a7f3693d1e2e5f5821b1b351260e9b}
       \strng{authorfullhashraw}{c1a7f3693d1e2e5f5821b1b351260e9b}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Configure MoveIt 2 for a Simulated Robot Arm – ROS 2 Jazzy}
@@ -1202,8 +1329,8 @@
       \strng{authorfullhash}{c8c8cd8ee646d3872b04f98a6c75b126}
       \strng{authorfullhashraw}{c8c8cd8ee646d3872b04f98a6c75b126}
       \field{extraname}{2}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Manufacturing Processes}
@@ -1260,8 +1387,8 @@
       \strng{authornamehash}{b48659b05fe2368492c661e48653a2cb}
       \strng{authorfullhash}{d83ac55d64d5a84f38a265e07592533f}
       \strng{authorfullhashraw}{d83ac55d64d5a84f38a265e07592533f}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:2501.00822}
@@ -1300,8 +1427,8 @@
       \strng{authornamehash}{d15d0e30dfa947d913467ac30b74a55e}
       \strng{authorfullhash}{8221b340ced7eaba70824b92fc7e1dad}
       \strng{authorfullhashraw}{8221b340ced7eaba70824b92fc7e1dad}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Electronics}
@@ -1329,8 +1456,8 @@
       \strng{authornamehash}{e0f0bfcdef97aaed4909571f74f82eae}
       \strng{authorfullhash}{e0f0bfcdef97aaed4909571f74f82eae}
       \strng{authorfullhashraw}{e0f0bfcdef97aaed4909571f74f82eae}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{A Digital Twin Framework for Telesurgery in the Presence of Varying Network Quality of Service}

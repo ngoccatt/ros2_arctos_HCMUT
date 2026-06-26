@@ -215,6 +215,12 @@ To communicate with Unity via Ros-sharp, use:
 ros2 launch file_server2 ros_sharp_communication.launch.py
 ```
 
+To allow VR application to access the RosBridge server on WSL, run the following command on Admin Powershell:
+
+```bash
+netsh interface portproxy add v4tov4 listenport=9090 listenaddress=<Windows IP> connectport=9090 connectaddress=(wsl hostname -I)
+```
+
 ## Individual Package READMEs
 
 Each package has its own **README.md** with more details:
