@@ -25,6 +25,14 @@
 *.la
 *.a
 *.lib
+*.aux
+*.log
+*.lof
+*.fls
+*.bcf
+*.blg
+*.tex.gz
+*.toc
 
 # Executables
 *.exe

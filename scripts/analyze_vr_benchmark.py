@@ -66,15 +66,15 @@ def load_sessions(bench_dir: str) -> list[tuple[str, pd.DataFrame]]:
     files = sorted(glob.glob(pattern))
     if not files:
         raise FileNotFoundError(f"Không tìm thấy file CSV trong: {bench_dir}")
-    sessions = []
-    for fp in files:
-        df = pd.read_csv(fp)
-        name = os.path.basename(fp)
-        sessions.append((name, df))
-        duration_s = df["Time Stamp"].iloc[-1] / 1000
-        print(f"  [+] {name}")
-        print(f"      Rows: {len(df)}, Duration: {duration_s:.0f}s ({duration_s/60:.1f} min)")
-    return sessions
+    # Only load the latest CSV (sorted by filename which contains timestamp)
+    latest = files[-1]
+    df = pd.read_csv(latest)
+    name = os.path.basename(latest)
+    duration_s = df["Time Stamp"].iloc[-1] / 1000
+    print(f"  [+] {name}  (latest)")
+    print(f"      Rows: {len(df)}, Duration: {duration_s:.0f}s ({duration_s/60:.1f} min)")
+    print(f"  (skipped {len(files)-1} older file(s))")
+    return [(name, df)]
 
 
 def stats(series: pd.Series) -> dict:
@@ -159,6 +159,7 @@ def print_latex_table(sessions: list[tuple[str, pd.DataFrame]], results: dict):
 
     # ── In bảng LaTeX ──────────────────────────────────────────────────────
     # Tính thêm một vài con số key để viết nhận xét
+    n_sessions = len(sessions)
     fps_mean   = combined.get("average_frame_rate", {}).get("mean", "?")
     fps_min    = combined.get("average_frame_rate", {}).get("min",  "?")
     gpu_rt_mean = round(combined.get("app_gpu_time_microseconds", {}).get("mean", 0) / 1000, 2)
@@ -180,6 +181,7 @@ def print_latex_table(sessions: list[tuple[str, pd.DataFrame]], results: dict):
                   sum(int(df["shader_hitches"].iloc[-1]) for _, df in sessions
                       if "shader_hitches" in df.columns))
     total_dur_s = sum(df["Time Stamp"].iloc[-1] / 1000 for _, df in sessions)
+    total_dur_min = round(total_dur_s / 60, 1)
 
     # Session durations
     sess_info = [(os.path.basename(n), round(df["Time Stamp"].iloc[-1]/1000, 0))
@@ -193,7 +195,6 @@ def print_latex_table(sessions: list[tuple[str, pd.DataFrame]], results: dict):
 
     # Bảng tổng hợp các metric
     n_sessions = len(sessions)
-    total_dur_min = round(total_dur_s / 60, 1)
 
     latex = rf"""Dữ liệu được thu thập qua {n_sessions} phiên sử dụng ứng dụng liên tục (tổng cộng
 {total_dur_min}\,phút) bằng Meta Quest Developer Hub trên thiết bị Meta Quest~3. Bảng~\ref{{tab:vr-app-metrics}}
@@ -224,7 +225,7 @@ GPU utilization & \% & {gpu_mean} & {combined.get('gpu_utilization_percentage',{
 RAM ứng dụng (PSS) & MB & {ram_mean} & {combined.get('app_pss_MB',{}).get('min','?')} & {ram_max} & -- \\
 GPU memory vật lý & MB & {gpu_phys} & -- & -- & -- \\
 \SetCell[c=6]{{l}} \textit{{Ổn định}} \\
-Stale frames (tổng 2 phiên) & frames & \SetCell[c=4]{{c}} {stale_tot} & & & 0 \\
+Stale frames (tổng {n_sessions} phiên) & frames & \SetCell[c=4]{{c}} {stale_tot} & & & 0 \\
 Skipped frames (tổng) & frames & \SetCell[c=4]{{c}} {skip_tot} & & & 0 \\
 Shader hitches (tổng) & lần & \SetCell[c=4]{{c}} {shader_h} & & & 0 \\
 \SetCell[c=6]{{l}} \textit{{Nhiệt độ}} \\

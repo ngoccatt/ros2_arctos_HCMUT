@@ -1,13 +1,13 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces So sánh các nghiên cứu liên quan về VR Teleoperation với luận văn hiện tại}}{10}{table.caption.4}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{Thông số kĩ thuật của cánh tay Robot Denso VS-6577}}{13}{table.3.1}%
-\contentsline {table}{\numberline {3.2}{Ý nghĩa các cổng đầu vào trên máy điều khiển RC5}}{16}{table.3.2}%
-\contentsline {table}{\numberline {3.3}{Bảng thông số kĩ thuật của máy điều khiển RC5 cho cánh tay robot VS-6577}}{17}{table.3.3}%
+\contentsline {table}{\numberline {3.1}{Thông số kĩ thuật của cánh tay Robot Denso VS-6577}}{15}{table.3.1}%
+\contentsline {table}{\numberline {3.2}{Ý nghĩa các cổng đầu vào trên máy điều khiển RC5}}{18}{table.3.2}%
+\contentsline {table}{\numberline {3.3}{Bảng thông số kĩ thuật của máy điều khiển RC5 cho cánh tay robot VS-6577}}{19}{table.3.3}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Thống kê tổng hợp độ trễ Execution của MoveIt2 ($N = 25$ goals)}}{86}{table.caption.44}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Tổng hợp hiệu năng ứng dụng VR trên Meta Quest\nobreakspace 3 (2 phiên đo, tổng 30{,}8 phút)}}{90}{table.caption.51}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Thống kê tổng hợp độ trễ Execution của MoveIt2 ($N = 25$ goals)}}{92}{table.caption.55}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Thống kê RTT giữa ứng dụng VR và RosBridge WebSocket theo điều kiện tải mạng}}{97}{table.caption.63}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Tổng hợp hiệu năng ứng dụng VR trên Meta Quest\nobreakspace 3 (1 phiên đo, tổng 27{,}3 phút)}}{98}{table.caption.64}%
 \addvspace {10\p@ }
 \contentsfinish 

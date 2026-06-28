@@ -122,7 +122,7 @@ def generate_launch_description():
         parameters=[
             {
                 'video_device': '/dev/video0',     
-                'image_size': [640, 480],
+                'image_size': [1280, 480],
                 'pixel_format': 'YUYV',             
                 'output_encoding': 'rgb8', 
                 'qos_overrides': {

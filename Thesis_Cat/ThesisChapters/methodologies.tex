@@ -10,7 +10,7 @@ Denso VS-6577 thuộc dòng robot sáu trục (6-axis articulated robot), mô ph
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{Images/Methodologies/denso_arm_1.png}
+    \includegraphics[width=1\linewidth]{Images/Methodologies/denso_arm_1.jpg}
     \caption{Cánh tay robot VS6577, hình ảnh lấy từ trang web nhà sản xuất}
     \label{fig:placeholder}
 \end{figure}
@@ -49,12 +49,12 @@ Khối lượng & ~ 36kg\\
 \begin{figure}[H]
 \centering
 \begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{Images/Methodologies/denso_arm_2.png}
+    \includegraphics[width=\textwidth]{Images/Methodologies/denso_arm_2.jpg}
     %\caption{Train YOLO11-n}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{Images/Methodologies/denso_arm_3.png}
+    \includegraphics[width=\textwidth]{Images/Methodologies/denso_arm_3.jpg}
     %\caption{Train YOLO11-s}
 \end{subfigure}
 \hfill
@@ -81,7 +81,7 @@ Bộ điều khiển RC5 được thiết kế với nhiều phiên bản khác 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{Images/Methodologies/rc5_design.png}
+    \includegraphics[width=1\linewidth]{Images/Methodologies/rc5_design.jpg}
     \caption{Vị trí các cổng nối của máy RC5}
     \label{fig:placeholder}
 \end{figure}
@@ -261,17 +261,6 @@ Có hai nhóm phương pháp chính để giải bài toán IK:
     \item \textbf{Phương pháp số (Numerical IK)}: Sử dụng các thuật toán lặp như phương pháp Jacobian pseudo-inverse, thuật toán gradient descent hoặc các phương pháp tối ưu hóa để hội tụ đến nghiệm. Phương pháp này tổng quát hơn nhưng có thể chậm hơn, phụ thuộc vào điểm khởi tạo và có thể không hội tụ gần các điểm kỳ dị (singularity).
 \end{enumerate}
 
-Trong đề tài, bài toán IK được giải quyết thông qua thư viện plugin của MoveIt2, cụ thể là \textbf{KDL Kinematics Plugin} (\lstinline[style=inlinecode]{kdl_kinematics_plugin/KDLKinematicsPlugin}) – một solver IK số dựa trên thư viện Kinematics and Dynamics Library của Orocos, với thời gian tìm kiếm và timeout được cấu hình trong file \lstinline[style=inlinecode]{kinematics.yaml}:
-
-\begin{lstlisting}
-denso_arm:
-  kinematics_solver: kdl_kinematics_plugin/KDLKinematicsPlugin
-  kinematics_solver_search_resolution: 0.005
-  kinematics_solver_timeout: 0.005
-\end{lstlisting}
-
-Khi ứng dụng VR hoặc module Remote Control yêu cầu cánh tay di chuyển đến một tư thế Cartesian xác định, MoveIt2 sẽ tự động gọi plugin IK này để tính toán cấu hình khớp tương ứng, sau đó lập kế hoạch quỹ đạo an toàn và thực thi.
-
 
 \section{Giao thức UART}
 
@@ -281,7 +270,7 @@ Về bản chất, UART là một phần cứng hoặc module tích hợp trong 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\linewidth]{Images/Methodologies/uart_2.png}
+    \includegraphics[width=0.6\linewidth]{Images/Methodologies/uart_2.jpg}
     \caption{Kết nối UART}
     \label{fig:placeholder}
 \end{figure}
@@ -292,7 +281,7 @@ Về bản chất, UART là một phần cứng hoặc module tích hợp trong 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\linewidth]{Images/Methodologies/uart_1.png}
+    \includegraphics[width=0.8\linewidth]{Images/Methodologies/uart_1.jpg}
     \caption{Định dạng một gói tin (package) của UART}
     \label{fig:placeholder}
 \end{figure}
@@ -342,7 +331,7 @@ ROS 2 có nhiều ưu điểm, bao gồm:
 ROS 2 là một công cụ quan trọng trong phát triển robot và trí tuệ nhân tạo. Nó được sử dụng rộng rãi trong nhiều lĩnh vực, bao gồm robot tự hành, robot y tế và robot công nghiệp. Trong đồ án này, máy tính nhúng Jetson Nano đã tích hợp sẵn những chương trình ROS cho phép ta phát triển ứng dụng trên đó dễ dàng hơn.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{Images/Methodologies/ros2_logo.png}
+    \includegraphics[width=0.6\textwidth]{Images/Methodologies/ros2_logo.jpg}
     \caption{Robot Operating System 2}
 \end{figure}
 
@@ -354,7 +343,7 @@ Ros2-Control là một framework cho việc điều khiển robot thời gian th
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{Images/Methodologies/ros2_control_architect.png}
+    \includegraphics[width=0.7\textwidth]{Images/Methodologies/ros2_control_architect.jpg}
     \caption{Sơ đồ kiến trúc của Ros2-Control}
 \end{figure}
 
@@ -380,11 +369,11 @@ Có ba loại thành phần cơ bản cho Hardware component:
 Dùng cho phần cứng robot phức tạp (multi-DOF) như robot công nghiệp. Khác với Actuator, System có thể sử dụng truyền động phức tạp như là cánh tay robot hay bàn tay robot (humanoid robot's hand). Hardware component dạng System có khả năng đọc và ghi xuống thiết bị thực tế, và thường dùng khi chỉ có một kênh giao tiếp logic với phần cứng.
 
 \item \textbf{{Cảm biến - Sensor}}
-Dành cho phần cứng robot dùng để cảm nhận môi trường xung quanh như camera, cảm biến nhiệt độ, cảm biến màu sắc, không gian.... Các cảm biến thường chỉ Liên kết với một khớp. Đối với hardware dạng cảm biến, ta chỉ có thể đọc dữ liệu được truyền lên từ phần cứng
+Dành cho phần cứng robot dùng để cảm nhận môi trường xung quanh như camera, cảm biến nhiệt độ, cảm biến màu sắc, không gian.... Các cảm biến thường chỉ Liên kết với một khớp. Đối với hardware dạng cảm biến, ta chỉ có thể đọc dữ liệu được truyền lên từ phần cứng.
 
 \item \textbf{{Bộ truyền động - Actuator}}
 Bộ truyền động thường nói đến phần cứng robot đơn giản (1 trục tự do) như động cơ, van, v.v.  và chỉ liên kết với một khớp duy nhất. 
-tương tự như System, Actuator cũng có khả năng đọc và ghi, tuy nhiên thao tác(\textit{đọc} không bắt buộc nếu không khả thi, ví dụ: điều khiển động cơ DC hay servo 
+tương tự như System, Actuator cũng có khả năng đọc và ghi, tuy nhiên thao tác(\textit{đọc} không bắt buộc nếu không khả thi, ví dụ: điều khiển động cơ DC hay servo .
 \end{itemize}
 
 \subsection{MoveIt 2}
@@ -393,7 +382,7 @@ MoveIt 2 là một nền tảng phát triển tích hợp trong ROS 2, bao gồm
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{Images/Methodologies/moveit_integration.png}
+    \includegraphics[width=1\textwidth]{Images/Methodologies/moveit_integration.jpg}
     \caption{MoveIt 2 được tích hợp cùng với Ros2-Control trong ứng dụng robotic}
 \end{figure}
 
@@ -452,25 +441,13 @@ Unity sử dụng mô hình lập trình hướng thành phần (Component-Based
     \item Hỗ trợ \textbf{hand tracking} nhận dạng và theo dõi cử chỉ bàn tay người dùng mà không cần tay cầm.
 \end{itemize}
 
-\textbf{Vai trò của Unity trong đề tài}
-
-Trong đề tài này, Unity Engine được sử dụng để xây dựng \textbf{ứng dụng VR điều khiển cánh tay robot từ xa}. Ứng dụng kết nối với hệ thống ROS2 thông qua thư viện ROS-Sharp và giao thức WebSocket của RosBridge, cho phép người dùng đeo kính Meta Quest 3 để:
-
-\begin{itemize}
-    \item Theo dõi trạng thái cánh tay robot thực tế theo thời gian thực thông qua mô hình 3D đồng bộ.
-    \item Xem hình ảnh camera từ môi trường làm việc của robot.
-    \item Điều khiển cánh tay bằng tay cầm VR với chế độ real-time servoing.
-    \item Lập kế hoạch và thực thi quỹ đạo di chuyển qua giao diện tương tác trực quan.
-    \item Điều khiển đóng/mở tay gắp.
-\end{itemize}
-
 \section{ROS-Sharp (ROS\#)}
 
 ROS-Sharp (hay ROS\#) là một thư viện mã nguồn mở được phát triển bởi Siemens AG, cung cấp khả năng \textbf{giao tiếp hai chiều giữa Unity và hệ thống ROS/ROS2} thông qua giao thức \textbf{WebSocket} và chuẩn \textbf{ROSBridge Protocol}. Thư viện này cho phép các ứng dụng Unity subscribe và publish các ROS topic, gọi các ROS service và gửi/nhận Action goals mà hoàn toàn không cần cài đặt ROS trực tiếp trên máy chạy Unity.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{Images/Methodologies/rossharp_architecture.png}
+    \includegraphics[width=0.8\textwidth]{Images/Methodologies/rossharp_architecture.jpg}
     \caption{Kiến trúc giao tiếp của ROS-Sharp giữa Unity và ROS2}
     \label{fig:rossharp}
 \end{figure}
@@ -492,18 +469,3 @@ ROS-Sharp hoạt động theo mô hình client-server:
     \item \textbf{Action Goal}: Gửi Action goal và nhận Feedback, Result của ROS2 Action thông qua WebSocket.
     \item \textbf{URDF Importer}: Một tính năng quan trọng của ROS-Sharp là khả năng \textbf{import mô hình robot từ URDF} trực tiếp vào Unity. Kết hợp với \lstinline[style=inlinecode]{file_server} package phía ROS2, Unity có thể tải toàn bộ file URDF cùng các file mesh (\lstinline[style=inlinecode]{.dae}, \lstinline[style=inlinecode]{.stl}) về và dựng lại mô hình 3D đầy đủ của robot trong scene VR.
 \end{itemize}
-
-\textbf{Vai trò trong đề tài}
-
-Trong đề tài, ROS-Sharp là cầu nối thiết yếu giúp ứng dụng Unity VR kết nối với toàn bộ stack điều khiển ROS2 đã xây dựng. Cụ thể, các kênh giao tiếp được sử dụng bao gồm:
-
-\begin{itemize}
-    \item Subscribe topic \lstinline[style=inlinecode]{/joint_states} để cập nhật liên tục trạng thái góc xoay của cánh tay, đồng bộ mô hình 3D trong VR với robot thực tế.
-    \item Subscribe topic \lstinline[style=inlinecode]{/image_raw} (hoặc topic camera tương ứng) để hiển thị luồng video từ camera gắn trên robot.
-    \item Gửi Action goal tới \lstinline[style=inlinecode]{move_to_pose} (module Denso Remote Control) để lập kế hoạch và thực thi quỹ đạo di chuyển.
-    \item Gọi service \lstinline[style=inlinecode]{~/start_servo} / \lstinline[style=inlinecode]{~/stop_servo} để bật/tắt chế độ MoveIt Servo.
-    \item Publish topic \lstinline[style=inlinecode]{~/delta_joint_cmds} hoặc \lstinline[style=inlinecode]{~/delta_twist_cmds} để gửi lệnh điều khiển real-time trong chế độ Servo.
-    \item Gửi Action goal tới \lstinline[style=inlinecode]{gripper_cmd} (denso\_hand\_controller) để điều khiển đóng/mở tay gắp.
-\end{itemize}
-
-Nhờ ROS-Sharp và rosbridge\_server, toàn bộ logic điều khiển phức tạp nằm ở phía ROS2, còn Unity chỉ cần đảm nhiệm phần giao diện người dùng và trải nghiệm VR, tạo ra sự phân tách rõ ràng và linh hoạt trong kiến trúc hệ thống.

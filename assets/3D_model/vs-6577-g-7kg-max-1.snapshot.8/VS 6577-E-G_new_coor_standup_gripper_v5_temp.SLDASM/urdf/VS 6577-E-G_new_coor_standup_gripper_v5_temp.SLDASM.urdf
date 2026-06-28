@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00047006 -0.012257 0.10022"
+        rpy="0 0 0" />
+      <mass
+        value="55.785" />
+      <inertia
+        ixx="0.39179"
+        ixy="-0.0027323"
+        ixz="-0.00075955"
+        iyy="0.323"
+        iyz="-0.022558"
+        izz="0.34492" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="0.0075871 0.03734 0.10645"
+        rpy="0 0 0" />
+      <mass
+        value="44.267" />
+      <inertia
+        ixx="0.28548"
+        ixy="-0.012987"
+        ixz="-0.013929"
+        iyy="0.25047"
+        iyz="-0.073189"
+        izz="0.26167" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.78431 0.98039 0.98039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="X_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.183"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.9671"
+      upper="2.9671"
+      effort="1"
+      velocity="3.0543" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="-0.068043780087778 0.014140910340166 0.158490980475755"
+        rpy="0 0 0" />
+      <mass
+        value="43.3387438811875" />
+      <inertia
+        ixx="0.977219187562445"
+        ixy="0.00144844221271251"
+        ixz="-0.021078642737214"
+        iyy="0.940664030252845"
+        iyz="-0.0372886990528127"
+        izz="0.0935514301099311" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.784313725490196 0.980392156862745 0.980392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Y_joint"
+    type="revolute">
+    <origin
+      xyz="-0.048 0.075 0.15"
+      rpy="0 0 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.7453"
+      upper="2.3562"
+      effort="1"
+      velocity="3.4907" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="0.054747 -0.045778 0.060447"
+        rpy="0 0 0" />
+      <mass
+        value="37.594" />
+      <inertia
+        ixx="0.31727"
+        ixy="-0.0048815"
+        ixz="0.0065087"
+        iyy="0.26582"
+        iyz="0.088578"
+        izz="0.16116" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.78431 0.98039 0.98039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Z_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.012264 0.36479"
+      rpy="0 0 0" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-2.0769"
+      upper="2.9496"
+      effort="1"
+      velocity="3.4907" />
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="0.0051846 -0.00064606 0.10645"
+        rpy="0 0 0" />
+      <mass
+        value="14.917" />
+      <inertia
+        ixx="0.062769"
+        ixy="3.6977E-05"
+        ixz="-0.001868"
+        iyy="0.069443"
+        iyz="-0.00032273"
+        izz="0.028683" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.78431 0.98039 0.98039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="A_joint"
+    type="revolute">
+    <origin
+      xyz="0.048 -0.09 0.198"
+      rpy="0 0 0" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.3161"
+      upper="3.3161"
+      effort="1"
+      velocity="5.236" />
+  </joint>
+  <link
+    name="link_5">
+    <inertial>
+      <origin
+        xyz="-0.00049422 2.4246E-07 0.0067098"
+        rpy="0 0 0" />
+      <mass
+        value="0.34309" />
+      <inertia
+        ixx="0.00034995"
+        ixy="-1.2487E-09"
+        ixz="-1.1371E-06"
+        iyy="0.00030039"
+        iyz="-1.4302E-09"
+        izz="0.00022745" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="B_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.207"
+      rpy="0 0 0" />
+    <parent
+      link="link_4" />
+    <child
+      link="link_5" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.0944"
+      upper="2.0944"
+      effort="1"
+      velocity="5.236" />
+  </joint>
+  <link
+    name="link_6">
+    <inertial>
+      <origin
+        xyz="3.1956E-05 1.0191E-06 0.011587"
+        rpy="0 0 0" />
+      <mass
+        value="0.068739" />
+      <inertia
+        ixx="2.0616E-05"
+        ixy="5.2203E-09"
+        ixz="-2.8476E-08"
+        iyy="2.0453E-05"
+        iyz="-9.0808E-10"
+        izz="3.4376E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/link_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="C_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.052"
+      rpy="0 0 0" />
+    <parent
+      link="link_5" />
+    <child
+      link="link_6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-6.2832"
+      upper="6.2832"
+      effort="1"
+      velocity="8.3776" />
+  </joint>
+  <link
+    name="gripper_body_link">
+    <inertial>
+      <origin
+        xyz="6.5243E-15 8.0178E-14 0.003"
+        rpy="0 0 0" />
+      <mass
+        value="0.001885" />
+      <inertia
+        ixx="5.2779E-08"
+        ixy="1.9953E-35"
+        ixz="4.1685E-22"
+        iyy="5.2779E-08"
+        iyz="1.9842E-21"
+        izz="9.4248E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/gripper_body_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/gripper_body_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_body_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.0219999999999994"
+      rpy="0 0 0" />
+    <parent
+      link="link_6" />
+    <child
+      link="gripper_body_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="gripper_gear_right">
+    <inertial>
+      <origin
+        xyz="-0.011853 0.017473 -0.79923"
+        rpy="0 0 0" />
+      <mass
+        value="196.34" />
+      <inertia
+        ixx="18.56"
+        ixy="0.26433"
+        ixz="0.20657"
+        iyy="18.59"
+        iyz="-0.78287"
+        izz="1.655" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/gripper_gear_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/gripper_gear_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_gear_right_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0105000000000263 0.0175575664610773 0.0484957779974575"
+      rpy="0 0 0" />
+    <parent
+      link="gripper_body_link" />
+    <child
+      link="gripper_gear_right" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="gripper_head_right">
+    <inertial>
+      <origin
+        xyz="-0.011035027899171 0.0174728819694071 -0.842420319360891"
+        rpy="0 0 0" />
+      <mass
+        value="196.338532376492" />
+      <inertia
+        ixx="18.5599193146117"
+        ixy="0.264332568164611"
+        ixz="0.206568713064759"
+        iyy="18.5903422885118"
+        iyz="-0.782868960063179"
+        izz="1.65500543821654" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/gripper_head_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/gripper_head_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_head_right_joint"
+    type="fixed">
+    <origin
+      xyz="-0.000818014467841976 0 0.043192254540952"
+      rpy="0 0 0" />
+    <parent
+      link="gripper_gear_right" />
+    <child
+      link="gripper_head_right" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="gripper_support_right">
+    <inertial>
+      <origin
+        xyz="0.00914695763298622 0.0255728819694327 -0.778228064819941"
+        rpy="0 0 0" />
+      <mass
+        value="196.338532376492" />
+      <inertia
+        ixx="18.5599193146117"
+        ixy="0.264332568164611"
+        ixz="0.206568713064758"
+        iyy="18.5903422885118"
+        iyz="-0.782868960063179"
+        izz="1.65500543821654" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/gripper_support_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/gripper_support_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_support_right_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0315000000000258 0.00945756646105398 0.0274957779974601"
+      rpy="0 0 0" />
+    <parent
+      link="gripper_body_link" />
+    <child
+      link="gripper_support_right" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="gripper_gear_left">
+    <inertial>
+      <origin
+        xyz="-0.0328530423670578 0.0174728819694509 -0.79922806481994"
+        rpy="0 0 0" />
+      <mass
+        value="196.338532376492" />
+      <inertia
+        ixx="18.5599193146117"
+        ixy="0.264332568164611"
+        ixz="0.206568713064758"
+        iyy="18.5903422885118"
+        iyz="-0.782868960063179"
+        izz="1.65500543821654" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/gripper_gear_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/gripper_gear_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_gear_left_joint"
+    type="revolute">
+    <origin
+      xyz="0.0105 0.017558 0.048496"
+      rpy="0 0 0" />
+    <parent
+      link="gripper_body_link" />
+    <child
+      link="gripper_gear_left" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <mimic
+      joint="gripper_gear_right_joint"
+      multiplier="1"
+      offset="0" />
+  </joint>
+  <link
+    name="gripper_head_left">
+    <inertial>
+      <origin
+        xyz="-0.0333772913192507 0.0174728819694482 -0.842424883719442"
+        rpy="0 0 0" />
+      <mass
+        value="196.338532376492" />
+      <inertia
+        ixx="18.5599193146117"
+        ixy="0.264332568164605"
+        ixz="0.20656871306462"
+        iyy="18.5903422885118"
+        iyz="-0.782868960063181"
+        izz="1.65500543821653" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/gripper_head_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/gripper_head_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_head_left_joint"
+    type="fixed">
+    <origin
+      xyz="0.000524248952185996 0 0.0431968188995016"
+      rpy="0 0 0" />
+    <parent
+      link="gripper_gear_left" />
+    <child
+      link="gripper_head_left" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="gripper_support_left">
+    <inertial>
+      <origin
+        xyz="-0.0538530423670568 0.0255728819694048 -0.778228064819941"
+        rpy="0 0 0" />
+      <mass
+        value="196.338532376492" />
+      <inertia
+        ixx="18.5599193146117"
+        ixy="0.264332568164611"
+        ixz="0.206568713064759"
+        iyy="18.5903422885118"
+        iyz="-0.782868960063179"
+        izz="1.65500543821654" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/gripper_support_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VS 6577-E-G_new_coor_standup_gripper_v5_temp.SLDASM/meshes/gripper_support_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_support_left_joint"
+    type="revolute">
+    <origin
+      xyz="0.0315 0.0094576 0.027496"
+      rpy="0 0 0" />
+    <parent
+      link="gripper_body_link" />
+    <child
+      link="gripper_support_left" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <mimic
+      joint="gripper_support_right_joint"
+      multiplier="1"
+      offset="0" />
+  </joint>
+</robot>
