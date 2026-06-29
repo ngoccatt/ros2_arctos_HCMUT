@@ -58,3 +58,5 @@ build/*
 Thesis_Cat.zip
 Thesis_by_AI.drawio
 ref_paper/*
+.claude
+.vscode

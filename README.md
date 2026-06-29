@@ -14,16 +14,19 @@ This project is still under development and is not yet ready for production use.
 
 ```
 ros2_denso/
-│── denso_bringup/            # Launch and runtime management
-│── denso_description/        # URDF and robot model files
-│── denso_hardware_interface/ # ROS2 control hardware abstraction
-│── denso_motor_driver/       # CAN motor driver implementation
-│── denso_moveit_base_xyz/    # MoveIt! base motion with X, Y and Z
-│── denso_moveit_config/      # MoveIt! motion planning configurations
-│── scripts/                   # Utility scripts
-│── assets/                    # Images and other assets
-│── LICENSE                    # Project license
-│── README.md                  # Project documentation
+│── denso_bringup/              # Launch and runtime management
+│── denso_description/          # URDF and robot model files
+│── denso_hardware_interface/   # ROS2 control hardware abstraction
+│── denso_interfaces/           # Custom Interfaces (msg, action...) used 
+│── denso_motor_driver/         # motor driver (VS-6577) + servo driver (gripper) implementation
+│── denso_moveit_config/        # MoveIt! motion planning configurations
+│── denso_moveit_servo/         # Service implementation to use MoveIt-Servo
+│── denso_remote_control/       # Action implementation to control robot via MoveToPose action
+│── file_server2/               # RosBridge Server launcher for Unity to connect to Ros2
+│── scripts/                    # Utility scripts
+│── assets/                     # Images and other assets
+│── LICENSE                     # Project license
+│── README.md                   # Project documentation
 ```
 
 ## Installation
@@ -76,17 +79,18 @@ sudo apt install can-utils python3-rosdep ros-humble-can-msgs ros-humble-ros2-co
 ```
 
 **Open new terminal**, then create a ROS2 workspace and clone the ROS2 Denso repository inside the `src/` directory:
+- Note: As GitHub removed password authentication, SSH is preferred to clone this repo. Prepare your SSH key and link with github, tutorial can be find here: [Configure ssh for github authentication](https://dev.to/jajera/how-to-configure-ssh-for-github-authentication-2b53)
 
 ```bash
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
-git clone --recurse-submodules https://github.com/ngoccatt/ros2_denso_HCMUT.git
+git clone --recurse-submodules git@github.com:ngoccatt/ros2_arctos_HCMUT.git
 ```
 
 **Note**: If you are on a different branch, you need to checkout the branch you want to use.
 
 ```bash
-cd ros2_denso
+cd ros2_arctos_HCMUT
 git checkout <branch_name>
 ```
 
@@ -242,6 +246,3 @@ We also expect all contributors to adhere to our [Code of Conduct](CODE_OF_CONDU
 
 This project is licensed under the [Apache License](LICENSE).
 
-## Contact
-
-For questions or contributions, use **GitHub Issues** or join our **[Discord Community](YOUR_DISCORD_INVITE_LINK)**.
