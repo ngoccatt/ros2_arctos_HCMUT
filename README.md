@@ -1,33 +1,63 @@
-# ROS2 Denso
-![Discord](https://img.shields.io/discord/1099629962618748958?logo=discord&logoColor=%23FFFFFF&logoSize=auto)
+# ROS2 Arctos — HCMUT
 
+## Warning
 
-## **Warning** 
+This project is still under development and is not yet ready for production use.
 
-This project is still under development and is not yet ready for production use. We are actively working on improving the project and adding new features. If you would like to contribute, please see the [Contributing Guidelines](CONTRIBUTING.md).
+**USE AT YOUR OWN RISK.**
+
+Only operate the robot if you have:
+- Ensured the robot arm is securely mounted and cannot tip over.
+- Ensured at least **1 metre of clearance** around the arm in all directions.
+- Ensured no fragile objects are within the arm's reach.
+- Stay close to the robot and be ready to cut power if unexpected motion occurs.
+
+---
 
 ## Overview
 
-**ROS2 Denso** is a **ROS2 package** designed for controlling the Denso robot arm using **MoveIt! for motion planning**. The project is structured into multiple packages, each handling a specific aspect of the robotic arm.
+**ROS2 Arctos HCMUT** controls a 6-DOF Arctos robot arm over UART using MKS stepper motor drivers. It supports real-hardware operation, Gazebo Ignition simulation, gesture-based control, and automated visual inspection with an AI classifier.
+
+### Hardware
+- **Robot**: 6-DOF Arctos arm — joints X, Y, Z, A, B, C
+- **Gripper**: single servo jaw (`gripper_gear_right_joint`)
+- **Motor drivers**: MKS57D (X, Y) and MKS42D (Z, A, B, C, gripper) via UART/Serial
+- **Camera**: UGREEN USB webcam (eye-in-hand, for inspection and gesture)
+- **AI accelerator**: Google Coral USB (optional, for EdgeTPU inference)
+
+### Software stack
+- **ROS2 Humble** on Ubuntu 22.04
+- **MoveIt2** (OMPL + CHOMP + Pilz planners)
+- **ros2_control** + JointTrajectoryController
+- **Gazebo Ignition Fortress** (simulation)
+- Python 3.10 (ROS2 nodes) + Python 3.9 via pyenv `gesture_env` (TFLite/EdgeTPU)
+
+---
 
 ## Repository Structure
 
 ```
-ros2_denso/
-│── denso_bringup/              # Launch and runtime management
-│── denso_description/          # URDF and robot model files
-│── denso_hardware_interface/   # ROS2 control hardware abstraction
-│── denso_interfaces/           # Custom Interfaces (msg, action...) used 
-│── denso_motor_driver/         # motor driver (VS-6577) + servo driver (gripper) implementation
-│── denso_moveit_config/        # MoveIt! motion planning configurations
-│── denso_moveit_servo/         # Service implementation to use MoveIt-Servo
-│── denso_remote_control/       # Action implementation to control robot via MoveToPose action
-│── file_server2/               # RosBridge Server launcher for Unity to connect to Ros2
-│── scripts/                    # Utility scripts
-│── assets/                     # Images and other assets
-│── LICENSE                     # Project license
-│── README.md                   # Project documentation
+ros2_arctos_HCMUT/
+├── serial/                      # UART serial library
+├── arctos_description/          # URDF / xacro robot model
+├── arctos_motor_driver/         # Low-level UART motor driver
+├── arctos_hardware_interface/   # ros2_control hardware plugin
+├── arctos_moveit_config/        # MoveIt2 config, SRDF, worlds
+├── arctos_bringup/              # Top-level launch files
+├── denso_interfaces/            # Custom ROS2 msgs/srvs/actions
+├── denso_remote_control/        # MoveToPose action server
+├── denso_moveit_servo/          # Real-time MoveIt Servo node
+├── file_server2/                # ROS-Sharp / Unity URDF bridge
+├── gesture_control/             # Gesture recognition → MoveIt2
+├── visual_inspection/           # AI visual inspection pipeline
+├── AI_modules/
+│   ├── gesture_recognition/     # Gesture model training
+│   ├── object_detection/        # Cube detection training + dataset_collector
+│   └── visual_inspection/       # Inspection model training + dataset tools
+└── scripts/                     # Utility scripts
 ```
+
+---
 
 ## Installation
 
@@ -130,6 +160,27 @@ Install needed dependency for the project.
 pip install python-can ruamel.yaml rich keyboard catkin-pkg lark PyQt5 PySide2 empy==3.3.4 tornado numpy pyyaml jinja2 typeguard pymongo Pillow netifaces cbor2
 ```
 
+#### 5 — Set up Python environments with pyenv (optional for AI)
+
+The project uses **two Python environments**:
+
+| Environment | Python | Purpose |
+|---|---|---|
+| `denso` | 3.10.12 | ROS2 nodes |
+| `gesture_env` | 3.9.17 | TFLite / EdgeTPU inference (pycoral requires 3.9) |
+
+Install pyenv following the [pyenv guide](https://realpython.com/intro-to-pyenv/), then:
+
+```bash
+# Python 3.9 for AI inference
+pyenv install 3.9.17
+pyenv virtualenv 3.9.17 gesture_env
+pyenv activate gesture_env
+pip install tensorflow==2.13.0 numpy opencv-python pyyaml
+# Optional — EdgeTPU (requires Coral USB plugged in):
+pip install pycoral
+```
+
 ### Building the Workspace
 
 Before building the workspace, source your ROS2 installation:
@@ -170,25 +221,28 @@ Build the workspace using `colcon`:
 
 ```bash
 cd ~/ros2_ws
+source /opt/ros/humble/setup.bash
+sudo rosdep init && rosdep update
+rosdep install --from-paths src -y --ignore-src
+
 colcon build --symlink-install
 source install/setup.bash
 ```
 
-You should now have the workspace built and ready to use.
+---
 
-### Getting Started
+## Running the Robot
 
-Make sure to always source the workspace that we've just built before running:
-
+Always source the workspace first:
 ```bash
-cd ~/ros2_ws
-source install/setup.bash
+source ~/ros2_ws/install/setup.bash
 ```
 
 #### Launch the robot
 
 To launch the robot with real hardware, run the launch file `denso_bringup.launch.py`:
 
+**Terminal 1 — Hardware bringup** (controllers + RViz + MoveIt):
 ```bash
 ros2 launch denso_bringup denso_bringup.launch.py use_sim_time:=false
 ```
@@ -199,21 +253,26 @@ To launch the robot with gazebo sim, run the launch file `gz_denso_bringup.launc
 ros2 launch denso_bringup gz_denso_bringup.launch.py use_sim_time:=true
 ```
 
-#### Launch the supporting packages for extra functionality:
+---
 
-To launch MoveToPose action server, that support receiving a Pose or a Joint, and planning-execute the robot to reach that Pose/Joints:
+## Optional Packages
+
+### Real-time servo (keyboard / Cartesian control)
+
+```bash
+# Terminal 2
+ros2 launch denso_moveit_servo denso_moveit_servo.launch.py use_sim_time:=false
+# Terminal 3
+ros2 run denso_moveit_servo servo_keyboard_input
+```
+
+### Remote control (MoveToPose action server)
 
 ```bash
 ros2 launch denso_remote_control remote_control.launch.py use_sim_time:=false
 ```
 
-To launch real-time servo, allowing to rotate each joint (and hopefully, rotate by axis of effector), launch moveit_servo by:
-
-```bash
-ros2 launch denso_moveit_servo denso_moveit_servo.launch.py use_sim_time:=false
-```
-
-To communicate with Unity via Ros-sharp, use:
+### Unity / ROS-Sharp bridge
 
 ```bash
 ros2 launch file_server2 ros_sharp_communication.launch.py
@@ -225,22 +284,60 @@ To allow VR application to access the RosBridge server on WSL, run the following
 netsh interface portproxy add v4tov4 listenport=9090 listenaddress=<Windows IP> connectport=9090 connectaddress=(wsl hostname -I)
 ```
 
-## Individual Package READMEs
+### Gesture control (by namdiep-239)
 
-Each package has its own **README.md** with more details:
+```bash
+# CPU inference (no Coral needed)
+ros2 launch gesture_control gesture_control.launch.py inference_mode:=cpu
 
-- [denso\_bringup](denso_bringup/README.md)
-- [denso\_description](denso_description/README.md)
-- [denso\_hardware\_interface](denso_hardware_interface/README.md)
-- [denso\_motor\_driver](denso_motor_driver/README.md)
-- [denso\_moveit\_base\_xyz](denso_moveit_base_xyz/README.md)
-- [denso\_moveit\_config](denso_moveit_config/README.md)
+# EdgeTPU inference (Coral USB plugged in)
+ros2 launch gesture_control gesture_control.launch.py inference_mode:=edgetpu
+```
+
+| Gesture | Action |
+|---|---|
+| thumbs_up | Move to `home` pose |
+| point | Raise arm (Y_joint +0.3 rad) |
+| open | Open gripper |
+| fist | Close gripper |
+| none | Stop arm |
+
+### Visual inspection (by namdiep-239)
+
+Requires hardware bringup running first.
+
+```bash
+# Terminal 2 — Inspection nodes
+ros2 launch visual_inspection visual_inspection.launch.py use_sim_time:=false
+
+# Terminal 3 — Trigger one inspection cycle
+ros2 action send_goal /run_inspection visual_inspection/action/RunInspection \
+  "{object_id: 'part_001'}"
+```
+
+The node drives the arm through 5 inspection poses, collects AI votes at each, classifies the object (PASS/FAIL), then sorts it to the corresponding tray.
+
+See [visual_inspection/README.md](visual_inspection/README.md) for the full pipeline.
+
+---
+
+## Package READMEs
+
+- [arctos_bringup](arctos_bringup/README.md)
+- [arctos_description](arctos_description/README.md)
+- [arctos_hardware_interface](arctos_hardware_interface/README.md)
+- [arctos_motor_driver](arctos_motor_driver/README.md)
+- [arctos_moveit_config](arctos_moveit_config/README.md)
+- [denso_moveit_servo](denso_moveit_servo/README.md)
+- [denso_remote_control](denso_remote_control/README.md)
+- [visual_inspection](visual_inspection/README.md)
+- [AI_modules/object_detection](AI_modules/object_detection/README.md)
+
+---
 
 ## Contributing
 
-Please follow our [Contributing Guidelines](CONTRIBUTING.md) before making any changes to the project.
-
-We also expect all contributors to adhere to our [Code of Conduct](CODE_OF_CONDUCT.md).
+Please follow the [Contributing Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## License
 

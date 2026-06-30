@@ -1,0 +1,44 @@
+{
+  "iou_threshold": 0.5,
+  "conf_threshold": 0.5,
+  "num_test_images": 61,
+  "float32_cpu": {
+    "model": "Float32 TFLite  (no quantization, CPU)",
+    "file": "cube_detector_float32.tflite",
+    "backend": "CPU",
+    "precision": 0.9683,
+    "recall": 1.0,
+    "f1": 0.9839,
+    "tp": 61,
+    "fp": 2,
+    "fn": 0,
+    "avg_inf_ms": 1200.83,
+    "num_samples": 61
+  },
+  "int8_cpu": {
+    "model": "INT8 TFLite     (quantized, CPU)",
+    "file": "cube_detector_int8.tflite",
+    "backend": "CPU",
+    "precision": 0.9839,
+    "recall": 1.0,
+    "f1": 0.9919,
+    "tp": 61,
+    "fp": 1,
+    "fn": 0,
+    "avg_inf_ms": 1236.88,
+    "num_samples": 61
+  },
+  "int8_edgetpu": {
+    "model": "INT8 EdgeTPU    (quantized, Coral)",
+    "file": "cube_detector_int8_edgetpu.tflite",
+    "backend": "EdgeTPU",
+    "precision": 0.9836,
+    "recall": 0.9836,
+    "f1": 0.9836,
+    "tp": 60,
+    "fp": 1,
+    "fn": 1,
+    "avg_inf_ms": 24.56,
+    "num_samples": 61
+  }
+}

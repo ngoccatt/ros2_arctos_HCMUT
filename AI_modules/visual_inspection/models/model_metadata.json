@@ -1,0 +1,15 @@
+{
+  "class_names": [
+    "FAIL",
+    "PASS"
+  ],
+  "num_classes": 2,
+  "image_size": [
+    224,
+    224
+  ],
+  "test_accuracy": 0.9973,
+  "model_type": "MobileNetV2",
+  "framework": "TensorFlow",
+  "optimized_for": "Google Coral EdgeTPU"
+}

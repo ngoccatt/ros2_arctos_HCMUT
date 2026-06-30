@@ -1,0 +1,46 @@
+inspection_commander_node:
+  ros__parameters:
+    # Minimum inference confidence to count a frame as a valid vote (0.0–1.0)
+    confidence_threshold: 0.50
+
+    # Number of inference frames to collect at each inspection pose
+    frames_per_pose: 5
+
+    # Seconds to wait after arm arrives at pose before collecting frames
+    # (lets arm vibration damp out)
+    settle_time_sec: 2.0
+
+    # Set true to enable the PICK step (grasp object before inspection).
+    # Currently under discussion — leave false until pick mechanics are decided.
+    enable_pick: true
+
+    # gripper_gear_right_joint positions (radians, from arctos_gripper.xacro)
+    # Safe range for cylinder object: 0.45 (closed grip) … 1.0 (open/release)
+    # open = release object into tray
+    # closed = grip cylinder during pick & inspection
+    gripper_open_pos:   1.2     # calibrated 2026-05-15 on real hardware (cylinder)
+    gripper_closed_pos: 0.45    # calibrated 2026-05-15 on real hardware (cylinder)
+
+    # ── Waypoints ─────────────────────────────────────────────────────────────
+    # Joint values [X, Y, Z, A, B, C] in radians for the denso_arm group.
+    # All set to 0.0 (home) as safe placeholders.
+    # !! Calibrate on real hardware and replace these values !!
+    waypoints:
+      home:       [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+      pick:       [0.0, 0.5585, 2.6180, 0.0, 0.0, 0.0]   # calibrated 2026-05-16
+      inspect_p1: [0.0, 0.5236, 1.3963, 0.0, 1.1345, 1.5708]   # calibrated 2026-05-15: [-1°, 30°, 80°, 0°, 65°, 91°]
+      inspect_p2: [0.0, 0.5236, 1.3963, 0.0, 1.2217, -0.1745]   # calibrated 2026-05-13: 0° side view (front face)
+      inspect_p3: [0.0, 0.5236, 1.3963, 0.0, 1.2217, -1.5708]   # calibrated 2026-05-13: -90° back face
+      inspect_p5: [0.0, 0.5236, 1.3963, -0.3491, 1.1345, 1.5708]   # calibrated 2026-05-15: [-1°, 30°, 80°, -20°, 65°, 90°]
+      inspect_p4: [-0.0175, 0.5236, 1.3963, 0.4363, 1.2217, 1.2915]   # calibrated 2026-05-15: [-1°, 30°, 80°, 25°, 70°, 74°]
+      pre_place:  [0.0, -0.1745, 2.2340, 0.0, 1.0821, 1.5708]    # calibrated 2026-05-13: arm back before sorting to clear camera
+      sort_pass:  [-1.5708, 0.5236, 2.0944, 0.0, 0.5236, -0.0175]   # calibrated 2026-05-13
+      sort_fail:  [1.5708, 0.5236, 2.0944, 0.0, 0.5236, -0.0175]   # calibrated 2026-04-10
+
+      # inspect_p2: [0.0, 0.0, 1.5708, 0.0, 1.5708, 0.0]   # TODO: 0° side view (front face)
+      # inspect_p1: [0.0, 0.0, 1.5708, 0.0, 1.5708, 1.5708]   # TODO: +90° rotation
+      # inspect_p3: [0.0, 0.0, 1.5708, 0.0, 1.5708, -1.5708]   # TODO: -90° back face
+      # inspect_p4: [0.0, 0.0, 1.5708, -0.6981, 1.5708, 1.5708]   # calibrated 2026-05-03: Z=90° A=-40° B=90° C=90°
+      # inspect_p5: [0.0, 0.0, 1.5708, 0.6981, 1.5708, 1.5708]   # TODO: -40° tilt (bottom face)
+      # sort_pass:  [-1.5708, 0.7854, 1.5708, 0.0, 0.7854, 0.0]   # calibrated 2026-04-10
+      # sort_fail:  [1.5708, 0.7854, 1.5708, 0.0, 0.7854, 0.0]   # calibrated 2026-04-10
