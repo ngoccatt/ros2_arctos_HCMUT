@@ -45,6 +45,7 @@
 \usepackage{graphicx}
 \usepackage{pdfpages}
 \usepackage{pmboxdraw}
+\usepackage{datetime}
 % \usepackage{csquotes}
 
 \usepackage[
@@ -91,15 +92,6 @@ sorting=none
 
 \renewcommand{\theequation}{\thechapter.\arabic{equation}}% Danh lai so cong thuc toan
 % \font\tieude=t5-lmb10 at 14pt
- \pagestyle{fancy}
-\renewcommand\headrulewidth{0 pt}
- \lhead{ }
- \chead{\thepage }
- \rhead{  }
-\lfoot{ }
-\cfoot{ }
-\rfoot{ }
-\numberwithin{subsection}{section}
 %------------------------------------------------------------
 \theoremstyle{definition}
 \theoremstyle{plain}
@@ -141,15 +133,23 @@ sorting=none
 %------------------------------------------------------------
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[R]{\textbf{\nouppercase{\rightmark}}}
-
-\renewcommand{\headrulewidth}{1pt}
-\fancyfoot{} % clear all footer fields
-\fancyfoot[C]{\thepage}
+\fancyhead[C]{\thepage}
+\fancyhead[R]{%
+\begin{minipage}[b]{0.40\textwidth}
+\raggedleft\nouppercase{\rightmark}
+\end{minipage}
+}
 \renewcommand{\headrulewidth}{0.3pt}
-\newcolumntype{L}{>{\centering\arraybackslash}m{5cm}}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{30pt}
+\setlength{\headsep}{10pt}
 
-
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyhead[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
 
 % ---------------------------------------------------------------
 % --------------------- CUSTOM TBLR SECTION ---------------------
@@ -363,6 +363,8 @@ sorting=none
 
 %----------------------------------------------------------------------------------------------------------%
 \include{Others/ThesisCover} 
+\include{Others/ThesisCoverPage2}
+\include{Others/mission}
 
 \newcommand\blankpage{%
 	\null
@@ -373,21 +375,21 @@ sorting=none
 	\newpage  
 }
 
- % \includepdf{Images/nhiem_vu.jpg}
- % \includepdf{Images/huong_dan.jpg}
- % \includepdf{Images/phan_bien.jpg}
-
 \pagenumbering{roman}
-\include{Others/teacherConfirmation}
-\include{Others/commitment}
+% \include{Others/teacherConfirmation}
 \include{Others/acknowledgement}
 \include{Others/abstract}
+\include{Others/commitment}
 
+\clearpage
+\pagenumbering{gobble}
 \tableofcontents
 \listoffigures
 \listoftables
+\clearpage
 
 \pagenumbering{arabic}
+\setcounter{page}{1}
 
 \include{ThesisChapters/Introduction}
 

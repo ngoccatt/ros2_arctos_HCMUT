@@ -1,6 +1,7 @@
-\font\td=t5-lmb10 at 14pt
+\newcommand{\td}{\fontfamily{ptm}\selectfont}
 \setlength{\fboxsep} {1pt}
 \begin{titlepage}
+\thispagestyle{empty}
 
 \begin{tikzpicture}[remember picture, overlay]
 \draw [line width=1pt]
@@ -14,57 +15,48 @@
 \end{tikzpicture}
 
 \begin{center}
-    \textbf{ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH}\\
-    \textbf{TRƯỜNG ĐẠI HỌC BÁCH KHOA THÀNH PHỐ HỒ CHÍ MINH}\\
-    \textbf{KHOA KHOA HỌC VÀ KỸ THUẬT MÁY TÍNH}\\
-    \rule{0.1in}{1pt}\ \rule{0.1in}{1pt}\ \rule{0.1in}{1pt}\ \rule{0.1in}{1pt}\ \rule{0.1in}{1pt}\ \rule{0.1in}{1pt}\ \rule{0.1in}{1pt}\ \rule{0.1in}{1pt}\ \rule{0.1in}{1pt}\ \rule{0.1in}{1pt}
+    {\td\fontsize{12pt}{14pt}\selectfont ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH}\\
+    {\td\bfseries\fontsize{13pt}{15pt}\selectfont TRƯỜNG ĐẠI HỌC BÁCH KHOA}\\
+    \rule{7cm}{0.4pt}
 \end{center}
 
-\vspace{0cm}
-\begin{center}
-\includegraphics[width=4cm,height=4cm]{Images/Logo BK.png}\\
-\end{center}
+% \vspace{0.6cm}
+% \begin{center}
+% \includegraphics[width=4cm,height=4cm]{Images/Logo BK.png}\\
+% \end{center}
 
-\vspace{0cm}
+\vspace{1.5cm}
 \begin{center}
- {\bf {\td \Large LUẬN VĂN TỐT NGHIỆP}}
+ {\td\bfseries\fontsize{16pt}{18pt}\selectfont TRẦN NGỌC CÁT}
 \end{center}
-\vspace{.4cm}
+\vspace{0.5cm}
 
 \begin{center}
-    \centerline{\bf \td \Large NGHIÊN CỨU VÀ PHÁT TRIỂN}
-    \vspace{.1cm}
-    \centerline{\bf \td \Large HỆ THỐNG ĐIỀU KHIỂN CÁNH TAY ROBOT VỚI ROS2}
-    \vspace{.1cm}
-    \centerline{\bf \td \Large ĐỒNG BỘ KÍNH THỰC TẾ ẢO (VR)}
-    \vspace{.1cm}
+    {\td\bfseries\fontsize{20pt}{24pt}\selectfont NGHIÊN CỨU VÀ PHÁT TRIỂN}\\[0.1cm]
+    {\td\bfseries\fontsize{20pt}{24pt}\selectfont HỆ THỐNG ĐIỀU KHIỂN CÁNH TAY ROBOT VỚI ROS2}\\[0.1cm]
+    {\td\bfseries\fontsize{20pt}{24pt}\selectfont ĐỒNG BỘ KÍNH THỰC TẾ ẢO (VR)}\\[0.25cm]
     % \centerline{\bf \td \Large TÍCH HỢP AI XỬ LÝ TẠI BIÊN}
-    % \vspace{.1cm}
     \vspace{.5cm}
-    \centerline{NGÀNH: KHOA HỌC MÁY TÍNH}
+    {\td\bfseries\fontsize{20pt}{24pt}\selectfont \uppercase{Research and Development of}}\\[0.1cm]
+    {\td\bfseries\fontsize{20pt}{24pt}\selectfont \uppercase{a Robotic Arm Control System Using ROS2}}\\[0.1cm]
+    {\td\bfseries\fontsize{20pt}{24pt}\selectfont \uppercase{with Virtual Reality (VR) Headset Synchronization}}\\[0.25cm]
+    \vspace{.1cm}
+    {\td\fontsize{13pt}{15pt}\selectfont Chuyên ngành: Khoa học máy tính}\\[0.1cm]
+    \vspace{.1cm}
+    {\td\fontsize{13pt}{15pt}\selectfont Mã ngành: 8480101}
 \end{center}
 
-\vspace{.5cm}
-\begin{flushright}
-\begin{tabular}{l l}
-     %\td Hội đồng: & \td  HỘI ĐỒNG x KỸ THUẬT MÁY TÍNH \\
-     \td GVHD: & \td TS. LÊ TRỌNG NHÂN \\
-     % \td GVPB: & \td THS. VŨ TRỌNG THIÊN \\
-\end{tabular}
+\vspace{1cm}
+
+\begin{center}
+    {\td\bfseries\fontsize{20pt}{24pt}\selectfont ĐỀ ÁN TỐT NGHIỆP}\\[0.1cm]
+\end{center}
 
 
-\end{flushright}
+\vspace{0.3cm}
 
-
-\vspace{0.2cm}
-
-\begin{flushright}
-\begin{tabular}{l l l}
-	Học viên: & Trần Ngọc Cát & 2370415\\
-\end{tabular}
-\end{flushright}
 \vfill
 \begin{center}
-TP. Hồ Chí Minh, \today
+{\td\fontsize{13pt}{15pt}\selectfont Thành phố Hồ Chí Minh, tháng \number\month\ năm \number\year}
 \end{center}
 \end{titlepage}
