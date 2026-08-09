@@ -1,20 +1,18 @@
 \chapter{KẾT QUẢ HIỆN THỰC VÀ ĐÁNH GIÁ}
 
-Trong chương này, nhóm sẽ trình bày kết quả của việc hiện thực hai trong 3 module chính trong kiến trúc đề xuất ban đầu cho ứng dụng điều khiển cánh tay robot bằng kính VR, bao gồm khối phần cứng (máy tính RC5 + Cánh tay robot Denso VS-6577) và phần điều khiển bằng Ros2 với PC controller.
+Trong chương này, đề án sẽ trình bày kết quả của việc hiện thực hai trong 3 module chính trong kiến trúc đề xuất ban đầu cho ứng dụng điều khiển cánh tay robot bằng kính VR, bao gồm khối phần cứng (máy tính RC5 + Cánh tay robot Denso VS-6577) và phần điều khiển bằng Ros2 với PC controller.
 
-\section{Kết quả hiện thực}
-
-\subsection{Kết quả demo}
+\section{Kết quả demo}
 
 Video demo của hệ thống điều khiển được trình bày tại đây: \href{https://drive.google.com/drive/folders/1OyP-rfXzVsNN-aHCGCSpOcyiajlx_tWP?usp=sharing}{Demo}
 
-\subsection{Điều khiển Robot thông qua RC5}
+\section{Điều khiển Robot thông qua RC5}
 
 Ở giai đoạn hai, đề tài đã tập trung cải thiện phương thức điều khiển bằng RC5, và hiện đã có một chu trình điều khiển ổn định và đáng tin cậy hơn rất nhiều so với giai đoạn trước đó. Nhờ việc phát hiện lỗi string đơn giản với CRC length, chương trình RC5 có thể chạy liên tục trong khoảng thời gian dài mà không bị lỗi gián đoạn. Với tốc độ truyền UART được set lên 119200 bit/s, thực nghiệm trong suốt quá trình phát triển cho thấy cứ 1000 lệnh gửi xuống RC5 sẽ có 2 lần lệnh bị lỗi, và chương trình RC5 hiện tại đã giúp loại bỏ vấn đề ngưng hệ thống mỗi khi chuỗi lệnh bị hỏng.
 
 Khi việc xử lý chuỗi được ổn định, thì luồng thực thi để di chuyển cánh tay robot cũng ổn định theo. Với việc tách các hàm chạy theo chu kì, sử dụng ring buffer để tách biệt giữa luồng xử lý chuỗi và luồng thực thi, cánh tay robot có thể chạy với tốc độ cao hơn và nhanh hơn, trong khi vẫn đảm bảo an toàn và chương trình không bị gián đoạn.
 
-\subsection{Hệ thống điều khiển với Ros2}
+\section{Hệ thống điều khiển với Ros2}
 
 Dựa trên nền tảng Ros2, đề tài đã xây dựng và tích hợp thành công nhiều module khác nhau: hiện thực Ros2-control với Hardware interface và phần driver, protocol riêng biệt, cấu hình Ros2-controllers, cấu hình MoveIt2 tích hợp với Ros2-Control, tích hợp Gazebo cho mô phỏng thay thế Hardware Interface, sử dụng MoveIt-Servo, tạo custom Service Provider và Action Server, tích hợp RosBridge server cho giao tiếp Ros thông qua web socket. Hiện tại, dự án đang có đến 10 Ros-packages được sử dụng. Chi tiết về cách cài đặt có thể xem qua ở phần Readme của Repo: \href{https://github.com/ngoccatt/ros2_arctos_HCMUT/tree/cat_impl}{ros2\_arctos\_HCMUT}.
 
@@ -60,7 +58,7 @@ source install/setup.bash
 
 Sau đó, ta có thể lần lượt chạy các module chính của dự án.
 
-\subsubsection{Hệ thống điều khiển chính với Ros2-Control và MoveIt}
+\subsection{Hệ thống điều khiển chính với Ros2-Control và MoveIt}
 
 Để chạy chương trình điều khiển chính, người dùng gõ lệnh sau vào terminal
 
@@ -88,7 +86,7 @@ Toàn bộ module Ros2-Control kèm controllers đều được khởi chạy, c
 
 Khởi chạy thành công, giao diện Rviz sẽ hiển thị ra như hình, bao gồm mô hình 3D của cánh tay và cả phần tay gắp. Lưu ý rằng mô hình tay gắp trong Rviz hiện tại không phản ánh chính xác hoạt động của của tay gắp, mà được đơn giản hóa hơn. Lý do là vì tay gắp thực tế có liên kết trục phức tạp và không thể xây dựng quan hệ một cha - một con trong URDF.
 
-Trong Rviz, ta có thể thay đổi planning group để thay đổi đối tượng cần điều khiển. \textbf{denso\_arm} dùng để điều khiển sáu trục của cánh tay, còn \textbf{denso\_hand} dùng để điều khiển phần tay gắp. Velocity Scaling và Accel Scaling là tỉ lệ của vận tốc và gia tốc tối đa được cấu hình cho cánh tay. Hiện tại, đồ án nhận thấy Velocity scaling 0.4 cùng Accel. Scaling 0.3 đem lại hiệu quả điều khiển ổn định và mượt mà nhất.
+Trong Rviz, ta có thể thay đổi planning group để thay đổi đối tượng cần điều khiển. \textbf{denso\_arm} dùng để điều khiển sáu trục của cánh tay, còn \textbf{denso\_hand} dùng để điều khiển phần tay gắp. Velocity Scaling và Accel Scaling là tỉ lệ của vận tốc và gia tốc tối đa được cấu hình cho cánh tay. Hiện tại, đề án nhận thấy Velocity scaling 0.4 cùng Accel. Scaling 0.3 đem lại hiệu quả điều khiển ổn định và mượt mà nhất.
 
 \begin{figure}[H]
     \centering
@@ -117,7 +115,7 @@ Trong hộp thoại MotionPlanning, ở thẻ Joint, ta có thể tùy ý xoay t
 
 Khi bấm \textbf{Execute}, Moveit sẽ bắt đầu gửi các trajectory tới Controller của cánh tay robot, và yêu cầu cánh tay robot quay dần để đạt tới vị trí đích. Từng giá trị Trajectory được truyền xuống Controller, tham gia vai trò của \textbf{update} trong chu kì ba bước. Sau \textbf{update}, các \lstinline[style=inlinecode]{command_interface} sẽ được ghi vào giá trị điều khiển, và \textbf{write} sử dụng các \lstinline[style=inlinecode]{command_interface}, tổng hợp thành một lệnh điều khiển đưa xuống máy RC5 theo định dạng phù hợp. Tiếp đó, \textbf{read} đọc trạng thái góc quay thực tế của cánh tay phản hồi từ RC5, cập nhật vào các \lstinline[style=inlinecode]{state_interface}. Giá trị trạng thái cũng được phản ánh ngay trên mô hình cánh tay Robot trên Rviz, và người dùng có thể thấy mô hình 3D mờ dần dần di chuyển tới vị trí đích.
 
-\subsubsection{Hệ thống điều khiển mô phỏng với Ros2-Control, MoveIt2 và Gazebo}
+\subsection{Hệ thống điều khiển mô phỏng với Ros2-Control, MoveIt2 và Gazebo}
 
 Gazebo được tích hợp vào hệ thống để giúp cho việc phát triển ứng dụng nhanh chóng hơn, an toàn hơn nhờ môi trường mô phỏng, trước khi thử nghiệm trên cánh tay thực tế. Để chạy hệ thống điều khiển với Gazebo, chạy lện sau trong cửa sổ terminal:
 
@@ -161,7 +159,7 @@ Ngoài việc chạy thêm các tác vụ liên quan tới Gazebo, lưu ý rằn
 
 Với hệ thống mô phỏng này, ta hoàn toàn có thể dùng Rviz để Planning, Execute các trục robot và điều khiển tay gắp mà không cần thiết bị thật, đồng thời thấy được phản hồi thay đổi trạng thái cánh tay khi Gazebo thực hiện thao tác di chuyển. Thêm nữa, ta sẽ không thể thực hiện kiểm thử module Hardware Interface do Gazebo đã thay thế module này trong vai trò thực hiện lệnh điều khiển và cập nhật trạng thái. Hệ thống mô phỏng sẽ chỉ hữu ích trong việc kiểm tra các tính năng từ tầng Hardware Interface trở lên: Các Controller, MoveIt và ứng dụng dựa trên MoveIt.
 
-\subsubsection{Denso MoveIt-Servo Service provider}
+\subsection{Denso MoveIt-Servo Service provider}
 
 Sau khi đã khởi chạy hệ thống chính, các module ứng dụng có thể lần lượt chạy để cung cấp phương thức điều khiển từ bên ngoài. Gõ lệnh sau vào terminal để chạy Denso Moveit-Servo:
 
@@ -182,7 +180,7 @@ ros2 run denso_moveit_servo servo_keyboard_input
     \label{fig:eval-moveit-servo-node}
 \end{figure}
 
-\subsubsection{Denso Remote Control Action Server}
+\subsection{Denso Remote Control Action Server}
 
 Tiếp theo, ta có thể chạy Action Server để nhận lệnh điều khiển Action dạng MoveToPose, để xoay robot tới vị trí yêu cầu. Ở một terminal khác, chạy lệnh sau:
 
@@ -215,7 +213,7 @@ ros2 action send_goal /move_to_pose denso_interfaces/action/MoveToPose "{pose: {
 
 Lệnh trên thực hiện việc điều khiển robot bằng cách sử dụng danh sách giá trị các trục (theo đơn vị rad). Mô phỏng với Gazebo cho thấy robot đã xoay tới vị trí mong muốn.
 
-\subsubsection{RosBridge Server}
+\subsection{RosBridge Server}
 
 Để có thể cho ứng dụng VR giao tiếp với Ros thông qua Web socket, ta cần chạy thêm RosBridge Server. Lệnh sau được sử dụng để chạy server cho kết nối:
 
@@ -232,7 +230,7 @@ ros2 launch file_server2 ros_sharp_communication.launch.py
 
 RosBridge server được khởi chạy tại port 9090, cho phép ứng dụng Unity với Ros-Sharp có thể kết nối tới và sử dụng các topic/service/action tự do.
 
-\subsubsection{Đánh giá về độ trễ Execution trên thiết bị thực tế}
+\subsection{Đánh giá về độ trễ Execution trên thiết bị thực tế}
 
 Trong quá trình phát triển, đề tài nhận thấy rằng việc điều khiển cánh tay thực tế luôn có độ trễ: cánh tay robot cần xoay các motor để di chuyển, cần phải có quá trình gia tốc, giảm tốc, có ma sát và ảnh hưởng bởi trọng lực, nên giả định lý tưởng: "với một lệnh điều khiển, cánh tay robot sẽ xoay hoàn tất trước khi nhận lệnh tiếp theo" là khó để đạt được, ít nhất là với hệ thống hiện tại, khi Ros2-Control tính toán trước chuỗi trajectory và gửi lần lượt chuỗi đó theo chu kì cố định. Chính vì vậy, đề tài đã thực hiện nhiều lần kiểm thử để tìm một cấu hình tối ưu, nhằm đồng bộ nhất có thể giữa tần số điều khiển của Ros2 và thời gian hoạt động của cánh tay robot, gồm:
 
@@ -332,11 +330,11 @@ $T_\text{gửi}$ trung bình \textbf{3599\,ms} ($\approx$\,64\% tổng thời gi
 
 Nhìn chung, $T_\text{tổng}$ trung bình \textbf{5654\,ms} (trung vị 5699\,ms) là tổng hợp của cả hai giai đoạn. Với cấu hình Velocity scaling 0.4 -- Accel. scaling 0.3 và chu kỳ điều khiển 100\,ms, $T_\text{dừng}$ $\approx$\,2\,s là mức độ trễ vật lý cần chấp nhận trong ứng dụng điều khiển từ kính VR: sau khi thao tác, người dùng cần chờ khoảng 2\,s để cánh tay dừng hoàn toàn và sẵn sàng nhận lệnh tiếp theo.
 
-\subsection{Ứng dụng VR điều khiển cánh tay robot}
+\section{Ứng dụng VR điều khiển cánh tay robot}
 
 Ứng dụng VR được xây dựng thành công và hầu như không có bất kì xung đột package nào - ứng dụng có thể được build thành một file cài đặt và chạy độc lập trên kính VR Meta Quest 3. Các tính năng của ứng dụng cho phép người dùng tự do lựa chọn phương thức điều khiển cánh tay robot và việc điều khiển có tính ổn định, đồng bộ cao với cánh tay thực tế thông qua giao tiếp Ros-sharp. 
 
-\subsubsection{Các tính năng của ứng dụng}
+\subsection{Các tính năng của ứng dụng}
 
 Các tính năng được hỗ trợ bởi ứng dụng bao gồm:
 
@@ -438,7 +436,7 @@ Khi đã chỉnh hình dạng của cánh tay robot, nhấn nút Execute sẽ đ
     \label{fig:eval-vr-grab-rotate}
 \end{figure}
 
-\subsubsection{Đánh giá độ trễ truyền nhận thông qua Ros-Sharp giữa ứng dụng và Ros2}
+\subsection{Đánh giá độ trễ truyền nhận thông qua Ros-Sharp giữa ứng dụng và Ros2}
 
 Độ trễ truyền nhận giữa ứng dụng VR và máy PC chạy Ros2 là tiêu chí quan trọng phản ánh mức độ đồng bộ giữa thao tác của người dùng trên kính VR và phản hồi từ hệ thống robot. Để đo đạc chỉ tiêu này, đề tài xây dựng một node Ros2 chuyên dụng (\texttt{topic\_latency\_benchmark}) thực hiện cơ chế ping-pong qua hai topic:
 
@@ -564,7 +562,7 @@ Có thể thấy, độ trễ của giao tiếp giữa ứng dụng VR và Ros2 
 
 Trong đề tài hiện tại, với lợi thế của mạng Wifi cục bộ và việc xây dựng ứng dụng ROS2 sử dụng C++, độ trễ giữa ứng dụng VR và ROS2 rơi vào khoảng 20ms trong điều kiện sử dụng bình thường, qua đó giúp cho việc truyền dữ liệu hình ảnh cũng như đồng bộ trạng thái hoạt động trong 10ms. 
 
-\subsubsection{Đánh giá hiệu năng ứng dụng trong quá trình hoạt động}
+\subsection{Đánh giá hiệu năng ứng dụng trong quá trình hoạt động}
 
 Một trong những vấn đề trong việc phát triển ứng dụng VR đó là đảm bảo người dùng có trải nghiệm sử dụng mượt mà, thoải mái mà không gây gánh nặng nhận thức (cognitive pressure). Meta Quest Developer Hub được sử dụng để thu thập chi tiết dữ liệu hoạt động của ứng dụng, gồm nhiều tiêu chí đánh giá khác nhau để xem xét ứng dụng có đang hoạt động ổn định và tối ưu hay không. Bảng phân tích các tiêu chí và nhận xét được thể hiện ở dưới:
 

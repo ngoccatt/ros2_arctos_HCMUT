@@ -23,7 +23,7 @@ Trong sơ đồ này, có các khối chức năng chính có thể kể đến 
 
     \item \textbf{Máy điều khiển RC5}:
 
-    Đây là một máy điều khiển robot hiệu năng cao, RC5 đóng vai trò quan trọng để trực tiếp điều khiển các trục của cánh tay robot Denso thông qua các dây kết nối ở cổng CN12. Điều này cũng đồng nghĩa là để có thể xoay các trục cánh tay, ta cần phải tận dụng RC5. Như đã trình bày ở Chương 2, ngoài khả năng điều khiển trực tiếp bằng teach pendant, RC5 cũng cho phép người dùng viết "PAC script" - là một ngôn ngữ lập trình chuyên biệt cho thiết bị để điều khiển từ nhà sản xuất Denso. Qua việc thiết kế các PAC script, nhóm hiện thực khả năng nhận lệnh điều khiển cánh tay robot thông qua lệnh UART, đẩy các tính năng chính và lớn lên module tiếp theo: PC Controller.
+    Đây là một máy điều khiển robot hiệu năng cao, RC5 đóng vai trò quan trọng để trực tiếp điều khiển các trục của cánh tay robot Denso thông qua các dây kết nối ở cổng CN12. Điều này cũng đồng nghĩa là để có thể xoay các trục cánh tay, ta cần phải tận dụng RC5. Như đã trình bày ở Chương 2, ngoài khả năng điều khiển trực tiếp bằng teach pendant, RC5 cũng cho phép người dùng viết "PAC script" - là một ngôn ngữ lập trình chuyên biệt cho thiết bị để điều khiển từ nhà sản xuất Denso. Qua việc thiết kế các PAC script, đề án hiện thực khả năng nhận lệnh điều khiển cánh tay robot thông qua lệnh UART, đẩy các tính năng chính và lớn lên module tiếp theo: PC Controller.
 
     \item \textbf{Tay gắp Gripper-A}
     
@@ -37,11 +37,11 @@ Trong sơ đồ này, có các khối chức năng chính có thể kể đến 
     \end{itemize}
     \item \textbf{Khối điều khiển: PC Controller}: 
 
-    PC Controller đóng vai trò là bộ điều khiển trung tâm, là cầu nối giữa thiết bị điều khiển thông dụng khác với cụm RC5-Cánh tay VS-6577E. Trên PC Controller sẽ được tập trung phát triển các cơ chế điều khiển cánh tay cũng như cập nhật trạng thái cánh tay tận dụng ROS2 Humble. ROS2 đem lại cho nhà phát triển một hệ sinh thái đa dạng, mạnh mẽ, giúp nhà phát triển có thể dễ dàng triển khai các ứng dụng robot đa dạng, phức tạp mà không bị phụ thuộc bởi máy RC5 của Denso. Nhóm tập trung xây dựng một cơ chế giao tiếp hiệu quả, tốc độ cao và đáng tin cậy giữa thiết bị điều khiển bên ngoài và cánh tay robot Denso, từ đó tạo nền móng cho việc phát triển nhiều ứng dụng trên cánh tay robot sau này.
+    PC Controller đóng vai trò là bộ điều khiển trung tâm, là cầu nối giữa thiết bị điều khiển thông dụng khác với cụm RC5-Cánh tay VS-6577E. Trên PC Controller sẽ được tập trung phát triển các cơ chế điều khiển cánh tay cũng như cập nhật trạng thái cánh tay tận dụng ROS2 Humble. ROS2 đem lại cho nhà phát triển một hệ sinh thái đa dạng, mạnh mẽ, giúp nhà phát triển có thể dễ dàng triển khai các ứng dụng robot đa dạng, phức tạp mà không bị phụ thuộc bởi máy RC5 của Denso. đề án tập trung xây dựng một cơ chế giao tiếp hiệu quả, tốc độ cao và đáng tin cậy giữa thiết bị điều khiển bên ngoài và cánh tay robot Denso, từ đó tạo nền móng cho việc phát triển nhiều ứng dụng trên cánh tay robot sau này.
 
     \item \textbf{Khối ứng dụng VR: Meta Quest 3}
 
-    Meta Quest 3 được nhóm lựa chọn là thiết bị VR được sử dụng trong đồ án. Một ứng dụng VR sẽ được phát triển tận dụng Unity Engine và thư viện VR được cung cấp và phát triển bởi Meta, với mục tiêu xây dựng ứng dụng điều khiển, tương tác hiệu quả, trực quan, đồng bộ tốt với cánh tay thực tế. Việc cho phép người dùng sử dụng VR để điều khiển cánh tay sẽ đem lại trải nghiệm sinh động, trực quan, tăng hiệu quả điều khiển cho người dùng từ xa mà không đánh đổi sự tiện lợi, cung cấp đầy đủ các tính năng điều khiển thông dụng như trên thiết bị truyền thống.
+    Meta Quest 3 được đề án lựa chọn là thiết bị VR được sử dụng trong đề án. Một ứng dụng VR sẽ được phát triển tận dụng Unity Engine và thư viện VR được cung cấp và phát triển bởi Meta, với mục tiêu xây dựng ứng dụng điều khiển, tương tác hiệu quả, trực quan, đồng bộ tốt với cánh tay thực tế. Việc cho phép người dùng sử dụng VR để điều khiển cánh tay sẽ đem lại trải nghiệm sinh động, trực quan, tăng hiệu quả điều khiển cho người dùng từ xa mà không đánh đổi sự tiện lợi, cung cấp đầy đủ các tính năng điều khiển thông dụng như trên thiết bị truyền thống.
 \end{itemize}
 
 Các phần tiếp theo lần lượt trình bày phương thức hiện thực các module chính đã được mô tả phía trên.
@@ -124,17 +124,17 @@ Chương trình MAIN.pac có vai trò khởi chạy các chương trình con the
     Trong đó, \lstinline[style=inlinecode]{J[X]} lần lượt là giá trị góc (tính theo độ) của từng trục, giá trị này cần ở dạng số nguyên có dấu. Trên thực tế, robot hoàn toàn có thể được điều khiển với giá trị góc là số thực (có dấu chấm động), tuy nhiên, việc xử lý chuỗi có dấu chấm động tăng tính phức tạp và thời gian chạy của hàm xử lý chuỗi, do đó giá trị góc dạng số thực sẽ sẽ được gửi xuống UART ở dạng \lstinline[style=inlinecode]{angle * 100}, và chia ngược lại ở RC5. 
 
     Ngoài ra, format lệnh còn có thêm \lstinline[style=inlinecode]{LEN_PAYLOAD}, được phân cách bởi ký tự đặc biệt "\#", dùng để chứa độ dài của chuỗi lệnh trước dấu "\#". Lý do là vì trong quá trình phát triển, giao tiếp giữa RC5 và PC controller thường gặp trục trặc, chủ yếu là do dữ liệu UART truyền tới RC5 bị mất hoặc dư kí tự, từ đó tạo giá trị góc sai lệch hoặc lỗi trong lúc giải mã chuỗi. Chính vì vậy, việc sử dụng \lstinline[style=inlinecode]{LEN_PAYLOAD} có tác dụng như một cơ chế kiểm tra toàn vẹn dữ liệu đơn giản, giúp chương trình xử lý chuỗi có thể phát hiện sớm chuỗi bị lỗi và loại bỏ, đảm bảo khả năng hoạt động ổn định trong thời gian dài ở phía cánh tay robot. Khối CRC\_check ở sơ đồ trên thể hiện tính năng này, trong đó chuỗi được xem là lỗi khi:
-    \begin{enumerate}
+    \begin{itemize}
         \item Không tìm thấy dấu "\#"
         \item Tìm thấy dấu "\#", nhưng \lstinline[style=inlinecode]{LEN_PAYLOAD} khác với độ dài của chuỗi nhận được bên trái dấu "\#".
-    \end{enumerate}
+    \end{itemize}
 
     Chuỗi dữ liệu hợp lệ (pass được khối CRC\_check) sẽ tiến tới phần bóc tách dữ liệu góc joint\_seperation, qua đó từng giá trị số nguyên sẽ được lấy ra, convert sang giá trị số và chia 100 để lấy giá trị số thực của góc xoay. Sáu giá trị góc sau đó lưu vào biến toàn cục \lstinline[style=inlinecode]{J[I5]}. \lstinline[style=inlinecode]{I5 + 1} và \lstinline[style=inlinecode]{I1 = 0} để cho phép \textbf{TASK0} đọc vào chuỗi UART tiếp theo.
     \item \textbf{TASK3:} Chương trình được cải tiến để tránh khoảng ngừng giữa các lần xoay bằng cơ chế Ring Buffer. Cụ thể, trong RC5 cho phép người dùng sử dụng các biến toàn cục, trong đó \lstinline[style=inlinecode]{J[X]}, với X từ 0 -> 99 là 100 biến toàn cục dùng để chứa giá trị góc (joint). Hai biến toàn cục \lstinline[style=inlinecode]{I4, I5} được sử dụng, trong đó:
-    \begin{enumerate}
+    \begin{itemize}
         \item \lstinline[style=inlinecode]{I5} thể hiện lệnh xoay joint \textbf{trong tương lại}, liên tục tăng mỗi khi chuỗi được xử lý xong ở \textbf{TASK1CRC} và giá trị góc được lưu vào \lstinline[style=inlinecode]{J[I5]}.
         \item Ở \textbf{TASK3}, \lstinline[style=inlinecode]{I4} thể hiện lệnh xoay joint \textbf{đã xử lý}, nếu \lstinline[style=inlinecode]{I4 < I5} tức là vẫn còn lệnh chưa được xử lý, \lstinline[style=inlinecode]{J[I4]} sẽ được dùng để xoay các trục robot, sau đó tăng \lstinline[style=inlinecode]{I4 + 1} cho tới khi đuổi kịp \lstinline[style=inlinecode]{I5}.
-    \end{enumerate}
+    \end{itemize}
     Cơ chế này đem lại sự linh hoạt và giảm đáng kể các khoảng ngừng giữa các lệnh xoay, bởi I5 thì cứ tăng (chuỗi được xử lý liên tục), trong khi ở \textbf{TASK3}, I4 cũng liên tục đuổi theo I5 và xoay các trục của cánh tay theo chuỗi lệnh. I5 chắc chắn sẽ chạy nhanh hơn I4, nên \textbf{TASK3} cũng sẽ liên tục có các giá trị góc xoay mới mà không bị ngắt giữa chừng.
 \end{itemize}
 
@@ -200,12 +200,12 @@ Khối UartProtocol được xây dựng các chức năng để hỗ trợ truy
 \subsubsection{Motor Driver}
 
 Phần Motor Driver được xây dựng để quản lý trạng thái và điều khiển các trục của cánh tay robot VS-6577. Module Motor driver mang đặc trưng điều khiển cụ thể, phù hợp với RC5 và VS-6577. Điểm mạnh của module này là: 
-\begin{enumerate}
+\begin{itemize}
     \item Cung cấp khả năng quản lý các trục xoay bằng nhiều thuộc tính như tên trục, giới hạn min/max trục, góc xoay hiện tại, góc xoay yêu cầu, feedback, thời gian cập nhật/điều khiển...
     \item Cung cấp cơ chế kiểm tra nhiều lớp tính hợp lệ của dữ liệu điều khiển cũng như giá trị trạng thái trục được gửi lên từ cánh tay robot thực tế.
     \item Tiết kiệm thời gian xử lý bằng cách kiểm tra tính mới của giá trị trạng thái trước khi giải mã và xử lý.
     \item Thiết kế để dễ dàng quản lý, mở rộng và có thể áp dụng để điều khiển với số lượng trục linh động, các hàm được xây dựng phụ thuộc vào tham số mà người dùng hoàn toàn có thể điều chỉnh ở file config mà không cần phải build lại phần mềm.
-\end{enumerate}
+\end{itemize}
 
 Cách thiết kế của Motor Driver cho phép mỗi trục là một đối tượng riêng biệt (\lstinline[style=inlinecode]{JointConfig}), giúp dễ dàng quản lý trạng thái và thuộc tính hiệu quả. Khi có lệnh mới, giá trị góc xoay yêu cầu được lưu ngay vào đối tượng \lstinline[style=inlinecode]{JointConfig}. Khi cần gửi dữ liệu điều khiển xuống RC5, các giá trị góc xoay yêu cầu được thu thập từ mỗi đối tượng và tạo thành một chuỗi lệnh ở dạng sau, với sự hỗ trợ của module Uart:
 
@@ -217,7 +217,7 @@ Ngược lại, dữ liệu trạng thái trục truyền lên từ RC5 được
 
 \subsubsection{Servo Driver}
 
-Khối Servo Driver được thiết kế dựa trên Motor Driver, tuy nhiên được tinh gọn hơn là chỉ dùng để gửi lệnh tới một Servo. Mục tiêu của module này là giao tiếp với Driver-Hat-A để điều khiển tay gắp Gripper-A, và hiện Driver-Hat-A cũng chỉ hỗ trợ điều khiển một servo duy nhất, nên Servo Driver chỉ đặt thêm một ràng buộc không cho tạo nhiều hơn 1 đối tượng \lstinline[style=inlinecode]{JointConfig}. Một lý do nữa cần phải phân tách ra so với khối Motor Driver, đó là giao tiếp với Driver-Hat-A có format quy định tương đối khác so với RC5. Cụ thể, lệnh cần được gửi ở dạng JSON format. Đề tài sử dụng thư viện \href{https://github.com/nlohmann/json}{JSON for Modern C++} để có thể nhanh chóng tạo và xử lý chuỗi ở dạng JSON. Lệnh điều khiển có dạng như sau:
+Khối Servo Driver được thiết kế dựa trên Motor Driver, tuy nhiên được tinh gọn hơn là chỉ dùng để gửi lệnh tới một Servo. Mục tiêu của module này là giao tiếp với Driver-Hat-A để điều khiển tay gắp Gripper-A, và hiện Driver-Hat-A cũng chỉ hỗ trợ điều khiển một servo duy nhất, nên Servo Driver chỉ đặt thêm một ràng buộc không cho tạo nhiều hơn 1 đối tượng \lstinline[style=inlinecode]{JointConfig}. Một lý do nữa cần phải phân tách ra so với khối Motor Driver, đó là giao tiếp với Driver-Hat-A có format quy định tương đối khác so với RC5. Cụ thể, lệnh cần được gửi ở dạng JSON (JavaScript Object Notation) format. Đề tài sử dụng thư viện \href{https://github.com/nlohmann/json}{JSON for Modern C++} để có thể nhanh chóng tạo và xử lý chuỗi ở dạng JSON. Lệnh điều khiển có dạng như sau:
 
 \begin{lstlisting}[language=json]
 {"T":121,"angle":0.67,"spd":100,"acc":10}
@@ -249,7 +249,7 @@ Thêm nữa, trong quá trình xoay, lệnh đọc trạng thái có thể gửi
 
 Khi xây dựng ứng dụng điều khiển robot với ROS2, robot description là một module không thể thiếu. Một thư mục Robot Description thường chứa file URDF (Unified Robot Description format), dùng để định nghĩa chi tiết về cấu trúc của robot trong không gian 3D, bao gồm việc nối các bộ phận từ Mesh (một file mô tả hình dáng của cánh tay) lại với nhau và định nghĩa sự liên kết của các bộ phận đó.
 
-Với mục tiêu mô phỏng cánh tay robot một cách chính xác nhất, đề tài chủ trương lấy chính xác mô hình 3D cùng phiên bản của cánh tay VS-6577 từ nhà sản xuất Denso. Mô hình này được import vào phần mềm SOLIDWORK 2024, sau đó thông qua plugin \href{https://github.com/ros/solidworks_urdf_exporter}{\textbf{Solidworks Urdf Exporter}} để export đặc tả URDF của cánh tay cùng các file mesh cấu thành cánh tay robot. Phần tay gắp cũng được nhóm nối trực tiếp vào trục end-effector của cánh tay, cấu thành mô hình 3D cuối cùng đang được đề tài sử dụng. 
+Với mục tiêu mô phỏng cánh tay robot một cách chính xác nhất, đề tài chủ trương lấy chính xác mô hình 3D cùng phiên bản của cánh tay VS-6577 từ nhà sản xuất Denso. Mô hình này được import vào phần mềm SOLIDWORK 2024, sau đó thông qua plugin \href{https://github.com/ros/solidworks_urdf_exporter}{\textbf{Solidworks Urdf Exporter}} để export đặc tả URDF của cánh tay cùng các file mesh cấu thành cánh tay robot. Phần tay gắp cũng được đề án nối trực tiếp vào trục end-effector của cánh tay, cấu thành mô hình 3D cuối cùng đang được đề tài sử dụng. 
 
 \begin{figure}[H]
     \centering
@@ -437,7 +437,7 @@ Với 100ms, trừ đi thời gian nhận UART và xử lý lệnh điều khi�
 
 Tiếp đến, cấu hình của từng controller, và cách nó liên kết với hardware interface sẽ được trình bày.
 
-\subsubsection{denso\_arm\_controller}
+\subsubsection{Denso\_arm\_controller}
 
 "Denso\_arm\_controller" thuộc loại JointTrajectoryController, đóng vai trò chính trong việc vận hành hoạt động của cánh tay robot. Trang \href{https://control.ros.org/humble/doc/ros2_controllers/joint_trajectory_controller/doc/userdoc.html}{JointTrajectoryController} của Ros2-Control cung cấp chi tiết cách để cấu hình và sử dụng loại controller này, cũng như những chức năng mà controller hỗ trợ. Cấu hình cho phần Denso\_arm\_controller hiện tại bao gồm danh sách các trục sẽ điều khiển, state interface, command interface cùng một số thuộc tính đặc biệt:
 
@@ -467,7 +467,7 @@ denso_arm_controller:
 
 Cấu hình hiện tại cho biết Denso\_arm\_controller sẽ có 6 trục, mỗi trục đều có position interface cho command (lệnh điều khiển) và state (trạng thái). Khi chạy controller, trạng thái của controller được cung cấp ở dạng topic với tần số 25hz, và khi thực hiện action, việc theo dõi sự thay đổi trạng thái được thực hiện với tần số 10hz. Tuy nhiên, việc cấu hình ở file yaml là chưa đủ để có thể khởi chạy một luồng ros2-control gồm controller-interface hoàn chỉnh, mà nó cần có sự ràng buộc ở nhiều vị trí khác nhau để đảm bảo liên kết giữa các module được đồng nhất. Cụ thể, cấu hình "6 trục, mỗi trục đều có position interface cho command (lệnh điều khiển) và state (trạng thái)" cần tương đồng trong:
 
-\begin{enumerate}
+\begin{itemize}
     \item \textbf{File Urdf}: Dưới tag <ros2\_control>, ngoài thông tin về plugin "hardware interface" sẽ sử dụng, cần liệt kê rõ các joint với tên trùng với tên joint đã cấu hình trong file yaml, đi kèm với command interface và position interface. Ví dụ của trục "X\_joint" dưới tag <ros2\_control> và các trục khác phải có cấu trúc:
     \begin{lstlisting}[language=xml]
     <joint name="X_joint">
@@ -489,7 +489,7 @@ command_interfaces.emplace_back(
             info_.joints[i].name, hardware_interface::HW_IF_POSITION, &joint_position_command_[i]);
     \end{lstlisting}
     Hai câu lệnh trên đảm bảo joint với tên được ghi trong URDF dưới tag <ros2\_control> (ví dụ X\_joint) sẽ được cung cấp hai command interface và state interface loại Position bởi DensoInterface.
-\end{enumerate}
+\end{itemize}
 
 Nếu có sự không đồng nhất giữa cấu hình file yaml, urdf hoặc cách hardware interface export, controller tương ứng sẽ không khởi chạy.
 
@@ -502,7 +502,7 @@ Khi cấu hình hoàn chỉnh và khởi chạy được denso\_arm\_controller,
 
 Hai cách thức giao tiếp này sẽ được tận dụng bởi MoveIt2 trong chức năng planning và moveit servo. Chi tiết này sẽ được trình bày cụ thể hơn ở phần sau.
 
-\subsubsection{denso\_hand\_controller}
+\subsubsection{Denso\_hand\_controller}
 
 "Denso\_hand\_controller" thuộc loại \textbf{GripperActionController}, là một loại controller đơn giản hơn với mục tiêu là điều khiển loại tay gắp hai đầu song song (parallel gripper). Tượng tự, cách cấu hình trong file ros2\_controlles.yaml có thể tham khảo ở trang \href{https://control.ros.org/humble/doc/ros2_controllers/gripper_controllers/doc/userdoc.html}{Gripper Action Controller}. Cấu hình hiện tại cho phần tay gắp là:
 
@@ -521,7 +521,7 @@ So với JointTrajectoryController, GripperActionController chỉ điều khiể
 
 Tương tự, để có thể khởi chạy denso\_hand\_controller, ta cần đảm bảo những cấu hình ở các file liên quan được đồng nhất, cụ thể:
 
-\begin{enumerate}
+\begin{itemize}
     \item Trong tag <ros2\_control> cho controller tay gắp, chỉ cần để một joint duy nhất, kèm theo một position interface và hai state interface. Tuy vậy, chỉ có position state interface sẽ được sử dụng trong dự án.
     \begin{lstlisting}[language=xml]
     <joint name="gripper_gear_right_joint">
@@ -546,11 +546,11 @@ state_interfaces.emplace_back(
 command_interfaces.emplace_back(
             info_.joints[i].name, hardware_interface::HW_IF_POSITION, &servo_position_command_[i]);
     \end{lstlisting}
-\end{enumerate}
+\end{itemize}
 
 Denso\_hand\_controller cung cấp một phương thức giao tiếp duy nhất là thông qua \href{https://docs.ros.org/en/melodic/api/control_msgs/html/action/GripperCommand.html}{GripperCommand Action}, cụ thể: /denso\_arm\_controller/GripperCommand. Action server này được sử dụng bởi MoveIt2 cho planning, và cũng là cách điều khiển mà ứng dụng VR sử dụng để có thể nhanh chóng điều khiển tay gắp.
 
-\subsubsection{joint\_state\_boardcaster}
+\subsubsection{Joint\_state\_boardcaster}
 
 Joint\_state\_boardcaster - như tên gọi - là một controller không phải để điều khiển thiết bị, mà là để thông báo (boardcast) dữ liệu. Đây cũng là một controller quan trọng, có nhiệm vụ thu thập toàn bộ state interface liên quan tới Joint và publish nó lên topic \textbf{/joint\_states}, cung cấp dữ liệu thực tế của phần cứng cho các ứng dụng quan tâm. Đối với controller này, đề tài để mọi thông số ở dạng mặc định và không tùy chỉnh gì thêm.
 
@@ -580,7 +580,7 @@ moveit_config
 \end{Verbatim}
 
 \begin{itemize}
-    \item \textbf{denso.srdf}: khác với file URDF có vai trò đặc tả về cấu trúc của robot, file SRDF (Semantic Robot Description Format) dùng để định nghĩa những thông tin ngữ nghĩa (semantic) cho robot. Ở đây có thể định nghĩa một nhóm các trục để điều khiển - planning trong \lstinline[style=inlinecode]{<group>}, định nghĩa trạng thái nhóm các trục và vị trí các trục ở trạng thái đó trong \lstinline[style=inlinecode]{<group_state>}. \lstinline[style=inlinecode]{<disable_collisions>} hữu dụng trong quá trình mô phỏng cánh tay robot, với khả năng tắt tính toán va chạm giữa những bộ phận của robot do nhiều lý do khác nhau, qua đó tăng tốc thời gian tính toán va chạm, cho phép MoveIt có thể lập ra những kế hoạch di chuyển (planning) chính xác, hiệu quả cho cánh tay robot.
+    \item \textbf{denso.srdf}: khác với file URDF có vai trò đặc tả về cấu trúc của robot, file SRDF (Semantic Robot Description Format) dùng để định nghĩa những thông tin ngữ nghĩa (semantic) cho robot. Ở đây có thể định nghĩa một đề án các trục để điều khiển - planning trong \lstinline[style=inlinecode]{<group>}, định nghĩa trạng thái đề án các trục và vị trí các trục ở trạng thái đó trong \lstinline[style=inlinecode]{<group_state>}. \lstinline[style=inlinecode]{<disable_collisions>} hữu dụng trong quá trình mô phỏng cánh tay robot, với khả năng tắt tính toán va chạm giữa những bộ phận của robot do nhiều lý do khác nhau, qua đó tăng tốc thời gian tính toán va chạm, cho phép MoveIt có thể lập ra những kế hoạch di chuyển (planning) chính xác, hiệu quả cho cánh tay robot.
     \item \textbf{chomp\_planning.yaml}: File cấu hình thuật toán tính toán lập quỹ đạo chuyển động Covariant Hamiltonian Optimization for Motion Planning (CHOMP). 
     \item \textbf{initial\_positions.yaml}: Vị trí ban đầu của từng trục cánh tay.
     \item \textbf{joint\_limits.yaml}: Một file cấu hình khác cho phép ghi đè những thuộc tính trên file URDF của cánh tay, cụ thể là cấu hình về vận tốc và gia tốc tối đa. Việc cấu hình tốc độ/gia tốc tối đa có ảnh hưởng tương đối với MoveIt trong quá trình lập kế hoạch di chuyển của các trục, bởi MoveIt sẽ điều chỉnh vị trí và vận tốc linh hoạt, có tăng tốc ở khoảng bắt đầu và giảm tốc ở khoảng kết thúc, vận tốc trong quá trình di chuyển giữa sẽ gần đạt tối đa. Chính vì vậy, vận tốc tối đa càng cao, thời gian xoay cánh tay và số bước thực hiện hành động xoay càng ngắn. Ngược lại, vận tốc tối đa càng thấp, số bước di chuyển càng nhiều và cánh tay sẽ xoay chậm hơn.
@@ -785,15 +785,15 @@ Luồng hoạt động và phản hồi của Denso Remote Control khi có reque
 \draw[earrow] (execok)  -- node[above, font=\footnotesize]{Không} (execfail);
 
 \end{tikzpicture}
-\caption{Luồng hoạt động của \texttt{RemoteControlServer} (\texttt{remote\_control\_server.cpp})}
+\caption{Luồng hoạt động của \texttt{RemoteControlServer}}
 \label{fig:remote-control-flow}
 \end{figure}
 
-\begin{enumerate}
+\begin{itemize}
     \item Khi nhận một Goal request, kiểm tra \lstinline[style=inlinecode]{use\_pose} và quyết định chọn message Pose hay chuỗi góc trục. Nếu request đưa tới là hợp lệ, tiến tới bước planning.
     \item Thực hiện ghi trạng thái đích (sử dụng \lstinline[style=inlinecode]{setPoseTarget()} nếu dùng pose, hoặc \lstinline[style=inlinecode]{setJointValueTarget()} nếu dùng chuỗi góc trục), sau đó tiến hành planning thông qua Moveit. \lstinline[style=inlinecode]{step} hiển thị "planning". Nếu planning thất bại, \lstinline[style=inlinecode]{completed = true} và \lstinline[style=inlinecode]{step = planning_failed:} kèm theo lý do cụ thể.
     \item Sau khi planning thành công, bước execute sẽ khởi chạy sử dụng hàm \lstinline[style=inlinecode]{execute()} của MoveIt, \lstinline[style=inlinecode]{step = executing} và thiết bị sẽ được điều khiển trong suốt thời gian executing. Nếu có lỗi trong quá trình execute, \lstinline[style=inlinecode]{step = execute_failed:} kèm lý do, và \lstinline[style=inlinecode]{completed = true}. Nếu việc execute thành công, \lstinline[style=inlinecode]{step = completed} và \lstinline[style=inlinecode]{completed=true}.
-\end{enumerate}
+\end{itemize}
 
 Khi khởi chạy, Action client có thể gửi MoveToPose goal request tới Denso Remote Control để thực hiện việc xoay cánh tay robot tới vị trí yêu cầu.
 
@@ -814,7 +814,7 @@ Trong quá trình phát triển, để giảm bớt sự phụ thuộc vào thi�
 
 Để có thể tích hợp Gazebo vào dự án, ta sẽ cần thực hiện một số thay đổi sau:
 
-\begin{enumerate}
+\begin{itemize}
     \item \textbf{Tắt trọng lực, bật động học}: Với mỗi một Link trong file UART, tag gazebo cần được liên kết để tắt tác dụng của trọng lực lên cánh tay. Bật động học đảm bảo cánh tay robot chỉ có thể được điều khiển bởi người dùng, chứ không chịu ảnh hưởng bởi va chạm với vật thể nào khác trong mô phỏng. Điều này giúp cho robot có thể giữ vị trí cố định và điều khiển được.
 
     \begin{lstlisting}[language=xml]
@@ -869,7 +869,7 @@ Trong quá trình phát triển, để giảm bớt sự phụ thuộc vào thi�
 
     \item Sau cùng, ở file launch của dự án, lần lượt khởi chạy Gazebo, sinh mô hình robot bằng cách dọc robot description, Gazebo sẽ xuất hiện và đóng vai trò là bộ mô phỏng cánh tay robot, có thể điều khiển được thông qua MoveIt và Ros2-Control.
 
-\end{enumerate}
+\end{itemize}
 
 \subsection{Lấy dữ liệu camera với V4L2 Camera Node}
 
@@ -909,7 +909,7 @@ sudo apt-get install ros-humble-rosbridge-server
 
 Sau khi cài xong, package \href{https://github.com/siemens/ros-sharp/tree/master/ROS%20Packages/ROS2/file_server2}{file\_server2} từ Repo được sử dụng để khởi chạy RosBridge server cùng một số tham số tùy chỉnh như port, kích thước gói tin, timeout cho service...
 
-Với việc cài đặt RosBridge server, gần như mọi topic, service và action có thể được truy cập bởi ứng dụng .Net sử dụng Ros-sharp. Với đồ án hiện tại, RosBridge Server sẽ cho phép ứng dụng VR truy cập các topic và dịch vụ sau:
+Với việc cài đặt RosBridge server, gần như mọi topic, service và action có thể được truy cập bởi ứng dụng .Net sử dụng Ros-sharp. Với đề án hiện tại, RosBridge Server sẽ cho phép ứng dụng VR truy cập các topic và dịch vụ sau:
 
 
 \begin{figure}[H]
@@ -988,7 +988,7 @@ Kiến trúc phần mềm cho ứng dụng VR, tương tự cũng sẽ bao gồm
 
 \subsection{Module tương tác VR}
 
-Điểm ấn tượng của module Meta XR SDK, đó là được thiết kế để nhà phát triển có thể dễ dàng bắt đầu một dự án VR/AR trên Unity với các "building block" gói gọn những tính năng thông dụng nhất để có thể sử dụng ngay. Thành phần cốt lõi nhất của một ứng dụng sử dụng Meta XR SDK là Camera Rig, với đầy đủ những tính năng như:
+Điểm ấn tượng của module Meta XR SDK, đó là được thiết kế để nhà phát triển có thể dễ dàng bắt đầu một dự án VR/AR (Virtual Reality/ Augmented Reality) trên Unity với các "building block" gói gọn những tính năng thông dụng nhất để có thể sử dụng ngay. Thành phần cốt lõi nhất của một ứng dụng sử dụng Meta XR SDK là Camera Rig, với đầy đủ những tính năng như:
 
 \begin{figure}[H]
     \centering
@@ -1108,7 +1108,7 @@ Trước khi hiện thực GripperCommand Action Client, ta cần định nghĩa
 
 Ros-Sharp sẽ tự động generate cho GripperCommand bảy class cho Action này, bao gồm:
 
-\begin{enumerate}
+\begin{itemize}
     \item GripperCommandAction
     \item GripperCommandActionFeedback
     \item GripperCommandActionGoal
@@ -1116,7 +1116,7 @@ Ros-Sharp sẽ tự động generate cho GripperCommand bảy class cho Action n
     \item GripperCommandFeedback
     \item GripperCommandGoal
     \item GripperCommandResult
-\end{enumerate}
+\end{itemize}
 
 Tiếp đến, class GripperCommandActionClient được hiện thực, kế thừa từ class ActionClient với toàn bộ bảy class của Action GripperCommand được xây dựng, cung cấp những API cơ bản như \lstinline[style=inlinecode]{SetActionGoal(), OnFeedbackReceived(), OnResultReceived()} để gửi Goal, theo dõi feedback và sau cùng là nhận result, như một Action client cơ bản của Ros2.
 
@@ -1133,7 +1133,7 @@ Dựa trên class GripperCommandActionClient, UnityGripperCommandActionClient k�
 
 MoveToPose là một custom action, dành riêng cho Denso Remote Control Action Server được hiện thực ở phần Ros2, nhằm mục tiêu gửi lệnh điều khiển robot xoay tới vị trí mong muốn thông qua giá trị góc trục hoặc tọa độ XYZ. Vì là một custom action, ta buộc phải import bộ action này vào Unity bằng tính năng Generate Action, tương tự như với Gripper Command. Bộ file được sinh ra sẽ bao gồm:
 
-\begin{enumerate}
+\begin{itemize}
     \item MoveToPoseAction
     \item MoveToPoseActionFeedback
     \item MoveToPoseActionGoal
@@ -1141,7 +1141,7 @@ MoveToPose là một custom action, dành riêng cho Denso Remote Control Action
     \item MoveToPoseFeedback
     \item MoveToPoseGoal
     \item MoveToPoseResult
-\end{enumerate}
+\end{itemize}
 
 Class MoveToPoseActionClient được hiện thực kế thừa class ActionClient cùng bảy class của MoveToPose phía trên, chung nhiệm vụ cung cấp các API cơ bản để có thể gửi Goal, nhận feedback và result. Trên lớp MoveToPoseActionClient, UnityMoveToPoseActionClient là class được sử dụng chính: tạo object MoveToPoseActionClient nhằm tạo goal, gửi goal và liên tục lấy các kết quả. 
 

@@ -21,49 +21,59 @@
   \datalist[entry]{none/global//global/global/global}
     \entry{wang2024genealogy}{article}{}{}
       \name{author}{4}{}{%
-        {{hash=2ca38ebc0e0cb8064a936205d2da287f}{%
+        {{hash=94a96dd789997ba3cdcb47f33c0d8cfe}{%
            family={Wang},
            familyi={W\bibinitperiod},
-           given={T.},
+           given={Tingpeng},
            giveni={T\bibinitperiod}}}%
-        {{hash=0e04240f755161f6091a2a37645ad3f2}{%
+        {{hash=51ee6dd983d46362eb29b48cbe1e4fac}{%
            family={Mao},
            familyi={M\bibinitperiod},
-           given={C.},
+           given={Chao},
            giveni={C\bibinitperiod}}}%
-        {{hash=6e16aa4068db42a4d6a601d334f40032}{%
+        {{hash=a3e5dc816134db6116921b9bac1cbbf6}{%
            family={Sun},
            familyi={S\bibinitperiod},
-           given={B.},
+           given={Bing},
            giveni={B\bibinitperiod}}}%
-        {{hash=ae6f64f7b429f6425fbe070323390f1b}{%
+        {{hash=c13d39254f853ff1bb03890a7c266e15}{%
            family={Li},
            familyi={L\bibinitperiod},
-           given={Z.},
+           given={Zhiqiang},
            giveni={Z\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Elsevier}%
-      }
-      \strng{namehash}{9403c06e8c3e03a59558568985d6de3d}
-      \strng{fullhash}{85452d789c28f98ee7cd950478518c6e}
-      \strng{fullhashraw}{85452d789c28f98ee7cd950478518c6e}
-      \strng{bibnamehash}{85452d789c28f98ee7cd950478518c6e}
-      \strng{authorbibnamehash}{85452d789c28f98ee7cd950478518c6e}
-      \strng{authornamehash}{9403c06e8c3e03a59558568985d6de3d}
-      \strng{authorfullhash}{85452d789c28f98ee7cd950478518c6e}
-      \strng{authorfullhashraw}{85452d789c28f98ee7cd950478518c6e}
+      \strng{namehash}{c4a422b2c31d11ce42a6015156e71a74}
+      \strng{fullhash}{64d2508d52c8d7465a666bbcdbf45052}
+      \strng{fullhashraw}{64d2508d52c8d7465a666bbcdbf45052}
+      \strng{bibnamehash}{64d2508d52c8d7465a666bbcdbf45052}
+      \strng{authorbibnamehash}{64d2508d52c8d7465a666bbcdbf45052}
+      \strng{authornamehash}{c4a422b2c31d11ce42a6015156e71a74}
+      \strng{authorfullhash}{64d2508d52c8d7465a666bbcdbf45052}
+      \strng{authorfullhashraw}{64d2508d52c8d7465a666bbcdbf45052}
       \field{extraname}{1}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{abstract}{Construction robots, as a collection of multidisciplinary technologies, have been extensively studied and implemented by scholars and engineers to boost construction efficiency and minimize the reliance on manual labor. However, the practical application of construction robots has been limited due to a lack of systematic research. The paper explores the future research direction of construction robots using a systematic literature review and a genealogical approach. Moreover, this paper qualitatively discusses the systematic classification of construction robots in terms of “timeline”, “life cycle”, and “functional features”, forming three categories of construction robot genealogy. Moreover, future research directions are proposed from six perspectives: labor force structure, task division model, economic benefits, project management approach, research on the adaptability of construction robots to the site environment, and integration development. This paper provides new insights into the classification of construction robots and gives theoretical references for the subsequent development of construction robots.}
+      \field{issn}{0926-5805}
       \field{journaltitle}{Automation in Construction}
+      \field{month}{10}
       \field{title}{Genealogy of construction robotics}
       \field{volume}{166}
       \field{year}{2024}
       \field{pages}{105607}
       \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.autcon.2024.105607
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0926580524003431
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0926580524003431
+      \endverb
+      \keyw{Construction robotic,Genealogy,Timeline,Life cycle,Functional features}
     \endentry
     \entry{pryor2023virtualspace}{inproceedings}{}{}
       \name{author}{8}{}{%
@@ -107,6 +117,9 @@
            familyi={K\bibinitperiod},
            given={Peter},
            giveni={P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {London, United Kingdom}%
       }
       \strng{namehash}{5b73d778a7f016ce06fedfc47e62c2e7}
       \strng{fullhash}{bf93cc001b213674de096a53483b973c}
@@ -170,8 +183,11 @@
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{issn}{2076-3417}
       \field{journaltitle}{Applied Sciences}
+      \field{number}{9}
       \field{title}{Mixed-Reality-Enhanced Human–Robot Interaction with an Imitation-Based Mapping Approach for Intuitive Teleoperation of a Robotic Arm-Hand System}
+      \field{volume}{12}
       \field{year}{2022}
       \verb{urlraw}
       \verb https://api.semanticscholar.org/CorpusID:248632683
@@ -218,6 +234,7 @@
       \field{abstract}{In the realm of industrial robotics, there is a growing challenge in simplifying human–robot collaboration (HRC), particularly in complex settings. The demand for more intuitive teleoperation systems is on the rise. However, optimizing robot control interfaces and streamlining teleoperation remains a formidable task due to the need for operators to possess specialized knowledge and the limitations of traditional methods regarding operational space and time constraints. This study addresses these issues by introducing a virtual reality (VR) HRC system with five-dimensional capabilities. Key advantages of our approach include: (1) real-time observation of robot work, whereby operators can seamlessly monitor the robot’s real-time work environment and motion during teleoperation; (2) leveraging VR device capabilities, whereby the strengths of VR devices are harnessed to simplify robot motion control, significantly reducing the learning time for operators; and (3) adaptability across platforms and environments: our system effortlessly adapts to various platforms and working conditions, ensuring versatility across different terminals and scenarios. This system represents a significant advancement in addressing the challenges of HRC, offering improved teleoperation, simplified control, and enhanced accessibility, particularly for operators with limited prior exposure to robot operation. It elevates the overall HRC experience in complex scenarios.}
       \field{issn}{2313-7673}
       \field{journaltitle}{Biomimetics}
+      \field{month}{12}
       \field{number}{8}
       \field{title}{Research on Teleoperated Virtual Reality Human–Robot Five-Dimensional Collaboration System}
       \field{volume}{8}
@@ -262,13 +279,27 @@
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Industrial Robot: An International Journal}
+      \field{abstract}{The purpose of this paper is to extract lessons learned from the Fukushima‐Daiichi accident, caused by a big earthquake and a huge tsunami, which occurred on 11 March 2011.Lessons learned are extracted after summarizing emergency response by robots to the Fukushima‐Daiichi accident.Many lessons had been learned from the experiences on robots' emergency response to the accident; organization and operation scheme, and systemization were major lessons learned.Unmanned constructive heavy machines and robots donated from the USA or imported from Sweden did reconnaissance work and cleaning up of rubble outside of buildings. Quince and JAEA‐3 were deployed for reconnaissance inside buildings.The Japanese nuclear disaster response robotics developed after Japan Conversion Corporation's critical accident occurred in 1999, could not work when the Fukushima‐Daiichi accident occurred on 11 March 2011.The paper emphasizes the importance of establishing emergency response schemes when a nuclear disaster occurs.}
+      \field{issn}{0143-991X}
+      \field{journaltitle}{Industrial Robot: the international journal of robotics research and application}
       \field{month}{08}
-      \field{title}{Emergency response by robots to Fukushima-Daiichi accident: Summary and lessons learned}
+      \field{number}{5}
+      \field{title}{Emergency response by robots to Fukushima‐Daiichi accident: summary and lessons learned}
       \field{volume}{39}
       \field{year}{2012}
+      \field{pages}{428\bibrangedash 435}
+      \range{pages}{8}
       \verb{doi}
       \verb 10.1108/01439911211249715
+      \endverb
+      \verb{eprint}
+      \verb https://www.emerald.com/ir/article-pdf/39/5/428/1203450/01439911211249715.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1108/01439911211249715
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1108/01439911211249715
       \endverb
     \endentry
     \entry{darvish2023teleoperation}{article}{}{}
@@ -327,6 +358,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Robotics}
+      \field{month}{06}
       \field{number}{3}
       \field{title}{Teleoperation of humanoid robots: A survey}
       \field{volume}{39}
@@ -359,15 +391,16 @@
         {{hash=04df1371738824971dee7a750dc03d08}{%
            family={Visser},
            familyi={V\bibinitperiod},
-           given={Ewart\bibnamedelima J},
-           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod},
-           prefix={de},
-           prefixi={d\bibinitperiod}}}%
+           given={Ewart\bibnamedelimb J.\bibnamedelimi de},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
         {{hash=9d6602519be4861a49ce7b2a90a98621}{%
            family={Phillips},
            familyi={P\bibinitperiod},
            given={Elizabeth},
            giveni={E\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Charlottesville, VA, USA}%
       }
       \strng{namehash}{3200bcf6acbfbf907b5c36bb7ae719cc}
       \strng{fullhash}{43329af93e4629b273e0f99a0d723b15}
@@ -386,8 +419,12 @@
       \field{year}{2020}
       \field{pages}{1\bibrangedash 7}
       \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/SIEDS49339.2020.9106630
+      \endverb
+      \keyw{Three-dimensional displays;Navigation;Weapons;Collaboration;Virtual reality;Grasping;International Space Station;Virtual reality;human-robot interaction;teleoperation;interface design}
     \endentry
-    \entry{chen2023comparing}{article}{}{}
+    \entry{chen2023comparing}{inproceedings}{}{}
       \name{author}{3}{}{%
         {{hash=0a27d714f6077b9631ee729c620c8a65}{%
            family={Chen},
@@ -405,6 +442,12 @@
            given={Praminda},
            giveni={P\bibinitperiod}}}%
       }
+      \list{location}{1}{%
+        {Stockholm, Sweden}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
       \strng{namehash}{913b6add437f4ceeb626c389c105d1a7}
       \strng{fullhash}{13465ca1284daaa5b1b1a925e49101df}
       \strng{fullhashraw}{13465ca1284daaa5b1b1a925e49101df}
@@ -417,11 +460,24 @@
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Companion of the 2023 ACM/IEEE International Conference on Human-Robot Interaction}
+      \field{abstract}{Robot teleoperation is being explored in a number of application areas, where combining human adaptive intelligence and high precision of robots can provide access to dangerous or inaccessible places, or augment human dexterity. Using virtual reality (VR) is one way to enable robot teleoperation, where additional information can be augmented in the display to make the remote control easier. In this paper, we present a robot teleoperation system, developed and deployed on a JAKA Minicobo robotic arm, to compare the user experience and performance for three different control methods. These include a VR controller, VR gestures, and a traditional graphical user interface (GUI). Each study participant was asked to conduct the experiment twice using all three methods, during which the time, the total spatial distance of the robot end-effector movement, and the frequency of errors in a teleoperation task were recorded for quantitative analysis. All participants were also asked to complete a questionnaire based on the NASA task load index. The results show that overall the VR gestures method enables users to complete the task faster than the VR controller, and using the traditional GUI is generally slower. While the quantitative results do not show statistically significant differences, both of the VR methods place greater perceived physical and mental demands on the users, in comparison to the GUI, although when asked which method they preferred, only three of the sixteen participants preferred the VR gestures method. Given that a number of applications use VR, this study indicates that if the task is not time critical, then a traditional GUI might be more suitable for reducing perceived mental and physical load, and controller-free VR interaction might not always be desirable.}
+      \field{booktitle}{Companion Proceedings of the 2023 ACM/IEEE International Conference on Human-Robot Interaction}
+      \field{isbn}{9781450399708}
+      \field{series}{HRI Companion '23}
       \field{title}{Comparing a Graphical User Interface, Hand Gestures and Controller in Virtual Reality for Robot Teleoperation}
       \field{year}{2023}
       \field{pages}{644\bibrangedash 648}
       \range{pages}{5}
+      \verb{doi}
+      \verb 10.1145/3568294.3580165
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3568294.3580165
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3568294.3580165
+      \endverb
+      \keyw{gesture,human robot interaction (hri),robot teleoperation,vr}
     \endentry
     \entry{Luu2025EnhancingRealTime}{article}{}{}
       \name{author}{7}{}{%
@@ -475,6 +531,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{The International Journal of Advanced Manufacturing Technology}
       \field{month}{08}
+      \field{number}{11}
       \field{title}{Enhancing real-time robot teleoperation with immersive virtual reality in industrial IoT networks}
       \field{volume}{139}
       \field{year}{2025}
@@ -484,29 +541,48 @@
       \verb 10.1007/s00170-025-16236-w
       \endverb
     \endentry
-    \entry{arclab2025beavr}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=0de2113e2cf2a4df407e9fb47cec056a}{%
-           family={ARCLab},
-           familyi={A\bibinitperiod},
-           given={MIT},
-           giveni={M\bibinitperiod}}}%
+    \entry{arclab2025beavr}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=4e6b5099994b9b67e7a66e1710591069}{%
+           family={Posadas-Nava},
+           familyi={P\bibinithyphendelim N\bibinitperiod},
+           given={Alejandro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0120d4a7ee09ef9c1335f04756749818}{%
+           family={Carrasco},
+           familyi={C\bibinitperiod},
+           given={Alejandro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8cedd29a1597b110e535ec33c8afc60a}{%
+           family={Linares},
+           familyi={L\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
       }
-      \strng{namehash}{0de2113e2cf2a4df407e9fb47cec056a}
-      \strng{fullhash}{0de2113e2cf2a4df407e9fb47cec056a}
-      \strng{fullhashraw}{0de2113e2cf2a4df407e9fb47cec056a}
-      \strng{bibnamehash}{0de2113e2cf2a4df407e9fb47cec056a}
-      \strng{authorbibnamehash}{0de2113e2cf2a4df407e9fb47cec056a}
-      \strng{authornamehash}{0de2113e2cf2a4df407e9fb47cec056a}
-      \strng{authorfullhash}{0de2113e2cf2a4df407e9fb47cec056a}
-      \strng{authorfullhashraw}{0de2113e2cf2a4df407e9fb47cec056a}
+      \list{location}{1}{%
+        {Kyoto, Japan}%
+      }
+      \strng{namehash}{3f71c1291993e608b0b20d1ecbd777f0}
+      \strng{fullhash}{374898bba69187127becfec5426ff802}
+      \strng{fullhashraw}{374898bba69187127becfec5426ff802}
+      \strng{bibnamehash}{374898bba69187127becfec5426ff802}
+      \strng{authorbibnamehash}{374898bba69187127becfec5426ff802}
+      \strng{authornamehash}{3f71c1291993e608b0b20d1ecbd777f0}
+      \strng{authorfullhash}{374898bba69187127becfec5426ff802}
+      \strng{authorfullhashraw}{374898bba69187127becfec5426ff802}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{arXiv preprint}
+      \field{booktitle}{2025 7th International Conference on Control and Robotics (ICCR)}
       \field{title}{BEAVR: Bimanual, multi-Embodiment, Accessible, Virtual Reality Teleoperation System for Robots}
       \field{year}{2025}
+      \field{pages}{283\bibrangedash 291}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/ICCR67607.2025.11372114
+      \endverb
+      \keyw{Training;Scalability;Virtual reality;Computer architecture;Real-time systems;Hardware;Systems support;Recording;Synchronization;Robots;Virtual Reality;Teleoperation;Policy Training;Open-source}
     \endentry
     \entry{torrejon2026teleoperation}{article}{}{}
       \name{author}{5}{}{%
@@ -549,74 +625,13 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Electronics}
+      \field{month}{01}
       \field{number}{3}
       \field{title}{Teleoperation of Dual-Arm Manipulators via VR Interfaces: A Framework Integrating Simulation and Real-World Control}
       \field{volume}{15}
       \field{year}{2026}
       \field{pages}{572}
       \range{pages}{1}
-    \endentry
-    \entry{StevenRos2Usecases}{article}{}{}
-      \name{author}{5}{}{%
-        {{hash=7b84d10a03303cd00f198fefb38a5da3}{%
-           family={Macenski},
-           familyi={M\bibinitperiod},
-           given={Steven},
-           giveni={S\bibinitperiod}}}%
-        {{hash=0d11ace6e44e4742ea1692d7ddf4819e}{%
-           family={Foote},
-           familyi={F\bibinitperiod},
-           given={Tully},
-           giveni={T\bibinitperiod}}}%
-        {{hash=a8ad4a5f43253f69552460c946e34e49}{%
-           family={Gerkey},
-           familyi={G\bibinitperiod},
-           given={Brian},
-           giveni={B\bibinitperiod}}}%
-        {{hash=4e2c9f9d04cf548117105f50a9c8a7a1}{%
-           family={Lalancette},
-           familyi={L\bibinitperiod},
-           given={Chris},
-           giveni={C\bibinitperiod}}}%
-        {{hash=fe838d86b89f8983167a3747e11998bb}{%
-           family={Woodall},
-           familyi={W\bibinitperiod},
-           given={William},
-           giveni={W\bibinitperiod}}}%
-      }
-      \strng{namehash}{4a195e02383364d4009f77ca22451e11}
-      \strng{fullhash}{c321d95ccac4f92536f0f1ed99f34d05}
-      \strng{fullhashraw}{c321d95ccac4f92536f0f1ed99f34d05}
-      \strng{bibnamehash}{c321d95ccac4f92536f0f1ed99f34d05}
-      \strng{authorbibnamehash}{c321d95ccac4f92536f0f1ed99f34d05}
-      \strng{authornamehash}{4a195e02383364d4009f77ca22451e11}
-      \strng{authorfullhash}{c321d95ccac4f92536f0f1ed99f34d05}
-      \strng{authorfullhashraw}{c321d95ccac4f92536f0f1ed99f34d05}
-      \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The next chapter of the robotics revolution is well underway with the deployment of robots for a broad range of commercial use cases. Even in a myriad of applications and environments, there exists a common vocabulary of components that robots share—the need for a modular, scalable, and reliable architecture; sensing; planning; mobility; and autonomy. The Robot Operating System (ROS) was an integral part of the last chapter, demonstrably expediting robotics research with freely available components and a modular framework. However, ROS 1 was not designed with many necessary production-grade features and algorithms. ROS 2 and its related projects have been redesigned from the ground up to meet the challenges set forth by modern robotic systems in new and exploratory domains at all scales. In this Review, we highlight the philosophical and architectural changes of ROS 2 powering this new chapter in the robotics revolution. We also show through case studies the influence ROS 2 and its adoption has had on accelerating real robot systems to reliable deployment in an assortment of challenging environments. This Review describes ROS 2’s design, features, and performance with four case studies on land, air, sea, and even space.}
-      \field{journaltitle}{Science Robotics}
-      \field{number}{66}
-      \field{title}{Robot Operating System 2: Design, architecture, and uses in the wild}
-      \field{volume}{7}
-      \field{year}{2022}
-      \field{pages}{eabm6074}
-      \range{pages}{-1}
-      \verb{doi}
-      \verb 10.1126/scirobotics.abm6074
-      \endverb
-      \verb{eprint}
-      \verb https://www.science.org/doi/pdf/10.1126/scirobotics.abm6074
-      \endverb
-      \verb{urlraw}
-      \verb https://www.science.org/doi/abs/10.1126/scirobotics.abm6074
-      \endverb
-      \verb{url}
-      \verb https://www.science.org/doi/abs/10.1126/scirobotics.abm6074
-      \endverb
     \endentry
     \entry{macenski2022robot}{article}{}{}
       \name{author}{5}{}{%
@@ -654,18 +669,31 @@
       \strng{authornamehash}{4a195e02383364d4009f77ca22451e11}
       \strng{authorfullhash}{c321d95ccac4f92536f0f1ed99f34d05}
       \strng{authorfullhashraw}{c321d95ccac4f92536f0f1ed99f34d05}
-      \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{abstract}{The next chapter of the robotics revolution is well underway with the deployment of robots for a broad range of commercial use cases. Even in a myriad of applications and environments, there exists a common vocabulary of components that robots share—the need for a modular, scalable, and reliable architecture; sensing; planning; mobility; and autonomy. The Robot Operating System (ROS) was an integral part of the last chapter, demonstrably expediting robotics research with freely available components and a modular framework. However, ROS 1 was not designed with many necessary production-grade features and algorithms. ROS 2 and its related projects have been redesigned from the ground up to meet the challenges set forth by modern robotic systems in new and exploratory domains at all scales. In this Review, we highlight the philosophical and architectural changes of ROS 2 powering this new chapter in the robotics revolution. We also show through case studies the influence ROS 2 and its adoption has had on accelerating real robot systems to reliable deployment in an assortment of challenging environments. This Review describes ROS 2’s design, features, and performance with four case studies on land, air, sea, and even space.}
       \field{journaltitle}{Science Robotics}
+      \field{month}{05}
       \field{number}{66}
       \field{title}{Robot Operating System 2: Design, architecture, and uses in the wild}
       \field{volume}{7}
       \field{year}{2022}
       \field{pages}{eabm6074}
       \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1126/scirobotics.abm6074
+      \endverb
+      \verb{eprint}
+      \verb https://www.science.org/doi/pdf/10.1126/scirobotics.abm6074
+      \endverb
+      \verb{urlraw}
+      \verb https://www.science.org/doi/abs/10.1126/scirobotics.abm6074
+      \endverb
+      \verb{url}
+      \verb https://www.science.org/doi/abs/10.1126/scirobotics.abm6074
+      \endverb
     \endentry
     \entry{kawshan2026digital}{article}{}{}
       \name{author}{2}{}{%
@@ -693,6 +721,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Machines}
+      \field{month}{04}
       \field{number}{4}
       \field{title}{Digital Twin Framework for Robot Path Planning and Real-Time Execution Using Unity-ROS Integration: Systems Architecture and Experimental Validation}
       \field{volume}{14}
@@ -741,6 +770,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Leibniz Transactions on Embedded Systems}
+      \field{month}{12}
       \field{number}{1}
       \field{title}{A Survey of Real-Time Support, Analysis, and Advancements in ROS 2}
       \field{volume}{11}
@@ -760,32 +790,44 @@
            familyi={G\bibinitperiod},
            given={Sandesh},
            giveni={S\bibinitperiod}}}%
-        {{hash=e8d228b3bbe1e7bbc6656481f53df716}{%
-           family={Liu},
-           familyi={L\bibinitperiod},
-           given={Sen},
-           giveni={S\bibinitperiod}}}%
         {{hash=2e6b72068cd97d6b074240a9b4973c4e}{%
            family={Yang},
            familyi={Y\bibinitperiod},
            given={Qin},
            giveni={Q\bibinitperiod}}}%
+        {{hash=e8d228b3bbe1e7bbc6656481f53df716}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Sen},
+           giveni={S\bibinitperiod}}}%
       }
       \strng{namehash}{232e897897c283f8536d060b04f72fba}
-      \strng{fullhash}{b361cacdf8d0af7c50b53b776d9b2bed}
-      \strng{fullhashraw}{b361cacdf8d0af7c50b53b776d9b2bed}
-      \strng{bibnamehash}{b361cacdf8d0af7c50b53b776d9b2bed}
-      \strng{authorbibnamehash}{b361cacdf8d0af7c50b53b776d9b2bed}
+      \strng{fullhash}{48f7581cea2c5d44f3d962970c3614c4}
+      \strng{fullhashraw}{48f7581cea2c5d44f3d962970c3614c4}
+      \strng{bibnamehash}{48f7581cea2c5d44f3d962970c3614c4}
+      \strng{authorbibnamehash}{48f7581cea2c5d44f3d962970c3614c4}
       \strng{authornamehash}{232e897897c283f8536d060b04f72fba}
-      \strng{authorfullhash}{b361cacdf8d0af7c50b53b776d9b2bed}
-      \strng{authorfullhashraw}{b361cacdf8d0af7c50b53b776d9b2bed}
+      \strng{authorfullhash}{48f7581cea2c5d44f3d962970c3614c4}
+      \strng{authorfullhashraw}{48f7581cea2c5d44f3d962970c3614c4}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{arXiv preprint arXiv:2501.18016}
-      \field{title}{Digital Twin-Enabled Real-Time Control in Robotic Additive Manufacturing via Soft Actor-Critic Reinforcement Learning}
+      \field{abstract}{Recent advancements in Digital Twin (DT) technology have opened new avenues for smart manufacturing. These systems increasingly depend on adaptive control mechanisms to optimize complex processes and reduce production wastage. This research presents an innovative approach that integrates Soft Actor-Critic (SAC) Reinforcement Learning (RL) algorithm with DT technology with Robot Operating System 2 (ROS2) to enable real-time adaptive control in robotic manufacturing. Our experimental setup consists of a ViperX 300 S robot arm, in which two distinct Tasks: (1) static target reaching and (2) dynamic target following were implemented for simulating adaptive control of manufacturing process. The innovative system architecture combines Unity game engine’s simulation environment with ROS2 for seamless and robust DT synchronization. We implemented a hierarchical reward structure to address common RL challenges, including local minima avoidance, convergence acceleration, and training stability, while leveraging transfer learning to efficiently adapt trained behavior models across tasks. Experimental results demonstrate rapid policy convergence and robust task execution, with performance metrics including cumulative reward, value loss, policy loss, and entropy validating the effectiveness of the approach. To the best of our knowledge, this is the first study to integrate Unity with ROS2-based DT for real-time synchronization and adaptive physical robot control using RL. Unlike prior works limited to offline or low-frequency simulations, our framework achieves stable 20 ms joint-level synchronization, enabling deployment of learned behaviors directly to physical robotic systems through virtual platform. This work advances the integration of RL with realistic DT framework for industrial and manufacturing robotics applications, providing a framework for enhanced adaptive real-time control in smart additive manufacturing (AM) processes.}
+      \field{issn}{1572-8145}
+      \field{journaltitle}{Journal of Intelligent Manufacturing}
+      \field{month}{11}
+      \field{title}{Digital twin-enabled real-time control for robot arm-based manufacturing via reinforcement learning}
       \field{year}{2025}
+      \verb{doi}
+      \verb 10.1007/s10845-025-02728-9
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s10845-025-02728-9
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s10845-025-02728-9
+      \endverb
     \endentry
     \entry{naceri2021vicarios}{article}{}{}
       \name{author}{8}{}{%
@@ -843,6 +885,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Intelligent \& Robotic Systems}
+      \field{month}{03}
       \field{number}{4}
       \field{title}{The Vicarios Virtual Reality Interface for Remote Robotic Teleoperation: Teleporting for Intuitive Tele-manipulation}
       \field{volume}{101}
@@ -870,16 +913,15 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{VRC.Quest.Performance -- Performance Requirements for Quest Apps}
-      \field{urlday}{7}
-      \field{urlmonth}{6}
+      \field{urlday}{12}
+      \field{urlmonth}{3}
       \field{urlyear}{2026}
-      \field{year}{2024}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://developers.meta.com/horizon/documentation/native/android/ts-ovr-best-practices/
+      \verb https://developers.meta.com/horizon/documentation/native/android/ts-ovr-best-practices
       \endverb
       \verb{url}
-      \verb https://developers.meta.com/horizon/documentation/native/android/ts-ovr-best-practices/
+      \verb https://developers.meta.com/horizon/documentation/native/android/ts-ovr-best-practices
       \endverb
     \endentry
     \entry{meta_ovr_best_practices}{online}{}{}
@@ -902,16 +944,15 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{OVR Best Practices -- App Performance Guidelines for Meta Quest}
-      \field{urlday}{7}
-      \field{urlmonth}{6}
+      \field{urlday}{14}
+      \field{urlmonth}{3}
       \field{urlyear}{2026}
-      \field{year}{2024}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://developers.meta.com/horizon/documentation/native/android/ts-ovr-best-practices/
+      \verb https://developers.meta.com/horizon/documentation/native/android/ts-ovr-best-practices
       \endverb
       \verb{url}
-      \verb https://developers.meta.com/horizon/documentation/native/android/ts-ovr-best-practices/
+      \verb https://developers.meta.com/horizon/documentation/native/android/ts-ovr-best-practices
       \endverb
     \endentry
     \entry{meta_ovr_stats}{online}{}{}
@@ -934,16 +975,15 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{OVR Metrics Tool -- Stats and Definitions}
-      \field{urlday}{7}
-      \field{urlmonth}{6}
+      \field{urlday}{14}
+      \field{urlmonth}{3}
       \field{urlyear}{2026}
-      \field{year}{2024}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://developers.meta.com/horizon/documentation/native/android/ts-ovrstats/
+      \verb https://developers.meta.com/horizon/documentation/native/android/ts-ovrstats
       \endverb
       \verb{url}
-      \verb https://developers.meta.com/horizon/documentation/native/android/ts-ovrstats/
+      \verb https://developers.meta.com/horizon/documentation/native/android/ts-ovrstats
       \endverb
     \endentry
     \entry{android_memory_overview}{online}{}{}
@@ -965,10 +1005,9 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Overview of Android Memory Management}
-      \field{urlday}{7}
-      \field{urlmonth}{6}
+      \field{urlday}{5}
+      \field{urlmonth}{4}
       \field{urlyear}{2026}
-      \field{year}{2024}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://developer.android.com/topic/performance/memory-overview
@@ -977,7 +1016,7 @@
       \verb https://developer.android.com/topic/performance/memory-overview
       \endverb
     \endentry
-    \entry{reality-fusion}{misc}{}{}
+    \entry{reality-fusion}{inproceedings}{}{}
       \name{author}{5}{}{%
         {{hash=815a2cdb03036dc2884fcf0472f759cf}{%
            family={Li},
@@ -1005,6 +1044,9 @@
            given={Frank},
            giveni={F\bibinitperiod}}}%
       }
+      \list{location}{1}{%
+        {Abu Dhabi, United Arab Emirates}%
+      }
       \strng{namehash}{bc4908476129f5d39803e51d00d66921}
       \strng{fullhash}{d187ded47484f2571cf0a46fa2193ff6}
       \strng{fullhashraw}{d187ded47484f2571cf0a46fa2193ff6}
@@ -1017,20 +1059,16 @@
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{eprintclass}{cs.RO}
-      \field{eprinttype}{arXiv}
+      \field{booktitle}{2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}
       \field{title}{Reality Fusion: Robust Real-time Immersive Mobile Robot Teleoperation with Volumetric Visual Data Fusion}
-      \field{year}{2025}
+      \field{year}{2024}
       \true{nocite}
-      \verb{eprint}
-      \verb 2408.01225
+      \field{pages}{8982\bibrangedash 8989}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/IROS58592.2024.10802431
       \endverb
-      \verb{urlraw}
-      \verb https://arxiv.org/abs/2408.01225
-      \endverb
-      \verb{url}
-      \verb https://arxiv.org/abs/2408.01225
-      \endverb
+      \keyw{Visualization;Three-dimensional displays;Telepresence;Robot control;Virtual reality;Robot sensing systems;Rendering (computer graphics);Spatial resolution;Streams;Research and development}
     \endentry
     \entry{multi-view}{inproceedings}{}{}
       \name{author}{3}{}{%
@@ -1088,53 +1126,29 @@
       \endverb
       \keyw{augmented reality,multi-view vision,object manipulation,teleoperation}
     \endentry
-    \entry{formant}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=e2ef951ab8d64c8a53679506cad7aed8}{%
-           family={Formant},
-           familyi={F\bibinitperiod}}}%
-      }
-      \strng{namehash}{e2ef951ab8d64c8a53679506cad7aed8}
-      \strng{fullhash}{e2ef951ab8d64c8a53679506cad7aed8}
-      \strng{fullhashraw}{e2ef951ab8d64c8a53679506cad7aed8}
-      \strng{bibnamehash}{e2ef951ab8d64c8a53679506cad7aed8}
-      \strng{authorbibnamehash}{e2ef951ab8d64c8a53679506cad7aed8}
-      \strng{authornamehash}{e2ef951ab8d64c8a53679506cad7aed8}
-      \strng{authorfullhash}{e2ef951ab8d64c8a53679506cad7aed8}
-      \strng{authorfullhashraw}{e2ef951ab8d64c8a53679506cad7aed8}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{What is teleoperation?}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://formant.io/resources/learn/learn-teleoperation/
-      \endverb
-      \verb{url}
-      \verb https://formant.io/resources/learn/learn-teleoperation/
-      \endverb
-      \keyw{teleoperation}
-    \endentry
     \entry{uart}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=1197190d95b0f6e82537145fe6948a4b}{%
-           family={analog.com},
-           familyi={a\bibinitperiod}}}%
+        {{hash=f81b34da5839253845c696bf71a74915}{%
+           family={{Analog Devices, Inc.}},
+           familyi={A\bibinitperiod}}}%
       }
-      \strng{namehash}{1197190d95b0f6e82537145fe6948a4b}
-      \strng{fullhash}{1197190d95b0f6e82537145fe6948a4b}
-      \strng{fullhashraw}{1197190d95b0f6e82537145fe6948a4b}
-      \strng{bibnamehash}{1197190d95b0f6e82537145fe6948a4b}
-      \strng{authorbibnamehash}{1197190d95b0f6e82537145fe6948a4b}
-      \strng{authornamehash}{1197190d95b0f6e82537145fe6948a4b}
-      \strng{authorfullhash}{1197190d95b0f6e82537145fe6948a4b}
-      \strng{authorfullhashraw}{1197190d95b0f6e82537145fe6948a4b}
+      \strng{namehash}{f81b34da5839253845c696bf71a74915}
+      \strng{fullhash}{f81b34da5839253845c696bf71a74915}
+      \strng{fullhashraw}{f81b34da5839253845c696bf71a74915}
+      \strng{bibnamehash}{f81b34da5839253845c696bf71a74915}
+      \strng{authorbibnamehash}{f81b34da5839253845c696bf71a74915}
+      \strng{authornamehash}{f81b34da5839253845c696bf71a74915}
+      \strng{authorfullhash}{f81b34da5839253845c696bf71a74915}
+      \strng{authorfullhashraw}{f81b34da5839253845c696bf71a74915}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Uart: a hardware communication protocol}
+      \field{urlday}{2}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://www.analog.com/en/resources/analog-dialogue/articles/uart-a-hardware-communication-protocol.html
@@ -1142,40 +1156,42 @@
       \verb{url}
       \verb https://www.analog.com/en/resources/analog-dialogue/articles/uart-a-hardware-communication-protocol.html
       \endverb
-      \keyw{uart}
     \endentry
     \entry{ros2-control-humble}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=aba3aa931662562ba28fd1f0a05f64bf}{%
-           family={Ros},
+        {{hash=531d1aa27762e03fa4c4382be3a7bd0f}{%
+           family={{ROS2-Control}},
            familyi={R\bibinitperiod}}}%
       }
-      \strng{namehash}{aba3aa931662562ba28fd1f0a05f64bf}
-      \strng{fullhash}{aba3aa931662562ba28fd1f0a05f64bf}
-      \strng{fullhashraw}{aba3aa931662562ba28fd1f0a05f64bf}
-      \strng{bibnamehash}{aba3aa931662562ba28fd1f0a05f64bf}
-      \strng{authorbibnamehash}{aba3aa931662562ba28fd1f0a05f64bf}
-      \strng{authornamehash}{aba3aa931662562ba28fd1f0a05f64bf}
-      \strng{authorfullhash}{aba3aa931662562ba28fd1f0a05f64bf}
-      \strng{authorfullhashraw}{aba3aa931662562ba28fd1f0a05f64bf}
+      \strng{namehash}{531d1aa27762e03fa4c4382be3a7bd0f}
+      \strng{fullhash}{531d1aa27762e03fa4c4382be3a7bd0f}
+      \strng{fullhashraw}{531d1aa27762e03fa4c4382be3a7bd0f}
+      \strng{bibnamehash}{531d1aa27762e03fa4c4382be3a7bd0f}
+      \strng{authorbibnamehash}{531d1aa27762e03fa4c4382be3a7bd0f}
+      \strng{authornamehash}{531d1aa27762e03fa4c4382be3a7bd0f}
+      \strng{authorfullhash}{531d1aa27762e03fa4c4382be3a7bd0f}
+      \strng{authorfullhashraw}{531d1aa27762e03fa4c4382be3a7bd0f}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Ros2\_Control: Humble}
+      \field{title}{Ros2-Control: Humble}
+      \field{urlday}{1}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
-      \verb https://control.ros.org/humble/doc/getting_started/getting_started.html#controller-manager
+      \verb https://control.ros.org/humble/index.html
       \endverb
       \verb{url}
-      \verb https://control.ros.org/humble/doc/getting_started/getting_started.html#controller-manager
+      \verb https://control.ros.org/humble/index.html
       \endverb
-      \keyw{ros2_control}
     \endentry
     \entry{moveit_conf}{online}{}{}
       \name{author}{1}{}{%
         {{hash=c1a7f3693d1e2e5f5821b1b351260e9b}{%
-           family={Addison},
+           family={{Addison}},
            familyi={A\bibinitperiod}}}%
       }
       \strng{namehash}{c1a7f3693d1e2e5f5821b1b351260e9b}
@@ -1190,7 +1206,11 @@
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Configure MoveIt 2 for a Simulated Robot Arm – ROS 2 Jazzy}
+      \field{title}{Configure MoveIt 2 for a Simulated Robot Arm - ROS 2 Jazzy}
+      \field{urlday}{3}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
       \verb https://automaticaddison.com/configure-moveit-2-for-a-simulated-robot-arm-ros-2-jazzy/
@@ -1198,35 +1218,6 @@
       \verb{url}
       \verb https://automaticaddison.com/configure-moveit-2-for-a-simulated-robot-arm-ros-2-jazzy/
       \endverb
-      \keyw{ros2-tutorial}
-    \endentry
-    \entry{moveit}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=a8456833ca3dba82188942683da441e5}{%
-           family={moveit},
-           familyi={m\bibinitperiod}}}%
-      }
-      \strng{namehash}{a8456833ca3dba82188942683da441e5}
-      \strng{fullhash}{a8456833ca3dba82188942683da441e5}
-      \strng{fullhashraw}{a8456833ca3dba82188942683da441e5}
-      \strng{bibnamehash}{a8456833ca3dba82188942683da441e5}
-      \strng{authorbibnamehash}{a8456833ca3dba82188942683da441e5}
-      \strng{authornamehash}{a8456833ca3dba82188942683da441e5}
-      \strng{authorfullhash}{a8456833ca3dba82188942683da441e5}
-      \strng{authorfullhashraw}{a8456833ca3dba82188942683da441e5}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Moveit Concept}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://moveit.picknik.ai/humble/doc/concepts/concepts.html
-      \endverb
-      \verb{url}
-      \verb https://moveit.picknik.ai/humble/doc/concepts/concepts.html
-      \endverb
-      \keyw{moveit}
     \endentry
     \entry{vr-in-contruction}{article}{}{}
       \name{author}{7}{}{%
@@ -1282,6 +1273,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Advanced Engineering Informatics}
+      \field{month}{10}
       \field{title}{Effectiveness of VR-based training on improving construction workers’ knowledge, skills, and safety behavior in robotic teleoperation}
       \field{volume}{50}
       \field{year}{2021}
@@ -1329,11 +1321,12 @@
       \strng{authorfullhash}{c8c8cd8ee646d3872b04f98a6c75b126}
       \strng{authorfullhashraw}{c8c8cd8ee646d3872b04f98a6c75b126}
       \field{extraname}{2}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Manufacturing Processes}
+      \field{month}{12}
       \field{title}{Virtual reality human-robot collaborative welding: A case study of weaving gas tungsten arc welding}
       \field{volume}{48}
       \field{year}{2019}
@@ -1342,7 +1335,7 @@
       \range{pages}{8}
     \endentry
     \entry{xu2025immersive}{article}{}{}
-      \name{author}{7}{}{%
+      \name{author}{9}{}{%
         {{hash=03e19c58a92aef9decaa2c65c1b7bae8}{%
            family={Xu},
            familyi={X\bibinitperiod},
@@ -1373,6 +1366,16 @@
            familyi={X\bibinitperiod},
            given={Haoliang},
            giveni={H\bibinitperiod}}}%
+        {{hash=e84b8aaff073320969f957f40cbef49c}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={ZunRan},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=ea77e2414ebf10e88abbe0462a0612cc}{%
+           family={Cao},
+           familyi={C\bibinitperiod},
+           given={Huibin},
+           giveni={H\bibinitperiod}}}%
         {{hash=f495cdda14989886bcfdb65c02b7a19d}{%
            family={Li},
            familyi={L\bibinitperiod},
@@ -1380,21 +1383,39 @@
            giveni={Q\bibinitperiod}}}%
       }
       \strng{namehash}{b48659b05fe2368492c661e48653a2cb}
-      \strng{fullhash}{d83ac55d64d5a84f38a265e07592533f}
-      \strng{fullhashraw}{d83ac55d64d5a84f38a265e07592533f}
+      \strng{fullhash}{cfb60693d704d71cad23e57739675741}
+      \strng{fullhashraw}{cfb60693d704d71cad23e57739675741}
       \strng{bibnamehash}{b48659b05fe2368492c661e48653a2cb}
       \strng{authorbibnamehash}{b48659b05fe2368492c661e48653a2cb}
       \strng{authornamehash}{b48659b05fe2368492c661e48653a2cb}
-      \strng{authorfullhash}{d83ac55d64d5a84f38a265e07592533f}
-      \strng{authorfullhashraw}{d83ac55d64d5a84f38a265e07592533f}
+      \strng{authorfullhash}{cfb60693d704d71cad23e57739675741}
+      \strng{authorfullhashraw}{cfb60693d704d71cad23e57739675741}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{arXiv preprint arXiv:2501.00822}
+      \field{abstract}{ABSTRACT In robotic bimanual teleoperation, multimodal sensory feedback plays a crucial role, providing operators with a more immersive operating experience, reducing cognitive burden and improving operating efficiency. In this study, we develop an immersive bilateral isomorphic bimanual telerobotic system, which comprises dual arms and dual dexterous hands, with visual and haptic force feedback. To assess the performance of this system, we carried out a series of experiments and investigated the user's teleoperation experience. The results demonstrate that haptic force feedback enhances physical perception capabilities and complex task operating abilities. In addition, it compensates for visual perception deficiencies and reduces the operator's work burden. Consequently, our proposed system achieves more intuitive, realistic and immersive teleoperation, improves operating efficiency and expands the complexity of tasks that robots can perform through teleoperation.}
+      \field{journaltitle}{IET Cyber-Systems and Robotics}
+      \field{number}{1}
       \field{title}{An Immersive Virtual Reality Bimanual Telerobotic System With Haptic Feedback}
+      \field{volume}{7}
       \field{year}{2025}
       \true{nocite}
+      \field{pages}{e70033}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb https://doi.org/10.1049/csy2.70033
+      \endverb
+      \verb{eprint}
+      \verb https://ietresearch.onlinelibrary.wiley.com/doi/pdf/10.1049/csy2.70033
+      \endverb
+      \verb{urlraw}
+      \verb https://ietresearch.onlinelibrary.wiley.com/doi/abs/10.1049/csy2.70033
+      \endverb
+      \verb{url}
+      \verb https://ietresearch.onlinelibrary.wiley.com/doi/abs/10.1049/csy2.70033
+      \endverb
+      \keyw{haptic interface,human robot interaction,robotics,telecontrol,telerobotics}
     \endentry
     \entry{papakonstantinou2025effect}{article}{}{}
       \name{author}{4}{}{%
@@ -1432,6 +1453,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Electronics}
+      \field{month}{12}
       \field{number}{24}
       \field{title}{The Effect of Tactile Feedback on the Manipulation of a Remote Robotic Arm via a Haptic Glove}
       \field{volume}{14}
@@ -1440,29 +1462,99 @@
       \field{pages}{4964}
       \range{pages}{1}
     \endentry
-    \entry{autolab2021telesurgery}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=e0f0bfcdef97aaed4909571f74f82eae}{%
-           family={AUTOLab},
-           familyi={A\bibinitperiod},
-           given={Berkeley},
+    \entry{autolab2021telesurgery}{inproceedings}{}{}
+      \name{author}{13}{}{%
+        {{hash=37e8c07f4594551317e7c29f838b033f}{%
+           family={Bonne},
+           familyi={B\bibinitperiod},
+           given={Sophea},
+           giveni={S\bibinitperiod}}}%
+        {{hash=bfb3643eeef04431f563c9666c56286a}{%
+           family={Panitch},
+           familyi={P\bibinitperiod},
+           given={Will},
+           giveni={W\bibinitperiod}}}%
+        {{hash=556fc0baf2ce4fd7f8ed8c17c3e09fb1}{%
+           family={Dharmarajan},
+           familyi={D\bibinitperiod},
+           given={Karthik},
+           giveni={K\bibinitperiod}}}%
+        {{hash=0035553ab6853545f243b3fc7a2540c6}{%
+           family={Srinivas},
+           familyi={S\bibinitperiod},
+           given={Kishore},
+           giveni={K\bibinitperiod}}}%
+        {{hash=46a9f4ad4d51b2a0d7a3846256091ccd}{%
+           family={Kincade},
+           familyi={K\bibinitperiod},
+           given={Jerri-Lynn},
+           giveni={J\bibinithyphendelim L\bibinitperiod}}}%
+        {{hash=3926a011ae76ddd591250b1e24c57ac0}{%
+           family={Low},
+           familyi={L\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=0b2ec31ceffe76be4556ab0ea54149dd}{%
+           family={Knoth},
+           familyi={K\bibinitperiod},
+           given={Bruce},
            giveni={B\bibinitperiod}}}%
+        {{hash=cbe96e7866e158f5857ef24fadeb1038}{%
+           family={Cowan},
+           familyi={C\bibinitperiod},
+           given={Cregg},
+           giveni={C\bibinitperiod}}}%
+        {{hash=e84f0022afeaaa47e72bd2e8c21dadff}{%
+           family={Fer},
+           familyi={F\bibinitperiod},
+           given={Danyal},
+           giveni={D\bibinitperiod}}}%
+        {{hash=db9b78e03dfd808046af6b98c4245887}{%
+           family={Thananjeyan},
+           familyi={T\bibinitperiod},
+           given={Brijen},
+           giveni={B\bibinitperiod}}}%
+        {{hash=ae5c2532f75f911aa15a6a96548086aa}{%
+           family={Kerr},
+           familyi={K\bibinitperiod},
+           given={Justin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b643fb72b201d8554ac4a91eabb57911}{%
+           family={Ichnowski},
+           familyi={I\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1776deb0a86da5a75d0800ae967f4bd6}{%
+           family={Goldberg},
+           familyi={G\bibinitperiod},
+           given={Ken},
+           giveni={K\bibinitperiod}}}%
       }
-      \strng{namehash}{e0f0bfcdef97aaed4909571f74f82eae}
-      \strng{fullhash}{e0f0bfcdef97aaed4909571f74f82eae}
-      \strng{fullhashraw}{e0f0bfcdef97aaed4909571f74f82eae}
-      \strng{bibnamehash}{e0f0bfcdef97aaed4909571f74f82eae}
-      \strng{authorbibnamehash}{e0f0bfcdef97aaed4909571f74f82eae}
-      \strng{authornamehash}{e0f0bfcdef97aaed4909571f74f82eae}
-      \strng{authorfullhash}{e0f0bfcdef97aaed4909571f74f82eae}
-      \strng{authorfullhashraw}{e0f0bfcdef97aaed4909571f74f82eae}
+      \list{location}{1}{%
+        {Mexico City, Mexico}%
+      }
+      \strng{namehash}{9ba48e7e73019ed02653b364ac27657f}
+      \strng{fullhash}{032e3a295dd548526c12fc50f80f2955}
+      \strng{fullhashraw}{032e3a295dd548526c12fc50f80f2955}
+      \strng{bibnamehash}{9ba48e7e73019ed02653b364ac27657f}
+      \strng{authorbibnamehash}{9ba48e7e73019ed02653b364ac27657f}
+      \strng{authornamehash}{9ba48e7e73019ed02653b364ac27657f}
+      \strng{authorfullhash}{032e3a295dd548526c12fc50f80f2955}
+      \strng{authorfullhashraw}{032e3a295dd548526c12fc50f80f2955}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{booktitle}{2022 IEEE 18th International Conference on Automation Science and Engineering (CASE)}
       \field{title}{A Digital Twin Framework for Telesurgery in the Presence of Varying Network Quality of Service}
-      \field{year}{2021}
+      \field{year}{2022}
       \true{nocite}
+      \field{pages}{1325\bibrangedash 1332}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/CASE49997.2022.9926585
+      \endverb
+      \keyw{Training;Teleoperators;Three-dimensional displays;Minimally invasive surgery;Quality of service;Digital twins;Delays}
     \endentry
   \enddatalist
 \endrefsection

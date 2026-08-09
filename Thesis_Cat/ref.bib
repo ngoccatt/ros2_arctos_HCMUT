@@ -1,12 +1,15 @@
-@misc{reality-fusion,
-      title={Reality Fusion: Robust Real-time Immersive Mobile Robot Teleoperation with Volumetric Visual Data Fusion}, 
-      author={Ke Li and Reinhard Bacher and Susanne Schmidt and Wim Leemans and Frank Steinicke},
-      year={2025},
-      eprint={2408.01225},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2408.01225}, 
-}
+
+@INPROCEEDINGS{reality-fusion,
+  author={Li, Ke and Bacher, Reinhard and Schmidt, Susanne and Leemans, Wim and Steinicke, Frank},
+  booktitle={2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
+  title={Reality Fusion: Robust Real-time Immersive Mobile Robot Teleoperation with Volumetric Visual Data Fusion}, 
+  year={2024},
+  volume={},
+  number={},
+  location = {Abu Dhabi, United Arab Emirates},
+  pages={8982-8989},
+  keywords={Visualization;Three-dimensional displays;Telepresence;Robot control;Virtual reality;Robot sensing systems;Rendering (computer graphics);Spatial resolution;Streams;Research and development},
+  doi={10.1109/IROS58592.2024.10802431}}
 
 @inproceedings{multi-view,
 author = {Huang, Bidan and Timmons, Nicholas Gerard and Li, Qiang},
@@ -26,43 +29,32 @@ location = {Cambridge, United Kingdom},
 series = {HRI '20}
 }
 
-@online{formant,
-    author    = "
-Formant",
-    title     = "What is teleoperation?",
-    url       = "https://formant.io/resources/learn/learn-teleoperation/",
-    keywords  = "teleoperation"
-}
-
-
-
-
 @online{uart,
-    author    = "analog.com",
+    author    = {{Analog Devices, Inc.}},
     title     = "Uart: a hardware communication protocol",
     url       = "https://www.analog.com/en/resources/analog-dialogue/articles/uart-a-hardware-communication-protocol.html",
-    keywords  = "uart"
+    urldate =   {2026-01-02}
 }
 
 @online{ros2-control-humble,
-    author    = "Ros",
-    title     = "Ros2\_Control: Humble",
-    url       = "https://control.ros.org/humble/doc/getting_started/getting_started.html#controller-manager",
-    keywords  = "ros2_control"
+    author    = {{ROS2-Control}},
+    title     = "Ros2-Control: Humble",
+    url       = "https://control.ros.org/humble/index.html",
+    urldate =   {2026-02-01}
 }
 
 @online{moveit_conf,
-    author    = "Addison",
-    title     = "Configure MoveIt 2 for a Simulated Robot Arm – ROS 2 Jazzy",
+    author    = {{Addison}},
+    title     = "Configure MoveIt 2 for a Simulated Robot Arm - ROS 2 Jazzy",
     url       = "https://automaticaddison.com/configure-moveit-2-for-a-simulated-robot-arm-ros-2-jazzy/",
-    keywords  = "ros2-tutorial"
+    urldate =   {2026-02-03}
 }
 
-@online{moveit,
-    author    = "moveit",
+@online{moveit_conf,
+    author    = {{MoveIt}},
     title     = "Moveit Concept",
     url       = "https://moveit.picknik.ai/humble/doc/concepts/concepts.html",
-    keywords  = "moveit"
+    urldate =   {2026-02-05}
 }
 
 @article{vr-in-contruction,
@@ -71,6 +63,7 @@ Formant",
   journal={Advanced Engineering Informatics},
   volume={50},
   pages={101431},
+  month={10},
   year={2021},
   publisher={Elsevier}
 }
@@ -81,29 +74,25 @@ Formant",
   journal={Journal of Manufacturing Processes},
   volume={48},
   pages={210--217},
+  month={12},
   year={2019},
   publisher={Elsevier}
 }
 
 
 @article{wang2024genealogy,
-  title={Genealogy of construction robotics},
-  author={Wang, T. and Mao, C. and Sun, B. and Li, Z.},
-  journal={Automation in Construction},
-  volume={166},
-  pages={105607},
-  year={2024},
-  publisher={Elsevier}
-}
-
-@article{macenski2022robot,
-  title={Robot Operating System 2: Design, architecture, and uses in the wild},
-  author={Macenski, Steven and Foote, Tully and Gerkey, Brian and Lalancette, Chris and Woodall, William},
-  journal={Science Robotics},
-  volume={7},
-  number={66},
-  pages={eabm6074},
-  year={2022}
+title = {Genealogy of construction robotics},
+journal = {Automation in Construction},
+volume = {166},
+pages = {105607},
+month = {10},
+year = {2024},
+issn = {0926-5805},
+doi = {https://doi.org/10.1016/j.autcon.2024.105607},
+url = {https://www.sciencedirect.com/science/article/pii/S0926580524003431},
+author = {Tingpeng Wang and Chao Mao and Bing Sun and Zhiqiang Li},
+keywords = {Construction robotic, Genealogy, Timeline, Life cycle, Functional features},
+abstract = {Construction robots, as a collection of multidisciplinary technologies, have been extensively studied and implemented by scholars and engineers to boost construction efficiency and minimize the reliance on manual labor. However, the practical application of construction robots has been limited due to a lack of systematic research. The paper explores the future research direction of construction robots using a systematic literature review and a genealogical approach. Moreover, this paper qualitatively discusses the systematic classification of construction robots in terms of “timeline”, “life cycle”, and “functional features”, forming three categories of construction robot genealogy. Moreover, future research directions are proposed from six perspectives: labor force structure, task division model, economic benefits, project management approach, research on the adaptability of construction robots to the site environment, and integration development. This paper provides new insights into the classification of construction robots and gives theoretical references for the subsequent development of construction robots.}
 }
 
 @article{casini2025survey,
@@ -113,30 +102,58 @@ Formant",
   volume={11},
   number={1},
   pages={1--37},
+  month={12},
   year={2025}
 }
 
-@article{chen2023comparing,
-  title={Comparing a Graphical User Interface, Hand Gestures and Controller in Virtual Reality for Robot Teleoperation},
-  author={Chen, Jialin and Moemeni, Armaghan and Caleb-Solly, Praminda},
-  booktitle={Companion of the 2023 ACM/IEEE International Conference on Human-Robot Interaction},
-  pages={644--648},
-  year={2023}
+@inproceedings{chen2023comparing,
+author = {Chen, Jialin and Moemeni, Armaghan and Caleb-Solly, Praminda},
+title = {Comparing a Graphical User Interface, Hand Gestures and Controller in Virtual Reality for Robot Teleoperation},
+year = {2023},
+isbn = {9781450399708},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3568294.3580165},
+doi = {10.1145/3568294.3580165},
+abstract = {Robot teleoperation is being explored in a number of application areas, where combining human adaptive intelligence and high precision of robots can provide access to dangerous or inaccessible places, or augment human dexterity. Using virtual reality (VR) is one way to enable robot teleoperation, where additional information can be augmented in the display to make the remote control easier. In this paper, we present a robot teleoperation system, developed and deployed on a JAKA Minicobo robotic arm, to compare the user experience and performance for three different control methods. These include a VR controller, VR gestures, and a traditional graphical user interface (GUI). Each study participant was asked to conduct the experiment twice using all three methods, during which the time, the total spatial distance of the robot end-effector movement, and the frequency of errors in a teleoperation task were recorded for quantitative analysis. All participants were also asked to complete a questionnaire based on the NASA task load index. The results show that overall the VR gestures method enables users to complete the task faster than the VR controller, and using the traditional GUI is generally slower. While the quantitative results do not show statistically significant differences, both of the VR methods place greater perceived physical and mental demands on the users, in comparison to the GUI, although when asked which method they preferred, only three of the sixteen participants preferred the VR gestures method. Given that a number of applications use VR, this study indicates that if the task is not time critical, then a traditional GUI might be more suitable for reducing perceived mental and physical load, and controller-free VR interaction might not always be desirable.},
+booktitle = {Companion Proceedings of the 2023 ACM/IEEE International Conference on Human-Robot Interaction},
+pages = {644–648},
+numpages = {5},
+keywords = {gesture, human robot interaction (hri), robot teleoperation, vr},
+location = {Stockholm, Sweden},
+series = {HRI Companion '23}
 }
 
-@article{arclab2025beavr,
-  title={BEAVR: Bimanual, multi-Embodiment, Accessible, Virtual Reality Teleoperation System for Robots},
-  author={MIT ARCLab},
-  journal={arXiv preprint},
-  year={2025}
-}
+@INPROCEEDINGS{arclab2025beavr,
+  author={Posadas-Nava, Alejandro and Carrasco, Alejandro and Linares, Richard},
+  booktitle={2025 7th International Conference on Control and Robotics (ICCR)}, 
+  title={BEAVR: Bimanual, multi-Embodiment, Accessible, Virtual Reality Teleoperation System for Robots}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={283-291},
+  location = {Kyoto, Japan},
+  keywords={Training;Scalability;Virtual reality;Computer architecture;Real-time systems;Hardware;Systems support;Recording;Synchronization;Robots;Virtual Reality;Teleoperation;Policy Training;Open-source},
+  doi={10.1109/ICCR67607.2025.11372114}}
+
+
 
 @article{xu2025immersive,
-  title={An Immersive Virtual Reality Bimanual Telerobotic System With Haptic Feedback},
-  author={Xu, Han and Chen, Mingqi and Li, Gaofeng and Wei, Lei and Peng, Shichi and Xu, Haoliang and Li, Qiang},
-  journal={arXiv preprint arXiv:2501.00822},
-  year={2025}
+author = {Xu, Han and Chen, Mingqi and Li, Gaofeng and Wei, Lei and Peng, Shichi and Xu, Haoliang and Wang, ZunRan and Cao, Huibin and Li, Qiang},
+title = {An Immersive Virtual Reality Bimanual Telerobotic System With Haptic Feedback},
+journal = {IET Cyber-Systems and Robotics},
+volume = {7},
+number = {1},
+pages = {e70033},
+keywords = {haptic interface, human robot interaction, robotics, telecontrol, telerobotics},
+doi = {https://doi.org/10.1049/csy2.70033},
+url = {https://ietresearch.onlinelibrary.wiley.com/doi/abs/10.1049/csy2.70033},
+eprint = {https://ietresearch.onlinelibrary.wiley.com/doi/pdf/10.1049/csy2.70033},
+abstract = {ABSTRACT In robotic bimanual teleoperation, multimodal sensory feedback plays a crucial role, providing operators with a more immersive operating experience, reducing cognitive burden and improving operating efficiency. In this study, we develop an immersive bilateral isomorphic bimanual telerobotic system, which comprises dual arms and dual dexterous hands, with visual and haptic force feedback. To assess the performance of this system, we carried out a series of experiments and investigated the user's teleoperation experience. The results demonstrate that haptic force feedback enhances physical perception capabilities and complex task operating abilities. In addition, it compensates for visual perception deficiencies and reduces the operator's work burden. Consequently, our proposed system achieves more intuitive, realistic and immersive teleoperation, improves operating efficiency and expands the complexity of tasks that robots can perform through teleoperation.},
+year = {2025}
 }
+
+
 
 @article{papakonstantinou2025effect,
   title={The Effect of Tactile Feedback on the Manipulation of a Remote Robotic Arm via a Haptic Glove},
@@ -145,6 +162,7 @@ Formant",
   volume={14},
   number={24},
   pages={4964},
+  month={12},
   year={2025}
 }
 
@@ -155,6 +173,7 @@ Formant",
   volume={101},
   number={4},
   pages={80},
+  month={03},
   year={2021}
 }
 
@@ -164,6 +183,7 @@ Formant",
   journal={Electronics},
   volume={15},
   number={3},
+  month={01},
   pages={572},
   year={2026}
 }
@@ -175,29 +195,48 @@ Formant",
   volume={14},
   number={4},
   pages={387},
+  month={04},
   year={2026}
 }
 
 @article{ali2025digital,
-  title={Digital Twin-Enabled Real-Time Control in Robotic Additive Manufacturing via Soft Actor-Critic Reinforcement Learning},
-  author={Ali, Matsive and Giri, Sandesh and Liu, Sen and Yang, Qin},
-  journal={arXiv preprint arXiv:2501.18016},
-  year={2025}
+  author   = {Ali, Matsive and Giri, Sandesh and Yang, Qin and Liu, Sen},
+  title    = {Digital twin-enabled real-time control for robot arm-based manufacturing via reinforcement learning},
+  journal  = {Journal of Intelligent Manufacturing},
+  year     = {2025},
+  month    = {11},
+  day      = {11},
+  issn     = {1572-8145},
+  doi      = {10.1007/s10845-025-02728-9},
+  url      = {https://doi.org/10.1007/s10845-025-02728-9},
+  abstract = {Recent advancements in Digital Twin (DT) technology have opened new avenues for smart manufacturing. These systems increasingly depend on adaptive control mechanisms to optimize complex processes and reduce production wastage. This research presents an innovative approach that integrates Soft Actor-Critic (SAC) Reinforcement Learning (RL) algorithm with DT technology with Robot Operating System 2 (ROS2) to enable real-time adaptive control in robotic manufacturing. Our experimental setup consists of a ViperX 300 S robot arm, in which two distinct Tasks: (1) static target reaching and (2) dynamic target following were implemented for simulating adaptive control of manufacturing process. The innovative system architecture combines Unity game engine’s simulation environment with ROS2 for seamless and robust DT synchronization. We implemented a hierarchical reward structure to address common RL challenges, including local minima avoidance, convergence acceleration, and training stability, while leveraging transfer learning to efficiently adapt trained behavior models across tasks. Experimental results demonstrate rapid policy convergence and robust task execution, with performance metrics including cumulative reward, value loss, policy loss, and entropy validating the effectiveness of the approach. To the best of our knowledge, this is the first study to integrate Unity with ROS2-based DT for real-time synchronization and adaptive physical robot control using RL. Unlike prior works limited to offline or low-frequency simulations, our framework achieves stable 20 ms joint-level synchronization, enabling deployment of learned behaviors directly to physical robotic systems through virtual platform. This work advances the integration of RL with realistic DT framework for industrial and manufacturing robotics applications, providing a framework for enhanced adaptive real-time control in smart additive manufacturing (AM) processes.}
 }
 
-@inproceedings{hetrick2020comparing,
-  title={Comparing Virtual Reality Interfaces for the Teleoperation of Robots},
-  author={Hetrick, Rebecca and Amerson, Nicholas and Kim, Boyoung and Rosen, Eric and de Visser, Ewart J and Phillips, Elizabeth},
-  booktitle={2020 Systems and Information Engineering Design Symposium (SIEDS)},
-  pages={1--7},
-  year={2020}
-}
+@INPROCEEDINGS{hetrick2020comparing,
+  author={Hetrick, Rebecca and Amerson, Nicholas and Kim, Boyoung and Rosen, Eric and Visser, Ewart J. de and Phillips, Elizabeth},
+  booktitle={2020 Systems and Information Engineering Design Symposium (SIEDS)}, 
+  title={Comparing Virtual Reality Interfaces for the Teleoperation of Robots}, 
+  year={2020},
+  volume={},
+  number={},
+  pages={1-7},
+  location = {Charlottesville, VA, USA},
+  keywords={Three-dimensional displays;Navigation;Weapons;Collaboration;Virtual reality;Grasping;International Space Station;Virtual reality;human-robot interaction;teleoperation;interface design},
+  doi={10.1109/SIEDS49339.2020.9106630}}
 
-@article{autolab2021telesurgery,
-  title={A Digital Twin Framework for Telesurgery in the Presence of Varying Network Quality of Service},
-  author={Berkeley AUTOLab},
-  year={2021}
-}
+
+
+@INPROCEEDINGS{autolab2021telesurgery,
+  author={Bonne, Sophea and Panitch, Will and Dharmarajan, Karthik and Srinivas, Kishore and Kincade, Jerri-Lynn and Low, Thomas and Knoth, Bruce and Cowan, Cregg and Fer, Danyal and Thananjeyan, Brijen and Kerr, Justin and Ichnowski, Jeffrey and Goldberg, Ken},
+  booktitle={2022 IEEE 18th International Conference on Automation Science and Engineering (CASE)}, 
+  title={A Digital Twin Framework for Telesurgery in the Presence of Varying Network Quality of Service}, 
+  year={2022},
+  volume={},
+  number={},
+  location = {Mexico City, Mexico},
+  pages={1325-1332},
+  keywords={Training;Teleoperators;Three-dimensional displays;Minimally invasive surgery;Quality of service;Digital twins;Delays},
+  doi={10.1109/CASE49997.2022.9926585}}
 
 @article{darvish2023teleoperation,
   title={Teleoperation of humanoid robots: A survey},
@@ -206,6 +245,7 @@ Formant",
   volume={39},
   number={3},
   pages={1706--1727},
+  month={06},
   year={2023}
 }
 
@@ -216,6 +256,7 @@ Formant",
   year={2023},
   volume={},
   number={},
+  location = {London, United Kingdom},
   pages={11619-11625},
   keywords={Visualization;Three-dimensional displays;Two dimensional displays;Keyboards;Resists;Manipulators;Mice},
   doi={10.1109/ICRA48891.2023.10161029}}
@@ -227,6 +268,7 @@ AUTHOR = {Zhang, Qinglei and Liu, Qinghao and Duan, Jianguo and Qin, Jiyun},
 TITLE = {Research on Teleoperated Virtual Reality Human–Robot Five-Dimensional Collaboration System},
 JOURNAL = {Biomimetics},
 VOLUME = {8},
+MONTH = {12},
 YEAR = {2023},
 NUMBER = {8},
 ARTICLE-NUMBER = {605},
@@ -242,18 +284,28 @@ DOI = {10.3390/biomimetics8080605}
   author={Yunpeng Su and Xiao-Qi Chen and Tony Zhou and Christopher G. Pretty and Geoffrey Chase},
   journal={Applied Sciences},
   year={2022},
+  volume = {12},
+  number = {9},
+  article-number = {4740},
+  url = {https://www.mdpi.com/2076-3417/12/9/4740},
+  issn = {2076-3417},
   url={https://api.semanticscholar.org/CorpusID:248632683}
 }
 
 @article{Kawatsuma2012EmergencyResponseBy,
-author = {Kawatsuma, Shinji and Fukushima, Mineo and Okada, Takashi},
-year = {2012},
-month = {08},
-pages = {},
-title = {Emergency response by robots to Fukushima-Daiichi accident: Summary and lessons learned},
-volume = {39},
-journal = {Industrial Robot: An International Journal},
-doi = {10.1108/01439911211249715}
+    author = {Kawatsuma, Shinji and Fukushima, Mineo and Okada, Takashi},
+    title = {Emergency response by robots to Fukushima‐Daiichi accident: summary and lessons learned},
+    journal = {Industrial Robot: the international journal of robotics research and application},
+    volume = {39},
+    number = {5},
+    pages = {428-435},
+    year = {2012},
+    month = {08},
+    abstract = {The purpose of this paper is to extract lessons learned from the Fukushima‐Daiichi accident, caused by a big earthquake and a huge tsunami, which occurred on 11 March 2011.Lessons learned are extracted after summarizing emergency response by robots to the Fukushima‐Daiichi accident.Many lessons had been learned from the experiences on robots' emergency response to the accident; organization and operation scheme, and systemization were major lessons learned.Unmanned constructive heavy machines and robots donated from the USA or imported from Sweden did reconnaissance work and cleaning up of rubble outside of buildings. Quince and JAEA‐3 were deployed for reconnaissance inside buildings.The Japanese nuclear disaster response robotics developed after Japan Conversion Corporation's critical accident occurred in 1999, could not work when the Fukushima‐Daiichi accident occurred on 11 March 2011.The paper emphasizes the importance of establishing emergency response schemes when a nuclear disaster occurs.},
+    issn = {0143-991X},
+    doi = {10.1108/01439911211249715},
+    url = {https://doi.org/10.1108/01439911211249715},
+    eprint = {https://www.emerald.com/ir/article-pdf/39/5/428/1203450/01439911211249715.pdf},
 }
 
 @article{Luu2025EnhancingRealTime,
@@ -263,49 +315,47 @@ month = {08},
 pages = {6233-6257},
 title = {Enhancing real-time robot teleoperation with immersive virtual reality in industrial IoT networks},
 volume = {139},
+number   = {11},
 journal = {The International Journal of Advanced Manufacturing Technology},
 doi = {10.1007/s00170-025-16236-w}
 }
 
 @online{meta_vrc_performance,
-  author  = {{Meta Platforms, Inc.}},
-  title   = {VRC.Quest.Performance -- Performance Requirements for Quest Apps},
-  year    = {2024},
-  url     = {https://developers.meta.com/horizon/documentation/native/android/ts-ovr-best-practices/},
-  urldate = {2026-06-07},
+    author    = {{Meta Platforms, Inc.}},
+    title     = "VRC.Quest.Performance -- Performance Requirements for Quest Apps",
+    url       = "https://developers.meta.com/horizon/documentation/native/android/ts-ovr-best-practices",
+    urldate =   {2026-03-12}
 }
 
 @online{meta_ovr_stats,
-  author  = {{Meta Platforms, Inc.}},
-  title   = {OVR Metrics Tool -- Stats and Definitions},
-  year    = {2024},
-  url     = {https://developers.meta.com/horizon/documentation/native/android/ts-ovrstats/},
-  urldate = {2026-06-07},
+    author    = {{Meta Platforms, Inc.}},
+    title     = "OVR Metrics Tool -- Stats and Definitions",
+    url       = "https://developers.meta.com/horizon/documentation/native/android/ts-ovrstats",
+    urldate =   {2026-03-14}
 }
 
 @online{meta_ovr_best_practices,
-  author  = {{Meta Platforms, Inc.}},
-  title   = {OVR Best Practices -- App Performance Guidelines for Meta Quest},
-  year    = {2024},
-  url     = {https://developers.meta.com/horizon/documentation/native/android/ts-ovr-best-practices/},
-  urldate = {2026-06-07},
+    author    = {{Meta Platforms, Inc.}},
+    title     = "OVR Best Practices -- App Performance Guidelines for Meta Quest",
+    url       = "https://developers.meta.com/horizon/documentation/native/android/ts-ovr-best-practices",
+    urldate =   {2026-03-14}
 }
 
 @online{android_memory_overview,
-  author  = {{Google LLC}},
-  title   = {Overview of Android Memory Management},
-  year    = {2024},
-  url     = {https://developer.android.com/topic/performance/memory-overview},
-  urldate = {2026-06-07},
+    author    = {{Google LLC}},
+    title     = "Overview of Android Memory Management",
+    url       = "https://developer.android.com/topic/performance/memory-overview",
+    urldate =   {2026-04-05}
 }
 
-@article{StevenRos2Usecases,
+@article{macenski2022robot,
 author = {Steven Macenski  and Tully Foote  and Brian Gerkey  and Chris Lalancette  and William Woodall },
 title = {Robot Operating System 2: Design, architecture, and uses in the wild},
 journal = {Science Robotics},
 volume = {7},
 number = {66},
 pages = {eabm6074},
+month = {05},
 year = {2022},
 doi = {10.1126/scirobotics.abm6074},
 URL = {https://www.science.org/doi/abs/10.1126/scirobotics.abm6074},

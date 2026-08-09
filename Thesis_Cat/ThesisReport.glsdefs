@@ -1,0 +1,84 @@
+\glsdefs@newdocentry{ros2}%
+{%
+name={\acronymfont {\glsentryshort {ros2}}},%
+sort={ROS2},%
+type={acronym},%
+first={ROS2},%
+firstplural={ROS2s},%
+text={ROS2},%
+plural={ROS2s},%
+description={Robot Operating System 2},%
+descriptionplural={Robot Operating System 2},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Robot Operating System 2},%
+longplural={Robot Operating System 2s},%
+short={ROS2},%
+shortplural={ROS2s},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{vr}%
+{%
+name={\acronymfont {\glsentryshort {vr}}},%
+sort={VR},%
+type={acronym},%
+first={VR},%
+firstplural={VRs},%
+text={VR},%
+plural={VRs},%
+description={Virtual Reality},%
+descriptionplural={Virtual Reality},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Virtual Reality},%
+longplural={Virtual Realitys},%
+short={VR},%
+shortplural={VRs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{dof}%
+{%
+name={\acronymfont {\glsentryshort {dof}}},%
+sort={DOF},%
+type={acronym},%
+first={DOF},%
+firstplural={DOFs},%
+text={DOF},%
+plural={DOFs},%
+description={Degrees of Freedom},%
+descriptionplural={Degrees of Freedom},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Degrees of Freedom},%
+longplural={Degrees of Freedoms},%
+short={DOF},%
+shortplural={DOFs},%
+counter={page},%
+parent={},%
+%
+}%
+

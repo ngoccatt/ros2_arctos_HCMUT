@@ -4,7 +4,7 @@ Chương này trình bày các cơ sở lý thuyết cùng thông tin về các 
 
 \section{Cánh tay robot Denso VS-6577}
 
-Đầu tiên, cánh tay robot Denso VS-6577 chỉnh là đối tượng điều khiển chính trong đồ án hiện tại. Cánh tay robot \href{https://www.denso-wave.com/en/robot/product/five-six/vs.html}{Denso VS-6577} là một trong những model robot công nghiệp sáu trục nổi bật của hãng Denso - thương hiệu hàng đầu Nhật Bản trong lĩnh vực tự động hóa và robot công nghiệp. Được thiết kế với mục tiêu tối ưu hóa hiệu suất, độ chính xác và khả năng vận hành linh hoạt, VS-6577 đáp ứng tốt các yêu cầu khắt khe của sản xuất hiện đại trong nhiều ngành công nghiệp khác nhau.
+Đầu tiên, cánh tay robot Denso VS-6577 chỉnh là đối tượng điều khiển chính trong đề án hiện tại. Cánh tay robot \href{https://www.denso-wave.com/en/robot/product/five-six/vs.html}{Denso VS-6577} là một trong những model robot công nghiệp sáu trục nổi bật của hãng Denso - thương hiệu hàng đầu Nhật Bản trong lĩnh vực tự động hóa và robot công nghiệp. Được thiết kế với mục tiêu tối ưu hóa hiệu suất, độ chính xác và khả năng vận hành linh hoạt, VS-6577 đáp ứng tốt các yêu cầu khắt khe của sản xuất hiện đại trong nhiều ngành công nghiệp khác nhau.
 
 Denso VS-6577 thuộc dòng robot sáu trục (6-axis articulated robot), mô phỏng chuyển động linh hoạt của cánh tay con người, cho phép thực hiện các thao tác phức tạp như lắp ráp, hàn, sơn, kiểm tra chất lượng, đóng gói và vận chuyển sản phẩm. Với sự kết hợp giữa thiết kế cơ khí tối ưu, hệ thống điều khiển thông minh và khả năng tích hợp dễ dàng vào các dây chuyền sản xuất tự động, VS-6577 đã và đang được ứng dụng rộng rãi tại nhiều nhà máy trên toàn cầu, đặc biệt trong các lĩnh vực điện tử, ô tô, thực phẩm, dược phẩm và logistics.
 
@@ -39,7 +39,7 @@ Góc giới hạn & J1:±170°, \newline
                 J6:±360° \\
 Tải trọng tối đa & 7kg (với phần cổ cánh tay nghiêng xuống 1 góc khoảng 45°)\\
 Nhận diện vị trí & Bộ Absolute Encoder\\
-Động cơ xoay và phanh & AC motor cho toàn bộ các trục, phanh cho trục J2 tới J4\\
+Động cơ xoay và phanh & AC (Alternating Current) motor cho toàn bộ các trục, phanh cho trục J2 tới J4\\
 Khối lượng & ~ 36kg\\ 
 Độ chính xác lặp lại & Với mỗi hướng X, Y và Z ±0.03mm\\
 ... & \\
@@ -104,7 +104,7 @@ CN5 & PENDANT & Cổng tay dạy (teach pendant) & CN11 & INPUT AC & Cổng ngu�
 CN6 & PRINTER & Cổng máy in (không sử dụng) & CN12 & MOTOR & Cổng động cơ/bộ mã hóa \\
 \end{longtblr}
 
-Với việc có một lượng lớn các cổng kết nối, người dùng có sự linh hoạt trong việc tích hợp nó vào chu trình điều khiển hiện có. Không chỉ đơn thuần là điều khiển cánh tay robot, RC5 cũng có thể được sử dụng để điều khiển thêm các đầu gắp (end effector), kết nối với hệ thống PLC, kết nối với thiết bị "teach pendant", điều khiển I/O của nhiều thiết bị khác và hơn hết là cho phép kết nối với PC / thiết bị hỗ trợ quan sát (vision device) thông qua cổng giao tiếp RS232. 
+Với việc có một lượng lớn các cổng kết nối, người dùng có sự linh hoạt trong việc tích hợp nó vào chu trình điều khiển hiện có. Không chỉ đơn thuần là điều khiển cánh tay robot, RC5 cũng có thể được sử dụng để điều khiển thêm các đầu gắp (end effector), kết nối với hệ thống PLC (Programmable Logic Controller), kết nối với thiết bị "teach pendant", điều khiển I/O của nhiều thiết bị khác và hơn hết là cho phép kết nối với PC / thiết bị hỗ trợ quan sát (vision device) thông qua cổng giao tiếp RS232. 
 
 \begin{longtblr}[
 caption = {Bảng thông số kĩ thuật của máy điều khiển RC5 cho cánh tay robot VS-6577},
@@ -253,13 +253,13 @@ Ma trận $^0T_6 \in \mathbb{R}^{4 \times 4}$ là \textbf{ma trận biến đổ
     \item Hệ phương trình phi tuyến không phải lúc nào cũng có nghiệm giải tích (closed-form) và thường phải dùng phương pháp số (iterative).
 \end{itemize}
 
-Có hai nhóm phương pháp chính để giải bài toán IK:
+Có hai đề án phương pháp chính để giải bài toán IK:
 
-\begin{enumerate}
+\begin{itemize}
     \item \textbf{Phương pháp giải tích (Closed-form / Analytical IK)}: Khai thác cấu trúc hình học đặc thù của robot (ví dụ: ba trục cuối giao nhau tại một điểm – cấu hình cổ tay cầu - spherical wrist) để tìm nghiệm dạng công thức toán học. Phương pháp này cho kết quả nhanh và chính xác nhưng chỉ áp dụng được cho một số kiểu robot nhất định.
     
     \item \textbf{Phương pháp số (Numerical IK)}: Sử dụng các thuật toán lặp như phương pháp Jacobian pseudo-inverse, thuật toán gradient descent hoặc các phương pháp tối ưu hóa để hội tụ đến nghiệm. Phương pháp này tổng quát hơn nhưng có thể chậm hơn, phụ thuộc vào điểm khởi tạo và có thể không hội tụ gần các điểm kỳ dị (singularity).
-\end{enumerate}
+\end{itemize}
 
 
 \section{Giao thức UART}
@@ -286,12 +286,12 @@ Về bản chất, UART là một phần cứng hoặc module tích hợp trong 
     \label{fig:placeholder}
 \end{figure}
 
-\begin{enumerate}
+\begin{itemize}
     \item \textbf{Start bit}: Thông thường, đường truyền dữ liệu UART sẽ ở mức điện áp cao khi không có dữ liệu. Lúc bắt đầu truyền dữ liệu, UART sẽ kéo đường truyền xuống mức thấp trong một chu kì xung nhịp. Đây chính là Start bit của quá trình truyền nhận. Thiết bị UART ở phía nhận khi nhận thấy tín hiệu xuống thấp lần đầu tiên sẽ bắt đầu đọc các dữ liệu được truyền sau đó
     \item \textbf{Data Frame}: Đây là khu vực chứa dữ liệu cần truyền. Độ dài của dữ liệu có thể từ 5 tới 9 bit, với 9 bit trong trường hợp không sử dụng Parity bit. 
     \item \textbf{Parity Bit}: Parity bit chỉ có một bit, cho biết số lượng bit 1 trong khung dữ liệu là số chẵn hay số lẻ. Mục tiêu của Parity bit là bảo đảm sự toàn vẹn dữ liệu ở mức tương đối, như một cách để thiết bị nhận biết rằng có bất kì dữ liệu nào đã bị thay đổi trong quá trình truyền hay không. 
     \item \textbf{Stop bits}: Stop bits có độ dài từ 1 tới 2 bit, khi đó UART sẽ gửi tín hiệu điện áp từ thấp lên cao trong ít nhất hai bit, đánh dấu sự kết thúc của gói tin truyền nhận.
-\end{enumerate}
+\end{itemize}
 
 \textbf{Ưu điểm của giao thức UART}
 
@@ -328,7 +328,7 @@ ROS 2 có nhiều ưu điểm, bao gồm:
     \item Hỗ trợ tương tác: ROS 2 cung cấp các công cụ để tương tác với robot, cho phép người dùng điều khiển robot trực tiếp và thu thập dữ liệu từ các cảm biến.
     \item Khả năng mở rộng: ROS 2 cho phép người dùng thêm các chức năng mới vào hệ thống một cách dễ dàng, bằng cách tạo các gói phần mềm mới hoặc sử dụng các gói phần mềm có sẵn.
 \end{itemize}
-ROS 2 là một công cụ quan trọng trong phát triển robot và trí tuệ nhân tạo. Nó được sử dụng rộng rãi trong nhiều lĩnh vực, bao gồm robot tự hành, robot y tế và robot công nghiệp. Trong đồ án này, máy tính nhúng Jetson Nano đã tích hợp sẵn những chương trình ROS cho phép ta phát triển ứng dụng trên đó dễ dàng hơn.
+ROS 2 là một công cụ quan trọng trong phát triển robot và trí tuệ nhân tạo. Nó được sử dụng rộng rãi trong nhiều lĩnh vực, bao gồm robot tự hành, robot y tế và robot công nghiệp. Trong đề án này, máy tính nhúng Jetson Nano đã tích hợp sẵn những chương trình ROS cho phép ta phát triển ứng dụng trên đó dễ dàng hơn.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{Images/Methodologies/ros2_logo.jpg}

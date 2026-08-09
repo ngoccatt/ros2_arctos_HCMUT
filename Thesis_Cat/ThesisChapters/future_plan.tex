@@ -3,7 +3,7 @@
 
 Đề tài đã hiện thực thành công một hệ thống điều khiển cánh tay robot Denso VS-6577 từ xa thông qua kính thực tế ảo Meta Quest 3, bao phủ toàn bộ năm thành phần trong kiến trúc đề xuất ban đầu: \textbf{cánh tay robot Denso VS-6577, máy điều khiển RC5, PC Controller, camera môi trường và ứng dụng VR}. Hệ thống được xây dựng theo kiến trúc phân lớp rõ ràng - từ lớp Driver giao tiếp UART với RC5, Hardware Interface và Controller tuân thủ chuẩn Ros2-Control, MoveIt2 cho planning và thực thi trajectory, cho đến lớp ứng dụng gồm Remote Control Action Server, MoveIt Servo Service Provider, RosBridge WebSocket và ứng dụng VR Unity - đảm bảo tính mô-đun, dễ bảo trì và có khả năng mở rộng sang các mô hình cánh tay robot khác trong tương lai.
 
-\subsection{Đánh giá các thành phần đã hiện thực}
+\textbf{Đánh giá các thành phần đã hiện thực}
 
 \begin{itemize}
     \item \textbf{Điều khiển cánh tay robot Denso VS-6577 qua RC5}: So với giai đoạn đầu, chương trình RC5 đã được cải tiến đáng kể. Việc áp dụng cơ chế phát hiện lỗi CRC theo độ dài payload đã loại bỏ hoàn toàn hiện tượng ngưng hệ thống khi chuỗi lệnh UART bị nhiễu - thực nghiệm ghi nhận khoảng 2 lỗi trên 1000 lệnh ở baud rate 119200\,bit/s, và hệ thống có thể tự phục hồi mà không cần can thiệp thủ công. Ring buffer phân tách luồng xử lý chuỗi và luồng thực thi giúp cánh tay chạy liên tục, ổn định trong thời gian dài.

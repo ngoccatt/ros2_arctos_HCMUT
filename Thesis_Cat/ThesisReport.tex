@@ -19,6 +19,7 @@
 \usepackage{fancyhdr,graphicx,amsmath,amssymb}
 \graphicspath{images}
 \usepackage{titlesec}
+\usepackage{acronym}
 \usepackage{color}
 \usepackage[table]{xcolor}
 \graphicspath{ {images}}
@@ -26,6 +27,8 @@
 \usepackage{afterpage}
 \usepackage{boxedminipage,fancybox}
 \usepackage{subcaption}
+\usepackage{caption}
+\captionsetup{labelfont=bf, labelsep=space}
 \usepackage{float}
 \usepackage{xcolor,soul}
 \sethlcolor{lightgray}
@@ -54,15 +57,28 @@ style=ieee,
 sorting=none
 ]{biblatex}
 
+\renewbibmacro*{name:andothers}{% Based on name:andothers from biblatex.def
+  \ifboolexpr{
+    test {\ifnumequal{\value{listcount}}{\value{liststop}}}
+    and
+    test \ifmorenames
+  }
+    {\ifnumgreater{\value{liststop}}{1}
+       {\finalandcomma}
+       {}%
+     \andothersdelim\bibstring[\emph]{andothers}}
+    {}}
+
 \addbibresource{ref.bib}
-% \font\tench=t5-lmb10 at18pt%
-
-% \titleformat{\chapter}[display]
-% {\normalfont\large\filcenter\bfseries}
-% {{{\chaptertitlename\,}\thechapter}} {1pc}{
-% {\tench}\MakeUppercase}
 
 
+%------------------------------------------------------------
+%   Make tblr table caption so that "Bang 3.1" in bold, no ":"
+%------------------------------------------------------------
+% 1. Make the label "Bảng 3.1" bold (Note the lowercase 'r' and correct bracket syntax)
+\SetTblrStyle{caption-tag}{\bfseries}
+% 2. Replace the default colon ":" separator with a space
+\DefTblrTemplate{caption-sep}{default}{\space}
 
 % \usepackage{minitoc}
 \usepackage{lipsum} % just to generate text for the example
@@ -71,7 +87,7 @@ sorting=none
 %------------------------------------------------------------
 \titleformat{\chapter}[display]
 {\bfseries\Large}
-{\filright\MakeUppercase{\chaptertitlename} \Huge\thechapter}
+{\filright\MakeUppercase{\chaptertitlename} \Huge\thechapter.}
 {1ex}
 {\titlerule\vspace{1ex}\filleft}
 [\vspace{1ex}\titlerule]
@@ -158,12 +174,33 @@ sorting=none
 % ---------------------------------------------------------------
 
 \usepackage{titletoc}% http://ctan.org/pkg/titletoc
-\titlecontents*{chapter}% <section-type>
+\titlecontents{chapter}% <section-type>
   [0pt]% <left>
-  {}% <above-code>
-  {\bfseries\chaptername\ \thecontentslabel\quad}% <numbered-entry-format>
+  {\vspace{0.5em}\bfseries}% <above-code>
+  {\chaptername\ \thecontentslabel.\quad}% <numbered-entry-format>
   {}% <numberless-entry-format>
-  {\bfseries\hfill\contentspage}% <filler-page-format>
+  {\titlerule*[0.5pc]{.}\contentspage}% <filler-page-format with dots>
+
+%   % Set section indent to 0pt
+% \titlecontents{section}[1.0pt]
+%   {}
+%   {\thecontentslabel.\quad}
+%   {}
+%   {\titlerule*[0.5pc]{.}\contentspage}
+
+% % Set subsection indent to 1.5em (smaller than default)
+% \titlecontents{subsection}[2.0em]
+%   {}
+%   {\thecontentslabel.\quad}
+%   {}
+%   {\titlerule*[0.5pc]{.}\contentspage}
+
+% % Set subsubsection indent to 3.0em
+% \titlecontents{subsubsection}[3.0em]
+%   {}
+%   {\thecontentslabel.\quad}
+%   {}
+%   {\titlerule*[0.5pc]{.}\contentspage}
 
 % \flushbottom
 
@@ -176,11 +213,35 @@ sorting=none
 \renewcommand{\appendixname}{Appendix}
 \renewcommand{\figurename}{Hình}
 \renewcommand{\tablename}{Bảng}
-\renewcommand{\contentsname}{Mục lục}
+\renewcommand{\contentsname}{MỤC LỤC}
 
-\renewcommand{\listfigurename}{Danh sách hình ảnh}
-\renewcommand{\listtablename}{Danh sách bảng}
-\renewcommand{\refname}{Tài liệu tham khảo}
+
+\setcounter{tocdepth}{3}
+
+%------------------------------------------------------------
+%   Bold Hinh/Bang at table
+%------------------------------------------------------------
+\makeatletter
+\renewcommand*\l@figure[2]{%
+  \ifnum \c@tocdepth >\z@
+    \@dottedtocline{1}{0pt}{6em}{%
+      \def\numberline##1{\hb@xt@\@tempdima{\textbf{Hình~##1}\hfil}}#1%
+    }{#2}%
+  \fi}
+
+\renewcommand*\l@table[2]{%
+  \ifnum \c@tocdepth >\z@
+    \@dottedtocline{1}{0pt}{6em}{%
+      \def\numberline##1{\hb@xt@\@tempdima{\textbf{Bảng~##1}\hfil}}#1%
+    }{#2}%
+  \fi}
+\makeatother
+
+
+
+\renewcommand{\listfigurename}{DANH MỤC HÌNH ẢNH}
+\renewcommand{\listtablename}{DANH MỤC BẢNG}
+\renewcommand{\refname}{TÀI LIỆU THAM KHẢO}
 
 % \font\chuong=t5-lmb10 at12pt%
 % \def\chaptername{\chuong CHƯƠNG}
@@ -361,9 +422,11 @@ sorting=none
     rulecolor=\color{blue!80!black}
 }
 
+
 %----------------------------------------------------------------------------------------------------------%
 \include{Others/ThesisCover} 
 \include{Others/ThesisCoverPage2}
+\pagenumbering{roman}
 \include{Others/mission}
 
 \newcommand\blankpage{%
@@ -375,17 +438,20 @@ sorting=none
 	\newpage  
 }
 
-\pagenumbering{roman}
 % \include{Others/teacherConfirmation}
 \include{Others/acknowledgement}
 \include{Others/abstract}
 \include{Others/commitment}
 
 \clearpage
-\pagenumbering{gobble}
+\addcontentsline{toc}{chapter}{MỤC LỤC}
 \tableofcontents
+\addcontentsline{toc}{chapter}{DANH MỤC HÌNH ẢNH}
 \listoffigures
+\addcontentsline{toc}{chapter}{DANH MỤC BẢNG}
 \listoftables
+\include{Others/abbreviation}
+
 \clearpage
 
 \pagenumbering{arabic}
@@ -407,7 +473,7 @@ sorting=none
 
 \printbibliography[
 heading=bibintoc,
-title=Tài liệu tham khảo,
+title=TÀI LIỆU THAM KHẢO,
 ]
 
 \include{Others/information}
